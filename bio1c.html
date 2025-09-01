@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cell Types and Structures Learning Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            background-image: linear-gradient(white 97%, #e0e0e0 100%);
+            background-size: 100% 30px;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5em;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 80%;
+            height: 450px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .notes, .game {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fffef7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .notes h2, .game h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #c8e6c9;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        details {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 10px;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #2e7d32;
+        }
+        summary:hover {
+            color: #388e3c;
+        }
+        ul {
+            margin: 10px 0 0 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .question-box {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff;
+        }
+        .feedback {
+            margin-top: 8px;
+            font-weight: bold;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+<body>
+
+<header>
+    Cell Types and Structures Learning
+</header>
+
+<div class="video-container">
+    <!-- Updated to the requested video -->
+    <iframe src="https://www.youtube.com/embed/3ffdsbRTuXY" allowfullscreen></iframe>
+</div>
+
+<div class="notes">
+    <h2>Video Key Notes</h2>
+
+    <details open>
+        <summary>Overview</summary>
+        <p>The video provides a comprehensive overview of cells, focusing on the differences between animal, plant, and bacterial cells. Cells are the fundamental units of life capable of independent replication, making up all living organisms. The video distinguishes two major types of cells: eukaryotic and prokaryotic. Eukaryotic cells, found in animals, plants, fungi, and protists, are complex and contain membrane-bound organelles, including a nucleus that houses genetic material. In contrast, prokaryotic cells, such as bacteria, are simpler, unicellular organisms without a nucleus, with their DNA freely floating in the cytoplasm.</p>
+    </details>
+
+    <details>
+        <summary>Animal vs Plant Cells</summary>
+        <p>Animal and plant cells share several common subcellular structures, such as the cell membrane, nucleus, cytoplasm, mitochondria, and ribosomes. However, plant cells have additional features that set them apart, including a rigid cell wall made of cellulose for structural support, a large central vacuole filled with cell sap to maintain pressure and store nutrients, and chloroplasts containing chlorophyll, which enables photosynthesis—the process by which plants convert sunlight into energy.</p>
+    </details>
+
+    <details>
+        <summary>Bacterial (Prokaryotic) Cells</summary>
+        <p>Bacterial cells, as prokaryotes, contain a cell membrane, cell wall, ribosomes, and cytoplasm but lack mitochondria and chloroplasts. Their genetic material is organized as a single circular DNA strand in the cytoplasm, sometimes accompanied by plasmids carrying extra genes like antibiotic resistance. Some bacteria have flagella, tail-like structures that enable movement.</p>
+        <p>The video emphasizes the diversity and complexity of cells, noting that while animal and plant cells are multicellular and structurally sophisticated, bacteria are unicellular and simpler but still highly adaptable and essential to life.</p>
+    </details>
+
+    <details>
+        <summary>Highlights (timestamps)</summary>
+        <ul>
+            <li><strong>00:00</strong> 🧬 Introduction to cells: smallest unit of life, making up all living organisms.</li>
+            <li><strong>00:40</strong> 🔬 Differentiation between eukaryotic (complex) and prokaryotic (simple) cells.</li>
+            <li><strong>01:19</strong> 🧫 Key subcellular structures shared by animal and plant cells: membrane, nucleus, cytoplasm, mitochondria, ribosomes.</li>
+            <li><strong>02:31</strong> 🌿 Unique plant cell features: cell wall, large vacuole, chloroplasts with chlorophyll for photosynthesis.</li>
+            <li><strong>03:38</strong> 🦠 Bacterial cells as unicellular prokaryotes with no nucleus but extra structures like plasmids and flagella.</li>
+            <li><strong>04:17</strong> ⚙️ Explanation of bacterial DNA organization and the function of plasmids and flagella.</li>
+            <li><strong>04:40</strong> 📌 Summary of cellular diversity and functionality across life forms.</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Key Insights</summary>
+        <p><strong>Fundamental nature of cells (00:00):</strong> Cells are the smallest living units capable of independent replication. This foundational fact underscores the importance of cells as the building blocks of all life, from single-celled bacteria to complex multicellular organisms like plants and animals. Understanding cells is essential to grasping biology at any level.</p>
+
+        <p><strong>Eukaryotic vs. Prokaryotic distinction (00:40):</strong> The clear division between eukaryotic and prokaryotic cells reflects evolutionary complexity. Eukaryotes, with compartmentalized organelles and a defined nucleus, allow for specialized functions within the cell, enabling multicellularity and complex life forms. Prokaryotes, lacking these features, represent an earlier, more streamlined form of life optimized for rapid reproduction and adaptability.</p>
+
+        <p><strong>Shared organelles and their functions:</strong> Both animal and plant cells share core structures—cell membrane for selective permeability, nucleus for genetic control, cytoplasm as a reaction medium, mitochondria for energy production, and ribosomes for protein synthesis. This commonality highlights the evolutionary unity of eukaryotic life and the fundamental processes necessary for cellular survival and function.</p>
+
+        <p><strong>Plant cell specialization (02:31):</strong> The plant cell’s cell wall made of cellulose provides mechanical support and prevents bursting due to osmotic pressure. The large central vacuole regulates internal pressure and stores nutrients, while chloroplasts enable photosynthesis, converting solar energy into chemical energy. These features underscore how plants have evolved cellular adaptations to harness sunlight and maintain rigidity, distinguishing them from animal cells.</p>
+
+        <p><strong>Bacterial simplicity yet versatility:</strong> Bacteria lack membrane-bound organelles such as mitochondria and chloroplasts but maintain essential life functions through ribosomes and cytoplasm. Their DNA floats freely, and plasmids add genetic versatility, such as antibiotic resistance, allowing bacteria to rapidly adapt to environmental challenges. Flagella provide mobility, enabling bacteria to seek nutrients or escape harmful conditions.</p>
+
+        <p><strong>Genetic organization in bacteria and implications:</strong> The single circular DNA strand in bacteria, combined with plasmids, exemplifies a minimalist but efficient genetic system. Plasmids can transfer between bacteria, spreading advantageous traits quickly, which is a critical factor in the evolution of bacterial populations and the development of antibiotic resistance—a major concern in medicine.</p>
+
+        <p><strong>Cellular diversity and biological complexity:</strong> While the video focuses on basic cell types, it hints at the vast diversity of cells within plants and animals, each adapted for specialized functions. This cellular variety underpins the complexity of multicellular organisms and the intricate interactions necessary for life, health, and development.</p>
+    </details>
+</div>
+
+<div class="game">
+    <h2>Quiz Game</h2>
+    <div id="game-area">
+        <button onclick="startGame()">Start Quiz Game</button>
+    </div>
+</div>
+
+<script>
+    const questions = [
+        {
+            type: "mcq",
+            question: "Which type of cell does not have a nucleus?",
+            options: ["Eukaryotic cell", "Prokaryotic cell", "Plant cell"],
+            answer: 1,
+            explanation: "Prokaryotic cells do not have a nucleus; their DNA is in the cytoplasm."
+        },
+        {
+            type: "fill",
+            question: "The organelle responsible for producing ATP (energy) is ________.",
+            answerText: "mitochondria",
+            explanation: "Mitochondria are the powerhouse of the cell."
+        },
+        {
+            type: "mcq",
+            question: "Which organelle is the site of protein synthesis?",
+            options: ["Ribosome", "Nucleus", "Golgi apparatus"],
+            answer: 0,
+            explanation: "Ribosomes are responsible for synthesizing proteins."
+        },
+        {
+            type: "fill",
+            question: "The site of photosynthesis in plant cells is the ________.",
+            answerText: "chloroplast",
+            explanation: "Chloroplasts capture light energy for photosynthesis."
+        },
+        {
+            type: "mcq",
+            question: "Which feature is unique to plant cells compared to animal cells?",
+            options: ["Cell membrane", "Large central vacuole", "Ribosomes"],
+            answer: 1,
+            explanation: "Plant cells have a large central vacuole that maintains turgor pressure."
+        },
+        {
+            type: "mcq",
+            question: "What is the primary component of the plant cell wall?",
+            options: ["Peptidoglycan", "Cellulose", "Chitin"],
+            answer: 1,
+            explanation: "Plant cell walls are mainly composed of cellulose."
+        },
+        {
+            type: "fill",
+            question: "Extra small DNA loops in bacteria that may carry antibiotic resistance genes are called ________.",
+            answerText: "plasmids",
+            explanation: "Plasmids are accessory DNA molecules that can carry useful traits."
+        },
+        {
+            type: "mcq",
+            question: "Flagella in bacteria primarily help with:",
+            options: ["Photosynthesis", "Protein synthesis", "Movement"],
+            answer: 2,
+            explanation: "Flagella are tail-like structures that enable bacterial movement."
+        },
+        {
+            type: "fill",
+            question: "Eukaryotic cells keep their DNA inside a membrane-bound ________.",
+            answerText: "nucleus",
+            explanation: "A defining feature of eukaryotes is the presence of a nucleus."
+        },
+        {
+            type: "mcq",
+            question: "Which set lists structures common to BOTH plant and animal cells?",
+            options: [
+                "Cell membrane, nucleus, cytoplasm, mitochondria, ribosomes",
+                "Cell wall, chloroplast, large central vacuole",
+                "Plasmids, flagella, nucleoid"
+            ],
+            answer: 0,
+            explanation: "These are core eukaryotic structures shared by plant and animal cells."
+        }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+    let shuffledQuestions = [];
+
+    function startGame() {
+        shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+        currentQuestion = 0;
+        score = 0;
+        showQuestion();
+    }
+
+    function showQuestion() {
+        const gameArea = document.getElementById("game-area");
+        const q = shuffledQuestions[currentQuestion];
+        let html = `<div class='question-box'><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+        if (q.type === "mcq") {
+            q.options.forEach((opt, index) => {
+                html += `<label><input type='radio' name='option' value='${index}'> ${opt}</label><br>`;
+            });
+            html += `<button onclick='checkMCQ()'>Submit</button>`;
+        } else if (q.type === "fill") {
+            html += `<input type='text' id='fill-answer' placeholder='Type your answer here'><br>`;
+            html += `<button onclick='checkFill()'>Submit</button>`;
+        }
+
+        html += `<div id='feedback' class='feedback'></div></div>`;
+        gameArea.innerHTML = html;
+    }
+
+    function checkMCQ() {
+        const q = shuffledQuestions[currentQuestion];
+        const selected = document.querySelector("input[name='option']:checked");
+        const feedback = document.getElementById("feedback");
+        if (!selected) {
+            feedback.textContent = "Please select an answer!";
+            feedback.className = "feedback incorrect";
+            return;
+        }
+        if (parseInt(selected.value) === q.answer) {
+            feedback.textContent = "✅ Correct! " + q.explanation;
+            feedback.className = "feedback correct";
+            score++;
+        } else {
+            feedback.textContent = "❌ Incorrect. " + q.explanation;
+            feedback.className = "feedback incorrect";
+        }
+        setTimeout(nextQuestion, 1500);
+    }
+
+    function checkFill() {
+        const q = shuffledQuestions[currentQuestion];
+        const answer = document.getElementById("fill-answer").value.trim().toLowerCase();
+        const feedback = document.getElementById("feedback");
+        if (!answer) {
+            feedback.textContent = "Please enter your answer!";
+            feedback.className = "feedback incorrect";
+            return;
+        }
+        if (answer.includes(q.answerText)) {
+            feedback.textContent = "✅ Correct! " + q.explanation;
+            feedback.className = "feedback correct";
+            score++;
+        } else {
+            feedback.textContent = "❌ Incorrect. " + q.explanation;
+            feedback.className = "feedback incorrect";
+        }
+        setTimeout(nextQuestion, 1500);
+    }
+
+    function nextQuestion() {
+        currentQuestion++;
+        if (currentQuestion < shuffledQuestions.length) {
+            showQuestion();
+        } else {
+            endGame();
+        }
+    }
+
+    function endGame() {
+        const gameArea = document.getElementById("game-area");
+        gameArea.innerHTML = `<h3>Game Over!</h3><p>Your score: ${score} / ${shuffledQuestions.length}</p>` +
+                             `<button onclick='startGame()'>Play Again</button>`;
+    }
+</script>
+
+</body>
+</html>
