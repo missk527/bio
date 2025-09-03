@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GCSE Food Tests | Notes & Quiz</title>
+  <style>
+    body{font-family:Arial, sans-serif;margin:0;background:#f9f9f9;color:#333}
+    header{background:#4CAF50;color:#fff;text-align:center;padding:15px;font-size:1.3rem}
+    .wrap{max-width:1000px;margin:auto;padding:15px}
+    iframe{width:100%;max-width:900px;height:470px;border:2px solid #ccc;border-radius:10px}
+    .card{background:#fff;padding:15px;border-radius:10px;margin:20px 0;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+    h2{border-bottom:2px solid #c8e6c9;padding-bottom:5px;color:#2e7d32}
+    details{margin:10px 0;padding:10px;border:1px solid #ddd;border-radius:8px}
+    summary{font-weight:bold;color:#1b5e20;cursor:pointer}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    th,td{border:1px solid #ddd;padding:8px}
+    th{background:#f1f8e9}
+    button{background:#4CAF50;color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
+    button:hover{opacity:0.9}
+    .question-box{margin-top:12px;padding:10px;border:1px solid #ddd;border-radius:8px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:#1b5e20}
+    .incorrect{color:#c62828}
+    .footer{text-align:center;color:#666;font-size:.9rem;margin-top:20px}
+  </style>
+</head>
+<body>
+<header>GCSE Food Tests | Notes + Interactive Quiz</header>
+<div class="wrap">
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/8HYfcNB2PIA" title="Food Tests" allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <h2>Notes (English)</h2>
+    <details open>
+      <summary>Sample Preparation (common to all)</summary>
+      <ul>
+        <li>Grind food with mortar and pestle.</li>
+        <li>Add distilled water in beaker, stir until partly dissolved.</li>
+        <li>Filter using funnel and filter paper; filtrate is test sample.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Benedict’s Test (Reducing Sugars)</summary>
+      <ul>
+        <li>5 cm³ sample + 10 drops Benedict’s solution.</li>
+        <li>Heat in 75 °C water bath for 5 minutes.</li>
+        <li>Result: blue (negative), green/yellow/brick-red (positive, depends on sugar concentration).</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Iodine Test (Starch)</summary>
+      <ul>
+        <li>5 cm³ sample + iodine solution.</li>
+        <li>Result: brown-orange (negative), blue-black (positive).</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Biuret Test (Protein)</summary>
+      <ul>
+        <li>2 cm³ sample + 2 cm³ Biuret reagent.</li>
+        <li>Result: blue (negative), lilac/purple (positive).</li>
+        <li>Edexcel: add KOH then CuSO₄ separately.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Sudan III Test (Lipids)</summary>
+      <ul>
+        <li>5 cm³ unfiltered sample + 3 drops Sudan III.</li>
+        <li>Result: bright red oil layer forms if lipids present.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Emulsion Test (Lipids, Edexcel)</summary>
+      <ul>
+        <li>Mix sample with ethanol, shake, then add equal volume of water.</li>
+        <li>Result: cloudy/milky white if lipids present.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Colour Reference Table</summary>
+      <table>
+        <tr><th>Test</th><th>Negative</th><th>Positive</th></tr>
+        <tr><td>Benedict’s (sugars)</td><td>Blue</td><td>Green → Yellow → Brick-red</td></tr>
+        <tr><td>Iodine (starch)</td><td>Brown-orange</td><td>Blue-black</td></tr>
+        <tr><td>Biuret (protein)</td><td>Blue</td><td>Lilac/purple</td></tr>
+        <tr><td>Sudan III (lipids)</td><td>No red layer</td><td>Red oil layer</td></tr>
+        <tr><td>Emulsion (lipids)</td><td>Clear</td><td>Cloudy/milky white</td></tr>
+      </table>
+    </details>
+  </div>
+
+  <div class="card">
+    <h2>Quiz (20 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start Quiz</button>
+    </div>
+  </div>
+  <div class="footer">© 2025 Food Tests Practice</div>
+</div>
+
+<script>
+function norm(s){
+  return (s||"").toLowerCase().replace(/[°\\s\\-]/g,"").replace(/minutes?|mins?|minute/g,"").replace(/cm3|cm²|cm/g,"").replace(/°c|c/g,"").trim();
+}
+const questions=[
+  {type:"mcq",question:"Which test identifies reducing sugars?",options:["Iodine","Biuret","Benedict"],answer:2,explanation:"Benedict detects reducing sugars."},
+  {type:"fill",question:"Benedict’s test water bath is about ____ °C.",answers:["75"],explanation:"~75 °C."},
+  {type:"fill",question:"Benedict’s test is heated for ____ minutes.",answers:["5"],explanation:"~5 minutes."},
+  {type:"mcq",question:"Highest sugar concentration gives which colour?",options:["Green","Yellow","Brick-red"],answer:2,explanation:"Brick-red at high concentration."},
+  {type:"mcq",question:"Iodine positive result is:",options:["Blue-black","Brick-red","Purple"],answer:0,explanation:"Blue-black = starch present."},
+  {type:"mcq",question:"Biuret test uses:",options:["5cm³ sample + 2cm³ reagent","2cm³ sample + 2cm³ reagent","2cm³ sample + 5cm³ reagent"],answer:1,explanation:"2cm³ sample + 2cm³ Biuret."},
+  {type:"mcq",question:"Biuret positive colour:",options:["Blue-black","Purple","Brick-red"],answer:1,explanation:"Lilac/purple if protein present."},
+  {type:"mcq",question:"Does Sudan III require filtering sample?",options:["Yes","No"],answer:1,explanation:"No filtering needed."},
+  {type:"fill",question:"Sudan III positive result forms a bright ____ layer.",answers:["red"],explanation:"Red oil layer."},
+  {type:"mcq",question:"Emulsion test sequence:",options:["Add water then ethanol","Ethanol then water","Iodine then ethanol"],answer:1,explanation:"Ethanol first, then water."},
+  {type:"fill",question:"Positive emulsion test gives ____ white appearance.",answers:["cloudy","milky"],explanation:"Cloudy/milky white."},
+  {type:"mcq",question:"Correct sample prep order:",options:["Grind→add water→stir→filter","Filter→grind→add water→stir","Add iodine→grind→filter→stir"],answer:0,explanation:"Grind, add water, stir, filter."},
+  {type:"mcq",question:"Which water used for sample?",options:["Tap","Distilled","Sea"],answer:1,explanation:"Distilled water."},
+  {type:"mcq",question:"Safety: during Benedict’s heating you must:",options:["Point tube to yourself","Hold with bare hand","Use holder, point away"],answer:2,explanation:"Use holder, point away."},
+  {type:"mcq",question:"Benedict detects:",options:["Reducing sugars","Proteins","Starch"],answer:0,explanation:"Reducing sugars."},
+  {type:"mcq",question:"Iodine detects:",options:["Lipids","Starch","Protein"],answer:1,explanation:"Starch."},
+  {type:"fill",question:"Lipids are ______ in water.",answers:["insoluble","hydrophobic"],explanation:"Lipids are insoluble in water."},
+  {type:"mcq",question:"Edexcel Biuret detail reagents:",options:["CuSO4 then KOH","KOH then CuSO4","Ethanol then iodine"],answer:1,explanation:"KOH then CuSO4."},
+  {type:"mcq",question:"Key step before adding water in emulsion test:",options:["Boil sample","Shake with ethanol","Filter twice"],answer:1,explanation:"Shake with ethanol first."},
+  {type:"fill",question:"Sample volume for Benedict’s and iodine tests is ____ cm³.",answers:["5"],explanation:"5 cm³ sample."}
+];
+let current=0,score=0,order=[];
+function startGame(){order=Array.from(questions.keys()).sort(()=>Math.random()-0.5);current=0;score=0;showQ();}
+function showQ(){const q=questions[order[current]];let html=`<div class='question-box'><p><b>Q${current+1}/${questions.length}:</b> ${q.question}</p>`;if(q.type==="mcq"){q.options.forEach((o,i)=>{html+=`<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`});html+=`<button onclick='checkMCQ()'>Submit</button>`;}else{html+=`<input id='fill' type='text'><button onclick='checkFill()'>Submit</button>`;}html+=`<div id='fb' class='feedback'></div></div>`;document.getElementById("game-area").innerHTML=html;}
+function checkMCQ(){const q=questions[order[current]];const p=document.querySelector("input[name='opt']:checked");const fb=document.getElementById("fb");if(!p){fb.textContent="Choose an answer";return;}if(parseInt(p.value)==q.answer){score++;fb.textContent="Correct: "+q.explanation;fb.className="feedback correct";}else{fb.textContent="Incorrect: "+q.explanation;fb.className="feedback incorrect";}setTimeout(nextQ,1200);}
+function checkFill(){const q=questions[order[current]];const fb=document.getElementById("fb");const val=norm(document.getElementById("fill").value);if(!val){fb.textContent="Type an answer";return;}const ok=(q.answers||[]).some(a=>val.includes(a));if(ok){score++;fb.textContent="Correct: "+q.explanation;fb.className="feedback correct";}else{fb.textContent="Incorrect: "+q.explanation;fb.className="feedback incorrect";}setTimeout(nextQ,1200);}
+function nextQ(){current++;if(current<questions.length)showQ();else endGame();}
+function endGame(){document.getElementById("game-area").innerHTML=`<h3>Game Over</h3><p>Your score: ${score}/${questions.length}</p><button onclick='startGame()'>Play Again</button>`;}
+</script>
+</body>
+</html>
