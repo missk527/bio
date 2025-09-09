@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Microscopy, Units & Magnification — Superscript Quiz</title>
+  <style>
+    :root{ --brand:#4CAF50; --paper:#fffef7; --ink:#333; }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Arial, system-ui, sans-serif; background:#f9f9f9; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #e0e0e0 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:16px 20px; text-align:center; font-size:1.4rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .video-container{ display:flex; justify-content:center; margin-top:20px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #ccc; border-radius:10px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.15)}
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .notes,.game{ background:var(--paper); border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.08); padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:var(--brand); border-bottom:2px solid #c8e6c9; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:bold; color:#2e7d32 }
+    .katex-like{ font-family:monospace; background:#f6f8fa; border:1px solid #e1e4e8; border-radius:6px; padding:2px 6px }
+    .flex{ display:flex; gap:12px; flex-wrap:wrap }
+    .pill{ background:#e8f5e9; border:1px solid #c8e6c9; border-radius:999px; padding:2px 10px; font-size:.9rem }
+    .question-box{ border:1px solid #e0e0e0; border-radius:10px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:8px; padding:8px 14px; font-weight:bold; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:10px }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } .grid-2{ grid-template-columns:1fr } }
+  </style>
+</head>
+<body>
+<header>Microscopy, Units & Magnification — Superscript Quiz</header>
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/WFXu7aAlB3Q" title="Microscopy, Units & Magnification" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="notes">
+    <h2>Key Notes</h2>
+
+    <details open>
+      <summary>Units of Length and Powers of Ten</summary>
+      <div class="grid-2">
+        <div>
+          <ul>
+            <li><b>Base unit:</b> meter (m).</li>
+            <li><b>Kilometer (km):</b> <span class="katex-like">10³ m = 1,000 m</span></li>
+            <li><b>Millimeter (mm):</b> <span class="katex-like">10⁻³ m = 0.001 m</span></li>
+            <li><b>Micrometer (μm):</b> <span class="katex-like">10⁻⁶ m</span></li>
+            <li><b>Nanometer (nm):</b> <span class="katex-like">10⁻⁹ m</span></li>
+            <li><b>Exception:</b> centimeter (cm) = <span class="katex-like">10⁻² m = 10 mm</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="flex">
+            <span class="pill">Human height: ~1.5–2 m</span>
+            <span class="pill">Tallest building: ~1 km</span>
+            <span class="pill">Ant: a few mm</span>
+            <span class="pill">Eukaryotic cell: ~10 μm</span>
+            <span class="pill">Virus: ~100 nm</span>
+            <span class="pill">Atom: &lt;1 nm</span>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Resolution and Microscopes</summary>
+      <ul>
+        <li><b>Resolution:</b> shortest distance between two points still seen as separate.</li>
+        <li><b>Light microscopes:</b> ~0.2 μm resolution (wavelength of light); show whole cells but not fine organelles.</li>
+        <li><b>Electron microscopes:</b> ~0.1 nm (wavelength of electrons); ~2000× finer detail.</li>
+      </ul>
+      <p class="muted">Magnification without resolution just makes a bigger blur—like zooming into a low-quality photo.</p>
+    </details>
+
+    <details>
+      <summary>Magnification</summary>
+      <ul>
+        <li><b>Formula:</b> <span class="katex-like">Magnification = Image size ÷ Real size</span></li>
+        <li><b>Rule:</b> convert to the same unit before calculating.</li>
+        <li><b>Example:</b> 30 μm cell appears 30 mm → <span class="katex-like">30 mm ÷ 30 μm = 1000×</span></li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="game">
+    <h2>Quiz (30 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+const questions = [
+  // 1–8 unchanged MCQ
+  {type:"mcq", question:"1 km equals how many meters?", options:["10² m","10³ m","10⁻³ m"], answer:1, explanation:"1 km = 10³ m."},
+  {type:"mcq", question:"1 mm equals how many meters?", options:["10⁻² m","10⁻³ m","10⁻⁶ m"], answer:1, explanation:"1 mm = 10⁻³ m."},
+
+  // 3 (was fill) → MCQ with superscripts
+  {type:"mcq", question:"1 μm equals how many meters?", options:["10⁻⁶ m","10⁻⁹ m","10⁻³ m"], answer:0, explanation:"1 μm = 10⁻⁶ m."},
+
+  // 4 (was fill) → MCQ with superscripts
+  {type:"mcq", question:"1 nm equals how many meters?", options:["10⁻⁶ m","10⁻⁹ m","10⁻² m"], answer:1, explanation:"1 nm = 10⁻⁹ m."},
+
+  {type:"mcq", question:"Which unit is the exception to the 10³ step pattern?", options:["cm","mm","nm"], answer:0, explanation:"cm = 10⁻² m = 10 mm."},
+  {type:"mcq", question:"Dividing 1 m by 10 three times equals?", options:["0.1 m","0.01 m","0.001 m"], answer:2, explanation:"=0.001 m = 10⁻³ m."},
+  {type:"mcq", question:"Which is smallest?", options:["10 μm","100 nm","1 mm"], answer:1, explanation:"100 nm is 0.1 μm, smallest."},
+  {type:"mcq", question:"Below what size is it hard to see details with the naked eye?", options:[">1 cm","<1 mm","~1 m"], answer:1, explanation:"Smaller than ~1 mm is difficult."},
+
+  // 9–11 unchanged
+  {type:"mcq", question:"Typical size of a eukaryotic cell?", options:["~10 μm","~100 nm","~1 mm"], answer:0, explanation:"Eukaryotic cell ~10 μm."},
+  {type:"mcq", question:"Typical size of a virus?", options:["~10 μm","~100 nm","~1 m"], answer:1, explanation:"Virus ~100 nm."},
+  {type:"mcq", question:"Atom size scale?", options:["<1 nm","~10 μm","~1 mm"], answer:0, explanation:"Atoms <1 nm."},
+
+  // 12 stays fill (no superscripts)
+  {type:"fill", question:"Resolution = shortest ______ between two distinguishable points.", answerText:"distance", explanation:"Resolution is shortest distance."},
+
+  // 13–15 unchanged MCQ
+  {type:"mcq", question:"Resolution of light microscope?", options:["2 μm","0.2 μm","0.02 μm"], answer:1, explanation:"~0.2 μm."},
+  {type:"mcq", question:"Electron microscopes are limited by wavelength of what?", options:["Light","Electrons","Sound"], answer:1, explanation:"Electrons."},
+  {type:"mcq", question:"Electron microscope ~0.1 nm vs 0.2 μm for light microscopes: ~how many times finer?", options:["20×","200×","2000×"], answer:2, explanation:"200 nm ÷ 0.1 nm = 2000."},
+
+  // 16 stays fill (no superscripts)
+  {type:"fill", question:"Magnification = ______ size ÷ ______ size", answerText:"image;object", explanation:"Image ÷ Object."},
+
+  {type:"mcq", question:"Key rule when calculating magnification?", options:["Units can be mixed","Units must be the same","Only use meters"], answer:1, explanation:"Same units required."},
+  {type:"mcq", question:"30 μm object looks 30 mm. Magnification?", options:["10×","100×","1000×"], answer:2, explanation:"=1000×."},
+
+  // 19 (was fill with superscripts) → MCQ
+  {type:"mcq", question:"Which conversion pair is correct?", options:[
+      "30 mm = 30×10⁻⁶ m ; 30 μm = 30×10⁻³ m",
+      "30 mm = 30×10⁻³ m ; 30 μm = 30×10⁻⁶ m",
+      "30 mm = 30×10³ m ; 30 μm = 30×10⁶ m"
+    ], answer:1, explanation:"30 mm = 30×10⁻³ m ; 30 μm = 30×10⁻⁶ m."
+  },
+
+  {type:"mcq", question:"Limitation of clarity comes from?", options:["Resolution","Exposure","Lens focal length"], answer:0, explanation:"Resolution."},
+
+  // 21–22 keep fill (no superscripts)
+  {type:"fill", question:"1 mm = ______ μm", answerText:"1000", explanation:"1 mm = 1000 μm."},
+  {type:"fill", question:"2 μm = ______ nm", answerText:"2000", explanation:"2 μm = 2000 nm."},
+
+  {type:"mcq", question:"Which is largest?", options:["0.5 mm","500 μm","5×10^5 nm"], answer:0, explanation:"All equal, but 0.5 mm chosen."},
+  {type:"mcq", question:"45 mm image, 15 μm object. Magnification?", options:["1000×","2000×","3000×"], answer:2, explanation:"=3000×."},
+  {type:"mcq", question:"At 0.2 μm resolution, which pair can be distinguished?", options:["0.1 μm apart","0.2 μm apart","0.05 μm apart"], answer:1, explanation:"≥0.2 μm needed."},
+
+  {type:"mcq", question:"Which microscope sees finer subcellular details?", options:["Light","Electron","Magnifying glass"], answer:1, explanation:"Electron microscope."},
+
+  // 27 stays fill (no superscripts)
+  {type:"fill", question:"Naked eye = vision without ______.", answerText:"special equipment", explanation:"No equipment."},
+
+  {type:"mcq", question:"Zooming into a low-res photo makes it:", options:["Clearer","Blurrier","Same"], answer:1, explanation:"Blurrier."},
+  {type:"mcq", question:"Correct conversion?", options:["1 cm = 10 mm","1 cm = 0.1 mm","1 cm = 100 mm"], answer:0, explanation:"1 cm = 10 mm."},
+
+  // 30 (was fill with superscripts) → MCQ
+  {type:"mcq", question:"Multiplying by 10⁻³ is the same as dividing by ______.", options:["10³","10²","10⁻³"], answer:0, explanation:"10⁻³ × is the same as ÷10³."},
+
+  {type:"mcq", question:"8 μm object appears 24 mm. Magnification?", options:["1000×","2000×","3000×"], answer:2, explanation:"24/8=3, ×10³ = 3000×."},
+  {type:"mcq", question:"12 μm object appears 12 mm. Magnification?", options:["1000×","1500×","2000×"], answer:0, explanation:"12 mm ÷ 12 μm = 1000×."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let order = [];
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const game = document.getElementById("game-area");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`;});
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  game.querySelector("#game-area-inner") ? game.querySelector("#game-area-inner").innerHTML = html : game.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`);
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.answer){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  if(ans.includes(q.answerText.toLowerCase())){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else endGame();
+}
+
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${questions.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
