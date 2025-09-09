@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gas Exchange in the Lungs</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gas Exchange in the Lungs — Video, Notes & Quiz</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/NPXgJXtArfQ" title="Gas Exchange Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: structure and function of the lungs and how alveoli are adapted for gas exchange.</p>
+
+      <details open>
+        <summary>1) Big Picture</summary>
+        <ul>
+          <li>The lungs move <strong>oxygen</strong> from air into the blood and remove <strong>carbon dioxide</strong> from the blood to the air.</li>
+          <li>Cells need oxygen to carry out <strong>aerobic respiration</strong> (to release energy). CO<sub>2</sub> is a waste product of this process.</li>
+          <li>Gas exchange happens in the <strong>alveoli</strong> (singular: alveolus).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Airway Pathway</summary>
+        <ul>
+          <li>Air enters via <strong>nose or mouth</strong> → down the <strong>trachea</strong> (windpipe).</li>
+          <li>The trachea divides into two <strong>bronchi</strong> → repeatedly branch into <strong>bronchioles</strong>.</li>
+          <li>Bronchioles end in clusters of tiny air sacs: <strong>alveoli</strong>, like bunches of grapes.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Alveolar Adaptations for Rapid Diffusion</summary>
+        <ul>
+          <li><span class="pill">Thin barrier</span> Alveolar wall and capillary wall are each <strong>one cell thick</strong> → <em>very short diffusion distance</em>.</li>
+          <li><span class="pill">Huge surface area</span> Hundreds of millions of alveoli in adults → combined area ≈ <em>about half a tennis court</em>.</li>
+          <li><span class="pill">Moist lining</span> Gases dissolve in the thin moisture layer → faster diffusion.</li>
+          <li><span class="pill">Rich blood supply & continuous flow</span> Capillaries constantly bring <strong>deoxygenated blood</strong> and carry away <strong>oxygenated blood</strong>, maintaining steep concentration gradients.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) What Diffuses and How It’s Carried</summary>
+        <ul>
+          <li><strong>Oxygen</strong>: high in alveoli, low in incoming blood → diffuses into capillaries; then carried by <strong>haemoglobin in red blood cells</strong>.</li>
+          <li><strong>Carbon dioxide</strong>: higher in blood than in alveoli → diffuses into alveoli and is exhaled. It is carried mainly <strong>dissolved in blood plasma</strong> (not bound to haemoglobin, in this context).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Breathing Rate Calculation</summary>
+        <ul>
+          <li>Breathing rate (breaths per minute) = <code>number of breaths ÷ time (in minutes)</code>.</li>
+          <li>Example: 42 breaths in 3 minutes → <code>42 ÷ 3 = 14 breaths·min⁻¹</code>.</li>
+          <li>During exercise your rate increases to deliver more O<sub>2</sub> and remove more CO<sub>2</sub>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (30 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Gas Exchange Study Helper</p>
+  </div>
+
+<script>
+// 30 quiz questions (based on the speech/notes)
+const questions = [
+  // 1
+  {type:"mcq", question:"Where does gas exchange occur in the lungs?", options:["Bronchi","Bronchioles","Alveoli"], answer:2,
+   explanation:"Gas exchange occurs across the thin walls of the alveoli."},
+  // 2
+  {type:"mcq", question:"Which path is correct for incoming air?", options:["Mouth/Nose → Bronchioles → Trachea","Mouth/Nose → Trachea → Bronchi → Bronchioles → Alveoli","Trachea → Mouth/Nose → Bronchi → Alveoli"], answer:1,
+   explanation:"Air moves from mouth/nose to trachea, then bronchi, bronchioles, and finally alveoli."},
+  // 3
+  {type:"fill", question:"Cells require oxygen for ______ respiration.", answerText:"aerobic",
+   explanation:"Oxygen is needed for aerobic respiration."},
+  // 4
+  {type:"mcq", question:"What is the main role of the lungs?", options:["Pump blood around the body","Move oxygen into blood and remove carbon dioxide","Digest nutrients"], answer:1,
+   explanation:"The lungs exchange gases: O2 into blood, CO2 out."},
+  // 5
+  {type:"mcq", question:"Alveolar and capillary walls are:", options:["Thick and multi-layered","One cell thick","Made of muscle"], answer:1,
+   explanation:"They are one cell thick, creating a very short diffusion distance."},
+  // 6
+  {type:"fill", question:"Alveoli are arranged in clusters that look like bunches of ______.", answerText:"grapes",
+   explanation:"Alveoli form grape-like clusters."},
+  // 7
+  {type:"mcq", question:"Which feature most directly increases diffusion speed by reducing distance?", options:["Moist lining","One-cell-thick walls","Large surface area"], answer:1,
+   explanation:"A shorter diffusion pathway speeds up diffusion."},
+  // 8
+  {type:"mcq", question:"Oxygen in the blood is mainly carried by:", options:["Plasma","Platelets","Haemoglobin in red blood cells"], answer:2,
+   explanation:"Oxygen binds to haemoglobin inside RBCs."},
+  // 9
+  {type:"mcq", question:"Carbon dioxide is carried primarily:", options:["Bound to haemoglobin","Dissolved in plasma","Inside white blood cells"], answer:1,
+   explanation:"In this context CO2 is mainly transported dissolved in plasma."},
+  // 10
+  {type:"fill", question:"The trachea is also called the ______.", answerText:"windpipe",
+   explanation:"'Trachea' is commonly known as the windpipe."},
+  // 11
+  {type:"mcq", question:"Why does oxygen diffuse from alveoli into blood?", options:["Higher O2 in blood than alveoli","Equal O2 levels","Higher O2 in alveoli than blood"], answer:2,
+   explanation:"A steep concentration gradient drives diffusion."},
+  // 12
+  {type:"mcq", question:"Which statement about surface area is true?", options:["Adults have only a few thousand alveoli","Alveoli collectively create a very large surface area","Surface area is small to slow diffusion"], answer:1,
+   explanation:"Hundreds of millions of alveoli produce a huge surface area."},
+  // 13
+  {type:"fill", question:"Moist alveolar walls help gases ______ before diffusing.", answerText:"dissolve",
+   explanation:"Dissolving in moisture speeds diffusion."},
+  // 14
+  {type:"mcq", question:"Which structure directly precedes the alveoli?", options:["Bronchi","Bronchioles","Trachea"], answer:1,
+   explanation:"Bronchioles end in alveolar sacs."},
+  // 15
+  {type:"mcq", question:"Continuous blood flow around alveoli helps by:", options:["Flattening the lungs","Maintaining steep concentration gradients","Cooling the body"], answer:1,
+   explanation:"Fresh deoxygenated blood keeps gradients steep."},
+  // 16
+  {type:"fill", question:"Breathing rate (breaths·min⁻¹) = number of breaths ÷ ______ (in minutes).", answerText:"time",
+   explanation:"Divide by the time interval in minutes."},
+  // 17
+  {type:"mcq", question:"42 breaths in 3 minutes equals:", options:["12 breaths·min⁻¹","14 breaths·min⁻¹","18 breaths·min⁻¹"], answer:1,
+   explanation:"42 ÷ 3 = 14 breaths per minute."},
+  // 18
+  {type:"mcq", question:"Which best describes bronchi?", options:["Single tube entering each lung from the trachea","Tiny sacs for gas exchange","Smallest airway branches"], answer:0,
+   explanation:"The trachea splits into the left and right bronchi."},
+  // 19
+  {type:"mcq", question:"During exercise, breathing rate increases mainly to:", options:["Reduce body temperature","Deliver more O2 and remove more CO2","Increase heart size"], answer:1,
+   explanation:"Increased ventilation meets higher metabolic demand."},
+  // 20
+  {type:"fill", question:"An individual air sac is called an ______.", answerText:"alveolus",
+   explanation:"Plural: alveoli; singular: alveolus."},
+  // 21
+  {type:"mcq", question:"Which pairing is correct?", options:["CO2 high in alveoli → into blood","O2 high in blood → into alveoli","CO2 high in blood → into alveoli"], answer:2,
+   explanation:"CO2 diffuses from blood (higher) to alveoli (lower)."},
+  // 22
+  {type:"mcq", question:"Short diffusion distance is achieved because:", options:["Alveolar walls are moist","Walls are one cell thick","Lungs are inside the rib cage"], answer:1,
+   explanation:"One-cell-thick walls minimize distance."},
+  // 23
+  {type:"fill", question:"The tiny blood vessels surrounding alveoli are called ______.", answerText:"capillaries",
+   explanation:"Capillaries form a dense network around alveoli."},
+  // 24
+  {type:"mcq", question:"Which statement about haemoglobin here is correct?", options:["It mainly carries CO2","It carries O2 in red blood cells","It digests nutrients"], answer:1,
+   explanation:"Haemoglobin binds and transports oxygen."},
+  // 25
+  {type:"mcq", question:"Which feature primarily increases the <em>amount</em> of gas that can diffuse at once?", options:["Large surface area","Moist lining","One-cell thickness"], answer:0,
+   explanation:"More surface area allows more gas to diffuse simultaneously."},
+  // 26
+  {type:"fill", question:"The smallest airway branches that lead to alveoli are ______.", answerText:"bronchioles",
+   explanation:"Bronchi branch repeatedly into bronchioles."},
+  // 27
+  {type:"mcq", question:"Why is constant blood movement important at the alveoli?", options:["Prevents clotting only","Keeps oxygen levels low in incoming blood and CO2 high, sustaining diffusion","Warms the air"], answer:1,
+   explanation:"Flow preserves steep gradients for O2 and CO2."},
+  // 28
+  {type:"mcq", question:"Which of the following is NOT a function mentioned for red blood cells here?", options:["Carrying oxygen via haemoglobin","Carrying carbon dioxide in plasma","Traveling through capillaries"], answer:1,
+   explanation:"CO2 in this explanation is carried mainly in plasma, not by RBCs."},
+  // 29
+  {type:"fill", question:"Another term for the trachea is the ______.", answerText:"windpipe",
+   explanation:"Same as Q10; reinforces key term."},
+  // 30
+  {type:"mcq", question:"Alveoli look like:", options:["Stacks of plates","Bunches of grapes","Solid balls of muscle"], answer:1,
+   explanation:"They are clustered grape-like sacs to maximize area."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
