@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cell Differentiation & Stem Cells</title>
+  <style>
+    :root{ --brand:#4CAF50; --paper:#fffef7; --ink:#333; }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Arial, system-ui, sans-serif; background:#f9f9f9; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #e0e0e0 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:16px 20px; text-align:center; font-size:1.4rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .video-container{ display:flex; justify-content:center; margin-top:20px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #ccc; border-radius:10px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.15)}
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .notes,.game{ background:var(--paper); border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.08); padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:var(--brand); border-bottom:2px solid #c8e6c9; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:bold; color:#2e7d32 }
+    .flex{ display:flex; gap:12px; flex-wrap:wrap }
+    .pill{ background:#e8f5e9; border:1px solid #c8e6c9; border-radius:999px; padding:2px 10px; font-size:.9rem }
+    .question-box{ border:1px solid #e0e0e0; border-radius:10px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:8px; padding:8px 14px; font-weight:bold; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:10px }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } .grid-2{ grid-template-columns:1fr } }
+    .small{font-size:.95rem}
+  </style>
+</head>
+<body>
+<header>Cell Differentiation & Stem Cells</header>
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/lA2iRRgc9Oo" title="Cell Differentiation & Stem Cells" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="notes">
+    <h2>Key Notes (rewritten from the speech)</h2>
+
+    <details open>
+      <summary>Undifferentiated vs. Specialized Cells</summary>
+      <ul>
+        <li><b>Undifferentiated cells</b> (e.g., stem cells) have not yet adopted a specific structure or function.</li>
+        <li><b>Specialized cells</b> have distinct shapes, organelles, and roles (e.g., nerve cells, muscle cells, sperm, egg).</li>
+        <li>Multicellular organisms need many cell types—like a building needs many materials.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Start of Life & Gametes</summary>
+      <ul>
+        <li>In animals, life begins when a <b>sperm cell</b> fertilizes an <b>egg cell</b>.</li>
+        <li>Both gametes are <b>specialized</b>:
+          <ul>
+            <li><b>Sperm:</b> small; delivers the father’s DNA; contains many mitochondria for tail movement.</li>
+            <li><b>Egg:</b> large; stores nutrients to start development.</li>
+          </ul>
+        </li>
+        <li>Each gamete carries <b>half</b> the usual DNA (haploid), so the zygote has the normal amount after fusion.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>From Zygote to Stem Cells</summary>
+      <ul>
+        <li>After fertilization, the zygote divides into a cluster of identical cells.</li>
+        <li>These early cells are <b>embryonic stem cells</b>: fully undifferentiated and capable of becoming any cell type.</li>
+        <li><b>Differentiation</b> = the process by which cells become specialized for specific functions.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Examples of Specialized Animal Cells</summary>
+      <ul>
+        <li><b>Muscle cells:</b> elongated, packed with mitochondria to power contraction.</li>
+        <li><b>Nerve cells (neurons):</b> adapted for rapid signaling (covered in more detail elsewhere).</li>
+        <li><b>Sperm cells:</b> streamlined for motility and DNA delivery.</li>
+      </ul>
+      <p class="small">In fully developed animals, most cells are fixed in their roles and can no longer differentiate.</p>
+    </details>
+
+    <details>
+      <summary>Adult Stem Cells</summary>
+      <ul>
+        <li>Some undifferentiated cells remain in adults—especially in the <b>bone marrow</b>.</li>
+        <li><b>Adult stem cells</b> mainly produce different kinds of <b>blood cells</b> (limited potency).</li>
+        <li>They help replace lost or damaged cells (e.g., skin, blood).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Plants: Specialization & Meristems</summary>
+      <ul>
+        <li>Plants also have specialized cells:
+          <ul>
+            <li><b>Root hair cells:</b> increase surface area for water and mineral uptake.</li>
+            <li><b>Phloem cells:</b> transport sugars and other nutrients.</li>
+            <li><b>Xylem cells:</b> transport water.</li>
+          </ul>
+        </li>
+        <li><b>Meristems</b> are growth regions that stay stem-cell-like throughout life (do not fully differentiate).</li>
+        <li>Small cuttings can be used to <b>clone</b> plants quickly and cheaply.</li>
+        <li>Applications: propagate rare species; mass-produce identical crops with desirable traits (e.g., large fruits).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Medical Uses of Stem Cells</summary>
+      <ul>
+        <li>Two key animal stem cell types:
+          <ul>
+            <li><b>Embryonic stem cells:</b> can become <i>any</i> cell type.</li>
+            <li><b>Adult stem cells (bone marrow):</b> limited to blood cell lineages.</li>
+          </ul>
+        </li>
+        <li>In the lab, stem cells are <b>cloned</b> to produce many identical cells for therapy or research.</li>
+        <li>Existing therapy: transfer of <b>bone marrow stem cells</b> to replace faulty blood cells.</li>
+        <li>Potential future therapies (with embryonic stem cells): replace damaged <b>neurons</b> in paralysis; restore <b>insulin-producing cells</b> in diabetes; and many others.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Risks, Rejection & Therapeutic Cloning</summary>
+      <ul>
+        <li><b>Immune rejection:</b> transplanted cells from another person may be recognized as foreign.</li>
+        <li><b>Therapeutic cloning:</b> create an embryo with the patient’s DNA so derived stem cells are <b>genetically matched</b> and less likely to be rejected.</li>
+        <li><b>Infection risk:</b> stem cells grown in the lab could acquire a virus and pass it to the patient.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Ethical & Legal Considerations</summary>
+      <ul>
+        <li>Some object to using human embryos due to their potential for life.</li>
+        <li>Embryos used in research are often <b>surplus from fertility clinics</b> that would otherwise be destroyed.</li>
+        <li>Regulation varies by country; in the <b>UK</b>, stem cell research is legal under <b>strict criteria</b>.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="game">
+    <h2>Quiz (30 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 30-question quiz based on the speech
+const questions = [
+  {type:"mcq", question:"What does 'differentiation' mean in cells?", options:["Cells dividing rapidly","Cells becoming specialized for specific roles","Cells dying in a programmed way"], answer:1, explanation:"Differentiation is the process by which cells become specialized."},
+  {type:"mcq", question:"Which cells are undifferentiated?", options:["Neurons","Skin cells","Stem cells"], answer:2, explanation:"Stem cells are undifferentiated."},
+  {type:"mcq", question:"What is the main role of a sperm cell?", options:["Store nutrients","Transport the father's DNA","Produce insulin"], answer:1, explanation:"Sperm deliver paternal DNA."},
+  {type:"mcq", question:"Why do sperm cells contain many mitochondria?", options:["For photosynthesis","To power tail movement","To store DNA"], answer:1, explanation:"Mitochondria supply energy for motility."},
+  {type:"mcq", question:"Why is the egg cell larger than the sperm cell?", options:["It moves faster","It contains nutrients to start development","It has more mitochondria"], answer:1, explanation:"Eggs store nutrients for the early embryo."},
+  {type:"mcq", question:"How much genetic material does a human gamete have?", options:["The full amount (diploid)","Half the amount (haploid)","Double the amount"], answer:1, explanation:"Gametes are haploid so the zygote becomes diploid."},
+  {type:"mcq", question:"What can embryonic stem cells become?", options:["Only blood cells","Any cell type","Only nerve cells"], answer:1, explanation:"Embryonic stem cells are pluripotent and can form any body cell type."},
+  {type:"mcq", question:"Adult stem cells in bone marrow mainly produce:", options:["Muscle fibers","Blood cells","Neurons"], answer:1, explanation:"Bone marrow stem cells generate blood cell lineages."},
+  {type:"mcq", question:"Which animal cell type is long and packed with mitochondria to support contraction?", options:["Muscle cell","Neuron","Sperm cell"], answer:0, explanation:"Muscle cells are elongated and energy-demanding."},
+  {type:"fill", question:"The process of cells becoming specialized is called ______.", answerText:"differentiation", explanation:"Term from the speech."},
+  {type:"mcq", question:"After fertilization, the zygote first forms a group of:", options:["Identical undifferentiated cells","Mature neurons","Mature muscle fibers"], answer:0, explanation:"Early divisions produce identical stem cells."},
+  {type:"mcq", question:"Most cells in a fully developed animal:", options:["Remain able to differentiate into any type","Are specialized and cannot differentiate further","Are always stem cells"], answer:1, explanation:"Most lose the ability to differentiate."},
+  {type:"fill", question:"Stem cells from early embryos are called ______ stem cells.", answerText:"embryonic", explanation:"Embryonic stem cells."},
+  {type:"mcq", question:"Which plant cell increases surface area for uptake?", options:["Xylem cell","Root hair cell","Phloem cell"], answer:1, explanation:"Root hairs absorb water and minerals."},
+  {type:"mcq", question:"Which tissue transports water in plants?", options:["Phloem","Xylem","Meristem"], answer:1, explanation:"Xylem transports water."},
+  {type:"mcq", question:"Which tissue transports sugars in plants?", options:["Xylem","Phloem","Cuticle"], answer:1, explanation:"Phloem transports sugars and nutrients."},
+  {type:"mcq", question:"What are meristems in plants?", options:["Storage tissues","Regions that stay stem-cell-like and drive growth","Photosynthetic tissues"], answer:1, explanation:"Meristems contain dividing, undifferentiated cells."},
+  {type:"mcq", question:"Why can small plant cuttings produce clones?", options:["Plant cells do not divide","Meristem cells remain undifferentiated","Plants have no immune system"], answer:1, explanation:"Meristems allow cloning and regeneration."},
+  {type:"mcq", question:"A current clinical use of adult stem cells is to replace:", options:["Faulty blood cells","Damaged heart valves","Broken bones"], answer:0, explanation:"Bone marrow transplants replace blood cells."},
+  {type:"mcq", question:"Why are adult stem cells limited in the diseases they can treat?", options:["They cannot divide","They are limited in what they can differentiate into","They are always rejected"], answer:1, explanation:"They mainly form blood cell types."},
+  {type:"mcq", question:"Which potential therapy involves replacing insulin-producing cells?", options:["Treating paralysis","Treating diabetes","Treating fractures"], answer:1, explanation:"Embryonic stem cells could restore beta cells."},
+  {type:"mcq", question:"What is a key risk when growing stem cells in the lab?", options:["They turn into viruses","They may acquire a virus and infect the patient","They cannot divide outside the body"], answer:1, explanation:"Viral contamination is a risk."},
+  {type:"mcq", question:"Why might a patient reject transplanted stem cells from a donor?", options:["They are identical to the patient","They are recognized as foreign by the immune system","They cannot make proteins"], answer:1, explanation:"Immune recognition leads to rejection."},
+  {type:"mcq", question:"Therapeutic cloning aims to:", options:["Make faster-dividing stem cells","Create embryos with the patient’s DNA to reduce rejection","Eliminate the need for labs"], answer:1, explanation:"Genetic match reduces rejection risk."},
+  {type:"fill", question:"Adult stem cells used clinically are commonly taken from the ______ marrow.", answerText:"bone", explanation:"Bone marrow stem cells."},
+  {type:"fill", question:"Plant cloning helps conserve ______ species.", answerText:"rare", explanation:"Rare species can be propagated."},
+  {type:"mcq", question:"An ethical concern about embryonic stem cell research is that embryos:", options:["Have no DNA","Are considered to have potential for human life","Cannot divide"], answer:1, explanation:"Some object on moral grounds."},
+  {type:"mcq", question:"Where do many embryos used in research come from?", options:["Unrelated animal species","Fertility clinics’ surplus embryos","Donor blood"], answer:1, explanation:"Often unwanted embryos from clinics."},
+  {type:"mcq", question:"In the UK, embryonic stem cell research is:", options:["Unregulated and legal","Illegal in all cases","Legal under strict criteria"], answer:2, explanation:"Permitted with strict controls."},
+  {type:"fill", question:"A cluster of early, identical cells formed after fertilization is called an ______.", answerText:"embryo", explanation:"Early embryo contains embryonic stem cells."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let order = [];
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const game = document.getElementById("game-area");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`;});
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  game.querySelector("#game-area-inner") ? game.querySelector("#game-area-inner").innerHTML = html : game.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`);
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.answer){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  if(ans.includes(q.answerText.toLowerCase())){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else endGame();
+}
+
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${questions.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
