@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Heart & Circulatory System</title>
+  <style>
+    :root{ --brand:#e53935; --paper:#fffef7; --ink:#222; }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Arial, system-ui, sans-serif; background:#f9f9f9; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #ececec 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:16px 20px; text-align:center; font-size:1.4rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .video-container{ display:flex; justify-content:center; margin-top:20px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #ccc; border-radius:10px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.15)}
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .notes,.game{ background:var(--paper); border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.08); padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:var(--brand); border-bottom:2px solid #ffcdd2; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:bold; color:#b71c1c }
+    .flex{ display:flex; gap:12px; flex-wrap:wrap }
+    .pill{ background:#ffebee; border:1px solid #ffcdd2; border-radius:999px; padding:2px 10px; font-size:.9rem }
+    .question-box{ border:1px solid #e0e0e0; border-radius:10px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:8px; padding:8px 14px; font-weight:bold; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:10px }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } .grid-2{ grid-template-columns:1fr } }
+    .small{font-size:.95rem}
+  </style>
+</head>
+<body>
+<header>The Heart & Circulatory System</header>
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/MMWDVnatceA" title="Heart & Circulatory System" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="notes">
+    <h2>Key Notes (rewritten from the speech)</h2>
+
+    <details open>
+      <summary>What the Circulatory System Does</summary>
+      <ul>
+        <li>The circulatory system is an <b>organ system</b> that transports <b>oxygen</b> and <b>nutrients</b> to tissues and carries wastes away.</li>
+        <li>It relies on three parts: <span class="pill">blood</span> (the transport medium), <span class="pill">blood vessels</span> (tubes), and the <span class="pill">heart</span> (the pump).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Double Circulation: Two Loops</summary>
+      <ul>
+        <li><b>Pulmonary loop:</b> carries <i>deoxygenated</i> blood from the heart to the lungs, gains oxygen, then returns <i>oxygenated</i> blood to the heart.</li>
+        <li><b>Systemic loop:</b> sends <i>oxygenated</i> blood from the heart to the body’s tissues, where oxygen is used, and returns <i>deoxygenated</i> blood to the heart.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Heart Structure & Orientation</summary>
+      <ul>
+        <li>The heart has <b>four chambers</b>: two <b>atria</b> at the top and two <b>ventricles</b> at the bottom, with thick muscular walls.</li>
+        <li>In most diagrams you view the heart as if facing a person: the heart’s <b>left side appears on your right</b>, and the <b>right side on your left</b>.</li>
+        <li><b>Valves</b> between chambers and vessels prevent backflow and keep blood moving in one direction.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Path of Blood Through the Heart</summary>
+      <ul>
+        <li>Blood enters via the <b>venae cavae</b> (from the body) into the <b>right atrium</b> and via the <b>pulmonary veins</b> (from the lungs) into the <b>left atrium</b>.</li>
+        <li>Both atria contract together, pushing blood into the <b>right</b> and <b>left ventricles</b>.</li>
+        <li>Ventricles then contract: the right ventricle pumps into the <b>pulmonary artery</b> (to the lungs) and the left ventricle pumps into the <b>aorta</b> (to the body).</li>
+        <li>The cycle repeats continuously: ~<b>70 beats per minute</b>, over <b>100,000 beats per day</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Keeping the Beat: Pacemaker</summary>
+      <ul>
+        <li>A group of cells in the <b>right atrium</b> acts as a natural <b>pacemaker</b>, generating electrical impulses that spread through the heart muscle and trigger contraction.</li>
+        <li>If these cells malfunction, doctors can implant an <b>artificial pacemaker</b> under the skin with a lead to the heart to maintain a regular rhythm.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Arteries vs. Veins (and the Pulmonary Exception)</summary>
+      <ul>
+        <li><b>Artery:</b> any vessel that carries blood <b>away</b> from the heart.</li>
+        <li><b>Vein:</b> any vessel that carries blood <b>toward</b> the heart.</li>
+        <li>Most arteries carry oxygenated blood and most veins carry deoxygenated blood, but there are exceptions:</li>
+        <li>The <b>pulmonary artery</b> carries <i>deoxygenated</i> blood to the lungs (still an artery because it goes away from the heart).</li>
+        <li>The <b>pulmonary veins</b> carry <i>oxygenated</i> blood to the heart (veins because they return to the heart).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>The Heart’s Own Blood Supply</summary>
+      <ul>
+        <li>The heart muscle needs oxygen and nutrients too.</li>
+        <li><b>Coronary arteries</b>, small branches from the <b>aorta</b>, encircle the heart and supply the cardiac muscle.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="game">
+    <h2>Quiz (30 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 30-question quiz based on the speech
+const questions = [
+  {type:"mcq", question:"What is the main role of the circulatory system?", options:["Produce hormones","Transport oxygen and nutrients to tissues","Store genetic information"], answer:1, explanation:"It transports oxygen/nutrients to tissues and removes wastes."},
+  {type:"mcq", question:"Which three components make up the circulatory system?", options:["Lungs, liver, kidneys","Blood, blood vessels, heart","Neurons, muscles, bones"], answer:1, explanation:"Blood is the medium, vessels are the tubes, and the heart is the pump."},
+  {type:"mcq", question:"Why is it called a double circulatory system?", options:["It has two hearts","There are two loops: pulmonary and systemic","Blood passes the heart twice per lifetime"], answer:1, explanation:"One loop goes to the lungs, the other to the body."},
+  {type:"mcq", question:"Which loop carries deoxygenated blood from the heart to the lungs?", options:["Systemic loop","Pulmonary loop","Coronary loop"], answer:1, explanation:"The pulmonary loop exchanges gases in the lungs."},
+  {type:"mcq", question:"Which loop delivers oxygenated blood to the body’s tissues?", options:["Pulmonary loop","Systemic loop","Portal loop"], answer:1, explanation:"The systemic loop supplies the body."},
+  {type:"mcq", question:"How many chambers does the human heart have?", options:["Two","Three","Four"], answer:2, explanation:"Two atria and two ventricles."},
+  {type:"mcq", question:"The top chambers of the heart are called:", options:["Ventricles","Atria","Auricles only"], answer:1, explanation:"A single top chamber is an atrium."},
+  {type:"mcq", question:"The bottom chambers of the heart are called:", options:["Ventricles","Atria","Septums"], answer:0, explanation:"Bottom chambers are ventricles."},
+  {type:"mcq", question:"When viewing a heart diagram, why is the left side shown on the right of the page?", options:["It is a printing error","We view it as if facing a person","The heart flips during development"], answer:1, explanation:"Diagrams are oriented as if you face the patient."},
+  {type:"mcq", question:"What is the function of valves in the heart and great vessels?", options:["Speed up blood chemically","Prevent backflow and maintain one-way flow","Exchange oxygen and carbon dioxide"], answer:1, explanation:"Valves ensure unidirectional flow."},
+  {type:"mcq", question:"Which vessels bring blood into the right atrium from the body?", options:["Pulmonary veins","Venae cavae","Coronary arteries"], answer:1, explanation:"Superior and inferior venae cavae return systemic blood."},
+  {type:"mcq", question:"Which vessels bring oxygenated blood from the lungs to the left atrium?", options:["Pulmonary veins","Pulmonary arteries","Aorta"], answer:0, explanation:"Pulmonary veins return oxygenated blood."},
+  {type:"mcq", question:"Where does the right ventricle pump blood to?", options:["Aorta","Pulmonary artery","Coronary sinus"], answer:1, explanation:"The pulmonary artery carries blood to the lungs."},
+  {type:"mcq", question:"Where does the left ventricle pump blood to?", options:["Aorta","Pulmonary artery","Vena cava"], answer:0, explanation:"The aorta supplies the systemic circulation."},
+  {type:"mcq", question:"A typical resting heart rate is approximately:", options:["20 beats per minute","70 beats per minute","170 beats per minute"], answer:1, explanation:"~70 bpm; totals >100,000 beats/day."},
+  {type:"mcq", question:"About how many times does the heart beat per day?", options:["1,000","10,000","Over 100,000"], answer:2, explanation:"Around 70 bpm × 1440 minutes ≈ 100k+."},
+  {type:"mcq", question:"Where are the natural pacemaker cells located?", options:["Left ventricle","Right atrium","Aortic arch"], answer:1, explanation:"A small group in the right atrium sets the rhythm."},
+  {type:"mcq", question:"What do pacemaker cells produce?", options:["Hormones","Electrical impulses","Digestive enzymes"], answer:1, explanation:"Impulses spread through the heart muscle to contract."},
+  {type:"mcq", question:"What can doctors implant when natural pacemaker cells malfunction?", options:["Artificial valve","Artificial pacemaker","Artificial lung"], answer:1, explanation:"A device under the skin with a lead to the heart."},
+  {type:"mcq", question:"By definition, an artery is a vessel that carries blood:", options:["Toward the heart","Away from the heart","Only oxygenated blood"], answer:1, explanation:"Arteries carry blood away from the heart."},
+  {type:"mcq", question:"By definition, a vein is a vessel that carries blood:", options:["Toward the heart","Away from the heart","Only deoxygenated blood"], answer:0, explanation:"Veins carry blood to the heart."},
+  {type:"mcq", question:"Which artery uniquely carries deoxygenated blood in normal circulation?", options:["Aorta","Pulmonary artery","Coronary artery"], answer:1, explanation:"Pulmonary artery carries deoxygenated blood to lungs."},
+  {type:"mcq", question:"Which veins uniquely carry oxygenated blood in normal circulation?", options:["Pulmonary veins","Venae cavae","Hepatic veins"], answer:0, explanation:"Pulmonary veins return oxygenated blood to the left atrium."},
+  {type:"mcq", question:"What vessels supply the heart muscle itself with oxygenated blood?", options:["Pulmonary arteries","Coronary arteries","Carotid arteries"], answer:1, explanation:"Coronary arteries branch from the aorta."},
+  {type:"fill", question:"The circulatory system includes blood, blood vessels, and the ______.", answerText:"heart", explanation:"These three work together to move substances."},
+  {type:"fill", question:"The two upper heart chambers are called ______ (singular: atrium).", answerText:"atria", explanation:"Top chambers = atria."},
+  {type:"fill", question:"The large artery leaving the left ventricle is the ______.", answerText:"aorta", explanation:"Left ventricle → aorta."},
+  {type:"fill", question:"The vessels returning deoxygenated blood from the body to the right atrium are the ______ ______.", answerText:"venae cavae", explanation:"Superior and inferior venae cavae."},
+  {type:"fill", question:"An artificial ______ can be implanted to maintain a steady heart rhythm.", answerText:"pacemaker", explanation:"Used when natural pacemaker cells fail."},
+  {type:"fill", question:"Small arteries branching from the aorta to feed the heart muscle are called ______ arteries.", answerText:"coronary", explanation:"They encircle and nourish the myocardium."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let order = [];
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const game = document.getElementById("game-area");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`;});
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  game.querySelector("#game-area-inner") ? game.querySelector("#game-area-inner").innerHTML = html : game.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`);
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.answer){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  if(ans.includes(q.answerText.toLowerCase())){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else endGame();
+}
+
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${questions.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
