@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cell Cycle, Chromosomes & Mitosis</title>
+  <style>
+    :root{ --brand:#3f51b5; --paper:#fffef7; --ink:#333; }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Arial, system-ui, sans-serif; background:#f5f7fb; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #e0e0e0 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:16px 20px; text-align:center; font-size:1.4rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .video-container{ display:flex; justify-content:center; margin-top:20px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #ccc; border-radius:10px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.15)}
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .notes,.game{ background:var(--paper); border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.08); padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:var(--brand); border-bottom:2px solid #c5cae9; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:bold; color:#283593 }
+    .question-box{ border:1px solid #e0e0e0; border-radius:10px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:8px; padding:8px 14px; font-weight:bold; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .small{font-size:.95rem}
+  </style>
+</head>
+<body>
+<header>Cell Cycle, Chromosomes & Mitosis</header>
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/jb_BVE4kkjg" title="Cell Cycle, Chromosomes & Mitosis" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="notes">
+    <h2>Key Notes (rewritten from the speech)</h2>
+
+    <details open>
+      <summary>Why organisms need new cells</summary>
+      <ul>
+        <li>All multicellular <b>eukaryotes</b> (humans, plants, walruses, etc.) continually make new cells for <b>growth, development, and repair</b>.</li>
+        <li>Young organisms grow in size; older organisms replace cells that are <b>lost</b> (e.g., shedding skin cells).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>The cell cycle at a glance</summary>
+      <ul>
+        <li>The <b>cell cycle</b> is a cell’s life from its formation to its division into two new cells.</li>
+        <li>Main stages to know:
+          <ol>
+            <li><b>Growth</b> – cell increases in size and number of subcellular structures (e.g., <b>mitochondria</b>, <b>ribosomes</b>).</li>
+            <li><b>DNA replication</b> – the genome is <b>duplicated</b> so each new cell will receive a full copy.</li>
+            <li><b>Mitosis</b> followed by <b>cytokinesis</b> – chromosomes separate, then the cytoplasm and membrane divide to form two daughter cells.</li>
+          </ol>
+        </li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>DNA packaging: from strands to chromosomes</summary>
+      <ul>
+        <li>When a cell is not dividing, DNA exists as long, <b>extended strands</b>.</li>
+        <li>As division approaches, DNA <b>condenses</b> into compact <b>chromosomes</b> (coiled packages of DNA).</li>
+        <li>Each chromosome carries many <b>genes</b> that control characteristics (e.g., eye color).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Chromosome sets and species differences</summary>
+      <ul>
+        <li>Eukaryotic animal cells have <b>pairs</b> of chromosomes—one copy from the <b>mother</b> and one from the <b>father</b>.</li>
+        <li>Humans have <b>23 pairs</b> (46 total). Different species have different numbers, which helps explain why most different species cannot produce <b>fertile offspring</b> together.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Chromosome duplication before mitosis</summary>
+      <ul>
+        <li>Before division, each of the 46 human chromosomes is <b>duplicated</b>.</li>
+        <li>The duplicate stays attached to the original, forming an <b>X-shaped</b> structure of two identical <b>sister chromatids</b> (the two “arms”).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Mitosis: line up, separate, move apart</summary>
+      <ul>
+        <li>All chromosomes <b>align</b> at the cell’s center (the equator).</li>
+        <li>Spindle (cell) fibers attach from opposite sides and pull on each chromatid.</li>
+        <li>Each X is pulled apart so the <b>sister chromatids</b> separate and move to opposite <b>poles</b> of the cell.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Cytokinesis and the outcome</summary>
+      <ul>
+        <li><b>Cytokinesis</b> splits the cytoplasm and cell membrane.</li>
+        <li>Two <b>genetically identical</b> daughter cells form—each has the same DNA as the parent cell and as each other.</li>
+        <li>These cells then support <b>growth, development,</b> or <b>repair</b> and can re-enter the cycle.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="game">
+    <h2>Quiz (35 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 35-question quiz based on the provided speech
+const questions = [
+  {type:"mcq", question:"What is the cell cycle?", options:["The time from an organism's birth to death","The life of a cell from its formation to division","Only the mitosis phase"], answer:1, explanation:"The cell cycle spans a cell’s life from formation until it divides into two cells."},
+  {type:"mcq", question:"Which is NOT one of the three main stages highlighted in the speech?", options:["Growth","DNA replication","Meiosis"], answer:2, explanation:"The stages highlighted were growth, DNA replication, and mitosis/cytokinesis, not meiosis."},
+  {type:"mcq", question:"During the growth stage, cells increase the number of which structures?", options:["Cell walls and chloroplasts only","Mitochondria and ribosomes","Lysosomes only"], answer:1, explanation:"Growth includes more subcellular structures like mitochondria and ribosomes."},
+  {type:"fill", question:"Duplicating the genome before division is called DNA ______.", answerText:"replication", explanation:"DNA replication duplicates the genetic material."},
+  {type:"mcq", question:"When a cell is NOT preparing to divide, its DNA is usually:", options:["Condensed into chromosomes","Spread out as long strands","Absent"], answer:1, explanation:"Non-dividing cells keep DNA as extended strands."},
+  {type:"mcq", question:"Chromosomes are best described as:", options:["Proteins that make ATP","Coiled packages of DNA","Membranes that surround the nucleus"], answer:1, explanation:"Chromosomes are condensed, coiled DNA."},
+  {type:"mcq", question:"Genes on chromosomes control:", options:["Only metabolism","Only movement","Development of characteristics such as eye color"], answer:2, explanation:"Genes influence many traits, like eye color."},
+  {type:"mcq", question:"In eukaryotic animals, chromosome pairs come from:", options:["Two copies from the mother","Two copies from the father","One from each parent"], answer:2, explanation:"One chromosome of each pair comes from each parent."},
+  {type:"mcq", question:"How many total chromosomes do humans have in body cells?", options:["23","46","92"], answer:1, explanation:"Humans have 23 pairs, i.e., 46 chromosomes."},
+  {type:"mcq", question:"Different species have different chromosome numbers. A reason most different species can’t produce fertile offspring together is:", options:["They eat different foods","They have different numbers of chromosomes","They live in different habitats"], answer:1, explanation:"Mismatch in chromosome sets often prevents fertile hybrids."},
+  {type:"mcq", question:"Before mitosis, each chromosome is duplicated and the copies remain attached, forming:", options:["A circle","An X shape","A triangle"], answer:1, explanation:"Duplicated chromosomes appear X-shaped."},
+  {type:"fill", question:"The two identical halves of an X-shaped chromosome are called sister ______.", answerText:"chromatids", explanation:"Each half is a sister chromatid."},
+  {type:"mcq", question:"What ensures each new cell receives a full set of DNA?", options:["Partial DNA replication","Equal separation of sister chromatids during mitosis","Random distribution of genes"], answer:1, explanation:"Mitosis separates sister chromatids equally to opposite poles."},
+  {type:"mcq", question:"At the start of mitosis, chromosomes line up:", options:["At the cell’s center (equator)","At one pole","Outside the cell"], answer:0, explanation:"They align along the center before separation."},
+  {type:"mcq", question:"What attaches to chromatids and pulls them to opposite poles?", options:["Actin rings","Cell (spindle) fibers","Golgi bodies"], answer:1, explanation:"Spindle fibers pull chromatids apart."},
+  {type:"fill", question:"The opposite ends of the cell are called the two ______.", answerText:"poles", explanation:"Spindle fibers pull chromatids to opposite poles."},
+  {type:"mcq", question:"When sister chromatids separate, each becomes:", options:["A gene","A chromosome in its own right","A mitochondrion"], answer:1, explanation:"Separated chromatids are individual chromosomes."},
+  {type:"mcq", question:"Cytokinesis is the division of:", options:["The nucleus only","The cytoplasm and cell membrane","Chromosomes into genes"], answer:1, explanation:"Cytokinesis splits the cytoplasm and membrane."},
+  {type:"mcq", question:"After mitosis and cytokinesis, the two daughter cells are:", options:["Genetically identical to each other and the parent cell","Genetically different from each other","Without DNA"], answer:0, explanation:"Daughter cells are identical copies."},
+  {type:"fill", question:"Each daughter cell receives a ______ set of DNA.", answerText:"full", explanation:"Replication and mitosis ensure a full set."},
+  {type:"mcq", question:"Newly formed daughter cells can contribute to:", options:["Growth only","Repair only","Growth, development, and repair"], answer:2, explanation:"They support all three."},
+  {type:"mcq", question:"The cell cycle concept applies to:", options:["Only humans","All multicellular eukaryotes","Only plants"], answer:1, explanation:"All multicellular eukaryotes rely on it."},
+  {type:"mcq", question:"Shedding skin cells illustrates that older organisms must:", options:["Stop cell division","Continuously replace lost cells","Reduce DNA replication"], answer:1, explanation:"Lost cells are continually replaced."},
+  {type:"fill", question:"Chromosomes contain many ______ that control traits.", answerText:"genes", explanation:"Genes reside on chromosomes."},
+  {type:"mcq", question:"Which best describes DNA before division vs. during division preparation?", options:["Always condensed vs. always spread out","Spread out strands vs. condensed chromosomes","Membrane-bound vs. free-floating"], answer:1, explanation:"It condenses as division approaches."},
+  {type:"mcq", question:"In humans, how many pairs of chromosomes are there?", options:["22","23","24"], answer:1, explanation:"Humans have 23 pairs."},
+  {type:"mcq", question:"What is the purpose of DNA replication before mitosis?", options:["To reduce DNA content","To ensure both daughter cells receive complete genomes","To make different DNA for each daughter"], answer:1, explanation:"Replication makes identical copies for both cells."},
+  {type:"fill", question:"Another term used for cell division of the cytoplasm is ______.", answerText:"cytokinesis", explanation:"Cytokinesis divides the cytoplasm."},
+  {type:"mcq", question:"During alignment at the cell’s center, how many human chromosomes are involved?", options:["46","23","It varies randomly"], answer:0, explanation:"All 46 align in a human body cell."},
+  {type:"mcq", question:"The fibers that attach to chromatids come from:", options:["Either side of the cell (opposite poles)","Only one side of the cell","Outside the organism"], answer:0, explanation:"Spindle fibers extend from both poles."},
+  {type:"fill", question:"The identical DNA on each arm of the X-shaped chromosome reflects prior DNA ______.", answerText:"duplication", explanation:"Chromatids are products of duplication/replication."},
+  {type:"mcq", question:"The two daughter cells produced by mitosis are best described as:", options:["Haploid and different","Diploid and identical","Without organelles"], answer:1, explanation:"They retain the same diploid set and are identical."},
+  {type:"mcq", question:"Increasing the number of ribosomes during growth helps a cell because ribosomes:", options:["Store DNA","Carry out protein synthesis","Make ATP directly"], answer:1, explanation:"Ribosomes synthesize proteins required for growth."},
+  {type:"fill", question:"The alignment of chromosomes at the center occurs before they are pulled to opposite ______.", answerText:"sides", explanation:"They move from the center to opposite sides/poles."},
+  {type:"mcq", question:"Which statement about mitosis in the speech is accurate?", options:["Only a few chromosomes are divided","All chromosomes are divided and their chromatids separate","Chromosomes remain intact as X-shapes in each daughter cell"], answer:1, explanation:"All sister chromatids separate to opposite poles."},
+  {type:"fill", question:"Daughter cells formed by mitosis can re-enter the cell ______ to repeat the process.", answerText:"cycle", explanation:"They can grow, replicate DNA, and divide again."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let order = [];
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const game = document.getElementById("game-area");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`;});
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  game.querySelector("#game-area-inner") ? game.querySelector("#game-area-inner").innerHTML = html : game.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`);
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.answer){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  if(ans.includes(q.answerText.toLowerCase())){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else endGame();
+}
+
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${questions.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
