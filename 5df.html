@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diffusion — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#0d47a1; --paper:#fffef7; --ink:#222; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f3f6fb; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #e7e7e7 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.25rem; letter-spacing:.3px }
+    .small{ opacity:.9; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:var(--brand); border-bottom:2px solid #bbdefb; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#0d47a1 }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#e3f2fd; color:#0d47a1; border:1px solid #bbdefb; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Diffusion — GCSE Notes & Quiz <span class="pill">Passive transport</span></h1>
+    <div class="small">Video + exam-focused notes + 35‑question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/6rQpMaKDxmI" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Exam‑ready key points)</h2>
+
+      <details open>
+        <summary>What is diffusion?</summary>
+        <ul>
+          <li><strong>Definition:</strong> Diffusion is the <em>net</em> movement of particles from an area of <strong>higher concentration</strong> to an area of <strong>lower concentration</strong>.</li>
+          <li>It happens because individual particles move <strong>randomly</strong>. They do <em>not</em> “aim” for low concentration—spread happens by chance over time.</li>
+          <li>If left long enough, particles tend to become <strong>evenly distributed</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Where does diffusion occur?</summary>
+        <ul>
+          <li>In <strong>gases</strong> (e.g., smelling perfume across a room).</li>
+          <li>In <strong>solutions</strong> (e.g., orange squash dispersing in water).</li>
+          <li>Across <strong>partially permeable membranes</strong> (e.g., cell membranes) that allow <em>some</em> particles through.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>What can/can’t pass through cell membranes?</summary>
+        <ul>
+          <li>Generally <strong>small, dissolved molecules</strong> can diffuse: e.g., oxygen, carbon dioxide, water, glucose, amino acids.</li>
+          <li><strong>Larger molecules</strong> like starch and most proteins <strong>cannot</strong> diffuse through the membrane.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Diffusion and cells</summary>
+        <ul>
+          <li>Cells need <strong>oxygen</strong> and <strong>glucose</strong> for respiration. These are high in the <strong>blood</strong> and lower inside cells → they <strong>diffuse into cells</strong>.</li>
+          <li><strong>Carbon dioxide</strong> is a waste of respiration. It builds up inside cells and <strong>diffuses out</strong> into the blood.</li>
+          <li>Blood flow maintains the <strong>concentration gradient</strong> by bringing fresh O<sub>2</sub>/glucose and carrying away CO<sub>2</sub>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Factors affecting the rate of diffusion</summary>
+        <ul>
+          <li><strong>Concentration gradient:</strong> larger difference → faster diffusion.</li>
+          <li><strong>Temperature:</strong> higher temperature → particles have more kinetic energy → faster movement → faster diffusion.</li>
+          <li><strong>Surface area:</strong> larger surface area of the membrane → faster diffusion (more “space” to pass through).</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (35 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Diffusion practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer)
+const questions = [
+  // Basics & definition
+  {type:"mcq", question:"Which is the best definition of diffusion?", options:[
+    "Particles moving from low to high concentration",
+    "Net movement of particles from high to low concentration due to random motion",
+    "Bulk flow driven by a pump",
+    "Active transport using ATP"
+  ], answer:1, explanation:"Diffusion is the net movement from high to low concentration because particles move randomly."},
+
+  {type:"tf", question:"In diffusion, particles deliberately move toward areas of lower concentration.", answer:false, explanation:"Movement is random; no intention is involved."},
+
+  {type:"mcq", question:"Over a long period, diffusion tends to make particles:", options:[
+    "Cluster in one corner",
+    "Form layers",
+    "Evenly distributed",
+    "Stick to membranes"
+  ], answer:2, explanation:"Random movement spreads particles until they become evenly distributed."},
+
+  // Where diffusion happens
+  {type:"mcq", question:"Diffusion occurs in which of the following?", options:[
+    "Gases only",
+    "Solutions only",
+    "Both gases and solutions",
+    "Solids only"
+  ], answer:2, explanation:"Diffusion occurs in gases and in solutions."},
+
+  {type:"mcq", question:"A classroom example of diffusion in a gas is:", options:[
+    "Salt dissolving in water",
+    "Perfume smell spreading across the room",
+    "Ice melting",
+    "Condensation on a window"
+  ], answer:1, explanation:"Perfume molecules spread through air by diffusion."},
+
+  {type:"mcq", question:"A solution example of diffusion is:", options:[
+    "Orange squash dispersing in water",
+    "Sand settling to the bottom",
+    "Oil floating on water",
+    "Boiling water bubbling"
+  ], answer:0, explanation:"Dye molecules spread from high to low concentration in water."},
+
+  // Membranes
+  {type:"mcq", question:"A cell membrane that allows some particles through but not others is:", options:[
+    "Impermeable",
+    "Fully permeable",
+    "Partially (selectively) permeable",
+    "Conductive"
+  ], answer:2, explanation:"Cell membranes are selectively permeable."},
+
+  {type:"mcq", question:"Which molecules are most likely to diffuse through the cell membrane?", options:[
+    "Large proteins and starch",
+    "Small dissolved molecules such as oxygen and glucose",
+    "Whole organelles",
+    "Chromosomes"
+  ], answer:1, explanation:"Small dissolved molecules can pass; large polymers cannot."},
+
+  {type:"tf", question:"Starch usually diffuses easily through cell membranes.", answer:false, explanation:"Starch is large and cannot pass by simple diffusion."},
+
+  // Cells and blood
+  {type:"mcq", question:"Why do oxygen and glucose diffuse from blood into cells?", options:[
+    "Blood is colder",
+    "There is a higher concentration of these substances in the blood than inside cells",
+    "Cells actively pump them out",
+    "They are heavier molecules"
+  ], answer:1, explanation:"A concentration gradient exists: high in blood, low in cells."},
+
+  {type:"mcq", question:"Carbon dioxide produced by respiration moves:", options:[
+    "From the blood into cells by diffusion",
+    "From cells into the blood by diffusion",
+    "Randomly with no net movement",
+    "Only with ATP"
+  ], answer:1, explanation:"CO₂ builds up in cells and diffuses into the blood."},
+
+  {type:"mcq", question:"What maintains the concentration gradient for CO₂ between cells and blood?", options:[
+    "Thicker membranes",
+    "Continuous blood flow carrying CO₂ away",
+    "Lower temperature",
+    "Cell walls"
+  ], answer:1, explanation:"Blood removes CO₂, keeping its concentration low in the blood."},
+
+  // Factors affecting rate
+  {type:"mcq", question:"Increasing the concentration gradient will:", options:[
+    "Decrease the rate of diffusion",
+    "Not change the rate of diffusion",
+    "Increase the rate of diffusion",
+    "Stop diffusion"
+  ], answer:2, explanation:"A steeper gradient speeds up diffusion."},
+
+  {type:"mcq", question:"Higher temperature generally makes diffusion:", options:[
+    "Slower, because particles settle",
+    "Faster, because particles have more kinetic energy",
+    "Impossible, because membranes melt",
+    "Unchanged"
+  ], answer:1, explanation:"More kinetic energy → faster random motion → faster diffusion."},
+
+  {type:"mcq", question:"A membrane with a larger surface area will:", options:[
+    "Have slower diffusion",
+    "Have faster diffusion",
+    "Prevent diffusion entirely",
+    "Only allow osmosis"
+  ], answer:1, explanation:"More area means more space for particles to pass simultaneously."},
+
+  // Concept checks
+  {type:"tf", question:"Diffusion is a passive process that does not require cellular energy (ATP).", answer:true, explanation:"Simple diffusion uses no metabolic energy."},
+
+  {type:"fill", question:"Fill in one word: Diffusion is the net movement from higher to lower ________.", answer:"concentration", explanation:"Net movement down a concentration gradient."},
+
+  {type:"mcq", question:"Which situation best shows diffusion across a membrane?", options:[
+    "Glucose moving from high concentration in blood into a cell",
+    "Water pumped into a cell via ATP",
+    "Protein secretion out of a cell by exocytosis",
+    "Chromosome movement during mitosis"
+  ], answer:0, explanation:"Small molecules diffuse across membranes down their gradients."},
+
+  {type:"mcq", question:"‘Net movement’ means:", options:[
+    "No particles move at all",
+    "As many particles move against the gradient as with it",
+    "Overall, more particles move from high to low concentration than the reverse",
+    "Movement is only in one direction"
+  ], answer:2, explanation:"Individual particles move both ways, but the overall flow is high → low."},
+
+  {type:"tf", question:"Diffusion can make concentrations equal over time if the system is left undisturbed.", answer:true, explanation:"Given enough time, random motion evens out concentrations."},
+
+  // Examples & applications
+  {type:"mcq", question:"Which molecule is LEAST likely to diffuse through a cell membrane by simple diffusion?", options:[
+    "Oxygen",
+    "Carbon dioxide",
+    "Starch",
+    "Water"
+  ], answer:2, explanation:"Starch is large; simple diffusion is unlikely."},
+
+  {type:"mcq", question:"In tissues with high respiration rates, oxygen will diffuse:", options:[
+    "From cells to blood",
+    "From blood to cells",
+    "Not at all",
+    "Only at low temperature"
+  ], answer:1, explanation:"Cells consume O₂, keeping a low intracellular concentration."},
+
+  {type:"fill", question:"Blood carrying away CO₂ helps maintain the concentration ________.", answer:"gradient", explanation:"Removing product maintains a steep gradient."},
+
+  {type:"tf", question:"Diffusion requires a partially permeable membrane to occur.", answer:false, explanation:"Diffusion can happen in open gases/solutions without any membrane."},
+
+  {type:"mcq", question:"Which change would speed up diffusion across a membrane the MOST?", options:[
+    "Decreasing temperature and surface area",
+    "Increasing temperature and surface area",
+    "Decreasing the concentration gradient",
+    "Adding larger molecules"
+  ], answer:1, explanation:"Both higher temperature and larger surface area increase rate."},
+
+  {type:"mcq", question:"If the concentration of glucose is higher inside a cell than in the blood, glucose will:", options:[
+    "Diffuse into the cell",
+    "Diffuse out of the cell",
+    "Not move at all",
+    "Require no gradient"
+  ], answer:1, explanation:"Diffusion goes from higher to lower concentration overall."},
+
+  // Clarifications
+  {type:"tf", question:"Particles ‘choose’ where to go during diffusion.", answer:false, explanation:"There is no choice—only random motion."},
+
+  {type:"mcq", question:"Why is surface area important in organs like alveoli and the small intestine?", options:[
+    "To reduce diffusion rate",
+    "To increase diffusion rate by providing more area",
+    "To stop large molecules",
+    "To lower temperature"
+  ], answer:1, explanation:"Large surface area speeds diffusion of gases/nutrients."},
+
+  {type:"mcq", question:"Which statement about diffusion is TRUE?", options:[
+    "It always requires protein channels and ATP",
+    "It is faster with a steeper concentration gradient",
+    "It only occurs in gases",
+    "It moves particles from low to high concentration"
+  ], answer:1, explanation:"Steeper gradients increase diffusion rates."},
+
+  {type:"fill", question:"Name one small molecule that can diffuse through cell membranes mentioned in the notes.", answer:"oxygen|water|glucose|amino acids|carbon dioxide|co2", explanation:"Any of these small molecules is acceptable."},
+
+  {type:"mcq", question:"Which factor does NOT directly increase diffusion rate?", options:[
+    "Higher temperature",
+    "Larger concentration gradient",
+    "Greater membrane surface area",
+    "Heavier molecular mass and thicker membrane"
+  ], answer:3, explanation:"Heavier molecules and thicker barriers slow diffusion."},
+
+  // Scenario reasoning
+  {type:"mcq", question:"If blood flow stopped around a tissue, diffusion of oxygen into cells would:", options:[
+    "Speed up indefinitely",
+    "Eventually slow as the gradient collapses",
+    "Reverse immediately",
+    "Be unaffected"
+  ], answer:1, explanation:"Without blood removal/supply, gradients flatten and diffusion slows."},
+
+  {type:"tf", question:"Diffusion can move carbon dioxide out of cells without any energy input from the cell.", answer:true, explanation:"It moves down its gradient passively."},
+
+  {type:"mcq", question:"Which best describes the role of randomness in diffusion?", options:[
+    "Particles move in straight lines toward low concentration",
+    "Random motion leads to overall spreading from high to low concentration",
+    "Particles stop moving at low concentration",
+    "Randomness prevents any net movement"
+  ], answer:1, explanation:"Random motion causes net spreading down the gradient."},
+
+  {type:"fill", question:"Complete: Diffusion moves particles down their concentration ________.", answer:"gradient", explanation:"Down the gradient, not up."},
+
+  {type:"mcq", question:"In a closed container of air with perfume added in one corner, what will you observe over time?", options:[
+    "Perfume stays in the corner",
+    "Perfume becomes evenly distributed",
+    "Perfume falls to the bottom",
+    "Perfume disappears"
+  ], answer:1, explanation:"Gas molecules diffuse until evenly spread."},
+
+  {type:"mcq", question:"Which pair correctly matches process and example?", options:[
+    "Diffusion — glucose pumped into cells using ATP",
+    "Diffusion — oxygen entering cells from nearby capillaries",
+    "Diffusion — protein secretion via vesicles",
+    "Diffusion — chromosome separation"
+  ], answer:1, explanation:"Oxygen diffuses from high concentration in blood to lower in cells."},
+
+  {type:"tf", question:"Large proteins typically cross membranes quickly by simple diffusion.", answer:false, explanation:"Large molecules do not pass easily by simple diffusion."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
