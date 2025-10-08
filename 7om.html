@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Osmosis — Notes & 35‑Q Quiz</title>
+  <style>
+    :root{ --brand:#00796b; --paper:#fffef9; --ink:#212121; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f6fbff; color:var(--ink); line-height:1.6; }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10; box-shadow:0 2px 12px rgba(0,0,0,.15) }
+    header h1{ margin:0; font-size:1.25rem; letter-spacing:.2px }
+    .small{ opacity:.9; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000; box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08); padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:#004d40; border-bottom:2px solid #b2dfdb; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#00695c }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#e0f2f1; color:#004d40; border:1px solid #b2dfdb; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Osmosis — Exam Notes & 35‑Q Quiz <span class="pill">Diffusion · Water potential · Cells</span></h1>
+    <div class="small">Video + exam‑focused notes + interactive practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/c_bt2oVHZQI" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>Diffusion vs. Osmosis</summary>
+        <ul>
+          <li><strong>Diffusion:</strong> particles spread from <em>higher</em> to <em>lower</em> concentration.</li>
+          <li><strong>Osmosis:</strong> a <em>special case</em> of diffusion — the movement of <strong>water molecules</strong> across a <strong>partially permeable membrane</strong> from a region of <strong>higher water concentration</strong> to <strong>lower water concentration</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>“Water concentration” & solutes</summary>
+        <ul>
+          <li>“Water concentration” compares the amount of water to the amount of <strong>solutes</strong> (e.g., sugars, salts) dissolved in it.</li>
+          <li>More solute → <strong>lower</strong> water concentration; less solute → <strong>higher</strong> water concentration.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Beaker model (thought experiment)</summary>
+        <ul>
+          <li>Two beakers, equal water volumes. Left has <em>1 g</em> solute; right has <em>3 g</em> solute.</li>
+          <li>Right beaker has <strong>higher solute</strong> and therefore <strong>lower water</strong> concentration.</li>
+          <li>With a <strong>partially permeable membrane</strong> between them, <strong>water diffuses left → right</strong> by osmosis until water concentrations equalize.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Cell membranes & typical direction</summary>
+        <ul>
+          <li>Cell cytoplasm contains many solutes → relatively <strong>low water</strong> concentration inside.</li>
+          <li>Therefore, water outside often <strong>diffuses into cells</strong> by osmosis.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Effects on animal vs. plant cells</summary>
+        <ul>
+          <li><strong>Animal cells:</strong> too much water entry → cell may <strong>burst</strong> (like a balloon).</li>
+          <li><strong>Plant cells:</strong> cell wall stops bursting; cell becomes <strong>turgid</strong> when full of water.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Hypertonic (very sugary) solutions</summary>
+        <ul>
+          <li>Outside water concentration <strong>lower</strong> than inside → water leaves the cell.</li>
+          <li>Excessive water loss → cell becomes <strong>dehydrated</strong>; in plants we describe it as <strong>flaccid</strong>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (35 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Osmosis practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string or pipe-separated options)
+const questions = [
+  // 1
+  {type:"mcq", question:"Osmosis is best defined as the movement of:", options:[
+    "Any particles from low to high concentration across any membrane",
+    "Water molecules across a partially permeable membrane from higher to lower water concentration",
+    "Solutes across a membrane from higher to lower concentration",
+    "Water molecules with the help of protein pumps only"
+  ], answer:1, explanation:"Osmosis is a special case of diffusion: water moving across a partially permeable membrane from higher to lower water concentration."},
+
+  // 2
+  {type:"tf", question:"Diffusion is the spreading out of particles from higher to lower concentration.", answer:true, explanation:"This is the base idea that osmosis builds on."},
+
+  // 3
+  {type:"mcq", question:"Why is osmosis considered a special case of diffusion?", options:[
+    "It involves only gases",
+    "It involves only solute movement",
+    "It refers specifically to the diffusion of water",
+    "It requires energy from ATP"
+  ], answer:2, explanation:"Osmosis is diffusion of water molecules."},
+
+  // 4
+  {type:"mcq", question:"A partially permeable membrane:", options:[
+    "Allows all particles through equally",
+    "Allows water to pass but restricts some solutes",
+    "Blocks water but allows solutes through",
+    "Is found only in plants"
+  ], answer:1, explanation:"It is selectively permeable, typically permitting water to pass."},
+
+  // 5
+  {type:"tf", question:"Higher solute concentration means higher water concentration.", answer:false, explanation:"More solute means proportionally less water."},
+
+  // 6
+  {type:"mcq", question:"In the beaker model, which side has lower water concentration?", options:[
+    "The beaker with 1 g solute",
+    "The beaker with 3 g solute",
+    "Both are the same",
+    "It cannot be determined"
+  ], answer:1, explanation:"The 3 g solute beaker has lower water concentration."},
+
+  // 7
+  {type:"tf", question:"When connected by a partially permeable membrane, water will diffuse from the lower to the higher water concentration.", answer:false, explanation:"Water moves from higher to lower water concentration."},
+
+  // 8
+  {type:"mcq", question:"Osmosis in cells most commonly occurs across the:", options:[
+    "Cell wall",
+    "Cell membrane (plasma membrane)",
+    "Nuclear envelope",
+    "Endoplasmic reticulum"
+  ], answer:1, explanation:"The cell membrane is the partially permeable barrier."},
+
+  // 9
+  {type:"mcq", question:"Cell cytoplasm usually has:", options:[
+    "Few solutes and high water concentration",
+    "Many solutes and relatively lower water concentration",
+    "No solutes and no water",
+    "Only sugars but no salts"
+  ], answer:1, explanation:"Cytoplasm contains many solutes."},
+
+  // 10
+  {type:"tf", question:"Because cytoplasm is relatively concentrated, water outside often diffuses into the cell by osmosis.", answer:true, explanation:"Water moves toward lower water concentration inside."},
+
+  // 11
+  {type:"mcq", question:"If too much water enters an animal cell by osmosis, it may:", options:[
+    "Become turgid but safe",
+    "Shrink immediately",
+    "Burst like a balloon",
+    "Form a cell wall"
+  ], answer:2, explanation:"Animal cells can lyse when overfilled with water."},
+
+  // 12
+  {type:"mcq", question:"In plant cells, excess water entry causes the cell to:", options:[
+    "Burst",
+    "Become turgid due to the cell wall",
+    "Dissolve its cell wall",
+    "Stop photosynthesis"
+  ], answer:1, explanation:"The rigid cell wall prevents bursting; the cell becomes turgid."},
+
+  // 13
+  {type:"tf", question:"A very sugary (hypertonic) external solution has a lower water concentration than the cell interior.", answer:true, explanation:"More solute outside → lower water concentration outside."},
+
+  // 14
+  {type:"mcq", question:"Placing a cell in a very sugary solution will tend to:", options:[
+    "Drive water into the cell",
+    "Drive water out of the cell",
+    "Leave water movement unchanged",
+    "Increase internal water concentration"
+  ], answer:1, explanation:"Water moves from higher to lower water concentration (inside → outside)."},
+
+  // 15
+  {type:"mcq", question:"Excessive water loss from a plant cell in a strong sugar solution makes it:", options:[
+    "Turgid",
+    "Flaccid",
+    "Burst",
+    "Divide rapidly"
+  ], answer:1, explanation:"The speech describes dehydrated plant cells as flaccid."},
+
+  // 16
+  {type:"tf", question:"“Water concentration” compares the amount of water to the amount of solute present.", answer:true, explanation:"It's about the proportion of water versus solutes."},
+
+  // 17
+  {type:"fill", question:"Osmosis is the movement of water molecules across a ______ permeable membrane.", answer:"partially|selectively", explanation:"Both phrases capture the idea from the speech."},
+
+  // 18
+  {type:"fill", question:"Dissolved molecules such as sugars and salts are called ______.", answer:"solutes", explanation:"Solutes lower water concentration."},
+
+  // 19
+  {type:"mcq", question:"Which statement aligns with the beaker example?", options:[
+    "Equal solute masses mean equal water concentration",
+    "More solute corresponds to lower water concentration",
+    "Volume of water alone determines water concentration",
+    "Osmosis moves solute, not water"
+  ], answer:1, explanation:"Water concentration depends on the ratio of water to solute."},
+
+  // 20
+  {type:"tf", question:"It is the proportion of water to solute, not just volume, that determines water concentration.", answer:true, explanation:"Concentration is about proportion."},
+
+  // 21
+  {type:"mcq", question:"Which of the following can cross the partially permeable membrane during osmosis in this context?", options:[
+    "Water",
+    "Large starch molecules",
+    "Proteins only",
+    "All solutes equally"
+  ], answer:0, explanation:"Osmosis refers specifically to water movement."},
+
+  // 22
+  {type:"mcq", question:"What typically prevents plant cells from bursting when water enters?", options:[
+    "Chloroplasts",
+    "Cell wall",
+    "Nucleus",
+    "Centrioles"
+  ], answer:1, explanation:"The rigid cell wall provides structural support."},
+
+  // 23
+  {type:"tf", question:"Animal cells have a cell wall that prevents bursting.", answer:false, explanation:"Animal cells lack a cell wall and can burst if too much water enters."},
+
+  // 24
+  {type:"mcq", question:"When will osmosis stop between two solutions separated by a partially permeable membrane?", options:[
+    "When water concentrations become equal on both sides",
+    "When solute concentrations become infinite",
+    "When temperature falls to zero",
+    "It never stops"
+  ], answer:0, explanation:"Net movement ceases at equal water concentrations."},
+
+  // 25
+  {type:"fill", question:"Cytoplasm usually has a relatively ______ water concentration compared with pure water.", answer:"lower", explanation:"Solutes in cytoplasm lower its water concentration."},
+
+  // 26
+  {type:"mcq", question:"If the outside of a cell has higher water concentration than the inside, osmosis will cause water to:", options:[
+    "Move into the cell",
+    "Move out of the cell",
+    "Not move",
+    "Convert solutes to water"
+  ], answer:0, explanation:"Water moves from higher to lower water concentration."},
+
+  // 27
+  {type:"tf", question:"In a hypertonic solution, water enters the cell by osmosis.", answer:false, explanation:"In hypertonic (very sugary) conditions, water leaves the cell."},
+
+  // 28
+  {type:"mcq", question:"Which phrase correctly matches the plant cell state with its water status?", options:[
+    "Turgid — water loss",
+    "Flaccid — water gain",
+    "Turgid — water gain; Flaccid — water loss",
+    "Flaccid — high internal pressure"
+  ], answer:2, explanation:"Turgid cells are full of water; flaccid cells have lost water."},
+
+  // 29
+  {type:"fill", question:"When a plant cell is full of water and firm, it is described as ______.", answer:"turgid", explanation:"'Turgid' is the term in the speech."},
+
+  // 30
+  {type:"fill", question:"When a plant cell loses too much water, it becomes ______.", answer:"flaccid", explanation:"The speech uses the word 'flaccid'."},
+
+  // 31
+  {type:"mcq", question:"Which statement about the beaker example is emphasized?", options:[
+    "Only water volume matters for concentration",
+    "Proportion of water to solute defines water concentration",
+    "Solute always moves to balance concentration",
+    "Osmosis requires ATP"
+  ], answer:1, explanation:"Water concentration is about proportion, not volume alone."},
+
+  // 32
+  {type:"tf", question:"Osmosis can dehydrate cells if the external solution is very sugary.", answer:true, explanation:"Water exits the cell toward lower water concentration outside."},
+
+  // 33
+  {type:"mcq", question:"Which pairing is correct?", options:[
+    "Higher solute outside → water enters cell",
+    "Lower solute outside → water leaves cell",
+    "Higher solute outside → water leaves cell",
+    "Equal solute both sides → water leaves cell"
+  ], answer:2, explanation:"Higher external solute means lower external water → net efflux of water."},
+
+  // 34
+  {type:"fill", question:"Osmosis moves water from a region of ______ water concentration to ______ water concentration.", answer:"higher|lower", explanation:"That is the core definition."},
+
+  // 35
+  {type:"mcq", question:"Which sentence best summarizes the video’s message?", options:[
+    "Osmosis is water diffusion across a partially permeable membrane, and it can swell or dehydrate cells depending on external solute concentration.",
+    "Diffusion only applies to gases; osmosis is unrelated.",
+    "Cells always gain water regardless of outside concentration.",
+    "Plant cells burst when water enters due to rigid walls."
+  ], answer:0, explanation:"This captures definition + real cellular consequences presented in the speech."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
