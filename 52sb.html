@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selective Breeding — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#7c3aed; --paper:#fffef7; --ink:#222; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f7f5f9; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #ede9fe 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.25rem; letter-spacing:.3px }
+    .small{ opacity:.9; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:#6d28d9; border-bottom:2px solid #ddd6fe; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#6d28d9 }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ede9fe; color:#4c1d95; border:1px solid #ddd6fe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Selective Breeding — Exam Notes & Quiz <span class="pill">Agriculture · Gene pool · Inbreeding · Pathogens</span></h1>
+    <div class="small">Video + exam-focused notes + 35-question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/69LbpvVbf18" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>What is selective breeding?</summary>
+        <ul>
+          <li><strong>Selective breeding</strong> = choosing the <strong>best individuals</strong> (plants/animals) and breeding them to get <strong>even better offspring</strong>.</li>
+          <li>Humans have done this for <strong>thousands of years</strong>, since the start of <strong>agriculture (farming)</strong>.</li>
+          <li>Used widely today for many traits.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Common aims / traits</summary>
+        <ul>
+          <li><strong>Livestock</strong>: cows with high <strong>meat</strong> or <strong>milk</strong> yield.</li>
+          <li><strong>Crops</strong>: <strong>disease-resistant</strong> varieties.</li>
+          <li><strong>Pets</strong>: <strong>friendly</strong> dogs and cats.</li>
+          <li><strong>Ornamentals</strong>: plants with <strong>large/unusual flowers</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>How the process works</summary>
+        <ul>
+          <li>Start with your existing <strong>stock</strong> (e.g., all tomato plants in a field).</li>
+          <li><strong>Select</strong> individuals with the <strong>desired characteristics</strong> (e.g., plants with many large tomatoes).</li>
+          <li><strong>Breed those selected</strong> together to produce the <strong>next generation</strong>.</li>
+          <li><strong>Repeat for many generations</strong>, always picking the best → gradual improvement.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Evidence of change over time</summary>
+        <ul>
+          <li>Compare <strong>wild sweet corn</strong> (~10,000 years ago) with <strong>modern sweet corn</strong>: dramatic changes in size and form.</li>
+          <li>Similar changes are seen across many plants due to repeated selective breeding for <strong>bigger, better, juicier</strong> crops.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Main drawback — reduced gene pool</summary>
+        <ul>
+          <li><strong>Gene pool</strong> = the collection of all different <strong>alleles</strong> in a population.</li>
+          <li>Selective breeding <strong>favours certain alleles</strong> and removes others → the gene pool becomes <strong>smaller</strong> over time.</li>
+          <li><strong>Inbreeding risk</strong>: the “best” individuals may be <strong>closely related</strong>, increasing inherited defects and <strong>disease susceptibility</strong>.</li>
+          <li>Example consequence: some dog breeds (e.g., <strong>German shepherds</strong>, <strong>Rottweilers</strong>) are prone to health conditions.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Another drawback — lower variation & vulnerability</summary>
+        <ul>
+          <li>A <strong>small gene pool</strong> means <strong>less variation</strong> within the population.</li>
+          <li>If a <strong>new pathogen</strong> infects one plant, it may infect <strong>almost all</strong>, risking the <strong>entire crop</strong>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (35 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Selective breeding practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer)
+const questions = [
+  // 1
+  {type:"mcq", question:"What is the basic idea of selective breeding?", options:[
+    "Breeding random individuals to increase diversity",
+    "Breeding the best individuals to obtain better offspring",
+    "Cloning organisms in a lab",
+    "Editing genes directly with CRISPR"
+  ], answer:1, explanation:"Selective breeding chooses the best parents to produce improved offspring."},
+
+  // 2
+  {type:"tf", question:"Humans have practiced selective breeding only since the 20th century.", answer:false, explanation:"It has been used for thousands of years since agriculture began."},
+
+  // 3
+  {type:"mcq", question:"Which of the following is NOT listed as a target of selective breeding in the speech?", options:[
+    "Cows for high meat/milk yield",
+    "Crops with disease resistance",
+    "Friendly pets",
+    "Humans for athletic performance"
+  ], answer:3, explanation:"The speech mentions livestock, crops, and pets—not humans."},
+
+  // 4
+  {type:"mcq", question:"Which step comes first in the selective breeding process?", options:[
+    "Release a pathogen",
+    "Select individuals with desired traits from the stock",
+    "Destroy the gene pool",
+    "Perform genetic engineering"
+  ], answer:1, explanation:"You start by examining existing stock and selecting the best individuals."},
+
+  // 5
+  {type:"mcq", question:"After selecting parents with desired traits, the next step is to:", options:[
+    "Breed them together to produce the next generation",
+    "Discard them to prevent inbreeding",
+    "Cross them with unrelated species",
+    "Store them but never breed them"
+  ], answer:0, explanation:"Selected individuals are bred to create the next generation."},
+
+  // 6
+  {type:"tf", question:"Selective breeding is typically performed over many generations.", answer:true, explanation:"The process is repeated to progressively improve traits."},
+
+  // 7
+  {type:"mcq", question:"Which example from the speech shows long-term change due to selective breeding?", options:[
+    "Comparing wild and modern sweet corn",
+    "Comparing wolves and cats",
+    "Comparing bananas and potatoes",
+    "Comparing oak trees and pines"
+  ], answer:0, explanation:"Wild vs modern sweet corn illustrates dramatic change over ~10,000 years."},
+
+  // 8
+  {type:"mcq", question:"In the tomato field example, which plants are chosen?", options:[
+    "Plants with the most thorns",
+    "Randomly chosen plants",
+    "Plants with many large tomatoes",
+    "Plants with the least fruit"
+  ], answer:2, explanation:"The desired trait is 'lots of big tomatoes'."},
+
+  // 9
+  {type:"mcq", question:"A major drawback of selective breeding is that it:", options:[
+    "Increases the gene pool",
+    "Reduces the gene pool of the population",
+    "Eliminates all diseases",
+    "Prevents inherited defects"
+  ], answer:1, explanation:"Favoring certain alleles removes others, shrinking the gene pool."},
+
+  // 10
+  {type:"mcq", question:"What does 'gene pool' mean as used in the speech?", options:[
+    "A swimming pool for genes",
+    "The set of all different alleles in a population",
+    "Only the dominant genes in a species",
+    "The DNA of a single individual"
+  ], answer:1, explanation:"Gene pool = all alleles present within the population."},
+
+  // 11
+  {type:"tf", question:"Selective breeding favors certain alleles that code for desired traits.", answer:true, explanation:"Selecting the best individuals chooses alleles linked to those traits."},
+
+  // 12
+  {type:"mcq", question:"Why can inbreeding occur during selective breeding?", options:[
+    "Because best individuals are often closely related",
+    "Because genes are randomly deleted",
+    "Because mutation rate increases",
+    "Because populations migrate frequently"
+  ], answer:0, explanation:"Top individuals may share ancestry, increasing inbreeding risk."},
+
+  // 13
+  {type:"mcq", question:"Which consequence is linked with inbreeding in the speech?", options:[
+    "Greater disease resistance",
+    "Increased inherited defects and disease susceptibility",
+    "Guaranteed higher yields",
+    "Unlimited genetic variation"
+  ], answer:1, explanation:"Small gene pools raise the risks of inherited problems and diseases."},
+
+  // 14
+  {type:"mcq", question:"Which dog breeds are mentioned as examples prone to health conditions?", options:[
+    "Golden retrievers and beagles",
+    "German shepherds and rottweilers",
+    "Poodles and huskies",
+    "Chihuahuas and corgis"
+  ], answer:1, explanation:"The speech specifically mentions German shepherds and rottweilers."},
+
+  // 15
+  {type:"tf", question:"A smaller gene pool usually means less variation within the population.", answer:true, explanation:"Reduced allelic diversity lowers variation."},
+
+  // 16
+  {type:"mcq", question:"What risk does reduced variation pose to a farmer's crop?", options:[
+    "Higher drought tolerance",
+    "Lower fertilizer needs",
+    "A new pathogen could wipe out the entire crop",
+    "Guaranteed immunity to pathogens"
+  ], answer:2, explanation:"If one plant is infected, many genetically similar plants may also be infected."},
+
+  // 17
+  {type:"mcq", question:"Selective breeding is commonly used to produce:", options:[
+    "Crops with large or unusual flowers",
+    "Dogs that are unfriendly to humans",
+    "Cows that produce less milk",
+    "Plants with reduced yield"
+  ], answer:0, explanation:"Ornamental traits like large/unusual flowers are targets."},
+
+  // 18
+  {type:"tf", question:"Selective breeding and genetic engineering are the same process.", answer:false, explanation:"Selective breeding chooses parents; genetic engineering alters DNA directly."},
+
+  // 19
+  {type:"mcq", question:"Which statement best describes the aim of selective breeding over generations?", options:[
+    "To return traits to wild-type",
+    "To gradually improve the desired characteristics",
+    "To remove all variability instantly",
+    "To randomize the population"
+  ], answer:1, explanation:"Repeated selection seeks continuous improvement."},
+
+  // 20
+  {type:"fill", question:"Selective breeding chooses the ______ individuals to breed.", answer:"best|top|fittest", explanation:"Parents with the most desired traits are selected."},
+
+  // 21
+  {type:"fill", question:"Humans have used selective breeding since the start of ______.", answer:"agriculture|farming", explanation:"The speech defines agriculture as farming."},
+
+  // 22
+  {type:"fill", question:"In the crop example, the farmer selects tomato plants with many large ______.", answer:"tomatoes", explanation:"The trait is 'lots of big tomatoes'."},
+
+  // 23
+  {type:"tf", question:"Selective breeding is a one-time event and not repeated.", answer:false, explanation:"It is repeated each generation."},
+
+  // 24
+  {type:"mcq", question:"Which phrase describes the evidence for selective breeding over millennia?", options:[
+    "Identical plants throughout history",
+    "Dramatic change from wild to modern forms (e.g., sweet corn)",
+    "No change in plant traits",
+    "Only smaller fruits today"
+  ], answer:1, explanation:"Wild to modern sweet corn shows large differences."},
+
+  // 25
+  {type:"fill", question:"The collection of all different alleles in a population is called the ______ ______.", answer:"gene pool", explanation:"Definition from the notes."},
+
+  // 26
+  {type:"mcq", question:"As we repeatedly select for certain alleles, what happens to the others?", options:[
+    "They become more common as well",
+    "They are removed from the population",
+    "They duplicate",
+    "They change species"
+  ], answer:1, explanation:"Undesired alleles are reduced or lost, shrinking diversity."},
+
+  // 27
+  {type:"mcq", question:"Which outcome is NOT a drawback mentioned in the speech?", options:[
+    "Reduced gene pool",
+    "Inbreeding and inherited defects",
+    "Greater vulnerability to new pathogens",
+    "Instant evolution into a new species"
+  ], answer:3, explanation:"Instant speciation is not claimed."},
+
+  // 28
+  {type:"tf", question:"Lower genetic variation can make all plants respond differently to the same pathogen.", answer:false, explanation:"Lower variation makes them respond similarly, often badly."},
+
+  // 29
+  {type:"mcq", question:"Which target trait is mentioned for pets?", options:[
+    "Aggression",
+    "Friendliness",
+    "No fur",
+    "Night vision"
+  ], answer:1, explanation:"Friendly cats and dogs for pets are mentioned."},
+
+  // 30
+  {type:"mcq", question:"Which target trait is mentioned for crops?", options:[
+    "Resistance to diseases",
+    "Smaller flowers",
+    "Lower yield",
+    "Reduced shelf life"
+  ], answer:0, explanation:"Disease resistance is a common goal."},
+
+  // 31
+  {type:"tf", question:"Selective breeding can lead to populations that are 'better, bigger, juicier' for human use.", answer:true, explanation:"The speech uses this phrase for plant improvement."},
+
+  // 32
+  {type:"fill", question:"Breeding closely related 'best' individuals can lead to ______.", answer:"inbreeding", explanation:"Inbreeding increases with small gene pools."},
+
+  // 33
+  {type:"fill", question:"A population with very low variation is more ______ to new diseases.", answer:"vulnerable|susceptible", explanation:"Uniform genetics can mean shared weaknesses."},
+
+  // 34
+  {type:"mcq", question:"Which of the following best summarizes why a crop might all fail at once?", options:[
+    "Over-watering alone",
+    "All plants share similar genetics and a pathogen can infect most of them",
+    "Too much sunshine",
+    "Seed color"
+  ], answer:1, explanation:"Low diversity means similar susceptibility to the same pathogen."},
+
+  // 35
+  {type:"tf", question:"Selective breeding aims to 'get rid of all the bad alleles and keep the good ones,' which shrinks the gene pool.", answer:true, explanation:"This summarises the drawback described in the speech."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
