@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health & Disease — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#0f766e; --paper:#fffef7; --ink:#222; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f7f5f9; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #e8f4f2 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.25rem; letter-spacing:.3px }
+    .small{ opacity:.9; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:#0f766e; border-bottom:2px solid #bfe3de; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#0f766e }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#d1fae5; color:#065f46; border:1px solid #a7f3d0; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Health &amp; Disease — Exam Notes & Quiz <span class="pill">Communicable · Non‑communicable · Immunity · Mental health</span></h1>
+    <div class="small">Video + exam‑focused notes + 35‑question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/xLC_2gK_eIw" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>What is health?</summary>
+        <ul>
+          <li><strong>Health</strong> is a state of <strong>physical</strong> and <strong>mental</strong> well‑being.</li>
+          <li>We don’t sit in two boxes (healthy / unhealthy) — we exist on a <strong>spectrum</strong> of health.</li>
+          <li>People differ because many <strong>factors</strong> affect health.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Main factors that support good health</summary>
+        <ul>
+          <li><strong>Balanced diet</strong></li>
+          <li><strong>Regular exercise</strong> and adequate <strong>sleep</strong></li>
+          <li>Access to <strong>medical care</strong>, especially <strong>preventive medicine</strong> such as <strong>vaccines</strong></li>
+          <li>Lower levels of <strong>stress</strong></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>What is disease?</summary>
+        <ul>
+          <li><strong>Disease</strong> is a broad term for conditions that cause <strong>ill health</strong>.</li>
+          <li>Some diseases are linked to <strong>lifestyle factors</strong> (e.g., an unhealthy diet → <strong>type 2 diabetes</strong>).</li>
+          <li>Other diseases are <strong>not related to lifestyle</strong> (e.g., <strong>chickenpox</strong>, <strong>asthma</strong>).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Two big groups of diseases</summary>
+        <ul>
+          <li><strong>Communicable diseases</strong> (a.k.a. infectious): can <strong>spread</strong> between people or between animals and people; caused by <strong>pathogens</strong> such as <em>viruses, bacteria, parasites, fungi</em>. Examples: <strong>common cold</strong>, <strong>malaria</strong>, <strong>meningitis</strong>.</li>
+          <li><strong>Non‑communicable diseases</strong>: <strong>cannot</strong> spread between people; often <strong>develop slowly</strong> and last a long time. Examples: <strong>asthma</strong>, <strong>coronary heart disease</strong>, <strong>diabetes</strong>, <strong>cancer</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>How different diseases interact</summary>
+        <ul>
+          <li><strong>Weakened immunity → more infections:</strong> If a person’s <strong>immune system</strong> is impaired, they catch communicable diseases (e.g., colds, flu) more often.</li>
+          <li><strong>Viruses linked to cancers:</strong> <strong>HPV</strong> (human papillomavirus) can cause <strong>cervical cancer</strong>. <em>In the UK, most girls receive an HPV vaccine, greatly reducing risk.</em></li>
+          <li><strong>Overactive immunity:</strong> Conditions such as <strong>skin rashes</strong> and <strong>asthma</strong> can result from the body’s immune system <strong>overreacting</strong> to a pathogen and damaging its own tissues.</li>
+          <li><strong>Physical ↔ mental health:</strong> Serious physical illness can limit daily activities (going out, work, social life) and increase the risk of <strong>depression</strong> or <strong>chronic anxiety</strong>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (35 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Health &amp; Disease practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer)
+const questions = [
+  // 1
+  {type:"mcq", question:"How is health defined in the speech?", options:[
+    "Absence of disease only",
+    "A state of physical and mental well-being",
+    "Perfect athletic performance",
+    "Never visiting a doctor"
+  ], answer:1, explanation:"Health includes both physical and mental well-being."},
+
+  // 2
+  {type:"tf", question:"According to the speech, people are either healthy or unhealthy with no in-between.", answer:false, explanation:"We exist on a spectrum of health."},
+
+  // 3
+  {type:"mcq", question:"Which factor is NOT listed as supporting good health?", options:[
+    "Balanced diet",
+    "Adequate sleep",
+    "Regular exercise",
+    "Excessive stress"
+  ], answer:3, explanation:"Stress is mentioned as something that can reduce health."},
+
+  // 4
+  {type:"mcq", question:"Preventive medicine mentioned in the speech includes:", options:[
+    "Antibiotics for every cold",
+    "Vaccines",
+    "Painkillers",
+    "Vitamin water"
+  ], answer:1, explanation:"Vaccines are given as a key preventive measure."},
+
+  // 5
+  {type:"tf", question:"Lack of access to medical care can make people less healthy.", answer:true, explanation:"Limited access is one reason people may become ill."},
+
+  // 6
+  {type:"mcq", question:"Which sentence best describes 'disease' in the speech?", options:[
+    "Any condition that improves well-being",
+    "A set of conditions that cause ill health",
+    "Only infections",
+    "Only genetic problems"
+  ], answer:1, explanation:"Disease is a broad term for conditions leading to ill health."},
+
+  // 7
+  {type:"mcq", question:"Which disease is linked to lifestyle in the speech?", options:[
+    "Chickenpox",
+    "Asthma",
+    "Type 2 diabetes from an unhealthy diet",
+    "Measles"
+  ], answer:2, explanation:"Unhealthy diet can lead to type 2 diabetes."},
+
+  // 8
+  {type:"mcq", question:"Which disease may be unrelated to lifestyle?", options:[
+    "Chickenpox",
+    "Obesity",
+    "Type 2 diabetes",
+    "Hypertension from diet"
+  ], answer:0, explanation:"Chickenpox is given as an example unrelated to lifestyle."},
+
+  // 9
+  {type:"mcq", question:"Communicable diseases are also called:", options:[
+    "Autoimmune diseases",
+    "Infectious diseases",
+    "Degenerative diseases",
+    "Genetic diseases"
+  ], answer:1, explanation:"Communicable = infectious."},
+
+  // 10
+  {type:"mcq", question:"Which is NOT a pathogen type listed in the speech?", options:[
+    "Viruses",
+    "Bacteria",
+    "Parasites",
+    "Prions"
+  ], answer:3, explanation:"The speech mentions viruses, bacteria, parasites, and fungi."},
+
+  // 11
+  {type:"mcq", question:"Which is an example of a communicable disease from the speech?", options:[
+    "Common cold",
+    "Asthma",
+    "Diabetes",
+    "Coronary heart disease"
+  ], answer:0, explanation:"Common cold is communicable."},
+
+  // 12
+  {type:"mcq", question:"Which is an example of a non-communicable disease from the speech?", options:[
+    "Malaria",
+    "Meningitis",
+    "Asthma",
+    "Influenza"
+  ], answer:2, explanation:"Asthma is non-communicable."},
+
+  // 13
+  {type:"tf", question:"Non-communicable diseases cannot spread from person to person.", answer:true, explanation:"By definition they do not spread between people."},
+
+  // 14
+  {type:"mcq", question:"How do non-communicable diseases usually progress?", options:[
+    "They appear suddenly and end quickly",
+    "They begin slowly and last a long time",
+    "They are always curable",
+    "They are always caused by fungi"
+  ], answer:1, explanation:"They generally develop slowly and can be long-lasting."},
+
+  // 15
+  {type:"mcq", question:"What happens if someone's immune system is weakened?", options:[
+    "They become immune to all infections",
+    "They catch communicable diseases more often",
+    "They cannot have cancer",
+    "They sleep more deeply"
+  ], answer:1, explanation:"Weakened immunity leads to more frequent infections."},
+
+  // 16
+  {type:"mcq", question:"Which virus is linked to cancer in the speech?", options:[
+    "HIV",
+    "HPV (human papillomavirus)",
+    "Influenza",
+    "Rhinovirus"
+  ], answer:1, explanation:"HPV is linked to cervical cancer."},
+
+  // 17
+  {type:"tf", question:"In the UK, most girls receive an HPV vaccine, reducing the risk of cervical cancer.", answer:true, explanation:"The speech states this vaccination program."},
+
+  // 18
+  {type:"mcq", question:"Overreaction of the immune system can lead to:", options:[
+    "Faster wound healing only",
+    "Skin rashes and asthma",
+    "Higher muscle mass",
+    "Better night vision"
+  ], answer:1, explanation:"The immune system can damage the body's own tissues."},
+
+  // 19
+  {type:"mcq", question:"Which pair correctly matches the disease groups?", options:[
+    "Communicable — cancer; Non-communicable — malaria",
+    "Communicable — common cold; Non-communicable — diabetes",
+    "Communicable — asthma; Non-communicable — meningitis",
+    "Communicable — coronary heart disease; Non-communicable — flu"
+  ], answer:1, explanation:"Cold is communicable; diabetes is non-communicable."},
+
+  // 20
+  {type:"tf", question:"Stress was mentioned as a factor that can reduce health if too high.", answer:true, explanation:"Excessive stress can make people less healthy."},
+
+  // 21
+  {type:"mcq", question:"Which of the following is NOT listed as an example of a communicable disease?", options:[
+    "Common cold",
+    "Malaria",
+    "Meningitis",
+    "Asthma"
+  ], answer:3, explanation:"Asthma is non-communicable."},
+
+  // 22
+  {type:"mcq", question:"Which of the following is NOT listed as a non-communicable disease?", options:[
+    "Coronary heart disease",
+    "Diabetes",
+    "Cancer",
+    "Influenza"
+  ], answer:3, explanation:"Influenza is communicable."},
+
+  // 23
+  {type:"fill", question:"Health exists on a ______ rather than two simple categories.", answer:"spectrum", explanation:"The speech says we exist on a spectrum of health."},
+
+  // 24
+  {type:"fill", question:"Preventive medicine mentioned in the speech includes ______.", answer:"vaccines|vaccinations", explanation:"Vaccines are key preventive tools."},
+
+  // 25
+  {type:"fill", question:"Diseases that can spread between people are called ______ diseases.", answer:"communicable|infectious", explanation:"Either term is acceptable."},
+
+  // 26
+  {type:"fill", question:"The group of organisms that cause infectious disease are called ______.", answer:"pathogens", explanation:"Viruses, bacteria, parasites and fungi are pathogens."},
+
+  // 27
+  {type:"fill", question:"An unhealthy diet could lead to ______.", answer:"diabetes|type 2 diabetes|type ii diabetes", explanation:"Diet-related diabetes is mentioned."},
+
+  // 28
+  {type:"fill", question:"The virus linked to cervical cancer is ______.", answer:"hpv|human papillomavirus|human papilloma virus", explanation:"HPV is associated with cervical cancer."},
+
+  // 29
+  {type:"tf", question:"Asthma can be triggered by the body's own immune system overreacting.", answer:true, explanation:"Overreaction can damage tissues and trigger asthma."},
+
+  // 30
+  {type:"mcq", question:"Which daily-life impacts can worsen mental health according to the speech?", options:[
+    "Eating fruit",
+    "Being unable to go out, work, or see friends",
+    "Watching a documentary",
+    "Listening to music"
+  ], answer:1, explanation:"Limits on daily activities can lead to depression/anxiety."},
+
+  // 31
+  {type:"mcq", question:"Which example best illustrates the link between physical and mental health?", options:[
+    "A mild cold improving mood",
+    "Severe long-term illness contributing to depression",
+    "Playing sports causing allergies",
+    "Eating vegetables causing insomnia"
+  ], answer:1, explanation:"Severe physical illness can impact mental health."},
+
+  // 32
+  {type:"tf", question:"All diseases are caused by lifestyle choices.", answer:false, explanation:"Some diseases (e.g., chickenpox, asthma) may be unrelated to lifestyle."},
+
+  // 33
+  {type:"mcq", question:"Which list contains only pathogen types mentioned in the speech?", options:[
+    "Viruses, bacteria, parasites, fungi",
+    "Viruses, protozoa, prions, algae",
+    "Bacteria, prions, helminths, fungi",
+    "Fungi, prions, viruses, algae"
+  ], answer:0, explanation:"Those four types are explicitly mentioned."},
+
+  // 34
+  {type:"fill", question:"A communicable disease example from the speech: the common ______.", answer:"cold", explanation:"The common cold is cited."},
+
+  // 35
+  {type:"fill", question:"A non-communicable disease example from the speech: ______ heart disease.", answer:"coronary", explanation:"Coronary heart disease is listed."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
