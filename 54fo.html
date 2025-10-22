@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fossils, Evolution & Extinction — Notes & 40‑Q Quiz</title>
+  <style>
+    :root{ --brand:#0f766e; --brand-2:#14b8a6; --paper:#fcfffd; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f3faf8; color:var(--ink); line-height:1.6;
+    }
+    header{ background:linear-gradient(90deg,var(--brand), var(--brand-2)); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.25rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.92rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #d1fae5; border-radius:14px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#065f46; border-bottom:2px solid #a7f3d0; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e6f5ef; border-radius:12px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#0f766e }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #dbece7; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ccfbf1; color:#064e3b; border:1px solid #99f6e4; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#667; font-size:.85rem; padding:20px 0 }
+    .key{ background:#ecfdf5; border-left:4px solid #10b981; padding:10px 12px; border-radius:8px; }
+    code.k{ background:#e6fffb; padding:2px 6px; border-radius:6px; border:1px solid #bff0e6 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fossils — Evidence for Evolution & Causes of Extinction <span class="pill">Formation · Record · Extinction</span></h1>
+    <div class="small">Video + exam-focused notes + 40-question interactive quiz</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/nmF3a0Ad6C8" title="Fossils video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points rewritten from the speech)</h2>
+
+      <details open>
+        <summary>What are fossils and why study them?</summary>
+        <ul>
+          <li><strong>Fossils</strong> are things left behind by long‑dead organisms: <em>rock‑like skeletons</em>, <em>casts</em>, <em>impressions</em>, or even <em>entire preserved organisms</em>.</li>
+          <li>Most organisms that ever lived are now <strong>extinct</strong>, so fossils are our main way to learn about them.</li>
+          <li>Fossils show how organisms <strong>changed through time</strong> — evidence for <strong>evolution</strong> via small, incremental changes over millions of years.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Three main ways fossils form</summary>
+        <ul>
+          <li><strong>1) Gradual replacement by minerals</strong><br>
+            Slow‑decaying hard parts (bones, teeth, shells) are <em>replaced by minerals</em> as they break down, forming <strong>rock‑like replicas</strong> of the original structures.</li>
+          <li><strong>2) Casts & impressions</strong><br>
+            <em>Casts:</em> An organism buried in soft material (e.g., clay) decays; the void left behind hardens into a <strong>mould</strong> of its shape (also seen with <em>burrows</em> or <em>plant roots</em>).<br>
+            <em>Impressions:</em> Preserved <strong>marks</strong> such as <strong>footprints</strong> that remain in the substrate.</li>
+          <li><strong>3) Preservation with little/no decay</strong><br>
+            Occurs when decay is prevented: <em>amber</em> or <em>tar pits</em> (no oxygen/moisture), <em>glaciers</em> (too cold for decomposers), or <em>peat bogs</em> (too acidic).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>The fossil record — very old and very incomplete</summary>
+        <div class="key">
+          <ul>
+            <li>The <strong>oldest fossils</strong> are roughly <strong>~3–4 billion years</strong> old.</li>
+            <li>The record is <strong>incomplete</strong>: there are long <strong>gaps</strong> where we don't know what happened, and we still do <strong>not know how life first began</strong> on Earth.</li>
+            <li>Why incomplete?<br>
+              • Many early life forms were <strong>soft‑bodied</strong> → decayed quickly, leaving few/no fossils.<br>
+              • Over immense time, fossils can be <strong>destroyed</strong> by geological processes: volcanoes, earthquakes, or movement of <strong>tectonic plates</strong>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Extinction — when a species disappears</summary>
+        <ul>
+          <li><strong>Extinction</strong>: a species has <strong>no surviving individuals</strong>.</li>
+          <li>Causes include:<br>
+            • <strong>Rapid environmental change</strong> (e.g., habitat destruction, rapid global warming).<br>
+            • Arrival of a <strong>new predator</strong> (including <strong>human hunting</strong>).<br>
+            • <strong>New disease</strong> (epidemic or long‑term).<br>
+            • <strong>Competition</strong> from a new species that out‑competes for resources.<br>
+            • <strong>Catastrophic events</strong> (e.g., the asteroid impact in Mexico that wiped out dinosaurs ~66 million years ago).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Core definitions for the exam</summary>
+        <ul>
+          <li><strong>Cast:</strong> A hardened mould of an organism's shape left after it decays in soft sediment.</li>
+          <li><strong>Impression:</strong> A preserved mark, such as a footprint.</li>
+          <li><strong>Amber:</strong> Fossilised tree resin that can trap and preserve organisms by <em>preventing decay</em>.</li>
+          <li><strong>Extinction:</strong> No individuals of a species remain.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Fossils & Extinction practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer with '|' for alternates)
+// All items are derived from the provided speech.
+const questions = [
+  // 1
+  {type:"mcq", question:"What is a fossil?", options:[
+    "Any living organism today",
+    "Material left behind by long-dead organisms (e.g., rock-like skeletons, casts, impressions, preserved bodies)",
+    "Only dinosaur bones",
+    "Only crystals formed in rocks"
+  ], answer:1, explanation:"Fossils are remains or traces of ancient organisms, including preserved bodies and traces."},
+
+  // 2
+  {type:"tf", question:"Most organisms that have ever lived are now extinct.", answer:true, explanation:"Hence fossils are crucial for learning about them."},
+
+  // 3
+  {type:"mcq", question:"Fossils provide evidence for evolution because they:", options:[
+    "Show only catastrophic events",
+    "Show incremental changes in organisms over millions of years",
+    "Show how planets form",
+    "Prove that species never change"
+  ], answer:1, explanation:"Stratified fossils document gradual changes through time."},
+
+  // 4
+  {type:"mcq", question:"Which is NOT listed as a type/form of fossil in the speech?", options:[
+    "Rock-like skeletons",
+    "Impressions",
+    "Preserved whole organisms",
+    "Metal alloys"
+  ], answer:3, explanation:"Metal alloys are not fossils."},
+
+  // 5
+  {type:"mcq", question:"The most common way fossils form is:", options:[
+    "Instant freezing in glaciers",
+    "Gradual replacement by minerals",
+    "Radiation exposure",
+    "Lightning strikes"
+  ], answer:1, explanation:"Hard parts slowly decay and are replaced by minerals."},
+
+  // 6
+  {type:"mcq", question:"Which body parts are most likely to be gradually replaced by minerals?", options:[
+    "Bones, teeth, shells",
+    "Skin and hair",
+    "Feathers only",
+    "Leaf pigments"
+  ], answer:0, explanation:"These hard parts decay slowly and become mineralised."},
+
+  // 7
+  {type:"tf", question:"Mineral replacement preserves the exact shape and size of original structures.", answer:true, explanation:"It creates rock-like replicas."},
+
+  // 8
+  {type:"mcq", question:"A cast forms when:", options:[
+    "An organism dissolves in soft sediment leaving a void that hardens to a mould of its shape",
+    "Footprints are left on soft ground",
+    "Amber engulfs an organism with no oxygen",
+    "Minerals fully replace the tissue"
+  ], answer:0, explanation:"Casts are moulds left after decay in soft material like clay."},
+
+  // 9
+  {type:"mcq", question:"An impression is best exemplified by:", options:[
+    "Buried shells replaced by quartz",
+    "Footprints preserved in sediment",
+    "A tooth encased in granite",
+    "A stromatolite"
+  ], answer:1, explanation:"Impressions are marks such as footprints."},
+
+  // 10
+  {type:"mcq", question:"Which of the following can also leave casts, according to the speech?", options:[
+    "Animal burrows and plant roots",
+    "Bird songs",
+    "DNA sequences",
+    "Meteorites"
+  ], answer:0, explanation:"Casts can capture burrows or root channels."},
+
+  // 11
+  {type:"mcq", question:"Preservation with little or no decay can occur when:", options:[
+    "There is abundant oxygen and moisture",
+    "Conditions prevent decay (e.g., amber, tar pits, glaciers, peat bogs)",
+    "Only sand is present",
+    "Photosynthesis stops"
+  ], answer:1, explanation:"Decay is halted in anoxic, cold, or acidic conditions."},
+
+  // 12
+  {type:"mcq", question:"Amber preserves organisms because:", options:[
+    "It provides extra nutrients",
+    "There is no oxygen or moisture inside",
+    "It heats them to high temperatures",
+    "It dissolves soft tissue"
+  ], answer:1, explanation:"Anoxic, dry resin prevents decay."},
+
+  // 13
+  {type:"mcq", question:"Glaciers help preserve organisms because they are:", options:[
+    "Too cold for decomposing microorganisms to survive",
+    "Full of oxygen",
+    "Extremely alkaline",
+    "Magnetic"
+  ], answer:0, explanation:"Cold inhibits decomposer activity."},
+
+  // 14
+  {type:"mcq", question:"Peat bogs can preserve remains because they are:", options:[
+    "Highly basic",
+    "Too acidic for microorganisms",
+    "Full of calcium carbonate",
+    "Under high pressure only"
+  ], answer:1, explanation:"Acidity prevents microbial decay."},
+
+  // 15
+  {type:"tf", question:"The fossil record is complete and continuous from Earth's origin to now.", answer:false, explanation:"It contains major gaps and we still do not know how life began."},
+
+  // 16
+  {type:"mcq", question:"According to the speech, the oldest fossils are roughly:", options:[
+    "3–4 billion years old",
+    "300–400 million years old",
+    "30–40 million years old",
+    "3–4 thousand years old"
+  ], answer:0, explanation:"The speech states the oldest are on the order of billions of years."},
+
+  // 17
+  {type:"mcq", question:"One reason the fossil record is incomplete is that early life forms were:", options:[
+    "Metallic",
+    "Soft-bodied and decayed quickly",
+    "Too large to fossilise",
+    "All aquatic"
+  ], answer:1, explanation:"Soft tissues rarely fossilise."},
+
+  // 18
+  {type:"mcq", question:"Fossils may be destroyed over time by:", options:[
+    "Volcanoes, earthquakes, and tectonic plate movement",
+    "Photosynthesis",
+    "Evaporation alone",
+    "Cloud formation"
+  ], answer:0, explanation:"Geological activity can obliterate fossils."},
+
+  // 19
+  {type:"tf", question:"Scientists have a complete explanation for how life first developed on Earth.", answer:false, explanation:"The speech states this remains unknown."},
+
+  // 20
+  {type:"mcq", question:"Extinction is defined as:", options:[
+    "A decline in population size",
+    "No individuals of the species remain",
+    "Migration to a new habitat",
+    "A temporary drop in birth rate"
+  ], answer:1, explanation:"Extinction means zero surviving individuals."},
+
+  // 21
+  {type:"mcq", question:"A rapid environmental change causing extinction could be:", options:[
+    "Habitat destruction or rapid global warming",
+    "A mild seasonal shift",
+    "Longer summers only",
+    "Increased rainfall one day"
+  ], answer:0, explanation:"Sudden changes can exceed a species' adaptive capacity."},
+
+  // 22
+  {type:"tf", question:"Human hunting has never caused extinctions.", answer:false, explanation:"Human predation has driven species to extinction."},
+
+  // 23
+  {type:"mcq", question:"Disease can cause extinction when:", options:[
+    "It fails to spread",
+    "A new disease spreads through a population, killing many",
+    "It only affects plants",
+    "It improves immunity instantly"
+  ], answer:1, explanation:"New diseases can cause mass die-offs."},
+
+  // 24
+  {type:"mcq", question:"Competition leading to extinction occurs when:", options:[
+    "A new species out-competes another for resources",
+    "Two species share food equally",
+    "Predators stop hunting",
+    "Plants stop photosynthesising"
+  ], answer:0, explanation:"Resource competition can displace species."},
+
+  // 25
+  {type:"mcq", question:"Which catastrophic event is cited as causing a mass extinction?", options:[
+    "A volcanic winter 6 years ago",
+    "An asteroid impact in Mexico ~66 million years ago",
+    "A hurricane in the Atlantic in 2005",
+    "A solar eclipse in 1999"
+  ], answer:1, explanation:"The impact is linked to the dinosaurs' extinction."},
+
+  // 26
+  {type:"tf", question:"Casts and impressions are two similar fossil types mentioned in the speech.", answer:true, explanation:"Both preserve shape; casts are voids that harden; impressions are marks like footprints."},
+
+  // 27
+  {type:"fill", question:"Casts often form in soft materials such as ______.", answer:"clay", explanation:"The speech gives clay as an example."},
+
+  // 28
+  {type:"fill", question:"Impressions include preserved ______.", answer:"footprints|footprint", explanation:"Footprints are a classic example."},
+
+  // 29
+  {type:"fill", question:"In amber or tar pits, decay is prevented because there is no ______ or ______.", answer:"oxygen; moisture|oxygen and moisture", explanation:"Anoxic and dry conditions inhibit decomposition."},
+
+  // 30
+  {type:"mcq", question:"Which setting prevents decay by low temperature?", options:[
+    "Peat bogs",
+    "Glaciers",
+    "Tar pits",
+    "Deserts"
+  ], answer:1, explanation:"Glaciers are too cold for decomposers."},
+
+  // 31
+  {type:"mcq", question:"Which setting prevents decay by acidity?", options:[
+    "Amber",
+    "Glaciers",
+    "Peat bogs",
+    "Tar pits"
+  ], answer:2, explanation:"Peat bogs are too acidic for most decomposers."},
+
+  // 32
+  {type:"mcq", question:"Which statement about mineral replacement is accurate?", options:[
+    "It changes the shape completely",
+    "It forms rock-like substances in the exact shape of original parts",
+    "It only occurs in deserts",
+    "It requires living tissue"
+  ], answer:1, explanation:"The mineralised replica preserves the shape."},
+
+  // 33
+  {type:"tf", question:"Burrows and roots may leave casts as the surrounding sediment hardens.", answer:true, explanation:"Voids left by structures can be preserved."},
+
+  // 34
+  {type:"mcq", question:"Which is a reason fossils do not always form?", options:[
+    "Soft-bodied organisms decay quickly",
+    "All organisms immediately mineralise",
+    "Every footprint becomes a fossil",
+    "Earth has no geological activity"
+  ], answer:0, explanation:"Soft tissues rarely fossilise."},
+
+  // 35
+  {type:"fill", question:"The movement of ______ ______ can destroy ancient fossils.", answer:"tectonic plates|tectonic plate", explanation:"Tectonics can recycle rocks."},
+
+  // 36
+  {type:"mcq", question:"Which is the correct pairing?", options:[
+    "Impression — preserved body in amber",
+    "Cast — mould left after organism decays in soft sediment",
+    "Amber — mineral replacement",
+    "Peat bog — high oxygen preservation"
+  ], answer:1, explanation:"Casts are hardened moulds left by decay."},
+
+  // 37
+  {type:"tf", question:"Extinctions can occur either suddenly or gradually over many years.", answer:true, explanation:"Diseases or multiple factors can act rapidly or slowly."},
+
+  // 38
+  {type:"fill", question:"Extinction means that ______ individuals of a species remain.", answer:"no|zero", explanation:"Zero individuals = extinction."},
+
+  // 39
+  {type:"mcq", question:"Which list contains only 'no/low decay' preservation contexts from the speech?", options:[
+    "Amber, tar pits, glaciers, peat bogs",
+    "Sand dunes, beaches, caves, deserts",
+    "Lakes, rivers, swamps, oceans",
+    "Mountains, valleys, plateaus, plains"
+  ], answer:0, explanation:"These are the specific contexts mentioned."},
+
+  // 40
+  {type:"tf", question:"We still do not know how life first developed on Earth, according to the speech.", answer:true, explanation:"The origin of life remains unresolved."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value='${i}'> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #dbece7;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      const alts = q.answer.split("|").map(s=>s.trim().toLowerCase());
+      ok = alts.includes(val);
+      // Also allow simple punctuation/space variants for pairs like "oxygen; moisture"
+      if(!ok){
+        const cleaned = val.replace(/\s*;\s*/g, "; ").replace(/\s+and\s+/g, " and ");
+        ok = alts.includes(cleaned);
+      }
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
