@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tumors vs Cancer — Notes & 40-Q Quiz</title>
+  <style>
+    :root{ --brand:#0f766e; --brand-2:#14b8a6; --paper:#fcfffd; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f3faf8; color:var(--ink); line-height:1.6;
+    }
+    header{ background:linear-gradient(90deg,var(--brand), var(--brand-2)); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.25rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.92rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #d1fae5; border-radius:14px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#065f46; border-bottom:2px solid #a7f3d0; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e6f5ef; border-radius:12px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#0f766e }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #dbece7; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ccfbf1; color:#064e3b; border:1px solid #99f6e4; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#667; font-size:.85rem; padding:20px 0 }
+    .key{ background:#ecfdf5; border-left:4px solid #10b981; padding:10px 12px; border-radius:8px; }
+    code.k{ background:#e6fffb; padding:2px 6px; border-radius:6px; border:1px solid #bff0e6 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tumors vs Cancer — Exam Notes & 40-Question Quiz <span class="pill">Benign · Malignant · Risk Factors</span></h1>
+    <div class="small">Video + exam-focused notes + interactive practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/SnotJ5shyEM" title="Tumors and Cancer video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points rewritten from the speech)</h2>
+
+      <details open>
+        <summary>Tumors vs Cancer — not the same</summary>
+        <ul>
+          <li><strong>Tumor:</strong> an <em>abnormal mass of cells</em> formed by uncontrolled cell growth and division.</li>
+          <li>Two types of tumors: <strong>benign</strong> and <strong>malignant</strong>.</li>
+          <li>Only <strong>malignant</strong> tumors are classified as <strong>cancer</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Benign tumors</summary>
+        <ul>
+          <li>Cells are <strong>contained in one area</strong>, usually within a <strong>membrane</strong>.</li>
+          <li>They <strong>do not invade</strong> other tissues and <strong>do not spread</strong> around the body.</li>
+          <li>Therefore, they are <strong>not usually dangerous</strong> and are <strong>not called cancer</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Malignant tumors (cancer)</summary>
+        <ul>
+          <li>Cells can <strong>invade</strong> nearby tissues and <strong>spread</strong> to other parts of the body.</li>
+          <li>They may form new <strong>secondary tumors</strong> (metastases) in distant sites.</li>
+          <li>Much more <strong>dangerous</strong> and potentially <strong>fatal</strong>, which is why they are <strong>cancer</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Risk factors linked with cancer</summary>
+        <ul>
+          <li><strong>Smoking</strong> → linked to <strong>lung cancer</strong>, and also <strong>mouth</strong>, <strong>stomach</strong>, <strong>cervical</strong> cancers.</li>
+          <li><strong>Obesity</strong> → linked to <strong>bowel</strong>, <strong>liver</strong>, <strong>kidney</strong> cancers.</li>
+          <li><strong>Ultraviolet (UV) light</strong> from the <strong>sun</strong> and <strong>sunbeds</strong> → strongly linked to <strong>skin cancer</strong> (UV damages skin cells).</li>
+          <li><strong>Alcohol</strong> → linked to an increased risk of <strong>liver cancer</strong>.</li>
+          <li><strong>Inherited genes</strong> → some variants increase susceptibility; <strong>BRCA genes</strong> are linked to <strong>breast</strong> and <strong>ovarian</strong> cancer.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Tumors vs Cancer practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer with '|' for alternates)
+// All items are derived from the provided speech.
+const questions = [
+  // 1
+  {type:"mcq", question:"What is a tumor?", options:[
+    "A normal cluster of healthy cells",
+    "An abnormal mass of cells from uncontrolled growth and division",
+    "A type of bacteria",
+    "A surgical procedure"
+  ], answer:1, explanation:"A tumor is an abnormal mass of cells due to uncontrolled growth and division."},
+
+  // 2
+  {type:"mcq", question:"Which tumors are classified as cancer?", options:[
+    "Benign only",
+    "Malignant only",
+    "Both benign and malignant",
+    "Neither benign nor malignant"
+  ], answer:1, explanation:"Only malignant tumors are considered cancer."},
+
+  // 3
+  {type:"mcq", question:"In benign tumors, the abnormal cells typically:", options:[
+    "Spread around the body",
+    "Are contained within one area, often within a membrane",
+    "Destroy all tissues immediately",
+    "Form secondary tumors"
+  ], answer:1, explanation:"Benign tumors remain localized and encapsulated."},
+
+  // 4
+  {type:"tf", question:"Benign tumors are normally considered cancer.", answer:false, explanation:"Benign tumors are not cancer because they do not invade or spread."},
+
+  // 5
+  {type:"mcq", question:"What makes malignant tumors dangerous?", options:[
+    "They always remain in one place",
+    "They can invade tissues and spread to form secondary tumors",
+    "They cannot damage the body",
+    "They are easy to remove"
+  ], answer:1, explanation:"Invasion and metastasis make malignant tumors hazardous."},
+
+  // 6
+  {type:"fill", question:"Malignant tumors can form new ______ tumors in other parts of the body.", answer:"secondary", explanation:"Spreading leads to secondary tumor formation."},
+
+  // 7
+  {type:"mcq", question:"Which statement best distinguishes tumor and cancer?", options:[
+    "All tumors are cancer; cancer is always benign",
+    "Tumor is any abnormal mass; only malignant tumors are cancer",
+    "Cancer is a benign growth",
+    "Tumor and cancer are identical terms"
+  ], answer:1, explanation:"Only malignant tumors are classified as cancer."},
+
+  // 8
+  {type:"mcq", question:"Smoking is strongly linked to which cancer?", options:[
+    "Lung cancer",
+    "Bone cancer",
+    "Eye cancer",
+    "Pancreatic cysts"
+  ], answer:0, explanation:"Smoking has a strong link to lung cancer."},
+
+  // 9
+  {type:"fill", question:"Besides the lungs, smoking is linked to ______, ______, and ______ cancers.", answer:"mouth; stomach; cervical|mouth, stomach, and cervical|mouth stomach cervical", explanation:"Speech lists mouth, stomach, and cervical cancers."},
+
+  // 10
+  {type:"mcq", question:"Obesity has been linked to increased risk of:", options:[
+    "Bowel, liver, and kidney cancers",
+    "Ear and eye infections",
+    "Skin abrasions",
+    "Muscle sprains only"
+  ], answer:0, explanation:"The speech links obesity with bowel, liver, kidney cancers."},
+
+  // 11
+  {type:"mcq", question:"UV light exposure (sun/sunbeds) is strongly linked to:", options:[
+    "Skin cancer",
+    "Kidney stones",
+    "Appendicitis",
+    "Arthritis"
+  ], answer:0, explanation:"UV radiation can damage skin cells causing skin cancer."},
+
+  // 12
+  {type:"mcq", question:"Alcohol consumption is linked to increased risk of:", options:[
+    "Liver cancer",
+    "Brain cancer only",
+    "No cancers",
+    "All infections"
+  ], answer:0, explanation:"Speech specifically links alcohol with liver cancer."},
+
+  // 13
+  {type:"mcq", question:"Which statement about risk factors is correct?", options:[
+    "All risk factors are lifestyle choices",
+    "Genes can also make some people more susceptible",
+    "Only environment matters",
+    "Risk factors are never inherited"
+  ], answer:1, explanation:"Inherited genetic variants can increase risk."},
+
+  // 14
+  {type:"fill", question:"Mutations in ______ genes increase the risk of breast and ovarian cancer.", answer:"brca|brca genes|brca1|brca2", explanation:"BRCA genes are linked to breast and ovarian cancers."},
+
+  // 15
+  {type:"tf", question:"Malignant tumors do not invade surrounding tissues.", answer:false, explanation:"By definition, malicious tumors invade surrounding tissues."},
+
+  // 16
+  {type:"mcq", question:"Which feature is typical of benign tumors?", options:[
+    "Metastasis",
+    "Encapsulation within a membrane",
+    "Rapid spread through the bloodstream",
+    "Formation of many secondary tumors"
+  ], answer:1, explanation:"Benign tumors are commonly encapsulated and localized."},
+
+  // 17
+  {type:"fill", question:"Cancer is defined as a ______ tumor.", answer:"malignant", explanation:"Only malignant tumors are cancer."},
+
+  // 18
+  {type:"mcq", question:"The spread of malignant cells to form tumors elsewhere is called:", options:[
+    "Photosynthesis",
+    "Metastasis (forming secondary tumors)",
+    "Hemostasis",
+    "Homeostasis"
+  ], answer:1, explanation:"Metastasis is spread and formation of secondary tumors."},
+
+  // 19
+  {type:"mcq", question:"Which is NOT listed as a cancer risk factor in the speech?", options:[
+    "Smoking",
+    "Obesity",
+    "UV exposure",
+    "High altitude"
+  ], answer:3, explanation:"High altitude is not mentioned."},
+
+  // 20
+  {type:"fill", question:"UV radiation can damage our ______ cells.", answer:"skin", explanation:"UV damages skin cells, increasing skin cancer risk."},
+
+  // 21
+  {type:"mcq", question:"Which list contains only cancers linked to obesity in the speech?", options:[
+    "Bowel, liver, kidney",
+    "Lung, skin, mouth",
+    "Breast, thyroid, brain",
+    "Cervical, prostate, pancreatic"
+  ], answer:0, explanation:"Obesity → bowel, liver, kidney cancers."},
+
+  // 22
+  {type:"mcq", question:"Which list contains only cancers linked to smoking in the speech?", options:[
+    "Mouth, stomach, cervical",
+    "Liver, kidney, bowel",
+    "Skin, eye, ear",
+    "Bone, muscle, tendon"
+  ], answer:0, explanation:"Smoking linked to mouth, stomach, cervical (and lung)."},
+
+  // 23
+  {type:"fill", question:"Benign tumor cells are usually contained within a ______.", answer:"membrane|capsule", explanation:"They are localized within a membrane/capsule."},
+
+  // 24
+  {type:"mcq", question:"Which statement is true about malignant tumors?", options:[
+    "They stay in one place",
+    "They can invade tissues and spread",
+    "They are not dangerous",
+    "They never form secondary tumors"
+  ], answer:1, explanation:"Malignancy involves invasion and spread."},
+
+  // 25
+  {type:"fill", question:"Cancer risk factors can be ______ (like smoking) or ______ (like inherited genes).", answer:"lifestyle; genetic|lifestyle and genetic|lifestyle, genetic", explanation:"Risk arises from lifestyle and inherited factors."},
+
+  // 26
+  {type:"mcq", question:"Which exposure source is specifically mentioned for UV light?", options:[
+    "Lasers only",
+    "Sun and sunbeds",
+    "LED lamps",
+    "X-rays in hospitals"
+  ], answer:1, explanation:"Sun and sunbeds provide UV exposure."},
+
+  // 27
+  {type:"fill", question:"Alcohol consumption is linked to increased risk of ______ cancer.", answer:"liver", explanation:"Speech links alcohol with liver cancer."},
+
+  // 28
+  {type:"mcq", question:"Which pairing is correct?", options:[
+    "Benign — spreads widely",
+    "Malignant — forms secondary tumors",
+    "Benign — invades tissues",
+    "Malignant — stays encapsulated"
+  ], answer:1, explanation:"Only malignant forms secondary tumors."},
+
+  // 29
+  {type:"fill", question:"A tumor forms when cells undergo uncontrolled ______ and ______.", answer:"growth; division|growth and division", explanation:"Uncontrolled growth and division form tumors."},
+
+  // 30
+  {type:"mcq", question:"Why are malignant tumors potentially fatal?", options:[
+    "They improve organ function",
+    "They can damage organs by invading and spreading",
+    "They produce vitamins",
+    "They remain harmless"
+  ], answer:1, explanation:"Invasion and metastasis damage body systems."},
+
+  // 31
+  {type:"tf", question:"Risk factors are always choices people make.", answer:false, explanation:"Genetic inheritance can also raise risk."},
+
+  // 32
+  {type:"fill", question:"Smoking is strongly linked to ______ cancer.", answer:"lung", explanation:"The most well-known link is to lung cancer."},
+
+  // 33
+  {type:"mcq", question:"Which statement summarizes the speech's key misconception?", options:[
+    "Tumor and cancer are identical terms",
+    "Tumor and cancer are different; only malignant tumors are cancer",
+    "All tumors are harmless",
+    "Only benign tumors are dangerous"
+  ], answer:1, explanation:"Speech clarifies tumor vs cancer distinction."},
+
+  // 34
+  {type:"fill", question:"Benign tumors are ______ dangerous and ______ called cancer.", answer:"not; not|not dangerous and not", explanation:"They are not usually dangerous nor called cancer."},
+
+  // 35
+  {type:"mcq", question:"Which cancer is strongly linked to UV exposure?", options:[
+    "Skin cancer",
+    "Kidney cancer",
+    "Stomach cancer",
+    "Cervical cancer"
+  ], answer:0, explanation:"UV damages skin cells → skin cancer."},
+
+  // 36
+  {type:"fill", question:"Malignant tumors can ______ other tissues and ______ to new sites.", answer:"invade; spread|invade and spread", explanation:"Invasion and spread define malignancy."},
+
+  // 37
+  {type:"mcq", question:"Which statement about alcohol is included in the speech?", options:[
+    "Alcohol prevents all cancers",
+    "Alcohol is linked to increased risk of liver cancer",
+    "Alcohol only affects the kidneys",
+    "Alcohol has no health effects"
+  ], answer:1, explanation:"Alcohol → higher liver cancer risk."},
+
+  // 38
+  {type:"fill", question:"Inherited ______ from parents can increase susceptibility to certain cancers.", answer:"genes|gene variants", explanation:"Inherited genetic factors raise risk."},
+
+  // 39
+  {type:"mcq", question:"BRCA gene variants are linked to which cancers?", options:[
+    "Breast and ovarian",
+    "Lung and skin",
+    "Bowel and kidney",
+    "Liver and stomach"
+  ], answer:0, explanation:"BRCA variants → breast & ovarian cancer risk."},
+
+  // 40
+  {type:"fill", question:"Only ______ tumors are classified as cancer.", answer:"malignant", explanation:"Core definition from the speech."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #dbece7;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      const alts = q.answer.split("|").map(s=>s.trim().toLowerCase());
+      ok = alts.includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
