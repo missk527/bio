@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enzymes: Lock & Key vs Induced Fit</title>
+<style>
+body{font-family:Arial, sans-serif; background:#fafafa; margin:0; line-height:1.6}
+header{background:#1565c0; color:#fff; padding:16px; text-align:center; font-size:1.4rem}
+.video-container{display:flex; justify-content:center; margin-top:20px}
+iframe{width:85%; max-width:900px; height:450px; border:2px solid #ccc; border-radius:8px; background:#fff}
+.wrap{max-width:900px; margin:22px auto; padding:0 14px}
+.card{background:#fff; border-radius:10px; margin-bottom:18px; padding:18px; box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.card h2{color:#1565c0; margin:0 0 10px}
+details{border:1px solid #eee; border-radius:8px; padding:10px 12px; margin:10px 0; background:#fff}
+summary{cursor:pointer; font-weight:bold; color:#0d47a1}
+button{background:#1565c0; color:#fff; border:none; border-radius:6px; padding:8px 14px; cursor:pointer; margin-top:8px}
+button:hover{opacity:.9}
+.question-box{border:1px solid #ddd; border-radius:8px; background:#fff; padding:12px; margin-top:12px}
+.feedback{margin-top:8px; font-weight:bold}
+.correct{color:#0a7a0a}
+.incorrect{color:#b71c1c}
+.scorebar{margin-top:10px; font-size:.95rem}
+</style>
+</head>
+<body>
+<header>Enzymes: Lock & Key vs Induced Fit</header>
+
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/y9uYrLGG854" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+<section class="card">
+<h2>Key Notes (English)</h2>
+
+<details open>
+<summary>Why cells need enzymes</summary>
+<ul>
+<li>Cells perform many chemical reactions every day, but most reactions are naturally slow.</li>
+<li>Heating up cells is dangerous: it uses too much energy, can damage cells, and speeds up unwanted reactions.</li>
+<li>A better solution is a <b>catalyst</b> — a substance that speeds up a reaction without being used up.</li>
+<li><b>Enzymes</b> are biological catalysts made of proteins.</li>
+</ul>
+</details>
+
+<details>
+<summary>Structure of an enzyme</summary>
+<ul>
+<li>Enzymes are long chains of amino acids folded into unique shapes.</li>
+<li>Each enzyme has an <b>active site</b> with a specific shape for a specific substrate.</li>
+<li>If a substrate does not fit the active site, the reaction will not be catalyzed.</li>
+</ul>
+</details>
+
+<details>
+<summary>Substrates and products</summary>
+<ul>
+<li>A <b>substrate</b> is the molecule an enzyme acts on.</li>
+<li>Enzymes may break a substrate into smaller products or combine substrates into a larger product.</li>
+<li>Enzymes speed up the reaction but are not used up, so they can work again and again.</li>
+</ul>
+</details>
+
+<details>
+<summary>Lock & Key Model</summary>
+<ul>
+<li>The original idea: the substrate fits perfectly into the active site like a key into a lock.</li>
+<li>This explains enzyme <b>specificity</b>: only the correct substrate fits.</li>
+</ul>
+</details>
+
+<details>
+<summary>Induced Fit Model</summary>
+<ul>
+<li>A more realistic explanation.</li>
+<li>The active site is not a perfect fit at first.</li>
+<li>The enzyme changes shape slightly to fit the substrate more closely.</li>
+<li>This helps the reaction happen efficiently.</li>
+</ul>
+</details>
+
+</section>
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button onclick="startGame()">Start</button>
+<div class="scorebar" id="scorebar">Not started</div>
+</div>
+</section>
+</div>
+
+<script>
+// ---- Questions (30 MCQ + 10 Fill) ----
+const questions = [
+  {type:"mcq", question:"What is a catalyst?", options:["A substance used up in reactions","A substance that speeds up a reaction without being used up","A product made by reactions"], answer:1, explanation:""},
+  {type:"mcq", question:"Enzymes are examples of:", options:["Chemical products","Biological catalysts","Carbohydrates"], answer:1, explanation:""},
+  {type:"mcq", question:"What are enzymes made of?", options:["Lipids","Proteins","DNA"], answer:1, explanation:""},
+  {type:"mcq", question:"The molecule an enzyme acts on is called a:", options:["Product","Substrate","Catalyst"], answer:1, explanation:""},
+  {type:"mcq", question:"The area of an enzyme where the substrate binds is the:", options:["Active site","Ribosome","Nucleus"], answer:0, explanation:""},
+  {type:"mcq", question:"If the substrate does not fit the active site:", options:["The reaction is catalyzed","No reaction is catalyzed","The enzyme breaks"], answer:1, explanation:""},
+  {type:"mcq", question:"Which model compares enzymes to keys fitting into locks?", options:["Induced fit","Lock and key","Fluid mosaic"], answer:1, explanation:""},
+  {type:"mcq", question:"Which model states enzymes change shape slightly to fit the substrate?", options:["Lock and key","Induced fit","Proton pump"], answer:1, explanation:""},
+  {type:"mcq", question:"Enzymes speed up reactions by:", options:["Raising temperature","Lowering activation energy","Adding heat to cells"], answer:1, explanation:""},
+  {type:"mcq", question:"Why not speed up reactions by heating cells?", options:["It is too cold","It may damage cells and use too much energy","Cells melt"], answer:1, explanation:""},
+  {type:"mcq", question:"Enzymes are made of long chains of:", options:["Nucleic acids","Amino acids","Fatty acids"], answer:1, explanation:""},
+  {type:"mcq", question:"The specific 3D pocket on an enzyme is called the:", options:["Active site","Helix","Binding groove"], answer:0, explanation:""},
+  {type:"mcq", question:"Enzymes are ______ after a reaction.", options:["Used up","Unchanged","Destroyed"], answer:1, explanation:""},
+  {type:"mcq", question:"A substrate binds to an enzyme to form a:", options:["Product complex","Enzyme–substrate complex","Ribosome"], answer:1, explanation:""},
+  {type:"mcq", question:"Products are formed when the enzyme helps the reaction to:", options:["Slow down","Reach completion faster","Stop"], answer:1, explanation:""},
+  {type:"mcq", question:"The lock and key model explains enzyme:", options:["Toxicity","Specificity","Mobility"], answer:1, explanation:""},
+  {type:"mcq", question:"Induced fit means the enzyme:", options:["Is always rigid","Adjusts shape around the substrate","Leaves the cell"], answer:1, explanation:""},
+  {type:"mcq", question:"Enzymes are best described as:", options:["Inorganic catalysts","Protein catalysts","Lipid hormones"], answer:1, explanation:""},
+  {type:"mcq", question:"Heating cells to speed reactions is a bad idea because it:", options:["Uses more ATP only","Damages cells and speeds unwanted reactions","Only helps enzymes"], answer:1, explanation:""},
+  {type:"mcq", question:"A reaction that combines two substrates into one product is an example of:", options:["Anabolic action","Catabolic action","Diffusion"], answer:0, explanation:""},
+  {type:"mcq", question:"Breaking one substrate into two products is:", options:["Anabolic","Catabolic","Endocytosis"], answer:1, explanation:""},
+  {type:"mcq", question:"If a substrate fits poorly at first but the fit improves as binding occurs, this is:", options:["Lock and key","Induced fit","Competitive inhibition"], answer:1, explanation:""},
+  {type:"mcq", question:"Enzymes are found in:", options:["Only animals","All living organisms","Only plants"], answer:1, explanation:""},
+  {type:"mcq", question:"Which statement is true?", options:["Enzymes are consumed in reactions","Enzymes can be reused","Enzymes become products"], answer:1, explanation:""},
+  {type:"mcq", question:"The active site’s shape is important because it determines:", options:["Enzyme color","Reaction specificity","Cell size"], answer:1, explanation:""},
+  {type:"mcq", question:"If no substrate fits an enzyme’s active site, then:", options:["Another enzyme is needed","The same reaction still occurs quickly","The cell heats up"], answer:0, explanation:""},
+  {type:"mcq", question:"Enzymes accelerate reactions primarily by:", options:["Providing energy","Stabilizing the transition state","Making more substrate"], answer:1, explanation:""},
+  {type:"mcq", question:"A catalyst is defined as a substance that:", options:["Starts a reaction and is used up","Speeds a reaction and is not used up","Stops a reaction"], answer:1, explanation:""},
+  {type:"mcq", question:"Enzymes are folded into shapes that create:", options:["Random coils only","Unique active sites","Cell membranes"], answer:1, explanation:""},
+  {type:"mcq", question:"In the lock and key model, the fit between enzyme and substrate is:", options:["Approximate","Perfect","Irrelevant"], answer:1, explanation:""},
+
+  {type:"fill", question:"Enzymes are biological __________.", answerText:"catalysts", explanation:""},
+  {type:"fill", question:"The molecule that fits into an active site is the __________.", answerText:"substrate", explanation:""},
+  {type:"fill", question:"The specific pocket is called the __________ site.", answerText:"active", explanation:""},
+  {type:"fill", question:"The model where the enzyme changes shape is the __________ fit model.", answerText:"induced", explanation:""},
+  {type:"fill", question:"Enzymes are made from chains of __________ acids.", answerText:"amino", explanation:""},
+  {type:"fill", question:"A catalyst speeds a reaction but is not __________ up.", answerText:"used", explanation:""},
+  {type:"fill", question:"In the lock and key model, the substrate fits __________.", answerText:"perfectly", explanation:""},
+  {type:"fill", question:"Enzymes make reactions go __________.", answerText:"faster", explanation:""},
+  {type:"fill", question:"Products are made after the enzyme acts on the __________.", answerText:"substrate", explanation:""},
+  {type:"fill", question:"Enzymes are not __________ during reactions.", answerText:"used up", explanation:""}
+];
+
+let current=0, score=0, order=[];
+
+function startGame(){
+  order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  current=0; score=0;
+  document.getElementById("scorebar").textContent=`Question ${current+1}/${questions.length}  Score: ${score}`;
+  showQ();
+}
+function showQ(){
+  const game=document.getElementById("game-area");
+  const q=questions[order[current]];
+  let h=`<div class='question-box'><p><b>Q${current+1}:</b> ${q.question}</p>`;
+  if(q.type==="mcq"){
+    q.options.forEach((o,i)=>{h+=`<label><input type='radio' name='o' value='${i}'> ${o}</label><br>`;});
+    h+=`<button onclick='checkMCQ()'>Submit</button>`;
+  }else{
+    h+=`<input id='fill' type='text' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+  }
+  h+=`<div id='fb' class='feedback'></div></div>`;
+  if (game.querySelector("#game-inner")) {
+    game.querySelector("#game-inner").innerHTML = h;
+  } else {
+    game.insertAdjacentHTML("beforeend", `<div id='game-inner'>${h}</div>`);
+  }
+}
+function checkMCQ(){
+  const q=questions[order[current]];
+  const sel=document.querySelector("input[name='o']:checked");
+  const fb=document.getElementById("fb");
+  if(!sel){fb.textContent="Select an answer.";fb.className='feedback incorrect';return;}
+  if(parseInt(sel.value)===q.answer){score++;fb.textContent="✅ Correct!";fb.className='feedback correct';}
+  else{fb.textContent="❌ Incorrect.";fb.className='feedback incorrect';}
+  setTimeout(nextQ,900);
+}
+function checkFill(){
+  const q=questions[order[current]];
+  const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+  const fb=document.getElementById("fb");
+  if(!ans){fb.textContent="Enter an answer.";fb.className='feedback incorrect';return;}
+  if(ans.includes(q.answerText.toLowerCase())){score++;fb.textContent="✅ Correct!";fb.className='feedback correct';}
+  else{fb.textContent="❌ Incorrect.";fb.className='feedback incorrect';}
+  setTimeout(nextQ,900);
+}
+function nextQ(){
+  current++;
+  if(current<questions.length){
+    document.getElementById("scorebar").textContent=`Question ${current+1}/${questions.length}  Score: ${score}`;
+    showQ();
+  }else endGame();
+}
+function endGame(){
+  const game=document.getElementById("game-area");
+  game.querySelector("#game-inner").innerHTML=`<h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button>`;
+  document.getElementById("scorebar").textContent=`Finished. Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
