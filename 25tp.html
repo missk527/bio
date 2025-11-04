@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plant Transport: Translocation & Transpiration</title>
+<style>
+:root{ --brand:#2e7d32; --paper:#fffef9; --ink:#222; }
+*{box-sizing:border-box}
+body{font-family:Arial, system-ui, sans-serif; background:#f6faf6; color:var(--ink); margin:0; line-height:1.6}
+header{background:var(--brand); color:#fff; padding:16px 20px; text-align:center; font-size:1.35rem; box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.video-container{display:flex; justify-content:center; margin-top:18px}
+iframe{width:85%; max-width:1000px; height:480px; border:2px solid #c8e6c9; border-radius:10px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.wrap{max-width:1000px; margin:22px auto; padding:0 14px}
+.card{background:var(--paper); border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.08); padding:18px; margin-bottom:18px}
+.card h2{color:var(--brand); border-bottom:2px solid #c8e6c9; padding-bottom:6px; margin:0 0 12px}
+details{background:#fff; border:1px solid #e8f5e9; border-radius:10px; padding:10px 12px; margin:10px 0}
+summary{cursor:pointer; font-weight:bold; color:#1b5e20}
+.pill{background:#e8f5e9; border:1px solid #c8e6c9; border-radius:999px; padding:2px 10px; font-size:.9rem}
+.question-box{border:1px solid #e0e0e0; border-radius:10px; background:#fff; padding:12px; margin-top:14px}
+button{background:var(--brand); color:#fff; border:none; border-radius:8px; padding:8px 14px; font-weight:bold; cursor:pointer; transition:.25s; margin-top:8px}
+button:hover{transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12)}
+.feedback{margin-top:8px; font-weight:bold}
+.correct{color:#0b8a0b} .incorrect{color:#c62828}
+.scorebar{margin-top:10px; font-size:.95rem} .muted{opacity:.85}
+@media (max-width:760px){ iframe{ width:95%; height:240px } }
+.small{font-size:.95rem}
+</style>
+</head>
+<body>
+<header>Plant Transport: Translocation & Transpiration</header>
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/fLxaSQc87l4" title="Translocation & Transpiration" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="card">
+    <h2>Key Notes (rewritten from the speech)</h2>
+
+    <details open>
+      <summary>Big picture</summary>
+      <ul>
+        <li>Plants move two main things: <span class="pill">sugars</span> (via <b>translocation</b> in the <b>phloem</b>) and <span class="pill">water + mineral ions</span> (via <b>transpiration</b> in the <b>xylem</b>).</li>
+        <li>Photosynthesis happens mostly in the <b>leaves</b>, so sugars must be distributed to non‑photosynthetic parts.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Phloem &amp; translocation (sugars)</summary>
+      <ul>
+        <li><b>Phloem</b> consists of columns of living <b>sieve tube elements</b> arranged end to end (with many pores between adjacent cells).</li>
+        <li>The pores allow movement of <b>cell sap</b> — a mixture of water and dissolved sugars.</li>
+        <li>Sugars made in leaves can be transported long distances to other organs.</li>
+        <li>Arriving sugars are used <b>for energy</b> or <b>stored</b> for later use.</li>
+        <li>Phloem transport is <b>bidirectional</b> (up or down the plant), depending on source and sink.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Xylem &amp; transpiration (water + minerals)</summary>
+      <ul>
+        <li><b>Xylem</b> are columns of <b>dead cells</b> with no end walls, forming continuous hollow tubes.</li>
+        <li>Walls are strengthened with <b>lignin</b>.</li>
+        <li>Xylem carries <b>water and mineral ions upward</b> from roots → stem → leaves.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>What drives water movement?</summary>
+      <ul>
+        <li>Water movement is driven by <b>evaporation from leaf surfaces</b> through <b>stomata</b>.</li>
+        <li>Think of water molecules as a <b>continuous chain</b>: when some evaporate, they pull the next molecules up — the <b>transpiration stream</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Transpiration rate: 4 key factors</summary>
+      <ul>
+        <li><b>Light intensity:</b> More light → more photosynthesis → stomata open → higher evaporation → <b>higher transpiration</b>. At night, stomata close → very low transpiration.</li>
+        <li><b>Temperature:</b> Warmer air gives water molecules more energy → they evaporate and diffuse out faster → <b>higher transpiration</b>.</li>
+        <li><b>Air flow (wind):</b> Moving air removes moist air near the leaf → keeps the outside concentration low → <b>steeper gradient</b> → higher transpiration.</li>
+        <li><b>Humidity:</b> More humid air reduces the inside–outside concentration gradient → <b>lower transpiration</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Diffusion gradient inside the leaf</summary>
+      <ul>
+        <li>Inside the leaf is kept <b>moist</b> because water is continually delivered from roots.</li>
+        <li>Since outside air is usually drier, water diffuses out down its <b>concentration gradient</b>; the strength of this gradient controls the rate.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="card">
+    <h2>Quiz (40 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 40-question quiz (30 MCQ + 10 short fill) based strictly on the speech
+const questions = [
+  // MCQ (1-30)
+  {type:"mcq", question:"What is the transport of sugars in plants called?", options:["Transpiration","Translocation","Transduction"], answer:1, explanation:"Sugars move by translocation in the phloem."},
+  {type:"mcq", question:"Where does most photosynthesis happen in a plant?", options:["Roots","Leaves","Flowers"], answer:1, explanation:"Leaves make sugars that must be moved elsewhere."},
+  {type:"mcq", question:"Phloem is arranged as:", options:["Single giant cell","Columns of sieve tube elements","Random parenchyma"], answer:1, explanation:"Phloem has living sieve tubes with pores."},
+  {type:"mcq", question:"Pores between adjacent phloem cells allow movement of:", options:["Air","Cell sap (water + sugars)","Mineral crystals"], answer:1, explanation:"The sap carries dissolved sugars."},
+  {type:"mcq", question:"Sugars carried by the phloem can be used for energy or:", options:["Lost as waste","Stored for later","Turned into minerals"], answer:1, explanation:"Plants store sugars (e.g., starch)."},
+  {type:"mcq", question:"Phloem transport direction:", options:["Only upward","Only downward","Both upward and downward"], answer:2, explanation:"Phloem is bidirectional depending on source/sink."},
+  {type:"mcq", question:"Xylem tubes are made of:", options:["Living cells with nuclei","Dead cells with no end walls","Guard cells"], answer:1, explanation:"Xylem forms continuous hollow tubes."},
+  {type:"mcq", question:"Xylem walls are strengthened by:", options:["Cellulose only","Lignin","Chitin"], answer:1, explanation:"Lignin adds strength and waterproofing."},
+  {type:"mcq", question:"Xylem transports:", options:["Sugars both ways","Water and mineral ions upward","Proteins downward"], answer:1, explanation:"Water/minerals move from roots to leaves."},
+  {type:"mcq", question:"Evaporation of water from leaves is called:", options:["Translocation","Transpiration","Respiration"], answer:1, explanation:"Transpiration is evaporation via stomata."},
+  {type:"mcq", question:"The continuous upward movement of water is the:", options:["Sugar stream","Transpiration stream","Proton stream"], answer:1, explanation:"Water chain pulled by evaporation."},
+  {type:"mcq", question:"Which leaf structures release water vapor to the air?", options:["Stomata","Chloroplasts","Vacuoles"], answer:0, explanation:"Stomata are pores in the epidermis."},
+  {type:"mcq", question:"Why does transpiration happen even at rest?", options:["Pumps in roots","Some evaporation is continuous","It only happens at night"], answer:1, explanation:"There is always some evaporation."},
+  {type:"mcq", question:"Higher light intensity generally causes:", options:["Lower transpiration","Higher transpiration","No change"], answer:1, explanation:"More light → stomata open → more evaporation."},
+  {type:"mcq", question:"At night, transpiration is usually:", options:["Very low","Very high","Unchanged"], answer:0, explanation:"Stomata close without photosynthesis."},
+  {type:"mcq", question:"Increasing temperature affects transpiration by:", options:["Decreasing molecular energy","Increasing evaporation and diffusion","Closing stomata permanently"], answer:1, explanation:"Warmer air speeds evaporation and diffusion."},
+  {type:"mcq", question:"High air flow (wind) near the leaf:", options:["Builds humidity near the leaf","Removes moist air and steepens the gradient","Stops diffusion"], answer:1, explanation:"Wind keeps outside vapor low, increasing diffusion."},
+  {type:"mcq", question:"High humidity around leaves will:", options:["Increase the gradient and transpiration","Decrease the gradient and transpiration","Have no effect"], answer:1, explanation:"Moist air reduces the inside–outside difference."},
+  {type:"mcq", question:"Inside a healthy leaf, the air spaces are:", options:["Dry","Moist","Vacuum"], answer:1, explanation:"Water delivery keeps internal air moist."},
+  {type:"mcq", question:"Water leaves the leaf because there is a:", options:["Temperature gradient","Concentration gradient of water vapor","Pressure pump"], answer:1, explanation:"Diffusion down the vapor concentration gradient."},
+  {type:"mcq", question:"Translocation occurs in:", options:["Phloem","Xylem","Cuticle"], answer:0, explanation:"Phloem moves sugars."},
+  {type:"mcq", question:"Transpiration occurs through:", options:["Phloem","Xylem","Mitochondria"], answer:1, explanation:"Xylem moves water/minerals; evaporation at stomata."},
+  {type:"mcq", question:"Which statement is true about phloem?", options:["Transports only upward","Transports only minerals","Can transport in both directions"], answer:2, explanation:"Bidirectional movement based on needs."},
+  {type:"mcq", question:"Which statement is true about xylem?", options:["Carries sugars","Carries water and minerals upward","Bidirectional sugar flow"], answer:1, explanation:"Water and minerals move root→leaf."},
+  {type:"mcq", question:"The driving force for the transpiration stream is:", options:["Root pressure only","Leaf evaporation through stomata","Phloem pumping"], answer:1, explanation:"Evaporation pulls the water chain upward."},
+  {type:"mcq", question:"Phloem sap mainly contains:", options:["Water and dissolved sugars","Only mineral ions","Proteins only"], answer:0, explanation:"Cell sap is water + sugars."},
+  {type:"mcq", question:"The pores between sieve tube elements are located:", options:["Within the cuticle","At the end walls between adjacent cells","In the chloroplast"], answer:1, explanation:"They permit sap flow cell-to-cell."},
+  {type:"mcq", question:"Lignin in xylem primarily provides:", options:["Color","Strength and support","Photosynthesis"], answer:1, explanation:"It reinforces the tube walls."},
+  {type:"mcq", question:"Transpiration rate depends on the strength of the:", options:["Light gradient","Water vapor concentration gradient","Nutrient gradient"], answer:1, explanation:"Stronger gradient → faster diffusion."},
+  {type:"mcq", question:"Why do stomata open in brighter light?", options:["To release oxygen only","To allow CO₂ in for photosynthesis","To cool the leaf only"], answer:1, explanation:"CO₂ is needed for photosynthesis."},
+
+  // Fill (31-40)
+  {type:"fill", question:"Transport of sugars through the phloem is called __________.", answerText:"translocation", explanation:""},
+  {type:"fill", question:"Evaporation of water from leaves is called __________.", answerText:"transpiration", explanation:""},
+  {type:"fill", question:"The water pathway from roots to leaves is the transpiration __________.", answerText:"stream", explanation:""},
+  {type:"fill", question:"Leaf pores that regulate gas exchange and water loss are __________.", answerText:"stomata", explanation:""},
+  {type:"fill", question:"Xylem tubes are strengthened with __________.", answerText:"lignin", explanation:""},
+  {type:"fill", question:"Phloem sap is a mixture of water and dissolved __________.", answerText:"sugars", explanation:""},
+  {type:"fill", question:"Phloem transport can move __________ (direction) in the plant.", answerText:"both up and down", explanation:""},
+  {type:"fill", question:"Higher __________ intensity opens stomata and raises transpiration.", answerText:"light", explanation:""},
+  {type:"fill", question:"Greater air __________ keeps the outside vapor low and increases diffusion.", answerText:"flow", explanation:""},
+  {type:"fill", question:"High __________ around a leaf lowers the water vapor gradient and reduces transpiration.", answerText:"humidity", explanation:""}
+];
+
+let current=0, score=0, order=[];
+
+function startGame(){
+  order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  current=0; score=0;
+  document.getElementById("scorebar").textContent=`Question ${current+1}/${questions.length}  Score: ${score}`;
+  showQ();
+}
+function showQ(){
+  const game=document.getElementById("game-area");
+  const q=questions[order[current]];
+  let h=`<div class='question-box'><p><b>Q${current+1}:</b> ${q.question}</p>`;
+  if(q.type==="mcq"){
+    q.options.forEach((o,i)=>{h+=`<label><input type='radio' name='o' value='${i}'> ${o}</label><br>`;});
+    h+=`<button onclick='checkMCQ()'>Submit</button>`;
+  }else{
+    h+=`<input id='fill' type='text' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+  }
+  h+=`<div id='fb' class='feedback'></div></div>`;
+  if (game.querySelector("#game-inner")) {
+    game.querySelector("#game-inner").innerHTML = h;
+  } else {
+    game.insertAdjacentHTML("beforeend", `<div id='game-inner'>${h}</div>`);
+  }
+}
+function checkMCQ(){
+  const q=questions[order[current]];
+  const sel=document.querySelector("input[name='o']:checked");
+  const fb=document.getElementById("fb");
+  if(!sel){fb.textContent="Select an answer.";fb.className='feedback incorrect';return;}
+  if(parseInt(sel.value)===q.answer){score++;fb.textContent="✅ Correct! "+(q.explanation||"");fb.className='feedback correct';}
+  else{fb.textContent="❌ Incorrect. "+(q.explanation||"");fb.className='feedback incorrect';}
+  setTimeout(nextQ,900);
+}
+function checkFill(){
+  const q=questions[order[current]];
+  const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+  const fb=document.getElementById("fb");
+  if(!ans){fb.textContent="Enter an answer.";fb.className='feedback incorrect';return;}
+  if(ans.includes(q.answerText.toLowerCase())){score++;fb.textContent="✅ Correct!";fb.className='feedback correct';}
+  else{fb.textContent="❌ Incorrect.";fb.className='feedback incorrect';}
+  setTimeout(nextQ,900);
+}
+function nextQ(){
+  current++;
+  if(current<questions.length){
+    document.getElementById("scorebar").textContent=`Question ${current+1}/${questions.length}  Score: ${score}`;
+    showQ();
+  }else endGame();
+}
+function endGame(){
+  const game=document.getElementById("game-area");
+  game.querySelector("#game-inner").innerHTML=`<h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button>`;
+  document.getElementById("scorebar").textContent=`Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
