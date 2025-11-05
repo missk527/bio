@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biological Classification & Evolutionary Trees</title>
+  <style>
+    :root{ --brand:#3f51b5; --paper:#fffef7; --ink:#333; }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Arial, system-ui, sans-serif; background:#f5f7fb; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #e0e0e0 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:16px 20px; text-align:center; font-size:1.4rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .video-container{ display:flex; justify-content:center; margin-top:20px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #ccc; border-radius:10px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.15)}
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .notes,.game{ background:var(--paper); border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.08); padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:var(--brand); border-bottom:2px solid #c5cae9; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:bold; color:#283593 }
+    .question-box{ border:1px solid #e0e0e0; border-radius:10px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:8px; padding:8px 14px; font-weight:bold; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .small{font-size:.95rem}
+  </style>
+</head>
+<body>
+<header>Biological Classification & Evolutionary Trees</header>
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/F09mrqJv8Lk" title="Biological Classification & Evolutionary Trees" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="notes">
+    <h2>Key Notes (rewritten from the speech)</h2>
+
+    <details open>
+      <summary>Why classification matters</summary>
+      <ul>
+        <li>Earth hosts <b>millions of species</b>; classification gives us a shared system to name and group them.</li>
+        <li>Early naming relied on <b>appearance</b> (e.g., black vs. brown vs. polar bear), which led to <b>inconsistent names</b> across regions and did not show relationships.</li>
+        <li>Example: “grizzly bear” is a type of <b>brown bear</b>; “koala bear” and “panda bear” are not true bears in the same family context.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>The Linnaean hierarchy (18th century)</summary>
+      <ul>
+        <li><b>Carl Linnaeus</b> grouped organisms by shared <b>characteristics</b> and often <b>skeletal structures</b>.</li>
+        <li>Standard ranks (from broad to specific): <b>Kingdom → Phylum → Class → Order → Family → Genus → Species</b>.</li>
+        <li>Names use mostly <b>Latin</b> so scientists worldwide can communicate.</li>
+        <li>Example (humans): <i>Animalia → Chordata → Mammalia → Primates → Hominidae → Homo → sapiens</i>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Binomial nomenclature</summary>
+      <ul>
+        <li>Linnaeus proposed a two‑part scientific name: <b>Genus + species</b> (the <b>binomial</b> system).</li>
+        <li>Formatting rule: <b>italics</b> both words; <b>capitalize</b> the Genus; <b>lowercase</b> the species (e.g., <i>Homo sapiens</i>).</li>
+        <li>Why it helps: unique, concise, and avoids duplicate common names (many “Tom” vs. one <i>Homo sapiens</i>).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Three-domain system (1990s)</summary>
+      <ul>
+        <li><b>Carl Woese</b> used <b>rRNA sequence</b> evidence to show deeper splits than kingdoms alone.</li>
+        <li>Added a level <b>above</b> kingdoms: the <b>Domains</b> — <b>Bacteria</b>, <b>Archaea</b>, and <b>Eukaryota</b>.</li>
+        <li><b>Eukaryota</b>: all organisms with <b>eukaryotic cells</b> (animals, plants, fungi, protists).</li>
+        <li><b>Bacteria</b>: single‑celled <b>prokaryotes</b> found nearly everywhere; often called “true bacteria.”</li>
+        <li><b>Archaea</b>: prokaryotes <b>distinct</b> from bacteria; many live in <b>extreme environments</b> (hot springs, salt lakes) and are sometimes called “archaebacteria.”</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Evolutionary trees (cladograms/phylogenies)</summary>
+      <ul>
+        <li>Show <b>evolutionary relationships</b> by linking species to their <b>common ancestors</b>.</li>
+        <li>A split (node) indicates one lineage diverging into <b>two</b> lineages.</li>
+        <li>Relative relatedness depends on how <b>recent</b> the shared ancestor is.</li>
+        <li>Example: Birds are <b>closer to T. rex</b> than to bats; bats and birds are still closer to each other than either is to <b>spiders</b>.</li>
+        <li>Tree layouts can vary in style but carry the <b>same relationships</b>.</li>
+        <li>Evidence sources: <b>anatomy</b>, <b>DNA/RNA</b> comparisons, and the <b>fossil record</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Remembering the rank order</summary>
+      <ul>
+        <li>Helpful mnemonic (Domain to Species): <b>“Dear King Philip Came Over For Good Spaghetti.”</b></li>
+        <li>Feel free to invent your own — funny or “rude” lines often <b>stick</b> better.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="game">
+    <h2>Quiz (40 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 40-question quiz based on the provided speech
+const questions = [
+  {type:"mcq", question:"Why do scientists classify organisms?", options:["To make species sound more impressive","To create regional nicknames","To organize and communicate about millions of species consistently"], answer:2, explanation:"Classification provides a shared, consistent system to organize life and communicate clearly."},
+  {type:"mcq", question:"What was a key limitation of early, appearance-based naming?", options:["It used Latin","It worked only for plants","It led to inconsistent names and didn’t show relationships"], answer:2, explanation:"Common names varied by region and didn’t reflect evolutionary relatedness."},
+  {type:"mcq", question:"Who formalized the hierarchical system widely used today?", options:["Charles Darwin","Carl Linnaeus","Gregor Mendel"], answer:1, explanation:"Carl Linnaeus introduced the classic rank-based system."},
+  {type:"mcq", question:"Arrange these from broadest to most specific: Family, Genus, Class, Order.", options:["Class, Order, Family, Genus","Order, Class, Family, Genus","Family, Class, Order, Genus"], answer:0, explanation:"The correct sequence is Class → Order → Family → Genus (→ Species)."},
+  {type:"fill", question:"Write the two-word term for the scientific naming system: ______ ______.", answerText:"binomial nomenclature", explanation:"Binomial nomenclature uses Genus + species."},
+  {type:"mcq", question:"In a scientific name like Homo sapiens, which part is capitalized?", options:["Both words","Only the species","Only the genus"], answer:2, explanation:"Capitalize the Genus; species is lowercase; both italicized."},
+  {type:"mcq", question:"Which is the correct formatting of the human scientific name?", options:["Homo Sapiens","Homo sapiens (not italicized)","Homo sapiens (italicized)"], answer:2, explanation:"Italicize both words; capitalize only the Genus."},
+  {type:"mcq", question:"Linnaeus grouped organisms using which kinds of features?", options:["Bone/structural traits and other characteristics","Diet only","Geographic location only"], answer:0, explanation:"He emphasized shared characteristics and skeletal structures."},
+  {type:"mcq", question:"Which list shows the full classic rank order from broad to specific?", options:["Domain, Class, Phylum, Kingdom, Order, Family, Genus, Species","Kingdom, Phylum, Class, Order, Family, Genus, Species","Phylum, Kingdom, Class, Order, Family, Genus, Species"], answer:1, explanation:"Standard Linnaean ranks: Kingdom → Phylum → Class → Order → Family → Genus → Species."},
+  {type:"mcq", question:"What problem does binomial naming solve compared with common names?", options:["It’s easier to pronounce","It’s identical in all languages and avoids duplicates","It changes every year"], answer:1, explanation:"Latin names are stable and internationally recognized."},
+  {type:"fill", question:"The second word in a scientific name is the ______ epithet.", answerText:"species", explanation:"The species (specific) epithet follows the genus."},
+  {type:"mcq", question:"Which statement is true about 'grizzly bear' in the speech?", options:["It’s a separate species unrelated to brown bears","It’s a type of brown bear","It’s closer to pandas than to brown bears"], answer:1, explanation:"Grizzly is a kind of brown bear; common names can obscure relationships."},
+  {type:"mcq", question:"Koala 'bears' and panda 'bears' are used to highlight that:", options:["All bears are closely related","Common names can be misleading about relatedness","They are both fish"], answer:1, explanation:"Common names don’t necessarily reflect true evolutionary relationships."},
+  {type:"mcq", question:"Who proposed the three-domain system?", options:["Carl Woese","Lynn Margulis","Alfred Wallace"], answer:0, explanation:"Carl Woese used rRNA evidence to introduce domains."},
+  {type:"fill", question:"Woese’s evidence primarily came from analyzing ______ sequences.", answerText:"rRNA", explanation:"Ribosomal RNA sequences revealed deep evolutionary splits."},
+  {type:"mcq", question:"Which is NOT a domain in the Woese system?", options:["Bacteria","Eukaryota","Protozoa"], answer:2, explanation:"The domains are Bacteria, Archaea, and Eukaryota."},
+  {type:"mcq", question:"Eukaryota includes which groups?", options:["Plants, fungi, protists, and animals","Only animals and plants","Only microscopic organisms"], answer:0, explanation:"All organisms with eukaryotic cells belong to Eukaryota."},
+  {type:"mcq", question:"Bacteria are best described as:", options:["Single-celled prokaryotes found widely","Eukaryotic multicellular organisms","Viruses"], answer:0, explanation:"Bacteria are prokaryotic and typically single-celled."},
+  {type:"mcq", question:"Archaea are:", options:["A type of eukaryote","Prokaryotes distinct from bacteria; many live in extreme environments","Only found in humans"], answer:1, explanation:"Archaea are prokaryotes, distinct from bacteria."},
+  {type:"fill", question:"Some sources call bacteria 'true bacteria' and archaea '______ bacteria.'", answerText:"primitive", explanation:"The speech mentions 'primitive bacteria' for Archaea (though modern usage varies)."},
+  {type:"mcq", question:"Where do evolutionary trees place the newest common ancestor between two groups?", options:["At the root of the tree","At the point where their lines split","Nowhere; trees don’t show that"], answer:1, explanation:"A node (split) represents their most recent common ancestor."},
+  {type:"mcq", question:"According to the speech, birds are more closely related to:", options:["Bats than to T. rex","T. rex than to bats","Spiders than to bats"], answer:1, explanation:"Birds share a more recent ancestor with non-avian theropods like T. rex."},
+  {type:"mcq", question:"Bats and birds are more closely related to each other than either is to spiders because:", options:["They both fly","They share a more recent common ancestor with each other","They are both nocturnal"], answer:1, explanation:"Relatedness depends on recency of shared ancestry, not flight or habits."},
+  {type:"fill", question:"Another name for an evolutionary tree is a ______ or phylogeny.", answerText:"cladogram", explanation:"Cladogram is commonly used to depict relationships."},
+  {type:"mcq", question:"What kind of evidence helps build evolutionary trees?", options:["Anatomy, DNA/RNA comparisons, and fossils","Only behavior","Only diet"], answer:0, explanation:"Multiple independent evidence lines are used."},
+  {type:"mcq", question:"When a line on a tree splits in two, this represents:", options:["Speciation from a common ancestor","Extinction event","Hybridization only"], answer:0, explanation:"A node indicates one lineage diverging into two."},
+  {type:"fill", question:"In Linnaean ranks, the level directly above Genus is ______.", answerText:"family", explanation:"Order → Family → Genus → Species."},
+  {type:"mcq", question:"Which order correctly includes Domain above Kingdom?", options:["Kingdom, Domain, Phylum, Class...","Domain, Kingdom, Phylum, Class...","Domain, Phylum, Kingdom, Class..."], answer:1, explanation:"In the three-domain model, Domain sits above Kingdom."},
+  {type:"mcq", question:"Which choice is formatted correctly?", options:["Canis Lupus (not italicized)","canis lupus (italicized)","Canis lupus (italicized)"], answer:2, explanation:"Italicize both words; capitalize Genus only."},
+  {type:"fill", question:"The mnemonic 'Dear King Philip Came Over For Good Spaghetti' starts with the level ______.", answerText:"domain", explanation:"D = Domain, then Kingdom, Phylum, Class, Order, Family, Genus, Species."},
+  {type:"mcq", question:"Why did scientists add domains above kingdoms?", options:["To increase memorization difficulty","New molecular data revealed deeper splits than kingdoms captured","To replace all other ranks"], answer:1, explanation:"rRNA analyses showed fundamental divisions across life."},
+  {type:"mcq", question:"Which statement about common names is accurate?", options:["They always reflect true relationships","They can be duplicated or misleading across regions","They are always in Latin"], answer:1, explanation:"Common names vary and can mislead about relatedness."},
+  {type:"fill", question:"In binomial names, the first word is the ______.", answerText:"genus", explanation:"Genus comes first, then species epithet."},
+  {type:"fill", question:"In binomial names, the second word is the ______.", answerText:"species", explanation:"Species (specific epithet) comes second."},
+  {type:"mcq", question:"Which rank comes immediately below Order?", options:["Family","Genus","Class"], answer:0, explanation:"Order → Family."},
+  {type:"mcq", question:"Which rank comes immediately above Species?", options:["Genus","Family","Order"], answer:0, explanation:"Genus → Species."},
+  {type:"mcq", question:"Which statement about Archaea in the speech is included?", options:["They were originally thought to be bacteria","They are photosynthetic plants","They are eukaryotes"], answer:0, explanation:"They were once grouped with bacteria but are distinct."},
+  {type:"mcq", question:"Why does Latin remain common in naming?", options:["It changes often","It avoids cross-language confusion and is historically rooted","It’s easier to type"], answer:1, explanation:"Latin provides stability and universality."},
+  {type:"fill", question:"The study of how organisms are related through evolution is called ______.", answerText:"phylogeny", explanation:"Phylogeny examines evolutionary relationships."},
+  {type:"mcq", question:"When two trees show the same relationships but look different, this means:", options:["One is wrong","Visual style differs but relationships are the same","They describe different species"], answer:1, explanation:"Layout can vary while relationships remain identical."},
+  {type:"fill", question:"A split on a tree indicates that a common ancestor has ______ into two lineages.", answerText:"split", explanation:"A node marks a divergence event."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let order = [];
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const game = document.getElementById("game-area");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`;});
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  game.querySelector("#game-area-inner") ? game.querySelector("#game-area-inner").innerHTML = html : game.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`);
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.answer){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  if(ans.includes(q.answerText.toLowerCase())){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else endGame();
+}
+
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${questions.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
