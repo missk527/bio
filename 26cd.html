@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communicable Disease — Pathogen Spread & Prevention (Notes & Quiz)</title>
+  <style>
+    :root{ --brand:#2563eb; --paper:#fffef8; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f7fafc; color:var(--ink); line-height:1.6; }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.2rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.95rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e5e7eb; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:#1e40af; border-bottom:2px solid #bfdbfe; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#1e40af }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#dbeafe; color:#1e40af; border:1px solid #bfdbfe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#6b7280; font-size:.85rem; padding:20px 0 }
+    code.kbd{ background:#eef2ff; border:1px solid #e0e7ff; padding:1px 6px; border-radius:6px }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Communicable Disease — Pathogen Spread & Prevention <span class="pill">Air · Food/Water · Contact · Hygiene · Vectors · Vaccines · Quarantine</span></h1>
+    <div class="small">Video + focused notes + interactive 40-question quiz</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/FbHaKq4tFHE" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points rewritten from the speech)</h2>
+
+      <details open>
+        <summary>What are microorganisms and pathogens?</summary>
+        <ul>
+          <li><strong>Microorganisms</strong>: bacteria, viruses, protists, fungi.</li>
+          <li>Most are harmless, but a small subset are <strong>pathogens</strong> — microorganisms that <strong>cause disease</strong>.</li>
+          <li>Diseases caused by pathogens are <strong>communicable/infectious</strong> and affect <strong>animals and plants</strong>.</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>How pathogens spread (three main routes)</summary>
+        <ul>
+          <li><strong>Airborne</strong>: tiny droplets from <em>coughs/sneezes</em> can carry viruses (e.g., influenza, measles).</li>
+          <li><strong>Food & water</strong>: ingesting <strong>contaminated</strong> items (e.g., <em>cholera</em> via contaminated water; <em>Salmonella</em> via contaminated food such as chicken).</li>
+          <li><strong>Direct contact</strong>: touching contaminated surfaces or skin (e.g., <em>athlete’s foot</em> fungi in swimming pools).</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>How to reduce spread (four strategies)</summary>
+        <ul>
+          <li><strong>Hygiene</strong>: wash hands after the bathroom and before food prep; clean knives/chopping boards.</li>
+          <li><strong>Kill vectors</strong>: eliminate organisms that carry pathogens (e.g., <strong>mosquitoes</strong> for malaria protists) — often using <strong>insecticides</strong>.</li>
+          <li><strong>Vaccination</strong>: best prevention — if people don’t catch it, they can’t pass it on.</li>
+          <li><strong>Isolation/quarantine</strong>: separate infected individuals (used for more serious diseases).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Looking ahead</summary>
+        <ul>
+          <li>Future lessons: dive into each pathogen type (bacteria, viruses, protists, fungi) and their disease examples.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Communicable disease practice</div>
+
+<script>
+// Quiz schema: mcq (options, answer index), tf (boolean), fill (string/alternatives)
+const questions = [
+  // 1
+  {type:"mcq", question:"Which are listed as microorganisms in the speech?", options:["Bacteria, viruses, protists, fungi","Plants, animals, fungi, bacteria","Archaea only","Only viruses"], answer:0, explanation:"The speech names bacteria, viruses, protists, and fungi."},
+  // 2
+  {type:"mcq", question:"What is a pathogen?", options:["Any microorganism","A microorganism that causes disease","A harmless bacterium","A large parasite"], answer:1, explanation:"Pathogens cause disease."},
+  // 3
+  {type:"tf", question:"Most microorganisms do not cause us problems.", answer:true, explanation:"Only a small group are pathogens."},
+  // 4
+  {type:"mcq", question:"Diseases caused by pathogens are called:", options:["Genetic diseases","Communicable (infectious) diseases","Lifestyle diseases","Autoimmune diseases"], answer:1, explanation:"They can spread from person to person."},
+  // 5
+  {type:"tf", question:"Communicable diseases can affect both animals and plants.", answer:true, explanation:"The speech says both are affected."},
+  // 6
+  {type:"mcq", question:"Which is an airborne route example from the speech?", options:["Cholera","Measles","Athlete’s foot","Salmonella"], answer:1, explanation:"Measles virus spreads in droplets from coughs/sneezes."},
+  // 7
+  {type:"mcq", question:"Which disease spreads via contaminated water in the speech?", options:["Influenza","Measles","Cholera","Athlete’s foot"], answer:2, explanation:"Cholera spreads through contaminated drinking water."},
+  // 8
+  {type:"mcq", question:"Which pathogen is linked to contaminated food (e.g., chicken)?", options:["Salmonella bacteria","Measles virus","Malaria protist","Ringworm fungus"], answer:0, explanation:"Salmonella spreads via contaminated food."},
+  // 9
+  {type:"mcq", question:"Which example is given for direct contact transmission?", options:["Measles","Cholera","Athlete’s foot","Influenza"], answer:2, explanation:"Athlete’s foot spreads on contaminated surfaces."},
+  // 10
+  {type:"tf", question:"Droplets from coughs and sneezes can carry airborne pathogens.", answer:true, explanation:"That is the airborne route described."},
+  // 11
+  {type:"mcq", question:"What’s the 'common-sense' first line of defense against spread?", options:["Avoid water","General hygiene (handwashing, clean utensils)","Take antibiotics daily","Never leave home"], answer:1, explanation:"Hygiene helps prevent transmission."},
+  // 12
+  {type:"mcq", question:"What is a vector?", options:["A genetic trait","An organism that transports a pathogen","A vitamin","A disinfectant"], answer:1, explanation:"Vectors carry pathogens between hosts."},
+  // 13
+  {type:"mcq", question:"Which vector and disease pair is mentioned?", options:["Tick – measles","Mosquito – malaria protists","Flea – cholera","Louse – athlete’s foot"], answer:1, explanation:"Mosquitoes transmit malaria protists."},
+  // 14
+  {type:"tf", question:"Insecticides are chemicals used to kill insect vectors.", answer:true, explanation:"They are used to control mosquito populations."},
+  // 15
+  {type:"mcq", question:"According to the speech, the best way to prevent spread is to:", options:["Quarantine everyone","Vaccinate people","Use antibiotics only","Boil all foods"], answer:1, explanation:"If people can't catch it, they can't pass it on."},
+  // 16
+  {type:"tf", question:"Quarantine means isolating infected people to prevent spread.", answer:true, explanation:"Isolation breaks transmission chains."},
+  // 17
+  {type:"mcq", question:"Quarantine is generally used when the disease is:", options:["Mild and harmless","Serious and could harm others","Always curable","Seasonal only"], answer:1, explanation:"Used for serious diseases to protect others."},
+  // 18
+  {type:"mcq", question:"Which list shows the three spread routes from the recap?", options:["Air; food/water; direct contact","Air; soil; sunlight","Only air","Only contact"], answer:0, explanation:"Air, contaminated food/water, and direct contact."},
+  // 19
+  {type:"fill", question:"Microorganisms that cause disease are called ______.", answer:"pathogens", explanation:"Definition from the speech."},
+  // 20
+  {type:"fill", question:"Diseases that can spread from person to person are ______ diseases.", answer:"communicable|infectious", explanation:"Either term used."},
+  // 21
+  {type:"fill", question:"Airborne pathogens are carried in tiny ______ from coughs/sneezes.", answer:"droplets", explanation:"Droplet transmission."},
+  // 22
+  {type:"fill", question:"Cholera spreads by drinking water that is ______.", answer:"contaminated", explanation:"Contaminated water carries cholera bacteria."},
+  // 23
+  {type:"fill", question:"Food poisoning by ______ bacteria is linked to contaminated chicken.", answer:"salmonella|salmonella bacteria", explanation:"Speech example."},
+  // 24
+  {type:"fill", question:"Athlete’s foot spreads by walking ______ on contaminated surfaces.", answer:"barefoot", explanation:"Direct contact example."},
+  // 25
+  {type:"tf", question:"Cleaning knives and chopping boards is part of good kitchen hygiene.", answer:true, explanation:"Prevents foodborne transmission."},
+  // 26
+  {type:"mcq", question:"Killing vectors helps because it:", options:["Feeds pathogens","Removes the organisms that carry pathogens","Creates vaccines","Makes water colder"], answer:1, explanation:"Reduces transmission routes."},
+  // 27
+  {type:"mcq", question:"Which control method directly prevents people from catching diseases in the first place?", options:["Insecticides","Vaccination","Quarantine","Handwashing"], answer:1, explanation:"Vaccines confer protection before exposure."},
+  // 28
+  {type:"mcq", question:"Which method is <em>not</em> listed among the four strategies in the speech?", options:["Hygiene","Vector control","Vaccination","Antibiotic prophylaxis for everyone"], answer:3, explanation:"Antibiotic use for everyone is not listed."},
+  // 29
+  {type:"tf", question:"The speech says future videos will look at each pathogen type in more detail.", answer:true, explanation:"It previews the next lessons."},
+  // 30
+  {type:"mcq", question:"Which pair correctly matches route and example?", options:["Air – cholera","Food/water – measles","Direct contact – athlete’s foot","Air – salmonella"], answer:2, explanation:"Athlete’s foot via contaminated surfaces."},
+  // 31
+  {type:"fill", question:"Name one airborne pathogen from the speech: ______ or ______.", answer:"influenza|measles|influenza virus|measles virus", explanation:"Either influenza or measles is acceptable."},
+  // 32
+  {type:"fill", question:"Vectors transport the ______ from one host to another.", answer:"pathogen|pathogens", explanation:"Definition recap."},
+  // 33
+  {type:"tf", question:"Vaccination works because people who don’t get infected can’t pass on the pathogen.", answer:true, explanation:"Breaks chains of transmission."},
+  // 34
+  {type:"mcq", question:"When are insecticides particularly relevant?", options:["For fungal spores in pools","For mosquito vectors of malaria","For viruses in air","For cholera in water"], answer:1, explanation:"Used to kill mosquito vectors."},
+  // 35
+  {type:"mcq", question:"Which is <em>not</em> given as a pathogen group?", options:["Bacteria","Viruses","Protists","Plants"], answer:3, explanation:"Plants are not listed as pathogens."},
+  // 36
+  {type:"tf", question:"Pathogens can infect plants as well as animals.", answer:true, explanation:"The speech says both are affected."},
+  // 37
+  {type:"mcq", question:"Direct-contact spread can occur via:", options:["Air currents outdoors","Shared contaminated surfaces","Boiled water only","Sunlight"], answer:1, explanation:"E.g., floors in swimming pools."},
+  // 38
+  {type:"fill", question:"Separating infected individuals is called ______ or ______.", answer:"isolation|quarantine", explanation:"Both terms appear."},
+  // 39
+  {type:"fill", question:"Handwashing should be done after the bathroom and before ______.", answer:"preparing food|food prep|preparing foods", explanation:"Hygiene step from the speech."},
+  // 40
+  {type:"tf", question:"According to the speech, quarantine is typically used first, before any other measure.", answer:false, explanation:"It is used if other measures fail and for serious diseases."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
