@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digestive System Overview</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>13. Digestive System Overview</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/Hw6VdF1LG5c" title="Digestive System Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: main organs of the human digestive system, what they do, and how food is broken down and absorbed.</p>
+
+      <details open>
+        <summary>1) Big Picture of Digestion</summary>
+        <ul>
+          <li>The digestive system breaks large, complex food into <strong>small, soluble molecules</strong> that can be absorbed into the blood and used by cells.</li>
+          <li>Main reasons we eat: to provide <strong>energy</strong> for movement and to keep <strong>metabolism</strong> and body processes running.</li>
+          <li>Digestion uses both <strong>physical (mechanical)</strong> breakdown and <strong>chemical</strong> breakdown by enzymes.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Key Nutrient Groups</summary>
+        <ul>
+          <li><strong>Carbohydrates</strong> – e.g. starch and glucose; main source of energy.</li>
+          <li><strong>Proteins</strong> – needed for growth, repair and enzymes.</li>
+          <li><strong>Fats (lipids)</strong> – energy store, insulation and protection.</li>
+          <li>These nutrients are locked inside <strong>large molecules</strong> in big pieces of food → they must be digested first.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Mouth and Salivary Glands</summary>
+        <ul>
+          <li><span class="pill">Mechanical digestion</span> Teeth chew food to break it into smaller pieces and increase surface area.</li>
+          <li><span class="pill">Saliva</span> Released from <strong>salivary glands</strong>; makes food mixture more liquid and easier to swallow.</li>
+          <li>Saliva contains <strong>salivary amylase</strong>, an enzyme that begins the chemical breakdown of <strong>carbohydrates (starch)</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Oesophagus (Gullet)</summary>
+        <ul>
+          <li>After swallowing, food travels down the <strong>gullet / oesophagus</strong>.</li>
+          <li>Muscle contractions push the food towards the stomach (this movement is called <strong>peristalsis</strong>, although the word is not stressed in the speech).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Stomach</summary>
+        <ul>
+          <li>The stomach is a <strong>muscular sac</strong> with three key roles:</li>
+          <li>1. <strong>Muscular walls contract</strong> to churn food and mix it with digestive juices (mechanical + mixing).</li>
+          <li>2. Produces <strong>pepsin</strong>, a <strong>protease</strong> enzyme that breaks down <strong>proteins</strong> into smaller chains.</li>
+          <li>3. Produces <strong>hydrochloric acid (HCl)</strong> which:
+            <ul>
+              <li>kills bacteria in food, and</li>
+              <li>provides the <strong>acidic pH</strong> needed for pepsin to work properly.</li>
+            </ul>
+          </li>
+          <li>After about an hour in the stomach, the partly digested food is released into the small intestine.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Small Intestine and Enzymes</summary>
+        <ul>
+          <li>The <strong>small intestine</strong> is the main site of <strong>digestion</strong> and <strong>absorption</strong>.</li>
+          <li>It produces some of its own digestive enzymes.</li>
+          <li>The <strong>pancreas</strong> makes most of the digestive enzymes and releases them into the small intestine as <strong>pancreatic juice</strong>.</li>
+          <li>Enzymes here continue the breakdown of carbohydrates, proteins and fats into very small, soluble molecules.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) Liver, Gallbladder and Bile</summary>
+        <ul>
+          <li><strong>Bile</strong> is made in the <strong>liver</strong>, but stored in the <strong>gallbladder</strong> until needed.</li>
+          <li>When food enters the small intestine, bile is released into it from the gallbladder.</li>
+          <li>Bile has two main roles:
+            <ul>
+              <li><span class="pill">Neutralisation</span> Bile is <strong>alkaline</strong>, so it neutralises the <strong>acidic chyme</strong> from the stomach, creating a better pH for enzymes in the small intestine.</li>
+              <li><span class="pill">Emulsification of fats</span> Bile breaks large fat droplets into many tiny droplets, increasing their <strong>surface area</strong> for lipase enzymes.</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Absorption in the Small Intestine – Villi</summary>
+        <ul>
+          <li>Once food is fully digested into tiny molecules, they are absorbed into the blood through the lining of the small intestine.</li>
+          <li>The inner surface of the small intestine is covered with millions of <strong>villi</strong> (singular: villus), which look like small fingers.</li>
+          <li>Villi adaptations for efficient absorption:
+            <ul>
+              <li><span class="pill">Large surface area</span> Many villi greatly increase the surface area, so absorption happens more quickly.</li>
+              <li><span class="pill">One-cell-thick walls</span> The surface cells are only one cell thick → very short diffusion distance.</li>
+              <li><span class="pill">Good blood supply</span> Dense capillary network maintains a concentration gradient and quickly carries absorbed nutrients away.</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Large Intestine and Rectum</summary>
+        <ul>
+          <li>Even after absorption in the small intestine, there is still a lot of <strong>undigested material</strong> and <strong>water</strong> left.</li>
+          <li>This material passes into the <strong>large intestine</strong>.</li>
+          <li>The large intestine <strong>absorbs most of the remaining water</strong>, turning the watery mixture into more solid <strong>faeces</strong>.</li>
+          <li>Faeces are stored in the <strong>rectum</strong> until they are removed from the body.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>10) Whole Process in Order</summary>
+        <ul>
+          <li>Food is taken into the <strong>mouth</strong> → chewed and mixed with <strong>saliva + salivary amylase</strong>.</li>
+          <li>Swallowed and moved down the <strong>oesophagus / gullet</strong>.</li>
+          <li>Enters the <strong>stomach</strong> → churned, mixed with pepsin and hydrochloric acid.</li>
+          <li>Passes into the <strong>small intestine</strong> → mixes with <strong>pancreatic juice</strong> from the pancreas and <strong>bile</strong> from the gallbladder (made in the liver).</li>
+          <li>Food is fully digested and then <strong>absorbed</strong> through the villi into the bloodstream.</li>
+          <li>Anything that cannot be digested plus lots of water moves into the <strong>large intestine</strong> → water is reabsorbed.</li>
+          <li>Remaining <strong>faeces</strong> are stored in the <strong>rectum</strong> before being removed from the body.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Digestive System Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the digestive system speech/notes)
+const questions = [
+  // 1
+  {type:"mcq", question:"What is the main overall role of digestion?", options:["To pump blood around the body","To break food into small soluble molecules for absorption","To produce hormones"], answer:1,
+   explanation:"Digestion breaks large food molecules into small soluble molecules that can be absorbed into the blood."},
+  // 2
+  {type:"mcq", question:"Which of the following is NOT one of the three main nutrient groups mentioned?", options:["Carbohydrates","Minerals","Proteins","Fats"], answer:1,
+   explanation:"The speech focused on carbohydrates, proteins and fats."},
+  // 3
+  {type:"fill", question:"Carbohydrates such as starch and glucose are mainly used by the body for ______.", answerText:"energy",
+   explanation:"Carbohydrates are a key energy source for movement and metabolism."},
+  // 4
+  {type:"mcq", question:"Which type of digestion happens when you chew food?", options:["Chemical digestion","Mechanical (physical) digestion","Respiration"], answer:1,
+   explanation:"Chewing physically breaks food into smaller pieces, which is mechanical digestion."},
+  // 5
+  {type:"mcq", question:"Which enzyme is found in saliva?", options:["Pepsin","Lipase","Salivary amylase"], answer:2,
+   explanation:"Salivary amylase in saliva begins digestion of carbohydrates."},
+  // 6
+  {type:"fill", question:"Salivary amylase starts the chemical breakdown of ______ in the mouth.", answerText:"carbohydrate",
+   explanation:"It mainly acts on starch, a carbohydrate."},
+  // 7
+  {type:"mcq", question:"What is another name for the gullet?", options:["Trachea","Oesophagus","Larynx"], answer:1,
+   explanation:"The gullet is also called the oesophagus."},
+  // 8
+  {type:"mcq", question:"Which organ is described as a muscular sac?", options:["Stomach","Pancreas","Liver"], answer:0,
+   explanation:"The stomach is a muscular sac that churns food and secretes acid and enzymes."},
+  // 9
+  {type:"mcq", question:"Which enzyme is produced in the stomach?", options:["Pepsin","Amylase","Lipase"], answer:0,
+   explanation:"The stomach produces pepsin, a protease that digests proteins."},
+  // 10
+  {type:"fill", question:"Pepsin is a type of ______ enzyme that breaks down proteins.", answerText:"protease",
+   explanation:"Pepsin is a protease, an enzyme that digests proteins."},
+  // 11
+  {type:"mcq", question:"What does hydrochloric acid in the stomach NOT do?", options:["Kill bacteria","Provide acidic conditions for pepsin","Directly digest carbohydrates"], answer:2,
+   explanation:"HCl provides the right pH and kills bacteria but it is not a carbohydrate-digesting enzyme."},
+  // 12
+  {type:"mcq", question:"After about an hour in the stomach, food is moved into the:", options:["Large intestine","Small intestine","Trachea"], answer:1,
+   explanation:"Partly digested food (chyme) is released into the small intestine."},
+  // 13
+  {type:"fill", question:"The small intestine is the main site where food is fully digested and ______ into the blood.", answerText:"absorbed",
+   explanation:"The small intestine completes digestion and is the major site of absorption."},
+  // 14
+  {type:"mcq", question:"Which organ makes most of the digestive enzymes that enter the small intestine?", options:["Gallbladder","Pancreas","Rectum"], answer:1,
+   explanation:"The pancreas produces many digestive enzymes and releases them into the small intestine."},
+  // 15
+  {type:"mcq", question:"Pancreatic enzymes are released into the small intestine as:", options:["Bile","Blood","Pancreatic juice"], answer:2,
+   explanation:"The enzymes from the pancreas are carried in pancreatic juice."},
+  // 16
+  {type:"mcq", question:"Where is bile made?", options:["Pancreas","Liver","Gallbladder"], answer:1,
+   explanation:"Bile is produced by the liver."},
+  // 17
+  {type:"mcq", question:"Where is bile stored before it is released into the small intestine?", options:["Stomach","Gallbladder","Large intestine"], answer:1,
+   explanation:"Bile is stored in the gallbladder."},
+  // 18
+  {type:"fill", question:"Bile helps to neutralise the acidic food coming from the stomach because bile is ______.", answerText:"alkaline",
+   explanation:"Bile is alkaline and so it neutralises the acid from the stomach."},
+  // 19
+  {type:"mcq", question:"What does it mean that bile emulsifies fats?", options:["It digests fats completely","It breaks fats into tiny droplets to increase surface area","It turns fats into proteins"], answer:1,
+   explanation:"Emulsification breaks large fat droplets into small ones, increasing surface area for lipase."},
+  // 20
+  {type:"fill", question:"Emulsification by bile increases the ______ area of fats for enzyme action.", answerText:"surface",
+   explanation:"Smaller droplets have a larger total surface area."},
+  // 21
+  {type:"mcq", question:"Which structure is covered with many villi?", options:["Stomach","Small intestine","Large intestine"], answer:1,
+   explanation:"The inner lining of the small intestine is covered with villi."},
+  // 22
+  {type:"mcq", question:"What is the main advantage of villi having a very large total surface area?", options:["Slows down absorption","Speeds up absorption of digested food","Prevents enzyme activity"], answer:1,
+   explanation:"A larger surface area allows faster and more efficient absorption."},
+  // 23
+  {type:"fill", question:"Villi have walls that are only one cell thick, giving a very short ______ distance for nutrients.", answerText:"diffusion",
+   explanation:"A short diffusion distance helps nutrients move into the blood quickly."},
+  // 24
+  {type:"mcq", question:"Why is a good blood supply to the villi important?", options:["It keeps the villi cool","It maintains a concentration gradient and quickly carries nutrients away","It produces enzymes"], answer:1,
+   explanation:"Blood flow maintains steep concentration gradients and removes absorbed nutrients."},
+  // 25
+  {type:"mcq", question:"After useful nutrients are absorbed, the remaining material moves into the:", options:["Stomach","Large intestine","Pancreas"], answer:1,
+   explanation:"Undigested material and water pass into the large intestine."},
+  // 26
+  {type:"fill", question:"The large intestine mainly absorbs ______ from the remaining material.", answerText:"water",
+   explanation:"Its key role is to absorb excess water."},
+  // 27
+  {type:"mcq", question:"What is the semi-solid waste material left after water is absorbed called?", options:["Chyme","Faeces","Plasma"], answer:1,
+   explanation:"The remaining solid waste is called faeces."},
+  // 28
+  {type:"fill", question:"Faeces are stored in the ______ until they are removed from the body.", answerText:"rectum",
+   explanation:"The rectum stores faeces before elimination."},
+  // 29
+  {type:"mcq", question:"Which of the following shows the correct order of organs for a piece of food?", options:["Mouth → Trachea → Stomach → Small intestine","Mouth → Oesophagus → Stomach → Small intestine → Large intestine → Rectum","Mouth → Stomach → Oesophagus → Large intestine"], answer:1,
+   explanation:"Food passes mouth → oesophagus → stomach → small intestine → large intestine → rectum."},
+  // 30
+  {type:"mcq", question:"Which statement about bile is TRUE?", options:["It is made and stored in the gallbladder","It is made in the liver and stored in the gallbladder","It is made in the pancreas"], answer:1,
+   explanation:"Bile is produced in the liver and stored in the gallbladder."},
+  // 31
+  {type:"fill", question:"The organ that produces most digestive enzymes and sends them to the small intestine is the ______.", answerText:"pancreas",
+   explanation:"The pancreas produces many digestive enzymes."},
+  // 32
+  {type:"mcq", question:"Which process mainly occurs in the large intestine?", options:["Digestion of proteins","Absorption of most nutrients","Absorption of remaining water"], answer:2,
+   explanation:"The large intestine mainly reabsorbs water from the remaining material."},
+  // 33
+  {type:"mcq", question:"Which statement about the mouth is correct?", options:["It only performs chemical digestion","It performs both mechanical digestion and chemical digestion of carbohydrates","It absorbs most nutrients"], answer:1,
+   explanation:"The mouth both chews food (mechanical) and uses salivary amylase (chemical)." },
+  // 34
+  {type:"fill", question:"Breaking big pieces of food into smaller pieces by chewing increases the ______ area for enzymes.", answerText:"surface",
+   explanation:"A greater surface area allows enzymes to work more effectively."},
+  // 35
+  {type:"mcq", question:"Which option best describes the role of hydrochloric acid in the stomach?", options:["Neutralises stomach contents","Creates an alkaline environment","Provides an acidic environment and kills bacteria"], answer:2,
+   explanation:"HCl makes the stomach contents acidic and kills bacteria, helping pepsin work."},
+  // 36
+  {type:"mcq", question:"What happens to food in the small intestine besides digestion?", options:["It is stored as faeces","It is absorbed into the blood through villi","It is turned into saliva"], answer:1,
+   explanation:"The small intestine is where digested food is absorbed through villi into the bloodstream."},
+  // 37
+  {type:"fill", question:"Villi are described as small ______-like projections lining the small intestine.", answerText:"finger",
+   explanation:"They are finger-like projections that increase surface area."},
+  // 38
+  {type:"mcq", question:"Which of these does NOT directly secrete substances into the small intestine?", options:["Stomach","Pancreas","Gallbladder"], answer:0,
+   explanation:"The stomach empties into the small intestine but pancreatic juice and bile come from the pancreas and gallbladder respectively."},
+  // 39
+  {type:"mcq", question:"Why is a lot of the material left after the small intestine very watery?", options:["Because water is added by lungs","Because many organs, like the stomach and pancreas, add secretions and not all food is digestible","Because the large intestine has already removed water"], answer:1,
+   explanation:"Secretions from stomach, pancreas and others add water, and some food remains undigested."},
+  // 40
+  {type:"fill", question:"The general name for the muscular movement that pushes food along the gullet and intestines is ______.", answerText:"peristalsis",
+   explanation:"Although not emphasised, peristalsis describes the wave-like muscle contractions that move food."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
