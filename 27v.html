@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Viruses & Viral Diseases</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#fee2e2;color:#b91c1c;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>27. Viruses & Viral Diseases</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/01n6qZ27pxo" title="Viruses and Viral Diseases Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: what viruses are, how they cause disease, and examples of measles, HIV and tobacco mosaic virus (TMV).</p>
+
+      <details open>
+        <summary>1) What Are Viruses?</summary>
+        <ul>
+          <li>Viruses are <strong>not cells</strong> and are generally considered <strong>non-living</strong>.</li>
+          <li>However, we usually still treat them as <strong>organisms</strong> in biology.</li>
+          <li>They are extremely small – around <strong>10,000 times smaller</strong> than animal cells.</li>
+          <li>They <strong>cannot reproduce by themselves</strong> outside a host cell.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) How Viruses Reproduce</summary>
+        <ul>
+          <li>Viruses must get <strong>inside the cells</strong> of another organism.</li>
+          <li>Once inside, they use the cell’s own <strong>machinery</strong> to make many copies of themselves.</li>
+          <li>When enough copies are made, the virus can <strong>burst the host cell</strong>.</li>
+          <li>The newly made viruses are then released and must find <strong>new cells to infect</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Why Viruses Make Us Ill</summary>
+        <ul>
+          <li>This process of <strong>infecting</strong> and then <strong>bursting our cells</strong> damages our tissues.</li>
+          <li>Cell damage is one of the main reasons that viral infections make us <strong>feel ill</strong>.</li>
+          <li>Different viruses target different cells or organisms, causing different <strong>diseases</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Measles – Symptoms and Spread</summary>
+        <ul>
+          <li><span class="pill">Disease</span> Measles is caused by the <strong>measles virus</strong>.</li>
+          <li>It is spread by <strong>droplets</strong> when an infected person <strong>coughs or sneezes</strong>.</li>
+          <li>Typical symptoms:
+            <ul>
+              <li>A <strong>red rash</strong> over much of the body.</li>
+              <li>A <strong>fever</strong> – high temperature and feeling very unwell.</li>
+            </ul>
+          </li>
+          <li>Measles can be <strong>very serious</strong> and sometimes even <strong>fatal</strong>.</li>
+          <li>In the UK, measles is now <strong>rare</strong> because most people are <strong>vaccinated when they are young</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) HIV – What It Is</summary>
+        <ul>
+          <li><span class="pill">Virus</span> HIV stands for <strong>Human Immunodeficiency Virus</strong>.</li>
+          <li>This tells us that:
+            <ul>
+              <li>It infects <strong>humans</strong>.</li>
+              <li>It causes a <strong>deficient (weakened)</strong> immune system.</li>
+            </ul>
+          </li>
+          <li>When we say “HIV”, we are referring to the <strong>virus itself</strong>, not the disease.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) HIV – Transmission and Early Infection</summary>
+        <ul>
+          <li>HIV can be spread by:
+            <ul>
+              <li><strong>Sexual contact</strong>, such as unprotected sex.</li>
+              <li>Exchange of <strong>bodily fluids</strong>, for example <strong>blood</strong> when people share needles.</li>
+            </ul>
+          </li>
+          <li>When someone first catches HIV, they may develop <strong>flu-like symptoms</strong> for a few weeks:
+            <ul>
+              <li>Fever</li>
+              <li>Tiredness</li>
+              <li>Aches</li>
+            </ul>
+          </li>
+          <li>After this, they often feel better and may think nothing is wrong.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) HIV to AIDS and Treatment</summary>
+        <ul>
+          <li>Even when the person feels well, HIV continues to <strong>damage the immune system</strong> over time.</li>
+          <li>Eventually, the immune system becomes so <strong>weak</strong> that the person starts to get:
+            <ul>
+              <li>Unusual or opportunistic <strong>infections</strong></li>
+              <li>Sometimes certain <strong>cancers</strong></li>
+            </ul>
+          </li>
+          <li>At this stage, they are said to have developed <strong>AIDS</strong> (Acquired Immune Deficiency Syndrome).</li>
+          <li>AIDS describes the <strong>disease/syndrome</strong> in which the immune system can no longer cope.</li>
+          <li>In the past, this often led to death from infections or cancer.</li>
+          <li>Now, we have <strong>antiretroviral drugs</strong> that <strong>stop HIV from replicating</strong> in the body.</li>
+          <li>If people have early and ongoing access to these medications, they can often live <strong>normal lives</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Tobacco Mosaic Virus (TMV)</summary>
+        <ul>
+          <li><span class="pill">Plant virus</span> Tobacco mosaic virus (TMV) is a virus that infects <strong>plants</strong>.</li>
+          <li>It affects certain species such as:
+            <ul>
+              <li><strong>Tobacco plants</strong></li>
+              <li><strong>Tomato plants</strong></li>
+            </ul>
+          </li>
+          <li>It does <strong>not</strong> infect all plant species.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Symptoms and Effects of TMV</summary>
+        <ul>
+          <li>TMV causes <strong>discoloured patches</strong> on the leaves.</li>
+          <li>These patches form a <strong>mosaic pattern</strong>, which is why it is called “mosaic”.</li>
+          <li>In the discoloured areas, <strong>photosynthesis cannot take place properly</strong>.</li>
+          <li>Because photosynthesis is reduced, the plant <strong>cannot make enough sugars</strong>.</li>
+          <li>As a result, the plant’s <strong>growth is poor</strong> and overall yield is lower.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>10) Overall Summary</summary>
+        <ul>
+          <li>Viruses are tiny, non-living particles that can only reproduce <strong>inside host cells</strong>.</li>
+          <li>They damage the host by <strong>infecting and then bursting cells</strong>.</li>
+          <li>Examples of viral diseases include:
+            <ul>
+              <li><strong>Measles</strong> – human viral disease with rash and fever, prevented by vaccination.</li>
+              <li><strong>HIV</strong> – human virus that can lead to <strong>AIDS</strong> if untreated.</li>
+              <li><strong>TMV</strong> – plant virus that damages leaves and reduces growth.</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Viruses Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the virus speech/notes)
+const questions = [
+  // 1
+  {type:"mcq", question:"Are viruses cells?", options:["Yes, they are animal cells","Yes, they are plant cells","No, they are not cells"], answer:2,
+   explanation:"Viruses are not cells. They are smaller particles that are not classed as cells."},
+  // 2
+  {type:"mcq", question:"Are viruses usually considered living?", options:["Always living","Never considered organisms","Non-living, but we still usually treat them as organisms"], answer:2,
+   explanation:"Viruses are generally described as non-living, but we still talk about them as organisms in biology."},
+  // 3
+  {type:"fill", question:"Viruses are about 10,000 times smaller than ______ cells.", answerText:"animal",
+   explanation:"The speech states that viruses are about 10,000 times smaller than animal cells."},
+  // 4
+  {type:"mcq", question:"Can viruses reproduce by themselves outside a host cell?", options:["Yes, they can reproduce anywhere","No, they cannot reproduce by themselves","Only in water"], answer:1,
+   explanation:"Viruses cannot reproduce on their own; they must be inside a host cell."},
+  // 5
+  {type:"fill", question:"Viruses must get inside another organism's ______ to reproduce.", answerText:"cell",
+   explanation:"They use the machinery of host cells to make copies of themselves."},
+  // 6
+  {type:"mcq", question:"What do viruses use inside a host cell?", options:["The cell's own machinery to make copies","Only the cell wall","Only the cell membrane"], answer:0,
+   explanation:"They hijack the host cell's internal machinery to replicate."},
+  // 7
+  {type:"mcq", question:"What can happen to a cell once many new viruses have been made inside it?", options:["It becomes stronger","It bursts","It turns into a plant"], answer:1,
+   explanation:"Eventually the host cell can burst, releasing many new viruses."},
+  // 8
+  {type:"fill", question:"The process of colonising and then ______ our cells is one reason viruses make us ill.", answerText:"bursting",
+   explanation:"Infecting and bursting cells damages tissues and makes us feel ill."},
+  // 9
+  {type:"mcq", question:"Which of the following is a viral disease mentioned in the speech?", options:["Malaria","Measles","Ringworm"], answer:1,
+   explanation:"Measles is one of the three viral diseases discussed."},
+  // 10
+  {type:"mcq", question:"How is the measles virus mainly spread?", options:["Through dirty water","Through insect bites","By droplets when an infected person coughs or sneezes"], answer:2,
+   explanation:"Measles spreads in droplets from coughs and sneezes."},
+  // 11
+  {type:"fill", question:"Measles often causes a red ______ over most of the body.", answerText:"rash",
+   explanation:"A red rash over the body is a common measles symptom."},
+  // 12
+  {type:"fill", question:"A high temperature caused by measles is called a ______.", answerText:"fever",
+   explanation:"A fever means a high temperature and feeling unwell."},
+  // 13
+  {type:"mcq", question:"How common is measles now in the UK?", options:["Very common","Very rare","It does not exist"], answer:1,
+   explanation:"Measles is now rare in the UK."},
+  // 14
+  {type:"mcq", question:"Why is measles rare in the UK?", options:["Because the virus is extinct","Because most people are vaccinated when they are young","Because it only infects plants"], answer:1,
+   explanation:"Vaccination in childhood has made measles rare in the UK."},
+  // 15
+  {type:"mcq", question:"What does HIV stand for?", options:["Human Immune Virus","Human Immunity Vaccine","Human Immunodeficiency Virus"], answer:2,
+   explanation:"HIV stands for Human Immunodeficiency Virus."},
+  // 16
+  {type:"fill", question:"The 'H' in HIV tells us that the virus infects ______.", answerText:"humans",
+   explanation:"H stands for Human."},
+  // 17
+  {type:"fill", question:"The word 'immunodeficiency' means that the ______ system becomes weak.", answerText:"immune",
+   explanation:"Immunodeficiency is a problem with the immune system."},
+  // 18
+  {type:"mcq", question:"When we use the term HIV, what are we referring to?", options:["The disease stage only","The virus itself","The treatment"], answer:1,
+   explanation:"HIV refers to the virus, not the disease (AIDS)."},
+  // 19
+  {type:"mcq", question:"How can HIV be spread?", options:["By casual contact such as hugging","By sexual contact or exchanging bodily fluids like blood","By breathing the same air"], answer:1,
+   explanation:"HIV can be spread by unprotected sex or by blood, for example when sharing needles."},
+  // 20
+  {type:"fill", question:"HIV can be spread through unprotected sexual contact and by sharing ______.", answerText:"needles",
+   explanation:"Sharing needles can transfer HIV-infected blood."},
+  // 21
+  {type:"mcq", question:"What symptoms might someone have soon after first catching HIV?", options:["No symptoms at all","Flu-like symptoms such as fever, tiredness and aches","Immediate severe cancer"], answer:1,
+   explanation:"Early HIV infection often causes flu-like symptoms."},
+  // 22
+  {type:"fill", question:"After the early stage, the person often feels better and thinks everything is ______.", answerText:"fine",
+   explanation:"They may feel fine even though the virus is still damaging the immune system."},
+  // 23
+  {type:"mcq", question:"What does HIV do over time inside the body?", options:["Strengthens the immune system","Gradually damages the immune system","Only infects the skin"], answer:1,
+   explanation:"HIV slowly weakens and damages the immune system."},
+  // 24
+  {type:"mcq", question:"What happens when the immune system becomes very weak from HIV?", options:["The person becomes completely healthy","The person starts to catch unusual infections and may get cancers","The person becomes immune to all diseases"], answer:1,
+   explanation:"A very weak immune system leads to unusual infections and sometimes cancers."},
+  // 25
+  {type:"fill", question:"When the immune system can no longer cope, the person is said to have developed ______.", answerText:"aids",
+   explanation:"AIDS is the syndrome that develops when the immune system is badly damaged."},
+  // 26
+  {type:"mcq", question:"What is AIDS?", options:["A type of bacteria","A virus","A disease/syndrome caused by a severely weakened immune system"], answer:2,
+   explanation:"AIDS is a syndrome where the immune system is too weak to cope."},
+  // 27
+  {type:"mcq", question:"In the past, what often happened once someone developed AIDS?", options:["They recovered quickly without treatment","They usually died from infections or cancer","Nothing changed"], answer:1,
+   explanation:"Before modern treatment, AIDS often led to death from infections or cancer."},
+  // 28
+  {type:"fill", question:"Modern treatment uses a group of medicines called ______ drugs.", answerText:"antiretroviral",
+   explanation:"Antiretroviral drugs are used to treat HIV infection."},
+  // 29
+  {type:"mcq", question:"What do antiretroviral drugs do?", options:["Kill human cells","Prevent HIV from replicating inside the body","Cause more viruses to form"], answer:1,
+   explanation:"They prevent HIV from making more copies of itself."},
+  // 30
+  {type:"fill", question:"With early access to antiretroviral drugs, many people with HIV can live ______ lives.", answerText:"normal",
+   explanation:"With treatment, they can often live normal lives."},
+  // 31
+  {type:"mcq", question:"What does TMV stand for?", options:["Tomato Medical Virus","Tobacco Mosaic Virus","Total Mosaic Virus"], answer:1,
+   explanation:"TMV stands for Tobacco Mosaic Virus."},
+  // 32
+  {type:"mcq", question:"What type of organism does TMV infect?", options:["Humans","Animals","Plants"], answer:2,
+   explanation:"TMV infects plants, such as tobacco and tomato plants."},
+  // 33
+  {type:"fill", question:"TMV commonly infects ______ plants and tomato plants.", answerText:"tobacco",
+   explanation:"The speech gives tobacco and tomato plants as examples."},
+  // 34
+  {type:"mcq", question:"Why is it called 'mosaic' virus?", options:["It builds mosaics in soil","It causes mosaic-like patterns of discolouration on leaves","It infects mosaic tiles"], answer:1,
+   explanation:"It causes discoloured patches that form a mosaic pattern on the leaves."},
+  // 35
+  {type:"fill", question:"TMV causes discoloured ______ on the leaves of infected plants.", answerText:"patches",
+   explanation:"The leaves show discoloured patches."},
+  // 36
+  {type:"mcq", question:"What important process cannot occur properly in the discoloured areas of leaves infected by TMV?", options:["Respiration","Photosynthesis","Digestion"], answer:1,
+   explanation:"Photosynthesis is reduced or cannot occur properly in the discoloured areas."},
+  // 37
+  {type:"fill", question:"Because photosynthesis is reduced, the plant cannot produce enough ______ for proper growth.", answerText:"sugars",
+   explanation:"Without enough photosynthesis, not enough sugars are produced for growth."},
+  // 38
+  {type:"mcq", question:"What is one result of TMV infection on the whole plant?", options:["The plant grows faster","The plant has poor growth overall","The plant becomes an animal"], answer:1,
+   explanation:"Reduced photosynthesis means the plant grows poorly."},
+  // 39
+  {type:"mcq", question:"Which of the following is NOT one of the three viral examples in the speech?", options:["Measles","HIV","Malaria"], answer:2,
+   explanation:"Malaria is caused by a protist, not one of the three viruses discussed."},
+  // 40
+  {type:"fill", question:"Viruses damage the body mainly by taking over and destroying our ______.", answerText:"cells",
+   explanation:"They colonise and burst our cells, causing damage that makes us ill."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
