@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digestive Enzymes & Bile</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Digestive Enzymes &amp; Bile</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/qL8mYNIKz9w" title="Digestive Enzymes &amp; Bile" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) Overview of digestion &amp; enzymes</summary>
+        <ul>
+          <li>Digestion changes large, insoluble food molecules into small, soluble molecules that can be absorbed into the blood.</li>
+          <li><b>Enzymes</b> are biological catalysts that speed up these reactions without being used up.</li>
+          <li>The three main nutrient groups that need enzyme digestion are <b>carbohydrates</b>, <b>proteins</b> and <b>fats (lipids)</b>.</li>
+          <li>Small, soluble molecules are absorbed through the lining of the <b>small intestine</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Carbohydrates &amp; amylase</summary>
+        <ul>
+          <li>Carbohydrates are found in foods such as <b>pasta</b>, <b>potatoes</b> and <b>rice</b>.</li>
+          <li>The main carbohydrate that we digest is <b>starch</b>, which the body uses as an energy source.</li>
+          <li>Starch is broken down by the enzyme <b>amylase</b> into smaller sugars such as <b>maltose</b>.</li>
+          <li>Amylase is produced in three places:</li>
+        </ul>
+        <div>
+          <span class="pill">Salivary glands (mouth)</span>
+          <span class="pill">Pancreas</span>
+          <span class="pill">Small intestine</span>
+        </div>
+      </details>
+
+      <details>
+        <summary>3) Proteins &amp; protease</summary>
+        <ul>
+          <li>Proteins are found in foods such as <b>meat</b>, <b>nuts</b> and <b>beans</b>.</li>
+          <li>Protease enzymes break proteins down into <b>amino acids</b>, which are used for growth and repair.</li>
+          <li>Proteases are made in three places:</li>
+        </ul>
+        <div>
+          <span class="pill">Stomach (here the protease is called <b>pepsin</b>)</span>
+          <span class="pill">Pancreas</span>
+          <span class="pill">Small intestine</span>
+        </div>
+      </details>
+
+      <details>
+        <summary>4) Fats (lipids) &amp; lipase</summary>
+        <ul>
+          <li>Fats, also called <b>lipids</b>, are found in foods such as <b>cheese</b>, <b>oils</b> and <b>chocolate</b>.</li>
+          <li>Lipase enzymes break lipids down into <b>glycerol</b> and <b>fatty acids</b>.</li>
+          <li>Lipases are produced in:</li>
+        </ul>
+        <div>
+          <span class="pill">Pancreas</span>
+          <span class="pill">Small intestine</span>
+        </div>
+      </details>
+
+      <details>
+        <summary>5) Bile: production, storage &amp; functions</summary>
+        <ul>
+          <li><b>Bile</b> is a digestive fluid made by the <b>liver</b> and stored in the <b>gallbladder</b>.</li>
+          <li>Bile is released into the <b>small intestine</b>.</li>
+          <li>Bile has two key roles:</li>
+        </ul>
+        <div class="chem">
+1. Neutralises stomach acid
+   • Stomach contents are very acidic.
+   • Bile is alkaline, so it raises the pH.
+   • This gives enzymes in the small intestine their optimum pH.
+
+2. Emulsifies fats
+   • Breaks large fat droplets into many tiny droplets.
+   • This greatly increases the surface area of the fat.
+   • Lipase can now work much faster.
+        </div>
+        <p><b>Important:</b> bile is <em>not</em> an enzyme, but it helps enzymes, especially lipase, to digest fats efficiently.</p>
+      </details>
+
+      <details>
+        <summary>6) Memory tips</summary>
+        <ul>
+          <li>All three enzyme types (<b>amylase, protease, lipase</b>) are made in the <b>pancreas</b> and the <b>small intestine</b>.</li>
+          <li>Only amylase is also made in the <b>salivary glands</b>.</li>
+          <li>Only protease is also made in the <b>stomach</b> (where it is called pepsin).</li>
+          <li>Remember the pattern:
+            <div class="chem">
+Amylase → starch → sugars (e.g. maltose)
+Protease → proteins → amino acids
+Lipase → lipids (fats) → glycerol + fatty acids
+            </div>
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2025 Biology Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the speech
+    const questions = [
+      {type:"mcq", q:"What is the main role of digestive enzymes?", opts:["To absorb food into the blood","To break large food molecules into small soluble ones","To neutralise stomach acid"], a:1, exp:"Enzymes catalyse the breakdown of large food molecules."},
+      {type:"fill", q:"Where are the small soluble molecules mainly absorbed?", ans:"small intestine", exp:"Absorption happens through the lining of the small intestine."},
+      {type:"mcq", q:"Which set shows the three main nutrient groups that need digestion?", opts:["Carbohydrates, proteins and fats","Vitamins, minerals and water","Glucose, starch and fibre"], a:0, exp:"Carbohydrates, proteins and fats are the key food groups broken down by enzymes."},
+      {type:"mcq", q:"Which nutrient group is the body’s main energy source?", opts:["Proteins","Carbohydrates","Fats only"], a:1, exp:"Carbohydrates are used mainly as an energy source."},
+      {type:"fill", q:"Name the main carbohydrate that we digest: ______.", ans:"starch", exp:"Starch is the main carbohydrate we break down."},
+      {type:"mcq", q:"Which enzyme breaks down starch?", opts:["Lipase","Protease","Amylase"], a:2, exp:"Amylase is the enzyme that digests starch."},
+      {type:"mcq", q:"Starch is broken down into:", opts:["Amino acids","Sugars such as maltose","Glycerol only"], a:1, exp:"Starch is digested to smaller sugars like maltose."},
+      {type:"mcq", q:"Where is amylase produced?", opts:["Salivary glands, pancreas and small intestine","Only in the stomach","Liver and gallbladder"], a:0, exp:"Amylase is made in the salivary glands, pancreas and small intestine."},
+      {type:"fill", q:"Which glands in the mouth make amylase? ______ glands.", ans:"salivary", exp:"Amylase in the mouth is produced by the salivary glands."},
+      {type:"mcq", q:"Protease enzymes act on which nutrient group?", opts:["Proteins","Carbohydrates","Fats"], a:0, exp:"Proteases digest proteins."},
+      {type:"fill", q:"Proteins are broken down into ______.", ans:"amino acids", exp:"Proteins are digested into amino acids."},
+      {type:"mcq", q:"Where are proteases made?", opts:["Stomach, pancreas and small intestine","Mouth only","Liver and gallbladder"], a:0, exp:"Proteases are produced in the stomach, pancreas and small intestine."},
+      {type:"fill", q:"The protease in the stomach is called ______.", ans:"pepsin", exp:"Pepsin is the name of the stomach protease."},
+      {type:"mcq", q:"Lipase enzymes act on which nutrient group?", opts:["Fats (lipids)","Carbohydrates","Proteins"], a:0, exp:"Lipases digest fats (lipids)."},
+      {type:"fill", q:"Lipids are broken down into glycerol and ______ acids.", ans:"fatty", exp:"Lipids are digested into glycerol and fatty acids."},
+      {type:"mcq", q:"Where are lipases produced?", opts:["Pancreas and small intestine","Stomach and liver","Salivary glands and gallbladder"], a:0, exp:"Lipases are made in the pancreas and small intestine."},
+      {type:"mcq", q:"Which two organs make all three enzyme types (amylase, protease, lipase)?", opts:["Liver and stomach","Pancreas and small intestine","Mouth and large intestine"], a:1, exp:"Pancreas and small intestine produce all three enzyme types."},
+      {type:"fill", q:"Large food molecules must be broken down because they are too ______ to be absorbed.", ans:"large", exp:"They are too large to pass through the intestinal wall."},
+      {type:"fill", q:"Most absorption of digested food happens in the ______ intestine.", ans:"small", exp:"The small intestine is the main site of absorption."},
+      {type:"mcq", q:"What is bile?", opts:["An enzyme that digests proteins","A digestive fluid that helps fat digestion","A hormone that controls blood sugar"], a:1, exp:"Bile is a digestive fluid that helps with fat digestion."},
+      {type:"fill", q:"Bile is made by the ______.", ans:"liver", exp:"The liver produces bile."},
+      {type:"fill", q:"Bile is stored in the ______.", ans:"gallbladder", exp:"The gallbladder stores bile."},
+      {type:"mcq", q:"Where is bile released into?", opts:["Stomach","Small intestine","Large intestine"], a:1, exp:"Bile is released into the small intestine."},
+      {type:"fill", q:"Bile helps to neutralise ______ acid.", ans:"stomach", exp:"Bile neutralises the acid coming from the stomach."},
+      {type:"mcq", q:"Why does stomach acid need to be neutralised in the small intestine?", opts:["To stop all digestion","To provide a suitable pH for enzymes","To kill all bacteria"], a:1, exp:"Most enzymes in the small intestine work best in neutral or slightly alkaline conditions."},
+      {type:"mcq", q:"What does it mean to emulsify fats?", opts:["To digest them completely","To break large fat droplets into many small droplets","To turn fats into proteins"], a:1, exp:"Emulsification breaks large droplets into smaller ones."},
+      {type:"fill", q:"Emulsifying fats increases their ______ area.", ans:"surface", exp:"Smaller droplets give a greater surface area."},
+      {type:"mcq", q:"Which enzyme works faster after bile emulsifies fats?", opts:["Amylase","Protease","Lipase"], a:2, exp:"Lipase works more efficiently on emulsified fats."},
+      {type:"mcq", q:"Is bile an enzyme?", opts:["Yes","No","Only in the stomach"], a:1, exp:"Bile is not an enzyme; it just helps enzymes."},
+      {type:"mcq", q:"Bile is:", opts:["Acidic","Neutral","Alkaline"], a:2, exp:"Bile is alkaline."},
+      {type:"fill", q:"The enzyme that starts starch digestion in the mouth is ______.", ans:"amylase", exp:"Amylase in saliva begins starch digestion."},
+      {type:"mcq", q:"Which organ mixes food with acid and protease?", opts:["Stomach","Pancreas","Large intestine"], a:0, exp:"The stomach mixes food with acid and pepsin (a protease)."},
+      {type:"fill", q:"Fats are also called ______.", ans:"lipids", exp:"Another word for fats is lipids."},
+      {type:"fill", q:"Give one example of a protein-rich food: ______.", ans:"meat", exp:"Meat is a protein-rich food (nuts and beans are also correct)."},
+      {type:"fill", q:"Give one example of a fat-rich food: ______.", ans:"cheese", exp:"Cheese is high in fat (oils and chocolate are also examples)."},
+      {type:"mcq", q:"Which organ releases many digestive enzymes into the small intestine via a duct?", opts:["Stomach","Pancreas","Gallbladder"], a:1, exp:"The pancreas releases several digestive enzymes into the small intestine."},
+      {type:"fill", q:"Amylase has starch as its substrate and produces small ______.", ans:"sugars", exp:"Amylase breaks starch into small sugars such as maltose."},
+      {type:"fill", q:"Lipase has lipids as its substrate and produces glycerol and ______ acids.", ans:"fatty", exp:"Lipase breaks lipids into glycerol and fatty acids."},
+      {type:"mcq", q:"Which statement is correct?", opts:["All enzymes are made only in the stomach","All three enzymes are made in the pancreas and small intestine","Only bile digests fats"], a:1, exp:"Amylase, protease and lipase are all produced in the pancreas and small intestine."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; fb.className='feedback bad';
+      }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
