@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fungi & Protists</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#fee2e2;color:#b91c1c;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>29. Fungi, Protists & Disease</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/kOJcI3HwnxM" title="Fungi and Protists Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: what fungi and protists are, examples of their diseases (rose black spot and malaria), and how these diseases spread and can be controlled.</p>
+
+      <details open>
+        <summary>1) What Are Fungi?</summary>
+        <ul>
+          <li>Fungi are <strong>eukaryotic organisms</strong>, just like plants and animals.</li>
+          <li>They can be <strong>unicellular</strong> (single-celled) or <strong>multicellular</strong>.</li>
+          <li><strong>Yeast</strong> is an example of a unicellular fungus used to make bread rise.</li>
+          <li><strong>Mushrooms</strong> are examples of multicellular fungi.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Hyphae and Spores</summary>
+        <ul>
+          <li>Many multicellular fungi have long, thread-like structures called <strong>hyphae</strong>.</li>
+          <li>Hyphae grow out from the main body of the fungus and can spread through the soil.</li>
+          <li>Sometimes hyphae <strong>spread over plant surfaces</strong> or even <strong>penetrate human skin</strong>, causing disease.</li>
+          <li>Hyphae can produce <strong>spores</strong>, which spread easily and grow into new fungi.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Rose Black Spot – Symptoms and Effects</summary>
+        <ul>
+          <li><span class="pill">Fungal disease</span> <strong>Rose black spot</strong> is a disease of plants, especially roses.</li>
+          <li>It causes <strong>purple or black spots</strong> to form on the leaves.</li>
+          <li>As the fungus damages the plant further, the leaves may <strong>turn yellow</strong> and eventually <strong>drop off</strong>.</li>
+          <li>This reduces the plant&apos;s ability to <strong>photosynthesise</strong>, so it does not grow well.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Spread and Treatment of Rose Black Spot</summary>
+        <ul>
+          <li>The rose black spot fungus is usually spread by <strong>water</strong> or by the <strong>wind</strong>.</li>
+          <li>One treatment is to <strong>cut off</strong> all infected leaves.</li>
+          <li>Another treatment is to <strong>spray the plant with fungicides</strong>, which kill the fungus.</li>
+          <li>Infected leaves that are removed should be <strong>destroyed</strong>, so the fungus cannot spread to other plants.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) What Are Protists?</summary>
+        <ul>
+          <li>Like fungi, <strong>protists</strong> are also <strong>eukaryotes</strong>.</li>
+          <li>They can be single-celled or multicellular, but most are <strong>unicellular</strong>.</li>
+          <li>Some protists are <strong>parasites</strong>, living on or inside other organisms.</li>
+          <li>Parasites survive at the <strong>host&apos;s expense</strong>, often causing harm to the host.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Vectors and Protist Diseases</summary>
+        <ul>
+          <li>Protist diseases are often spread by <strong>vectors</strong>.</li>
+          <li>A vector is another organism, such as an <strong>insect</strong>, that transports the protist between hosts.</li>
+          <li>Importantly, the <strong>vector does not usually get the disease</strong> itself.</li>
+          <li>The vector simply carries the protist from one host to another.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) Malaria – Cause and Transmission</summary>
+        <ul>
+          <li><span class="pill">Protist disease</span> <strong>Malaria</strong> is caused by a <strong>parasitic protist</strong>.</li>
+          <li>The protist needs a <strong>host</strong>, such as a human or other animal, in order to survive.</li>
+          <li>Malaria is transported between hosts by <strong>mosquitoes</strong>.</li>
+          <li>When a mosquito feeds on an infected animal, it can suck up some of the <strong>malaria parasites</strong> in the blood.</li>
+          <li>Later, when the mosquito feeds on a healthy person, the parasites are <strong>transferred</strong> to the new host.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Malaria – Symptoms and Dangers</summary>
+        <ul>
+          <li>When humans catch malaria, they can develop <strong>severe fevers</strong> and <strong>bad headaches</strong>.</li>
+          <li>People with malaria generally feel very <strong>unwell and dreadful</strong>.</li>
+          <li>The symptoms often go away for a time but then <strong>keep coming back</strong>.</li>
+          <li>These repeating attacks are called <strong>recurrent episodes</strong>.</li>
+          <li>In some cases, malaria can be <strong>fatal</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Preventing Malaria – Controlling Vectors</summary>
+        <ul>
+          <li>The best way to prevent malaria is to <strong>stop the vectors</strong> from spreading the protist.</li>
+          <li>We can <strong>reduce mosquito numbers</strong> by destroying their <strong>breeding sites</strong>.</li>
+          <li>Mosquitoes can also be killed directly using <strong>insecticides</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>10) Preventing Mosquito Bites</summary>
+        <ul>
+          <li>Another strategy is to <strong>stop mosquitoes feeding on humans</strong>.</li>
+          <li>People can sleep under <strong>mosquito nets</strong> to avoid bites at night.</li>
+          <li><strong>Mosquito repellents</strong> can also be used to keep mosquitoes away from the skin.</li>
+          <li>By reducing bites, we reduce the <strong>spread of malaria</strong> between human hosts.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the fungi and protists speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Fungi & Protists Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the fungi & protists speech/notes)
+const questions = [
+  // 1
+  {type:"mcq", question:"What type of organisms are fungi?", options:["Prokaryotic","Eukaryotic","Viruses"], answer:1,
+   explanation:"Fungi are eukaryotic organisms, like plants and animals."},
+  // 2
+  {type:"mcq", question:"Fungi can be:", options:["Only unicellular","Only multicellular","Either unicellular or multicellular"], answer:2,
+   explanation:"Unlike plants and animals, fungi can be either unicellular or multicellular."},
+  // 3
+  {type:"fill", question:"Yeast is an example of a ______ fungus.", answerText:"unicellular",
+   explanation:"Yeast is a unicellular (single-celled) fungus used to make bread rise."},
+  // 4
+  {type:"mcq", question:"Which of the following is an example of a multicellular fungus?", options:["Bacteria","Mushroom","Virus"], answer:1,
+   explanation:"Mushrooms are multicellular fungi."},
+  // 5
+  {type:"fill", question:"Many multicellular fungi have long threadlike structures called ______.", answerText:"hyphae",
+   explanation:"These threads are called hyphae."},
+  // 6
+  {type:"mcq", question:"Hyphae can spread through which of the following?", options:["Soil","Pure metal","Vacuum"], answer:0,
+   explanation:"Hyphae often spread through the soil."},
+  // 7
+  {type:"mcq", question:"Hyphae can sometimes cause disease by:", options:["Producing oxygen","Penetrating human skin or plant surfaces","Turning into viruses"], answer:1,
+   explanation:"Hyphae can spread over plants or penetrate human skin and cause disease."},
+  // 8
+  {type:"fill", question:"Hyphae can produce ______ that spread easily and grow into new fungi.", answerText:"spores",
+   explanation:"They produce spores which spread and form new fungi."},
+  // 9
+  {type:"mcq", question:"Rose black spot is a disease caused by:", options:["A virus","A bacterium","A fungus"], answer:2,
+   explanation:"Rose black spot is a fungal disease."},
+  // 10
+  {type:"fill", question:"Rose black spot causes purple or ______ spots to form on leaves.", answerText:"black",
+   explanation:"It causes purple or black spots on the leaves."},
+  // 11
+  {type:"mcq", question:"Which plants are especially affected by rose black spot?", options:["Roses","Pine trees","Wheat"], answer:0,
+   explanation:"Rose black spot mainly affects roses."},
+  // 12
+  {type:"fill", question:"As rose black spot gets worse, leaves may turn yellow and ______ off.", answerText:"drop",
+   explanation:"Damaged leaves can turn yellow and drop off the plant."},
+  // 13
+  {type:"mcq", question:"Why does rose black spot reduce plant growth?", options:["It increases photosynthesis","It reduces the plant's ability to photosynthesise","It gives the plant more light"], answer:1,
+   explanation:"The damaged leaves cannot photosynthesise properly, so growth is reduced."},
+  // 14
+  {type:"mcq", question:"How does the rose black spot fungus usually spread?", options:["By air only","By water or wind","By direct contact with animals"], answer:1,
+   explanation:"It is spread by water or by the wind."},
+  // 15
+  {type:"fill", question:"One treatment for rose black spot is to cut off all the ______ leaves.", answerText:"infected",
+   explanation:"Cutting off infected leaves helps to remove the fungus."},
+  // 16
+  {type:"mcq", question:"Another way to treat rose black spot is to spray the plant with:", options:["Antibiotics","Fungicides","Vaccines"], answer:1,
+   explanation:"Fungicides kill the fungus on the plant."},
+  // 17
+  {type:"fill", question:"Removed infected leaves should be ______ so the fungus cannot spread.", answerText:"destroyed",
+   explanation:"The infected leaves must be destroyed to stop the fungus spreading."},
+  // 18
+  {type:"mcq", question:"Protists, like fungi, are:", options:["Prokaryotes","Eukaryotes","Viruses"], answer:1,
+   explanation:"Protists are also eukaryotic organisms."},
+  // 19
+  {type:"mcq", question:"Most protists are:", options:["Multicellular","Unicellular","Non-living"], answer:1,
+   explanation:"The large majority of protists are single-celled or unicellular."},
+  // 20
+  {type:"fill", question:"Some protists are called ______ because they live on or inside other organisms and harm them.", answerText:"parasites",
+   explanation:"They are parasites, living at the host's expense."},
+  // 21
+  {type:"mcq", question:"A parasite lives:", options:["Independently in soil only","On or inside another organism (the host)","Only in rocks"], answer:1,
+   explanation:"Parasites live on or inside a host organism."},
+  // 22
+  {type:"mcq", question:"Protist diseases are often transported by:", options:["Vectors","Vitamins","Vacuum pumps"], answer:0,
+   explanation:"They are often spread by vectors such as insects."},
+  // 23
+  {type:"fill", question:"A ______ is an organism that carries a protist from one host to another.", answerText:"vector",
+   explanation:"This transporting organism is called a vector."},
+  // 24
+  {type:"mcq", question:"Do vectors usually get the disease themselves?", options:["Yes, always","No, they do not usually get the disease","Only if they are mammals"], answer:1,
+   explanation:"Vectors transport the protist but do not usually get the disease."},
+  // 25
+  {type:"mcq", question:"Malaria is caused by:", options:["A bacterium","A parasitic protist","A fungus"], answer:1,
+   explanation:"Malaria is caused by a parasitic protist."},
+  // 26
+  {type:"fill", question:"The malaria protist needs a ______ such as a human or animal to survive.", answerText:"host",
+   explanation:"It needs a host to live and reproduce."},
+  // 27
+  {type:"mcq", question:"Which organism acts as the vector for malaria?", options:["Ticks","Mosquitoes","Flies that do not bite"], answer:1,
+   explanation:"Mosquitoes transport the malaria protist between hosts."},
+  // 28
+  {type:"fill", question:"When a mosquito feeds on an infected animal, it can suck up malaria ______ in the blood.", answerText:"parasites",
+   explanation:"The mosquito takes up malaria parasites when it feeds on infected blood."},
+  // 29
+  {type:"mcq", question:"What happens when an infected mosquito then feeds on a healthy person?", options:["Nothing happens","The parasites are transferred to the new host","The mosquito dies immediately"], answer:1,
+   explanation:"The malaria parasites are transferred to the new host."},
+  // 30
+  {type:"mcq", question:"Which symptoms are mentioned for humans with malaria?", options:["Runny nose only","Severe fevers and bad headaches","Broken bones"], answer:1,
+   explanation:"People with malaria get bad fevers and headaches and feel dreadful."},
+  // 31
+  {type:"fill", question:"Malaria symptoms often go away and then keep coming back in ______ episodes.", answerText:"recurrent",
+   explanation:"These repeating attacks are called recurrent episodes."},
+  // 32
+  {type:"mcq", question:"In some cases, malaria can be:", options:["Harmless","Helpful","Fatal"], answer:2,
+   explanation:"Malaria can sometimes be fatal."},
+  // 33
+  {type:"mcq", question:"The best way to prevent malaria is to:", options:["Treat only the symptoms","Stop the vectors from spreading the protist","Ignore mosquitoes"], answer:1,
+   explanation:"Preventing mosquito spread is the best way to control malaria."},
+  // 34
+  {type:"fill", question:"We can reduce mosquito numbers by destroying their ______ sites.", answerText:"breeding",
+   explanation:"Destroying breeding sites reduces mosquito numbers."},
+  // 35
+  {type:"mcq", question:"Mosquitoes can also be killed directly using:", options:["Antibiotics","Insecticides","Fungicides"], answer:1,
+   explanation:"Insecticides are chemicals that kill insects such as mosquitoes."},
+  // 36
+  {type:"mcq", question:"Which method helps stop mosquitoes feeding on humans at night?", options:["Sleeping outside without cover","Using mosquito nets","Taking more sugar"], answer:1,
+   explanation:"Mosquito nets protect people from bites while they sleep."},
+  // 37
+  {type:"fill", question:"Chemical substances put on the skin to keep mosquitoes away are called mosquito ______.", answerText:"repellents",
+   explanation:"Mosquito repellents help keep mosquitoes away from the skin."},
+  // 38
+  {type:"mcq", question:"Why does using mosquito nets and repellents help prevent malaria?", options:["They make mosquitoes stronger","They reduce bites and so reduce transmission","They feed the mosquitoes"], answer:1,
+   explanation:"Fewer bites mean less chance of the protist being passed to humans."},
+  // 39
+  {type:"fill", question:"Both fungi and protists described in this topic are ______ organisms (they have a nucleus).", answerText:"eukaryotic",
+   explanation:"They are eukaryotic, meaning their cells contain a nucleus."},
+  // 40
+  {type:"mcq", question:"Which pair of diseases is covered in this fungi and protists lesson?", options:["Measles and HIV","Rose black spot and malaria","TMV and influenza"], answer:1,
+   explanation:"The speech focuses on the fungal disease rose black spot and the protist disease malaria."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
