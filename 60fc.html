@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Chains & Predator–Prey Cycles</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#fee2e2;color:#b91c1c;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>60. Food Chains & Predator–Prey Cycles</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/rijXBMkXjR0" title="Food Chains and Predator–Prey Cycles Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: how energy flows through an ecosystem using food chains, and how predator–prey population cycles work.</p>
+
+      <details open>
+        <summary>1) Food Chains and Food Webs</summary>
+        <ul>
+          <li>A <strong>food chain</strong> shows <strong>what gets eaten by what</strong> in an ecosystem.</li>
+          <li>It is a <strong>simplified version of a food web</strong>, because it only shows one pathway of feeding.</li>
+          <li>Food webs are more complex and show <strong>many different feeding relationships</strong> in an ecosystem.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Producers – The Start of All Food Chains</summary>
+        <ul>
+          <li>All food chains start with a <strong>producer</strong>.</li>
+          <li>Producers are <strong>photosynthetic organisms</strong>, such as green plants or algae.</li>
+          <li>They can produce <strong>glucose by photosynthesis</strong>, using <strong>energy from the Sun</strong>.</li>
+          <li>We can use <strong>grass</strong> as a simple example of a producer in a food chain.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Biomass – Stored Energy in Organisms</summary>
+        <ul>
+          <li>When producers make biological molecules like sugars, these become part of the plant&apos;s <strong>biomass</strong>.</li>
+          <li><strong>Biomass</strong> is the mass of living material and represents <strong>stored energy</strong>.</li>
+          <li>Energy from the Sun is therefore <strong>stored in the biomass</strong> of the producer and passed on when the producer is eaten.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Primary, Secondary and Tertiary Consumers</summary>
+        <ul>
+          <li>The next organisms in the food chain are the <strong>primary consumers</strong>.</li>
+          <li>Primary consumers eat the producers (for example, <strong>mice eating grass</strong>).</li>
+          <li><strong>Secondary consumers</strong> feed on primary consumers and are often <strong>predators</strong> (such as an <strong>owl eating mice</strong>).</li>
+          <li><strong>Tertiary consumers</strong> are the <strong>third level of consumers</strong> in the chain.</li>
+          <li>Some ecosystems have more levels, others fewer.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Energy Transfer and Arrow Direction</summary>
+        <ul>
+          <li>As we move up the food chain, energy is transferred from <strong>one level to the next</strong>.</li>
+          <li>However, <strong>most of the energy is lost</strong> between each level.</li>
+          <li>For example, about <strong>1,000 J</strong> of energy in grass might give only about <strong>100 J</strong> to mice and around <strong>20 J</strong> to an owl.</li>
+          <li>In diagrams, the <strong>arrows</strong> between organisms show the <strong>direction of energy flow</strong> (from the food to the organism that eats it).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Interactions in Ecosystems</summary>
+        <ul>
+          <li>One of the most important ideas in ecology is that <strong>organisms interact and influence each other</strong>.</li>
+          <li>Changes in the population of one species can affect the populations of <strong>other species</strong>.</li>
+          <li>Predators and their prey often show linked patterns over time.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) Predator–Prey Cycles</summary>
+        <ul>
+          <li>A <strong>predator–prey cycle</strong> shows how the populations of a predator and its prey change over time.</li>
+          <li>In the example, the prey is the <strong>field mouse</strong> and the predator is the <strong>owl</strong>.</li>
+          <li>Both populations <strong>cycle up and down</strong> rather than staying constant.</li>
+          <li>The predator population changes always <strong>lag behind</strong> the prey population slightly.</li>
+          <li>Because of this lag, the cycles are said to be <strong>out of phase</strong> with each other.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Phase 1 – Low Predator, Rising Prey</summary>
+        <ul>
+          <li>At first, the <strong>owl population is low</strong>.</li>
+          <li>With few predators, the <strong>mouse population can increase</strong> because fewer mice are being eaten.</li>
+          <li>This leads to a <strong>peak</strong> in the prey population later on.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Phase 2 – More Prey, Then More Predators</summary>
+        <ul>
+          <li>When there are now <strong>many mice</strong>, there is <strong>plenty of food</strong> for the owls.</li>
+          <li>The predator population (owls) then begins to <strong>increase</strong>.</li>
+          <li>Eventually, there are <strong>too many predators</strong>, and they eat a lot of the mice.</li>
+          <li>This causes the <strong>mouse population to decline</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>10) Phase 3 – Falling Predator Numbers and Repeating Cycles</summary>
+        <ul>
+          <li>With fewer mice around, there is now <strong>less food</strong> for the owls.</li>
+          <li>The owl population then begins to <strong>decline</strong> as well.</li>
+          <li>With fewer predators again, the <strong>mouse population can rise</strong> once more.</li>
+          <li>This brings the system back to a similar starting point, so the <strong>cycle repeats</strong> again and again.</li>
+          <li>The key reason for the cycles is that <strong>populations take time to increase or decrease</strong>, often over several generations.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the food chains and predator–prey cycles speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Food Chains Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the food chains & predator–prey cycles speech/notes)
+const questions = [
+  // 1
+  {type:"mcq", question:"What does a food chain show?", options:["Energy changes in a circuit","What gets eaten by what in an ecosystem","The water cycle"], answer:1,
+   explanation:"A food chain shows what gets eaten by what in an ecosystem."},
+  // 2
+  {type:"mcq", question:"How is a food chain related to a food web?", options:["It is more complex than a food web","It is a simplified version of a food web","They are completely unrelated"], answer:1,
+   explanation:"A food chain is a simplified version of a food web, showing just one pathway."},
+  // 3
+  {type:"mcq", question:"What is always at the start of a food chain?", options:["A predator","A producer","A decomposer"], answer:1,
+   explanation:"All food chains start with a producer."},
+  // 4
+  {type:"fill", question:"Producers are usually photosynthetic organisms such as green plants or ______.", answerText:"algae",
+   explanation:"Producers include green plants and algae."},
+  // 5
+  {type:"fill", question:"Photosynthetic organisms make glucose using energy from the ______.", answerText:"sun",
+   explanation:"They use energy from the Sun to make glucose by photosynthesis."},
+  // 6
+  {type:"mcq", question:"In the example food chain described, which organism was used as the producer?", options:["Mouse","Grass","Owl"], answer:1,
+   explanation:"Grass was used as the producer example."},
+  // 7
+  {type:"mcq", question:"What name is given to organisms that eat the producers?", options:["Primary consumers","Secondary consumers","Tertiary consumers"], answer:0,
+   explanation:"Primary consumers feed on producers."},
+  // 8
+  {type:"fill", question:"Mice eating grass are an example of ______ consumers.", answerText:"primary",
+   explanation:"Mice in the example are primary consumers."},
+  // 9
+  {type:"mcq", question:"Secondary consumers feed on:", options:["Producers","Primary consumers","Tertiary consumers"], answer:1,
+   explanation:"Secondary consumers eat primary consumers."},
+  // 10
+  {type:"mcq", question:"In the example, what kind of organism is the owl?", options:["Primary consumer","Secondary consumer and predator","Producer"], answer:1,
+   explanation:"The owl is a secondary consumer and acts as a predator."},
+  // 11
+  {type:"fill", question:"The term 'tertiary consumer' refers to the ______ level of consumers in a food chain.", answerText:"third",
+   explanation:"Tertiary means third, so these are the third-level consumers."},
+  // 12
+  {type:"mcq", question:"What is biomass?", options:["The total mass of rocks","The mass of living material storing energy","The mass of water in a habitat"], answer:1,
+   explanation:"Biomass is the mass of living material and represents stored energy."},
+  // 13
+  {type:"fill", question:"When energy from the Sun is built into plant tissues, it becomes part of the plant's ______.", answerText:"biomass",
+   explanation:"Energy becomes stored in the plant's biomass."},
+  // 14
+  {type:"mcq", question:"As energy passes up the food chain:", options:["Most of it is passed on","Most of it is lost","Energy stays exactly the same"], answer:1,
+   explanation:"Most of the energy is lost between levels."},
+  // 15
+  {type:"fill", question:"If grass contains about 1,000 J of energy, only about ______ J might reach the mice.", answerText:"100",
+   explanation:"Only around 100 J is passed on to the mice in the example."},
+  // 16
+  {type:"fill", question:"From the mice to the owl, the example suggested only about ______ J might be passed on.", answerText:"20",
+   explanation:"Only around 20 J is passed on to the owl in the example."},
+  // 17
+  {type:"mcq", question:"In a food chain diagram, what do the arrows represent?", options:["Direction of movement","Direction of energy flow","Wind direction"], answer:1,
+   explanation:"The arrows show the direction of energy flow from one organism to the next."},
+  // 18
+  {type:"fill", question:"The arrows in a food chain point from the organism being eaten to the one that ______ it.", answerText:"eats",
+   explanation:"They show energy flowing from food to the organism that eats it."},
+  // 19
+  {type:"mcq", question:"What key ecological idea is illustrated by food chains and predator–prey cycles?", options:["Organisms never affect each other","Organisms all interact and influence each other","Only plants affect animals"], answer:1,
+   explanation:"Organisms in an ecosystem interact and influence each other."},
+  // 20
+  {type:"mcq", question:"In the predator–prey example, what animal is the prey?", options:["Owl","Field mouse","Fox"], answer:1,
+   explanation:"Field mice are the prey in the example."},
+  // 21
+  {type:"mcq", question:"In the predator–prey example, what animal is the predator?", options:["Field mouse","Owl","Grass"], answer:1,
+   explanation:"Owls are the predators."},
+  // 22
+  {type:"mcq", question:"How do the predator and prey populations change over time?", options:["They stay perfectly constant","They both increase forever","They cycle up and down"], answer:2,
+   explanation:"The populations of both predator and prey cycle up and down."},
+  // 23
+  {type:"fill", question:"The graph showing how predator and prey numbers change over time is called a ______–prey cycle.", answerText:"predator",
+   explanation:"It is called a predator–prey cycle."},
+  // 24
+  {type:"mcq", question:"Relative to the prey population, the predator population:", options:["Changes at exactly the same time","Always leads the prey population","Lags slightly behind the prey population"], answer:2,
+   explanation:"The predator population changes lag behind the prey population."},
+  // 25
+  {type:"fill", question:"Because the predator population peaks after the prey, the two populations are said to be out of ______.", answerText:"phase",
+   explanation:"They are out of phase with each other."},
+  // 26
+  {type:"mcq", question:"At the beginning of the cycle, when owl numbers are low, what happens to the mouse population?", options:["It decreases sharply","It increases","It disappears instantly"], answer:1,
+   explanation:"With few predators, the mouse population increases."},
+  // 27
+  {type:"fill", question:"When there are very few predators, prey are not being ______ very much, so their numbers rise.", answerText:"eaten",
+   explanation:"Fewer prey are eaten, so their population grows."},
+  // 28
+  {type:"mcq", question:"Later, when there are many mice, what happens to the owl population?", options:["It stays the same","It increases","It becomes zero"], answer:1,
+   explanation:"Plenty of food allows the owl population to increase."},
+  // 29
+  {type:"mcq", question:"What eventually happens to the mouse population when the owl numbers become high?", options:["It increases even more","It starts to decline because more mice are being eaten","It never changes"], answer:1,
+   explanation:"More owls eating mice causes the mouse population to decline."},
+  // 30
+  {type:"fill", question:"When the mouse population falls, there is less ______ available for the owls.", answerText:"food",
+   explanation:"Less food is available for the owls."},
+  // 31
+  {type:"mcq", question:"What happens to the owl population when there are fewer mice to eat?", options:["It increases","It declines","It immediately goes to zero"], answer:1,
+   explanation:"With less food, the owl population also declines."},
+  // 32
+  {type:"fill", question:"Once predator numbers fall, the mouse population can begin to ______ again.", answerText:"rise",
+   explanation:"With fewer predators, the mouse population can rise again."},
+  // 33
+  {type:"mcq", question:"Why does the whole predator–prey system tend to repeat in cycles?", options:["Because populations react instantly","Because populations take time to increase or decrease","Because the Sun turns off"], answer:1,
+   explanation:"Populations take time to grow or shrink, so the pattern repeats over time."},
+  // 34
+  {type:"fill", question:"It takes multiple ______ of breeding for predator numbers to build up when food is plentiful.", answerText:"generations",
+   explanation:"Several generations of breeding are needed to increase predator numbers."},
+  // 35
+  {type:"mcq", question:"Which statement is true about how quickly whole populations change?", options:["They change instantly","They change over long periods of time","They never change"], answer:1,
+   explanation:"Whole populations change over time, not instantly."},
+  // 36
+  {type:"mcq", question:"Which of these best explains why the predator population lags behind the prey population?", options:["Predators move faster than prey","Predator numbers take time to increase after prey numbers rise","Prey do not reproduce"], answer:1,
+   explanation:"Predator numbers only increase after prey numbers rise, and this takes time."},
+  // 37
+  {type:"fill", question:"Primary means first and secondary means ______ in a sequence of consumers.", answerText:"second",
+   explanation:"Secondary consumers are the second level of consumers."},
+  // 38
+  {type:"fill", question:"Another word used in the video for 'third' level consumer is ______.", answerText:"tertiary",
+   explanation:"Tertiary means third."},
+  // 39
+  {type:"mcq", question:"In a simple grass → mouse → owl food chain, which organism is the secondary consumer?", options:["Grass","Mouse","Owl"], answer:2,
+   explanation:"The owl is the secondary consumer in this chain."},
+  // 40
+  {type:"fill", question:"In ecology, a key idea is that organisms in an ecosystem all ______ and influence each other.", answerText:"interact",
+   explanation:"Organisms interact and influence each other."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
