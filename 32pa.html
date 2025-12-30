@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medicines & Antibiotics — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#b00020; --paper:#fffef7; --ink:#222; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f7f5f9; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #ece6f1 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.25rem; letter-spacing:.3px }
+    .small{ opacity:.9; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:#6a1b9a; border-bottom:2px solid #e1bee7; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#6a1b9a }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#fde0dc; color:#b00020; border:1px solid #ffcdd2; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Medicines & Antibiotics — Exam Notes & Quiz <span class="pill">Symptoms · Treatment · Antibiotics · Resistance</span></h1>
+    <div class="small">Video + exam-focused notes + 40-question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/OVXjZMUZ9Dc" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>Medicines (drugs) in modern healthcare</summary>
+        <ul>
+          <li><strong>Medicines</strong> (also called <strong>drugs</strong> or <strong>medications</strong>) are a major part of modern medicine.</li>
+          <li>Health services spend huge amounts on them (the speech mentions the NHS spending <strong>over £17 billion per year</strong>).</li>
+          <li>People are often treated with <strong>multiple drugs at once</strong> to improve how they feel and to treat underlying causes.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Two broad types of medication</summary>
+        <ul>
+          <li><strong>Symptom-relief medicines</strong>: reduce discomfort (e.g., pain, coughing) but don’t remove the cause.</li>
+          <li><strong>Disease-treating medicines</strong>: target the <strong>root cause</strong> (for example, killing bacteria).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Example: sore throat — treating symptoms</summary>
+        <ul>
+          <li>A sore throat can cause symptoms like <strong>coughing</strong>, <strong>throat pain</strong>, and <strong>headache</strong>.</li>
+          <li><strong>Painkillers</strong> (e.g., aspirin or paracetamol) may reduce pain and ease headaches.</li>
+          <li><strong>Cough medicines</strong> can reduce the urge to cough.</li>
+          <li>These medicines can help you feel better, but the <strong>pathogen</strong> causing the problem may still be there.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Antibiotics — when they can cure</summary>
+        <ul>
+          <li><strong>Antibiotics</strong> can treat infections caused by <strong>bacteria</strong> by killing them or stopping them from multiplying.</li>
+          <li>They only help if the illness is <strong>bacterial</strong>.</li>
+          <li>Many sore throats are actually caused by <strong>viruses</strong>, so antibiotics would not help.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Why antibiotics don’t work on viruses</summary>
+        <ul>
+          <li>Antibiotics are designed to interfere with <strong>bacterial structures/processes</strong>, which viruses don’t have.</li>
+          <li>Viruses also <strong>hide inside our body’s cells</strong>, making them hard to destroy without damaging our own cells.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Choosing the right antibiotic and antibiotic resistance</summary>
+        <ul>
+          <li>There are many antibiotics, and each one works only against <strong>certain bacteria</strong>.</li>
+          <li>Doctors may need tests to identify the bacteria before prescribing the most effective antibiotic.</li>
+          <li><strong>Antibiotic resistance</strong> happens when bacteria become resistant, so the same antibiotic no longer works reliably.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Big takeaway</summary>
+        <ul>
+          <li>Modern medicine has been transformed because we can treat both <strong>symptoms</strong> and the <strong>underlying disease</strong>.</li>
+          <li>Symptom-relief drugs can improve <strong>quality of life</strong>, while disease-treating drugs address <strong>root causes</strong> and can extend life.</li>
+        </ul>
+      </details>
+
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Medicines & Antibiotics practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer)
+const questions = [
+{type:"mcq", question:"In the speech, what is another common name for drugs used in medicine?", options:[
+  "Vaccines",
+  "Medications",
+  "Sutures",
+  "Transplants"
+], answer:1, explanation:"Drugs used in medicine are also called medications."},
+
+{type:"mcq", question:"About how much does the NHS spend per year on medications (as stated)?", options:[
+  "Over £1 billion",
+  "Over £5 billion",
+  "Over £17 billion",
+  "Over £70 billion"
+], answer:2, explanation:"The speech says the NHS spends over 17 billion pounds a year."},
+
+{type:"mcq", question:"The speech splits medications into two main groups:", options:[
+  "Tablets and injections",
+  "Natural and synthetic",
+  "Symptom-relievers and disease-treaters",
+  "Short-term and long-term"
+], answer:2, explanation:"One group relieves symptoms; the other helps treat the disease itself."},
+
+  {type:"tf", question:"Symptom-relief medicines always remove the pathogen causing an illness.", answer:false, explanation:"They can make you feel better but may not cure the cause."},
+
+{type:"mcq", question:"Which set of symptoms is mentioned for a sore throat?", options:[
+  "Chest pain, fever, rash",
+  "Coughing, throat pain, headache",
+  "Blurred vision, nausea, cramps",
+  "Itchy eyes, sneezing, runny nose"
+], answer:1, explanation:"The speech lists coughing, throat pain, and headache."},
+
+{type:"mcq", question:"Which is an example of a painkiller mentioned?", options:[
+  "Insulin",
+  "Aspirin",
+  "Penicillin",
+  "Adrenaline"
+], answer:1, explanation:"Aspirin is mentioned as a painkiller option."},
+
+{type:"mcq", question:"Which is another painkiller mentioned?", options:[
+  "Paracetamol",
+  "Ibuprofen gel",
+  "Morphine patch",
+  "Warfarin"
+], answer:0, explanation:"Paracetamol is also mentioned."},
+
+  {type:"tf", question:"Painkillers can reduce throat pain and may ease a headache.", answer:true, explanation:"That is the symptom-relief role described."},
+
+{type:"mcq", question:"Cough medicines in the speech are described as helping you:", options:[
+  "Cure the infection",
+  "Reduce the need to cough",
+  "Kill viruses",
+  "Lower cholesterol"
+], answer:1, explanation:"They can reduce your urge to cough."},
+
+  {type:"tf", question:"Symptom-relief drugs can make you feel better even if the pathogen is still present.", answer:true, explanation:"They treat symptoms, not necessarily the cause."},
+
+{type:"mcq", question:"Antibiotics can directly:", options:[
+  "Kill bacteria or stop them growing",
+  "Kill all viruses",
+  "Repair damaged cells",
+  "Lower blood sugar"
+], answer:0, explanation:"They kill bacteria or prevent bacterial growth."},
+
+  {type:"tf", question:"Antibiotics will cure a sore throat in every case.", answer:false, explanation:"They only help if bacteria are causing the sore throat."},
+
+{type:"mcq", question:"Most sore throats are caused by:", options:[
+  "Bacteria",
+  "Viruses",
+  "Fungi",
+  "Parasites"
+], answer:1, explanation:"The speech says most are viral."},
+
+{type:"mcq", question:"One key reason antibiotics don’t work on viruses is that:", options:[
+  "Viruses are too large",
+  "Antibiotics target bacteria-specific features",
+  "Viruses live only in the stomach",
+  "Antibiotics cannot dissolve in blood"
+], answer:1, explanation:"Antibiotics are designed to interfere with bacteria, not viruses."},
+
+  {type:"tf", question:"Viruses are very similar to bacteria, so antibiotics usually work on them.", answer:false, explanation:"Viruses are very different from bacteria."},
+
+{type:"mcq", question:"The speech compares using antibiotics on viruses to:", options:[
+  "Putting out fire with water",
+  "Trying to kill a tree with a flick of water",
+  "Catching fish with a net",
+  "Building a house with bricks"
+], answer:1, explanation:"It’s an analogy for something that doesn’t make sense."},
+
+{type:"mcq", question:"Another reason antibiotics don’t work on viruses is that viruses:", options:[
+  "Hide within our body’s cells",
+  "Only live on skin",
+  "Are made of cholesterol",
+  "Cannot enter the body"
+], answer:0, explanation:"Viruses hide inside cells, making them hard to target without harming cells."},
+
+  {type:"tf", question:"If antibiotics could kill viruses, they would still struggle to find them because viruses hide inside cells.", answer:true, explanation:"That is the second reason given."},
+
+{type:"mcq", question:"Even for bacterial infections, doctors must be careful because:", options:[
+  "All antibiotics are identical",
+  "Each antibiotic kills only certain bacteria",
+  "Antibiotics only work in children",
+  "Bacteria cannot be tested"
+], answer:1, explanation:"Different antibiotics work on different bacteria."},
+
+  {type:"tf", question:"A single antibiotic can kill every type of bacteria.", answer:false, explanation:"Each antibiotic is effective against certain bacteria only."},
+
+{type:"mcq", question:"Doctors may do a test before prescribing antibiotics to find out:", options:[
+  "Your blood type",
+  "Which bacteria is causing the infection",
+  "Your vitamin levels",
+  "Your lung capacity"
+], answer:1, explanation:"Testing can identify the bacteria so the right antibiotic is chosen."},
+
+{type:"mcq", question:"Antibiotic resistance means:", options:[
+  "The body becomes immune to antibiotics",
+  "Bacteria become resistant to antibiotics",
+  "Viruses become resistant to vaccines",
+  "Antibiotics become stronger over time"
+], answer:1, explanation:"Resistance is when bacteria can survive antibiotics."},
+
+  {type:"tf", question:"Antibiotic resistance can make some antibiotics ineffective against certain bacteria.", answer:true, explanation:"Resistant bacteria can no longer be treated reliably by the same drug."},
+
+{type:"mcq", question:"Which statement best matches the conclusion of the speech?", options:[
+  "Only symptom relief matters",
+  "Only curing disease matters",
+  "Treating symptoms and root causes has revolutionized medicine",
+  "Medicines are rarely useful"
+], answer:2, explanation:"Both symptom control and treating causes improve and extend lives."},
+
+{type:"mcq", question:"Treating symptoms mainly improves a person’s:", options:[
+  "Bone density",
+  "Quality of life",
+  "Eye color",
+  "Blood type"
+], answer:1, explanation:"Relieving symptoms helps people feel better."},
+
+  {type:"tf", question:"Modern patients are often treated with multiple drugs at the same time.", answer:true, explanation:"The speech mentions people often take multiple drugs at once."},
+
+{type:"mcq", question:"Which pair matches the two medication roles described?", options:[
+  "Preventing and diagnosing",
+  "Relieving and researching",
+  "Relieving symptoms and treating disease",
+  "Measuring and monitoring"
+], answer:2, explanation:"That’s the key split presented."},
+
+  {type:"fill", question:"Medicines are also called ______.", answer:"medications|drugs", explanation:"Both terms are used in the speech."},
+
+  {type:"fill", question:"Antibiotics target infections caused by ______.", answer:"bacteria|bacterial", explanation:"They work against bacteria, not viruses."},
+
+  {type:"fill", question:"Most sore throats are caused by ______.", answer:"viruses|virus|viral infection|viral", explanation:"The speech says most are viral."},
+
+  {type:"fill", question:"Viruses can hide inside the body’s ______.", answer:"cells|body cells", explanation:"This makes them difficult to target safely."},
+
+  {type:"fill", question:"A process where bacteria become harder to kill with antibiotics is called antibiotic ______.", answer:"resistance", explanation:"Antibiotic resistance reduces treatment options."},
+
+  {type:"tf", question:"Antibiotics can prevent the growth of new bacteria.", answer:true, explanation:"The speech says they can stop new bacteria from growing."},
+
+  {type:"tf", question:"Cough medicines always cure the underlying sore throat infection.", answer:false, explanation:"They can reduce coughing but don’t necessarily cure the cause."},
+
+{type:"mcq", question:"If a sore throat is viral, taking antibiotics will:", options:[
+  "Cure it quickly",
+  "Help a little",
+  "Do nothing to the virus",
+  "Turn the virus into bacteria"
+], answer:2, explanation:"Antibiotics do not work on viruses."},
+
+{type:"mcq", question:"Why might doctors need to identify the exact bacteria first?", options:[
+  "Because antibiotics are expensive",
+  "Because each antibiotic targets specific bacteria",
+  "Because bacteria are invisible",
+  "Because tests replace treatment"
+], answer:1, explanation:"Correct matching improves effectiveness."},
+
+  {type:"tf", question:"Even if a medicine doesn’t cure a disease, it can still be valuable for symptom relief.", answer:true, explanation:"Symptom relief can significantly improve wellbeing."},
+
+{type:"mcq", question:"Which is the best description of 'treating the disease itself' in the speech?", options:[
+  "Masking pain",
+  "Stopping coughing",
+  "Killing bacteria or stopping them multiplying",
+  "Lowering stress hormones"
+], answer:2, explanation:"Antibiotics can treat bacterial causes directly."},
+
+{type:"mcq", question:"Which is a key caution about antibiotics highlighted in the speech?", options:[
+  "They work for all illnesses",
+  "They can be used whenever you feel unwell",
+  "You must consider cause (virus vs bacteria) and resistance",
+  "They only come as injections"
+], answer:2, explanation:"Cause matters, and resistance is a major issue."},
+
+{type:"mcq", question:"In the sore throat example, what might still be present after taking painkillers and cough medicine?", options:[
+  "The pathogen causing damage",
+  "A new heart valve",
+  "Extra oxygen in blood",
+  "Antibiotic resistance genes only"
+], answer:0, explanation:"Symptom medicines may not remove the pathogen."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
