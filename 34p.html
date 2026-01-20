@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photosynthesis</title>
+  <style>
+    :root{ --brand:#3f51b5; --paper:#fffef7; --ink:#333; }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Arial, system-ui, sans-serif; background:#f5f7fb; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #e0e0e0 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:16px 20px; text-align:center; font-size:1.4rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .video-container{ display:flex; justify-content:center; margin-top:20px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #ccc; border-radius:10px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.15)}
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .notes,.game{ background:var(--paper); border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.08); padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:var(--brand); border-bottom:2px solid #c5cae9; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:bold; color:#283593 }
+    .question-box{ border:1px solid #e0e0e0; border-radius:10px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:8px; padding:8px 14px; font-weight:bold; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .small{font-size:.95rem}
+  </style>
+</head>
+<body>
+<header>Photosynthesis</header>
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/8Wv-zethBVs" title="Metallic Bonding & Alloys" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+        <section class="notes">
+    <h2>Key Notes (rewritten from the speech)</h2>
+
+    <details open>
+      <summary>What photosynthesis is and where it happens</summary>
+      <ul>
+        <li>Plants must carry out <b>photosynthesis</b> to grow and survive.</li>
+        <li>Photosynthesis mainly happens in the <b>leaves</b>, inside subcellular structures called <b>chloroplasts</b>.</li>
+        <li>Chloroplasts contain <b>chlorophyll</b>, a pigment that absorbs <b>light energy</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Inputs and outputs</summary>
+      <ul>
+        <li>Light energy is used to convert <b>carbon dioxide</b> and <b>water</b> into <b>glucose</b> and <b>oxygen</b>.</li>
+        <li>Word equation: <b>carbon dioxide + water → glucose + oxygen</b> (with light).</li>
+        <li>Symbol equation: <b>6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂</b> (with light).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Energy transfer and reaction type</summary>
+      <ul>
+        <li>Because the reaction needs energy from the surroundings (light), photosynthesis is an <b>endothermic</b> reaction.</li>
+        <li>Energy is transferred from the environment to the chloroplasts by <b>light</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>How plants get the reactants</summary>
+      <ul>
+        <li><b>Carbon dioxide</b> diffuses into leaves through the <b>stomata</b>.</li>
+        <li><b>Water</b> is absorbed from the soil by the <b>roots</b> and transported to leaves in the <b>xylem</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Why glucose is the key product</summary>
+      <ul>
+        <li>The main useful product for plants is <b>glucose</b>.</li>
+        <li>Oxygen is produced as a by-product; plants may use some for <b>respiration</b>, but there is plenty in the air.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Five main uses of glucose</summary>
+      <ul>
+        <li><b>Respiration:</b> glucose is broken down to release energy (like a stored “battery” of light energy).</li>
+        <li><b>Cellulose:</b> many glucose molecules join to make cellulose for <b>cell wall strength</b>.</li>
+        <li><b>Starch:</b> glucose is converted to starch for <b>long-term storage</b> (compact and insoluble, so it does not draw in water by osmosis).</li>
+        <li><b>Amino acids &amp; proteins:</b> glucose combines with <b>nitrate ions</b> (from soil) to form amino acids, which then form proteins.</li>
+        <li><b>Oils and fats:</b> glucose can be converted into oils/fats for energy storage, especially in <b>seeds</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Starch storage and when it matters</summary>
+      <ul>
+        <li>Plants store starch so it can be broken back down into glucose when photosynthesis is low (e.g., <b>at night</b> or <b>in winter</b>).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Rate of photosynthesis</summary>
+      <ul>
+        <li>Plant growth rate often depends on how fast photosynthesis happens.</li>
+        <li>Main limiting factors: <b>light intensity</b>, <b>temperature</b>, <b>carbon dioxide concentration</b>, and <b>chlorophyll amount</b>.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="game">
+    <h2>Quiz (40 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 40-question quiz based on the provided speech
+const questions = [
+  {type:"mcq", question:"Why do plants need to carry out photosynthesis?", options:["To make nitrogen gas","To grow and survive","To produce sound"], answer:1, explanation:"Plants need photosynthesis for growth and survival."},
+  {type:"mcq", question:"Where does photosynthesis mainly take place?", options:["Roots","Leaves","Flowers"], answer:1, explanation:"Photosynthesis mainly occurs in leaves."},
+  {type:"mcq", question:"Which subcellular structures carry out photosynthesis?", options:["Mitochondria","Chloroplasts","Ribosomes"], answer:1, explanation:"Photosynthesis takes place in chloroplasts."},
+  {type:"mcq", question:"What pigment absorbs light energy in chloroplasts?", options:["Melanin","Chlorophyll","Haemoglobin"], answer:1, explanation:"Chlorophyll absorbs light."},
+  {type:"fill", question:"Light can be thought of as packets of ______ used in photosynthesis.", answerText:"energy", explanation:"Light provides energy for the reaction."},
+
+  {type:"mcq", question:"Which reactants are used to make glucose in photosynthesis?", options:["Oxygen and glucose","Carbon dioxide and water","Starch and cellulose"], answer:1, explanation:"CO2 and H2O are reactants."},
+  {type:"mcq", question:"Which products are made in photosynthesis?", options:["Glucose and oxygen","Carbon dioxide and water","Protein and nitrate"], answer:0, explanation:"Photosynthesis produces glucose and oxygen."},
+  {type:"fill", question:"Word equation: carbon dioxide + water → ______ + oxygen.", answerText:"glucose", explanation:"Glucose is the main product."},
+  {type:"fill", question:"Symbol equation includes: 6CO2 + 6H2O → ______ + 6O2.", answerText:"C6H12O6", explanation:"Glucose is C6H12O6."},
+  {type:"mcq", question:"Why is the word 'light' written over the reaction arrow?", options:["Light is produced","Light is required for the reaction","Light is a catalyst that is made"], answer:1, explanation:"Photosynthesis needs light energy."},
+
+  {type:"mcq", question:"Photosynthesis is an endothermic reaction because:", options:["It releases energy to the surroundings","It uses energy from the surroundings","It requires no energy"], answer:1, explanation:"Energy is taken in as light."},
+  {type:"fill", question:"In photosynthesis, energy is transferred from the environment to the chloroplasts by ______.", answerText:"light", explanation:"Light transfers energy into the chloroplasts."},
+  {type:"mcq", question:"How does carbon dioxide enter the leaf?", options:["Through stomata by diffusion","Through the xylem","Through the roots only"], answer:0, explanation:"CO2 diffuses in via stomata."},
+  {type:"fill", question:"Carbon dioxide enters leaves through the ______.", answerText:"stomata", explanation:"Stomata are pores for gas exchange."},
+  {type:"mcq", question:"Where is water absorbed from?", options:["Air","Soil","Sunlight"], answer:1, explanation:"Roots absorb water from soil."},
+
+  {type:"mcq", question:"Which structure transports water to the leaves?", options:["Phloem","Xylem","Stomata"], answer:1, explanation:"Xylem carries water."},
+  {type:"fill", question:"Water is transported to leaves via the ______.", answerText:"xylem", explanation:"Xylem transports water."},
+  {type:"mcq", question:"Which product do plants mainly want from photosynthesis?", options:["Oxygen","Glucose","Carbon dioxide"], answer:1, explanation:"Glucose is the key useful product."},
+  {type:"mcq", question:"Why is oxygen less important as a product for plants (according to the speech)?", options:["There is plenty in the air","Plants cannot use oxygen","Oxygen is toxic to plants"], answer:0, explanation:"Oxygen is abundant in air."},
+  {type:"mcq", question:"Plants sometimes use oxygen for:", options:["Respiration","Photosynthesis","Transpiration only"], answer:0, explanation:"Oxygen is used in respiration."},
+
+  {type:"mcq", question:"What is one main use of glucose?", options:["Respiration to release energy","To make carbon dioxide","To make nitrate ions"], answer:0, explanation:"Glucose is broken down in respiration."},
+  {type:"mcq", question:"The speech compares glucose to a:", options:["Battery","Leaf","Pylon"], answer:0, explanation:"Glucose stores energy like a battery."},
+  {type:"mcq", question:"Photosynthesis traps the sun’s energy in:", options:["Oxygen molecules","Glucose molecules","Nitrate ions"], answer:1, explanation:"Light energy is stored in glucose."},
+  {type:"mcq", question:"Which polymer strengthens plant cell walls?", options:["Starch","Cellulose","Protein"], answer:1, explanation:"Cellulose strengthens cell walls."},
+  {type:"fill", question:"Many glucose molecules combine to form ______ for strong cell walls.", answerText:"cellulose", explanation:"Cellulose is made from glucose."},
+
+  {type:"mcq", question:"Why is starch better for long-term storage than glucose?", options:["It is insoluble and more compact","It is poisonous to insects","It releases oxygen"], answer:0, explanation:"Starch is compact and insoluble."},
+  {type:"mcq", question:"Why is it helpful that starch is insoluble?", options:["It won’t draw water into the cell by osmosis","It diffuses out quickly","It increases transpiration"], answer:0, explanation:"Insoluble starch avoids osmotic water influx."},
+  {type:"mcq", question:"When might plants rely on stored starch?", options:["At night or in winter","Only at midday","Only in summer afternoons"], answer:0, explanation:"Stored starch helps when photosynthesis is low."},
+  {type:"fill", question:"Plants store starch so it can be broken down into ______ later.", answerText:"glucose", explanation:"Starch can be converted back to glucose."},
+
+  {type:"mcq", question:"To make amino acids, plants combine glucose with:", options:["Nitrate ions","Oxygen gas","Chlorophyll"], answer:0, explanation:"Nitrates from soil help form amino acids."},
+  {type:"mcq", question:"Where do plants get nitrate ions from?", options:["The soil","Sunlight","Oxygen"], answer:0, explanation:"Nitrates are taken up from soil."},
+  {type:"mcq", question:"Amino acids can be joined together to make:", options:["Proteins","Starch","Water"], answer:0, explanation:"Proteins are made from amino acids."},
+  {type:"mcq", question:"Another use of glucose is making:", options:["Oils and fats","More carbon dioxide directly","Only oxygen"], answer:0, explanation:"Glucose can be converted into oils and fats."},
+  {type:"mcq", question:"Oils and fats are especially stored for:", options:["Seeds","Stomata","Xylem vessels"], answer:0, explanation:"Seeds store oils/fats as energy reserves."},
+
+  {type:"mcq", question:"Plant growth rate is often dependent on:", options:["How fast they can photosynthesise","How loud the wind is","How many roots they have"], answer:0, explanation:"Faster photosynthesis supports faster growth."},
+  {type:"mcq", question:"Which factor can affect the rate of photosynthesis?", options:["Light intensity","Temperature","Carbon dioxide concentration"], answer:0, explanation:"Light intensity is a key factor."},
+  {type:"mcq", question:"Which option is also listed as affecting photosynthesis rate?", options:["Amount of chlorophyll","Number of petals","Soil colour"], answer:0, explanation:"Chlorophyll amount is listed."},
+  {type:"fill", question:"One factor affecting photosynthesis rate is carbon dioxide ______.", answerText:"concentration", explanation:"CO2 concentration is a limiting factor."},
+  {type:"fill", question:"Another factor affecting photosynthesis rate is ______.", answerText:"temperature", explanation:"Temperature affects enzyme-controlled reactions."},
+
+  {type:"mcq", question:"Which statement matches the overall process?", options:["CO2 and H2O are converted into glucose and O2 using light","Glucose and O2 are converted into CO2 and H2O using light","CO2 is converted into nitrate using water"], answer:0, explanation:"This is the photosynthesis reaction."},
+  {type:"mcq", question:"How many oxygen molecules are produced in the symbol equation shown?", options:["6","1","12"], answer:0, explanation:"6O2 is produced."},
+  {type:"mcq", question:"How many carbon dioxide molecules are used in the symbol equation shown?", options:["6","2","1"], answer:0, explanation:"6CO2 is used."},
+  {type:"fill", question:"Photosynthesis mainly happens in chloroplasts found in the ______.", answerText:"leaves", explanation:"Leaves contain most chloroplasts."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let order = [];
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const game = document.getElementById("game-area");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`;});
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  game.querySelector("#game-area-inner") ? game.querySelector("#game-area-inner").innerHTML = html : game.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`);
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.answer){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  if(ans.includes(q.answerText.toLowerCase())){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else endGame();
+}
+
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${questions.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
