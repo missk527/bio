@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Respiration — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#7c3aed; --paper:#fffdf9; --ink:#222; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f7f5f9; color:var(--ink); line-height:1.6;
+    }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.2rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#6d28d9; border-bottom:2px solid #e9d5ff; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#6d28d9 }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ede9fe; color:#4c1d95; border:1px solid #ddd6fe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Respiration — Exam Notes & Quiz <span class="pill">Aerobic · Anaerobic · Fermentation</span></h1>
+    <div class="small">Video + exam‑focused notes + 40‑question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/2qfsrS0iaNk" title="Respiration video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>What is respiration?</summary>
+        <ul>
+          <li>Most energy for life is released from <strong>glucose</strong> (made by plants in <strong>photosynthesis</strong>).</li>
+          <li>Respiration is an <strong>exothermic reaction</strong> that <strong>transfers energy</strong> from glucose.</li>
+          <li>Energy is <strong>not created</strong> — it is <strong>released/ transferred</strong> from the chemical store in glucose.</li>
+          <li>Respiration happens <strong>continuously in living cells</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Why organisms need the energy</summary>
+        <ul>
+          <li><strong>Building larger molecules</strong> from smaller ones (e.g., <strong>amino acids → proteins</strong>).</li>
+          <li><strong>Muscle contraction</strong> so organisms can move.</li>
+          <li><strong>Maintaining body temperature</strong> (staying warm in cold environments).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Metabolism</summary>
+        <ul>
+          <li><strong>Metabolism</strong> = <strong>all the chemical reactions</strong> in an organism that keep it alive.</li>
+          <li>Many reactions need energy and are often <strong>catalysed by enzymes</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Aerobic respiration (with oxygen)</summary>
+        <ul>
+          <li>Occurs when there is <strong>enough oxygen</strong>.</li>
+          <li>It is the <strong>most efficient</strong> way to transfer energy from glucose.</li>
+          <li>Happens in plants and animals, mainly in the <strong>mitochondria</strong>.</li>
+          <li><strong>Word equation:</strong> glucose + oxygen → carbon dioxide + water.</li>
+          <li><strong>Symbol equation:</strong> C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub> → 6CO<sub>2</sub> + 6H<sub>2</sub>O.</li>
+          <li>This is the <strong>reverse of photosynthesis</strong> (photosynthesis makes glucose).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Anaerobic respiration in animals (without oxygen)</summary>
+        <ul>
+          <li>Used only when needed (e.g., <strong>sprinting</strong> when oxygen supply can’t meet demand).</li>
+          <li><strong>Word equation:</strong> glucose → lactic acid.</li>
+          <li>Less efficient because glucose is <strong>not completely broken down</strong> without oxygen.</li>
+          <li><strong>Lactic acid builds up</strong> and must be removed later.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Anaerobic respiration in plants & yeast (fermentation)</summary>
+        <ul>
+          <li>Glucose is converted to <strong>ethanol</strong> and <strong>carbon dioxide</strong>.</li>
+          <li>In yeast, this is called <strong>fermentation</strong> and is used in industry.</li>
+          <li><strong>Bread making:</strong> CO<sub>2</sub> makes air pockets so bread becomes <strong>light and fluffy</strong>.</li>
+          <li><strong>Brewing:</strong> ethanol produced is used to make <strong>beer and wine</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Take‑home message</summary>
+        <ul>
+          <li>Respiration is essential because it provides energy for <strong>many cellular processes</strong>.</li>
+          <li><strong>Aerobic</strong> respiration is preferred (efficient) but <strong>anaerobic</strong> is a useful backup when oxygen is limited.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Respiration practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer)
+// All items are derived from the provided speech.
+const questions = [
+  // 1
+  {type:"mcq", question:"Where does most of the energy used by organisms ultimately come from?", options:[
+    "Proteins made by animals",
+    "Glucose made by plants during photosynthesis",
+    "Minerals absorbed from soil",
+    "Water stored in cells"
+  ], answer:1, explanation:"The speech states glucose is originally made by plants in photosynthesis."},
+
+  // 2
+  {type:"mcq", question:"Respiration is best described as:", options:[
+    "An endothermic reaction that stores energy in glucose",
+    "An exothermic reaction that transfers energy from glucose",
+    "A process that creates energy from nothing",
+    "A process that only happens in muscles"
+  ], answer:1, explanation:"Respiration transfers energy from glucose and is exothermic."},
+
+  // 3
+  {type:"tf", question:"In respiration, energy is created inside cells.", answer:false, explanation:"Energy is not made; it is transferred from glucose."},
+
+  // 4
+  {type:"mcq", question:"What does 'exothermic' mean?", options:[
+    "The reaction absorbs energy",
+    "The reaction releases energy",
+    "The reaction needs light",
+    "The reaction produces oxygen"
+  ], answer:1, explanation:"Exothermic reactions release energy."},
+
+  // 5
+  {type:"mcq", question:"Respiration involves breaking down ______ to release energy trapped inside.", options:[
+    "Oxygen molecules",
+    "Glucose molecules",
+    "Protein molecules",
+    "Water molecules"
+  ], answer:1, explanation:"Glucose is broken down to release energy."},
+
+  // 6
+  {type:"tf", question:"Respiration occurs continuously in living cells.", answer:true, explanation:"The speech says it is continuously occurring in living cells."},
+
+  // 7
+  {type:"mcq", question:"Which is an example of energy use mentioned in the speech?", options:[
+    "Photosynthesis",
+    "Building proteins from amino acids",
+    "Digesting food only in the stomach",
+    "Making chlorophyll"
+  ], answer:1, explanation:"One example is building larger molecules such as proteins."},
+
+  // 8
+  {type:"mcq", question:"Energy is used for muscular contraction mainly to:", options:[
+    "Make cells divide faster",
+    "Help organisms move",
+    "Lower the body temperature",
+    "Turn glucose into oxygen"
+  ], answer:1, explanation:"Muscles contract so we can move about."},
+
+  // 9
+  {type:"mcq", question:"Maintaining body temperature is an example of energy being used for:", options:[
+    "Keeping warm in colder environments",
+    "Producing carbon dioxide in leaves",
+    "Stopping enzyme action",
+    "Creating glucose"
+  ], answer:0, explanation:"Energy helps keep the body warm."},
+
+  // 10
+  {type:"fill", question:"The sum of all the chemical processes in an organism is called ______.", answer:"metabolism", explanation:"Metabolism is all the chemical processes needed to maintain life."},
+
+  // 11
+  {type:"tf", question:"Many reactions in cells are catalysed by enzymes.", answer:true, explanation:"The speech notes most reactions are catalysed by enzymes."},
+
+  // 12
+  {type:"mcq", question:"How many types of respiration do you need to know (from the speech)?", options:[
+    "One",
+    "Two",
+    "Three",
+    "Four"
+  ], answer:1, explanation:"Aerobic and anaerobic respiration."},
+
+  // 13
+  {type:"mcq", question:"Aerobic respiration happens when there is:", options:[
+    "No glucose",
+    "Enough oxygen",
+    "No water",
+    "No enzymes"
+  ], answer:1, explanation:"A key point: aerobic respiration occurs when oxygen is available."},
+
+  // 14
+  {type:"tf", question:"Aerobic respiration is the most efficient way to transfer energy from glucose.", answer:true, explanation:"It is described as by far the most efficient."},
+
+  // 15
+  {type:"mcq", question:"In plants and animals, aerobic respiration mainly takes place in the:", options:[
+    "Nucleus",
+    "Mitochondria",
+    "Cell wall",
+    "Vacuole"
+  ], answer:1, explanation:"Aerobic respiration occurs in mitochondria."},
+
+  // 16
+  {type:"mcq", question:"Which is the correct word equation for aerobic respiration?", options:[
+    "glucose + carbon dioxide → oxygen + water",
+    "glucose + oxygen → carbon dioxide + water",
+    "oxygen + water → glucose + carbon dioxide",
+    "glucose → lactic acid"
+  ], answer:1, explanation:"Glucose + oxygen produces carbon dioxide + water."},
+
+  // 17
+  {type:"fill", question:"In the balanced symbol equation for aerobic respiration, glucose reacts with ___ molecules of oxygen.", answer:"6|six", explanation:"C6H12O6 + 6O2 → 6CO2 + 6H2O."},
+
+  // 18
+  {type:"fill", question:"Aerobic respiration produces carbon dioxide and ______.", answer:"water", explanation:"CO2 and water are products."},
+
+  // 19
+  {type:"tf", question:"The aerobic respiration equation is the exact opposite of photosynthesis.", answer:true, explanation:"The speech highlights they are opposites."},
+
+  // 20
+  {type:"mcq", question:"Anaerobic respiration is respiration:", options:[
+    "With extra oxygen",
+    "Without oxygen",
+    "Only in plants",
+    "Only in the nucleus"
+  ], answer:1, explanation:"Anaerobic = without oxygen."},
+
+  // 21
+  {type:"mcq", question:"Humans rely more on anaerobic respiration when:", options:[
+    "Sleeping",
+    "Sprinting and oxygen supply cannot meet demand",
+    "Eating carbohydrates",
+    "Sitting quietly"
+  ], answer:1, explanation:"Example given: sprinting."},
+
+  // 22
+  {type:"mcq", question:"Which is the correct word equation for anaerobic respiration in animals?", options:[
+    "glucose → lactic acid",
+    "glucose + oxygen → ethanol + carbon dioxide",
+    "glucose + oxygen → carbon dioxide + water",
+    "glucose → carbon dioxide + water"
+  ], answer:0, explanation:"Animals produce lactic acid in anaerobic respiration."},
+
+  // 23
+  {type:"tf", question:"Anaerobic respiration in animals completely breaks down glucose.", answer:false, explanation:"It is incomplete without oxygen, so it is inefficient."},
+
+  // 24
+  {type:"mcq", question:"Why is anaerobic respiration less efficient?", options:[
+    "It uses too much oxygen",
+    "Glucose is not fully broken down without oxygen",
+    "It only happens in plants",
+    "It cannot release any energy"
+  ], answer:1, explanation:"Without oxygen to oxidise glucose fully, less energy is released."},
+
+  // 25
+  {type:"mcq", question:"A drawback of anaerobic respiration in animals is that ______ builds up.", options:[
+    "Ethanol",
+    "Lactic acid",
+    "Oxygen",
+    "Glucose"
+  ], answer:1, explanation:"Lactic acid builds up and must be removed later."},
+
+  // 26
+  {type:"tf", question:"Lactic acid made in anaerobic respiration has to be removed later.", answer:true, explanation:"Stated directly in the speech."},
+
+  // 27
+  {type:"mcq", question:"In plants and yeast, anaerobic respiration produces:", options:[
+    "Lactic acid only",
+    "Ethanol and carbon dioxide",
+    "Carbon dioxide and water",
+    "Oxygen and glucose"
+  ], answer:1, explanation:"Plants/yeast convert glucose to ethanol + CO2."},
+
+  // 28
+  {type:"fill", question:"Anaerobic respiration in yeast is often called ______.", answer:"fermentation", explanation:"Yeast anaerobic respiration is fermentation."},
+
+  // 29
+  {type:"mcq", question:"In bread making, yeast is added mainly because it produces:", options:[
+    "Oxygen that hardens the dough",
+    "Carbon dioxide that makes air pockets",
+    "Water that dries the dough",
+    "Lactic acid that flavours the bread"
+  ], answer:1, explanation:"CO2 forms pockets of air, making bread light and fluffy."},
+
+  // 30
+  {type:"mcq", question:"The gas bubbles in bread dough make the bread:", options:[
+    "Heavier and denser",
+    "Light and fluffy",
+    "Hard and brittle",
+    "Green in colour"
+  ], answer:1, explanation:"The speech says light and fluffy."},
+
+  // 31
+  {type:"mcq", question:"Fermentation produces ethanol, which is:", options:[
+    "A type of alcohol",
+    "A type of protein",
+    "A type of enzyme",
+    "A type of sugar"
+  ], answer:0, explanation:"Ethanol is an alcohol."},
+
+  // 32
+  {type:"mcq", question:"Yeast fermentation is used to make:", options:[
+    "Beer and wine",
+    "Milk and cheese",
+    "Oxygen and glucose",
+    "Insulin and enzymes"
+  ], answer:0, explanation:"Beer and wine production uses ethanol from yeast."},
+
+  // 33
+  {type:"tf", question:"Aerobic respiration happens in both plants and animals.", answer:true, explanation:"The speech explicitly says both."},
+
+  // 34
+  {type:"fill", question:"The reactants in aerobic respiration are glucose and ______.", answer:"oxygen|o2", explanation:"Glucose + oxygen are reactants."},
+
+  // 35
+  {type:"fill", question:"In the balanced symbol equation for aerobic respiration, there are 6 molecules of ______ dioxide produced.", answer:"carbon|co2", explanation:"6CO2 is produced."},
+
+  // 36
+  {type:"mcq", question:"Which statement matches the speech?", options:[
+    "Respiration makes energy from nothing",
+    "Respiration transfers energy from glucose",
+    "Respiration only happens during exercise",
+    "Respiration only happens in plants"
+  ], answer:1, explanation:"Energy is transferred from glucose, not created."},
+
+  // 37
+  {type:"mcq", question:"Which is an example of building larger molecules from smaller ones?", options:[
+    "Amino acids joining to form proteins",
+    "Oxygen joining to form glucose",
+    "Carbon dioxide turning into lactic acid",
+    "Water splitting into ethanol"
+  ], answer:0, explanation:"Amino acids combine to form proteins."},
+
+  // 38
+  {type:"tf", question:"Anaerobic respiration is preferred because it releases more energy than aerobic respiration.", answer:false, explanation:"Anaerobic is less efficient and used only when necessary."},
+
+  // 39
+  {type:"mcq", question:"Why does anaerobic respiration happen during a sprint?", options:[
+    "Because there is too much oxygen",
+    "Because oxygen cannot be supplied fast enough for aerobic respiration",
+    "Because mitochondria stop working forever",
+    "Because glucose disappears"
+  ], answer:1, explanation:"Oxygen delivery cannot meet demand during intense activity."},
+
+  // 40
+  {type:"fill", question:"The organelle associated with aerobic respiration is the ______.", answer:"mitochondria|mitochondrion", explanation:"Aerobic respiration occurs in mitochondria."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
