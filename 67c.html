@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Respiration — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#7c3aed; --paper:#fffdf9; --ink:#222; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f7f5f9; color:var(--ink); line-height:1.6;
+    }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.2rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#6d28d9; border-bottom:2px solid #e9d5ff; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#6d28d9 }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ede9fe; color:#4c1d95; border:1px solid #ddd6fe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pregnancy Tests — Monoclonal Antibodies <span class="pill">hCG · Binding · Control Line</span></h1>
+    <div class="small">Video + exam‑focused notes + 40‑question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/3mFaybFH1dA" title="Respiration video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+                            <section class="notes">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>What pregnancy tests detect</summary>
+        <ul>
+          <li>Pregnancy tests are cheap, quick, and reliable ways to check if a woman is pregnant.</li>
+          <li>Pregnant women produce a hormone called <strong>hCG</strong> (human chorionic gonadotropin).</li>
+          <li>hCG is <strong>excreted in urine</strong>, and the test detects whether hCG is present.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Monoclonal antibodies and specificity</summary>
+        <ul>
+          <li>The test uses <strong>monoclonal antibodies</strong> that are <strong>specific to hCG</strong>.</li>
+          <li>“Specific” means the antibodies can <strong>bind</strong> to hCG if they meet it.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Two key parts of the test strip</summary>
+        <ul>
+          <li><strong>Fixed antibodies zone:</strong> antibodies attached to the strip that <strong>cannot move</strong>.</li>
+          <li><strong>Mobile blue beads zone:</strong> blue beads coated with the same anti-hCG antibodies; these beads are <strong>free to move</strong> with urine.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Negative result (not pregnant)</summary>
+        <ul>
+          <li>If there is <strong>no hCG</strong>, urine carries the <strong>mobile beads</strong> along the strip.</li>
+          <li>The beads pass over the <strong>fixed antibodies</strong> but <strong>do not stick</strong> (nothing to bind to).</li>
+          <li>No trapped beads → <strong>no coloured line</strong> (no blue strip).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Positive result (pregnant)</summary>
+        <ul>
+          <li>If hCG is present, it binds to antibodies on the <strong>blue beads</strong> first.</li>
+          <li>As the beads move, the hCG on the beads also binds to the <strong>fixed antibodies</strong>.</li>
+          <li>This forms a “sandwich” and the beads get <strong>trapped</strong> in the test region.</li>
+          <li>Trapping many beads creates a visible <strong>coloured line/strip</strong> that indicates a positive result.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Control line</summary>
+        <ul>
+          <li>Many real pregnancy tests show <strong>two lines</strong> rather than one.</li>
+          <li>The second line acts as a <strong>control</strong> to show the test has worked properly.</li>
+          <li>Typically, <strong>two lines = positive</strong>, but different tests vary, so always <strong>read the instructions</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Take-home message</summary>
+        <ul>
+          <li>Pregnancy tests detect <strong>hCG in urine</strong> using antibodies that bind specifically to hCG.</li>
+          <li>A coloured line appears when antibody-coated beads are trapped by fixed antibodies because hCG is present.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Respiration practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer)
+// All items are derived from the provided speech.
+const questions = [
+  {type:"mcq", question:"Pregnancy tests are mainly used to detect whether:", options:[
+    "a woman has diabetes",
+    "a woman is pregnant",
+    "a woman has an infection",
+    "a woman has low blood pressure"
+  ], answer:1, explanation:"They indicate whether a woman is pregnant."},
+
+  {type:"mcq", question:"The key hormone detected by pregnancy tests is:", options:[
+    "insulin",
+    "hCG",
+    "adrenaline",
+    "oestrogen"
+  ], answer:1, explanation:"Pregnant women produce hCG."},
+
+  {type:"tf", question:"hCG is excreted in urine.", answer:true, explanation:"The speech states hCG is excreted in urine."},
+
+  {type:"mcq", question:"Pregnancy tests detect pregnancy by checking for hCG in:", options:[
+    "blood",
+    "urine",
+    "saliva",
+    "sweat"
+  ], answer:1, explanation:"The strip tests urine for hCG."},
+
+  {type:"mcq", question:"The test strip uses monoclonal antibodies that are:", options:[
+    "randomly shaped",
+    "specific to hCG",
+    "specific to glucose",
+    "only found in plants"
+  ], answer:1, explanation:"They bind specifically to hCG."},
+
+  {type:"mcq", question:"What does it mean if an antibody is 'specific' to hCG?", options:[
+    "It can bind to hCG molecules",
+    "It can bind to any hormone",
+    "It destroys hCG instantly",
+    "It changes colour without binding"
+  ], answer:0, explanation:"Specific antibodies bind to their matching antigen (hCG)."},
+
+  {type:"mcq", question:"Which part of the test strip contains fixed antibodies?", options:[
+    "The region where urine is applied only",
+    "A zone where antibodies are attached to the strip and cannot move",
+    "Only the plastic casing",
+    "The battery compartment"
+  ], answer:1, explanation:"Fixed antibodies are attached and cannot move."},
+
+  {type:"mcq", question:"Which part contains blue beads coated with antibodies?", options:[
+    "The moving beads zone",
+    "The plastic handle",
+    "The control panel",
+    "The oscilloscope"
+  ], answer:0, explanation:"Blue beads have antibodies and can move."},
+
+  {type:"tf", question:"The blue beads and their antibodies are free to move along the strip.", answer:true, explanation:"They are not fixed to the strip."},
+
+  {type:"mcq", question:"What happens in a negative test (not pregnant)?", options:[
+    "Beads stick to the fixed antibodies and make a line",
+    "Beads wash along the strip and do not get trapped",
+    "hCG binds to beads and turns them red",
+    "Fixed antibodies move to meet the beads"
+  ], answer:1, explanation:"Without hCG, beads do not bind and are not trapped."},
+
+  {type:"tf", question:"If there is no hCG, the test region still turns blue.", answer:false, explanation:"Without hCG, beads don’t get trapped so there is no blue line."},
+
+  {type:"mcq", question:"In a positive test, what binds to the antibodies on the blue beads first?", options:[
+    "water",
+    "hCG",
+    "oxygen",
+    "carbon dioxide"
+  ], answer:1, explanation:"hCG binds to bead antibodies when present."},
+
+  {type:"mcq", question:"When the bead-hCG complex reaches the fixed antibodies, what happens?", options:[
+    "Nothing happens and the beads keep moving",
+    "hCG binds to the fixed antibodies and traps the beads",
+    "The fixed antibodies dissolve",
+    "The beads disappear"
+  ], answer:1, explanation:"hCG binds to fixed antibodies and traps beads."},
+
+  {type:"mcq", question:"Why does the test line become visible in a positive result?", options:[
+    "The strip melts",
+    "Many blue beads become trapped in one place",
+    "hCG changes colour by itself",
+    "Urine becomes blue"
+  ], answer:1, explanation:"Trapping many beads makes the region appear coloured."},
+
+  {type:"tf", question:"In a positive test, beads get stuck because hCG links them to fixed antibodies.", answer:true, explanation:"This is the antibody-hCG-antibody 'sandwich' idea."},
+
+  {type:"mcq", question:"Which statement best describes the role of monoclonal antibodies in the test?", options:[
+    "They bind specifically to hCG to show if it is present",
+    "They produce hCG in the strip",
+    "They absorb water to dry the strip",
+    "They stop urine from moving"
+  ], answer:0, explanation:"Specific binding enables detection."},
+
+  {type:"mcq", question:"Where are the antibodies located in the test strip (according to the speech)?", options:[
+    "Only on the blue beads",
+    "Only fixed on the strip",
+    "Both fixed on the strip and on mobile blue beads",
+    "Only in the plastic casing"
+  ], answer:2, explanation:"There are fixed antibodies and bead-coated antibodies."},
+
+  {type:"tf", question:"The fixed antibodies on the strip can move with urine.", answer:false, explanation:"Fixed antibodies cannot move."},
+
+  {type:"mcq", question:"What causes the mobile beads to travel along the strip?", options:[
+    "Magnetism",
+    "Urine washing them along",
+    "Gravity only with no liquid",
+    "Heat from the sun"
+  ], answer:1, explanation:"Urine carries beads along the strip."},
+
+  {type:"mcq", question:"In the speech, the positive result is shown by:", options:[
+    "a blue strip/line appearing",
+    "the strip turning green",
+    "a flashing light",
+    "a sound signal"
+  ], answer:0, explanation:"Trapped blue beads make the strip look blue."},
+
+  {type:"mcq", question:"Many real pregnancy tests include a second line to act as a:", options:[
+    "battery indicator",
+    "control",
+    "temperature sensor",
+    "glucose test"
+  ], answer:1, explanation:"The second line is a control line."},
+
+  {type:"tf", question:"Two lines usually indicate a positive result (as mentioned).", answer:true, explanation:"Typically two lines mean positive, but instructions vary."},
+
+  {type:"mcq", question:"Why is a control line useful?", options:[
+    "It confirms the test has worked properly",
+    "It produces more hCG",
+    "It stops antibodies binding",
+    "It changes the urine colour"
+  ], answer:0, explanation:"Control shows the test functioned."},
+
+  {type:"mcq", question:"Which advice is given about using pregnancy tests?", options:[
+    "Always ignore the instructions",
+    "Always read the instructions because tests can differ",
+    "Only use the test at night",
+    "Do not use urine"
+  ], answer:1, explanation:"Different tests work differently, so read instructions."},
+
+  {type:"mcq", question:"What is the biological reason a pregnant woman’s urine can trigger the test line?", options:[
+    "It contains glucose",
+    "It contains hCG hormone",
+    "It contains DNA bases",
+    "It contains sodium chloride"
+  ], answer:1, explanation:"hCG is present in urine during pregnancy."},
+
+  {type:"fill", question:"The hormone detected in pregnancy tests is called ______.", answer:"hcg", explanation:"hCG is the target molecule."},
+
+  {type:"fill", question:"The antibodies used in the test are ______ antibodies.", answer:"monoclonal", explanation:"They are monoclonal antibodies specific to hCG."},
+
+  {type:"mcq", question:"What happens to the beads in a negative test?", options:[
+    "They are trapped at the test zone",
+    "They wash past the fixed antibodies and keep moving",
+    "They turn into antibodies",
+    "They bind to the plastic casing"
+  ], answer:1, explanation:"No hCG means no trapping."},
+
+  {type:"mcq", question:"The test line forms because:", options:[
+    "hCG binds only to fixed antibodies",
+    "hCG binds only to bead antibodies",
+    "hCG binds to bead antibodies and then to fixed antibodies",
+    "hCG destroys the antibodies"
+  ], answer:2, explanation:"hCG links bead antibodies to fixed antibodies."},
+
+  {type:"tf", question:"Without hCG, the bead antibodies still bind strongly to the fixed antibodies.", answer:false, explanation:"They need hCG to bind/trap at the test zone."},
+
+  {type:"mcq", question:"Which component is designed to move along the strip?", options:[
+    "Fixed antibodies",
+    "Blue beads with antibodies",
+    "Plastic casing",
+    "Control line ink only"
+  ], answer:1, explanation:"Beads are mobile."},
+
+  {type:"mcq", question:"What makes the beads 'blue' in the explanation?", options:[
+    "They are coloured beads used as a visible marker",
+    "hCG turns them blue chemically",
+    "Urine stains them blue",
+    "The oscilloscope colours them"
+  ], answer:0, explanation:"They are coloured beads to show accumulation."},
+
+  {type:"mcq", question:"A pregnancy test is described as:", options:[
+    "expensive and slow",
+    "cheap, quick, and reliable",
+    "only used in hospitals",
+    "unreliable and complicated to use"
+  ], answer:1, explanation:"The speech says cheap, quick, reliable."},
+
+  {type:"tf", question:"The test strip works even without any liquid flowing along it.", answer:false, explanation:"Urine flow carries beads along the strip."},
+
+  {type:"mcq", question:"Which best describes the sequence in a positive test?", options:[
+    "Beads move → hCG binds beads → beads get trapped by fixed antibodies",
+    "Fixed antibodies move → beads stay still → line forms",
+    "hCG binds fixed antibodies → beads disappear",
+    "Urine evaporates → antibodies change colour"
+  ], answer:0, explanation:"That is the mechanism described."},
+
+  {type:"mcq", question:"In a negative test, why do beads not get trapped?", options:[
+    "Because urine is too thick",
+    "Because there is no hCG to link beads to fixed antibodies",
+    "Because the fixed antibodies are missing",
+    "Because hCG destroys the beads"
+  ], answer:1, explanation:"No hCG means no binding/trapping."},
+
+  {type:"mcq", question:"Which statement about different pregnancy tests is correct (from the speech)?", options:[
+    "All tests work in exactly the same way",
+    "Different tests can work differently, so read instructions",
+    "All tests show only one line",
+    "Control lines are never used"
+  ], answer:1, explanation:"Always read instructions because tests vary."},
+
+  {type:"mcq", question:"What does the control line mainly indicate?", options:[
+    "That hCG is definitely present",
+    "That the test has worked and the liquid has flowed correctly",
+    "That urine contains water",
+    "That the woman is not pregnant"
+  ], answer:1, explanation:"Control line shows the test worked properly."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
