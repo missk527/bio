@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Respiration — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#7c3aed; --paper:#fffdf9; --ink:#222; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f7f5f9; color:var(--ink); line-height:1.6;
+    }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.2rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#6d28d9; border-bottom:2px solid #e9d5ff; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#6d28d9 }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ede9fe; color:#4c1d95; border:1px solid #ddd6fe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Plant Disease — Symptoms, Diagnosis & Defences <span class="pill">Deficiency · Pathogens · Defences</span></h1>
+    <div class="small">Video + exam‑focused notes + 40‑question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/JI9xDpAeFHQ" title="Respiration video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+                                <section class="notes">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>Causes of plant disease</summary>
+        <ul>
+          <li>Plants can get diseases from microorganisms such as <strong>fungi</strong>, <strong>bacteria</strong>, and <strong>viruses</strong>.</li>
+          <li>They can also be harmed by larger organisms such as <strong>insects</strong> (e.g., aphids, spider mites).</li>
+          <li>Plants may also develop <strong>deficiency diseases</strong> if they lack essential mineral ions (e.g., <strong>nitrates</strong>, <strong>magnesium ions</strong>).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Nitrate deficiency</summary>
+        <ul>
+          <li><strong>Nitrates</strong> are needed to make <strong>amino acids and proteins</strong> (important for growth).</li>
+          <li>Plants lacking nitrates often show <strong>stunted growth</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Magnesium deficiency</summary>
+        <ul>
+          <li><strong>Magnesium ions</strong> are needed to make <strong>chlorophyll</strong>.</li>
+          <li>Without enough chlorophyll, photosynthesis is reduced and leaves may turn yellow (<strong>chlorosis</strong>).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Common symptoms of disease</summary>
+        <ul>
+          <li><strong>Abnormal growths or lumps</strong>.</li>
+          <li><strong>Malformed stems or leaves</strong>.</li>
+          <li><strong>Patches of decay</strong>.</li>
+          <li><strong>Spots/discolouration</strong> on leaves.</li>
+          <li>Sometimes you can directly see pests such as <strong>aphids</strong> or <strong>spider mites</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Diagnosing plant disease</summary>
+        <ul>
+          <li>Start with <strong>basic observations</strong> and match symptoms to a <strong>garden manual</strong> or reputable website.</li>
+          <li>If unsure, send a sample to a <strong>plant pathologist</strong> for detailed testing.</li>
+          <li>Possible tests include:
+            <ul>
+              <li><strong>Microscopy</strong> of tissue samples.</li>
+              <li>Testing for pathogen <strong>antigens</strong> (e.g., using <strong>monoclonal antibodies</strong>).</li>
+              <li><strong>DNA tests</strong> to detect pathogen DNA.</li>
+            </ul>
+          </li>
+          <li>A simpler method is <strong>trial and error</strong> (e.g., add magnesium if you suspect deficiency; use antifungal sprays if fungal disease is suspected).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Plant defences</summary>
+        <ul>
+          <li>Plant defences can be grouped into <strong>physical</strong>, <strong>chemical</strong>, and <strong>mechanical</strong> defences.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Physical defences (barriers)</summary>
+        <ul>
+          <li><strong>Waxy cuticle</strong> on leaves/stems helps prevent pathogen entry.</li>
+          <li><strong>Cellulose cell walls</strong> around each cell.</li>
+          <li>Layers of <strong>dead cells</strong> such as <strong>bark</strong> around stems.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Chemical defences</summary>
+        <ul>
+          <li>Plants can secrete <strong>antimicrobial substances</strong> that kill bacteria/fungi.</li>
+          <li>They can also produce <strong>poisons</strong> that deter or kill insects.</li>
+          <li>Many medicines come from plant chemicals; for example, <strong>aspirin</strong> is derived from compounds found in <strong>willow</strong> bark/leaves.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Mechanical defences</summary>
+        <ul>
+          <li>Structures with a defensive function, such as <strong>thorns</strong> and <strong>hairs</strong>, which stop animals feeding.</li>
+          <li>Some leaves <strong>curl or droop</strong> when insects land on them.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Take-home message</summary>
+        <ul>
+          <li>Plant disease can be caused by pathogens, pests, or mineral deficiencies, and produces recognizable symptoms.</li>
+          <li>Diagnosis can use observation, specialist testing (microscopy/antigen/DNA), or trial-and-error treatments.</li>
+          <li>Plants reduce disease using physical, chemical, and mechanical defences.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Respiration practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer)
+// All items are derived from the provided speech.
+const questions = [
+  {type:"mcq", question:"Plants can catch diseases from microorganisms such as:", options:[
+    "mammals only",
+    "fungi, bacteria and viruses",
+    "rocks and soil only",
+    "electricity and magnets"
+  ], answer:1, explanation:"The speech lists fungi, bacteria and viruses."},
+
+  {type:"mcq", question:"Plants can also be harmed by larger organisms such as:", options:[
+    "insects",
+    "planets",
+    "metals",
+    "sound waves"
+  ], answer:0, explanation:"Insects can cause plant disease/damage."},
+
+  {type:"mcq", question:"Deficiency diseases occur when plants lack:", options:[
+    "sunlight only",
+    "essential mineral ions",
+    "carbon dioxide only",
+    "oxygen only"
+  ], answer:1, explanation:"Deficiency diseases can be caused by mineral shortages."},
+
+  {type:"mcq", question:"Which mineral is needed for making proteins and growth?", options:[
+    "nitrates",
+    "magnesium ions",
+    "chlorophyll",
+    "ethanol"
+  ], answer:0, explanation:"Nitrates are needed for proteins and growth."},
+
+  {type:"mcq", question:"A plant lacking nitrates often shows:", options:[
+    "stunted growth",
+    "double helix formation",
+    "higher boiling point",
+    "blue leaves"
+  ], answer:0, explanation:"Nitrate deficiency causes stunted growth."},
+
+  {type:"mcq", question:"Magnesium ions are needed to make:", options:[
+    "glucose",
+    "chlorophyll",
+    "DNA bases",
+    "cellulose only"
+  ], answer:1, explanation:"Magnesium is needed for chlorophyll."},
+
+  {type:"mcq", question:"A magnesium deficiency often causes yellow leaves due to:", options:[
+    "too much chlorophyll",
+    "chlorosis (lack of chlorophyll)",
+    "extra nitrate production",
+    "too much water absorption"
+  ], answer:1, explanation:"Chlorosis is yellowing due to low chlorophyll."},
+
+  {type:"tf", question:"Chlorophyll is needed for photosynthesis.", answer:true, explanation:"The speech links chlorophyll to photosynthesis."},
+
+  {type:"mcq", question:"Which is NOT listed as a symptom of plant disease?", options:[
+    "abnormal growths/lumps",
+    "malformed stems or leaves",
+    "patches of decay",
+    "a fixed boiling point of 100°C"
+  ], answer:3, explanation:"Boiling points are unrelated."},
+
+  {type:"mcq", question:"Spots of discolouration are often seen on:", options:[
+    "roots only",
+    "leaves",
+    "seeds only",
+    "flowers only"
+  ], answer:1, explanation:"Leaf spots/discolouration are mentioned."},
+
+  {type:"mcq", question:"Which pests are mentioned as sometimes visible on plants?", options:[
+    "aphids and spider mites",
+    "sharks and whales",
+    "lions and tigers",
+    "bacteria and viruses"
+  ], answer:0, explanation:"Aphids or spider mites may be seen."},
+
+  {type:"mcq", question:"The easiest first step in diagnosis is to:", options:[
+    "run DNA tests immediately",
+    "make basic observations and match symptoms to a manual/website",
+    "burn the plant",
+    "add random chemicals"
+  ], answer:1, explanation:"Start with observation and matching."},
+
+  {type:"mcq", question:"A specialist in plant disease is called a:", options:[
+    "cardiologist",
+    "plant pathologist",
+    "geologist",
+    "astronomer"
+  ], answer:1, explanation:"Plant pathologists specialise in plant disease."},
+
+  {type:"mcq", question:"A plant pathologist might examine tissue using:", options:[
+    "a microscope",
+    "a telescope",
+    "a thermometer only",
+    "a satellite dish"
+  ], answer:0, explanation:"Microscopy can show problems in detail."},
+
+  {type:"mcq", question:"Looking for unique antigens from pathogens could involve using:", options:[
+    "monoclonal antibodies",
+    "chlorophyll",
+    "distillation",
+    "alternating current"
+  ], answer:0, explanation:"Monoclonal antibodies can detect specific antigens."},
+
+  {type:"mcq", question:"A highly accurate method for detecting pathogens is:", options:[
+    "boiling point tests",
+    "DNA tests for pathogen DNA",
+    "paint formulations",
+    "infrared cameras"
+  ], answer:1, explanation:"DNA tests can look for pathogen DNA."},
+
+  {type:"mcq", question:"A simple trial-and-error approach to yellow leaves might be to:", options:[
+    "add magnesium",
+    "add radio waves",
+    "freeze the plant",
+    "remove sunlight"
+  ], answer:0, explanation:"If magnesium deficiency is suspected, add magnesium."},
+
+  {type:"mcq", question:"If you suspect a fungal disease, a trial treatment could be:", options:[
+    "spraying antifungal chemicals",
+    "adding nitrate only",
+    "using a satellite dish",
+    "turning off photosynthesis"
+  ], answer:0, explanation:"Antifungal sprays may be tried."},
+
+  {type:"tf", question:"A benefit of trial-and-error is that you can try one solution and if it fails, try another.", answer:true, explanation:"That is the benefit described."},
+
+  {type:"mcq", question:"Plant defences can be split into:", options:[
+    "thermal and electrical only",
+    "physical, chemical and mechanical",
+    "solid, liquid and gas",
+    "shortwave and longwave"
+  ], answer:1, explanation:"Physical, chemical, mechanical defences are listed."},
+
+  {type:"mcq", question:"Which is a physical defence that prevents pathogen entry?", options:[
+    "waxy cuticle",
+    "DNA test",
+    "oxygen debt",
+    "microwave heating"
+  ], answer:0, explanation:"Waxy cuticle is a barrier."},
+
+  {type:"mcq", question:"Cellulose cell walls act mainly as a:", options:[
+    "communication signal",
+    "physical barrier",
+    "fungal spray",
+    "mineral fertiliser"
+  ], answer:1, explanation:"Cell walls are physical defences."},
+
+  {type:"mcq", question:"Bark protects plants because it consists of layers of:", options:[
+    "living bacteria",
+    "dead cells",
+    "liquid water",
+    "pure glucose"
+  ], answer:1, explanation:"Bark is layers of dead cells."},
+
+  {type:"mcq", question:"Chemical defences include:", options:[
+    "antimicrobial substances and poisons",
+    "waxy cuticles and bark",
+    "thorns and hairs",
+    "chlorophyll and nitrates"
+  ], answer:0, explanation:"Plants secrete chemicals that kill microbes or deter insects."},
+
+  {type:"mcq", question:"Antimicrobial chemicals help by:", options:[
+    "killing bacteria or fungi",
+    "increasing plant melting point",
+    "reflecting radio waves",
+    "making chlorophyll blue"
+  ], answer:0, explanation:"They kill bacteria/fungi."},
+
+  {type:"mcq", question:"Plant poisons are mainly used to:", options:[
+    "deter or kill insects",
+    "increase photosynthesis directly",
+    "make nitrates",
+    "stop water absorption"
+  ], answer:0, explanation:"Poisons deter/kill insects."},
+
+  {type:"mcq", question:"Aspirin is mentioned as a drug derived from chemicals found in:", options:[
+    "pine needles",
+    "willow bark and leaves",
+    "cactus spines",
+    "seaweed"
+  ], answer:1, explanation:"Aspirin comes from willow bark/leaves chemicals."},
+
+  {type:"mcq", question:"Mechanical defences include structures such as:", options:[
+    "thorns and hairs",
+    "microscopes and dishes",
+    "chlorophyll and glucose",
+    "nitrates and magnesium"
+  ], answer:0, explanation:"Thorns and hairs prevent feeding."},
+
+  {type:"mcq", question:"Mechanical defences differ from physical defences because they:", options:[
+    "have a defensive function beyond being just a barrier",
+    "are made of DNA only",
+    "increase boiling point",
+    "work only at night"
+  ], answer:0, explanation:"Mechanical defences actively deter feeding/touching."},
+
+  {type:"mcq", question:"Some leaves defend themselves by:", options:[
+    "curling or drooping when insects land",
+    "turning into bark",
+    "producing microwaves",
+    "removing all chlorophyll"
+  ], answer:0, explanation:"Curling/drooping is mentioned."},
+
+  {type:"fill", question:"Yellow leaves caused by magnesium deficiency are called ______.", answer:"chlorosis", explanation:"Chlorosis is leaf yellowing due to low chlorophyll."},
+
+  {type:"fill", question:"Nitrates are needed to make ______, which are important for growth.", answer:"proteins|protein", explanation:"Nitrates are needed for protein production."},
+
+  {type:"mcq", question:"Which of these is a symptom of disease listed in the speech?", options:[
+    "patches of decay",
+    "perfectly formed leaves always",
+    "constant melting point",
+    "increased radio frequency"
+  ], answer:0, explanation:"Patches of decay are mentioned."},
+
+  {type:"tf", question:"Plants can get diseases from viruses as well as fungi and bacteria.", answer:true, explanation:"Viruses are listed among pathogens."},
+
+  {type:"mcq", question:"If observation fails, what could you do next?", options:[
+    "Ignore the problem",
+    "Send a sample to a plant pathologist",
+    "Only measure the boiling point",
+    "Use FM radio"
+  ], answer:1, explanation:"A plant pathologist can do detailed testing."},
+
+  {type:"mcq", question:"Which method directly looks for pathogen genetic material?", options:[
+    "microscopy",
+    "DNA testing",
+    "adding magnesium",
+    "spraying water"
+  ], answer:1, explanation:"DNA tests look for pathogen DNA."},
+
+  {type:"mcq", question:"Which is an example of a physical defence around stems?", options:[
+    "bark",
+    "enzymes",
+    "nitrates",
+    "osmosis"
+  ], answer:0, explanation:"Bark is a layer of dead cells."},
+
+  {type:"mcq", question:"Which is a correct match?", options:[
+    "Nitrate deficiency → chlorosis",
+    "Magnesium deficiency → chlorosis",
+    "Magnesium deficiency → stunted growth only",
+    "Nitrate deficiency → double helix"
+  ], answer:1, explanation:"Magnesium deficiency causes chlorosis (yellow leaves)."},
+
+  {type:"mcq", question:"Which best describes the overall role of plant defences?", options:[
+    "To increase radio communication",
+    "To prevent pathogen entry and reduce damage from pests",
+    "To make plants melt at fixed points",
+    "To convert nitrates into viruses"
+  ], answer:1, explanation:"Defences prevent entry and deter/kill pathogens and pests."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
