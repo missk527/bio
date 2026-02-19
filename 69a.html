@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Brain</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Brain</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/yecTSnxhclg" title="The Brain" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) What the brain does</summary>
+        <ul>
+          <li>The <b>brain</b> contains billions of interconnected <b>nerve cells</b> (neurons) and stores our <b>thoughts</b> and <b>memories</b>.</li>
+          <li>It controls complex behaviour, from everyday choices (like what to wear) to skills like <b>running</b> and <b>reading</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) The brain and the central nervous system</summary>
+        <ul>
+          <li>The <b>central nervous system (CNS)</b> is made of the <b>brain</b> and <b>spinal cord</b>.</li>
+          <li>Aside from simple reflexes, the <b>brain</b> makes most important decisions and coordinates responses.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Cerebral cortex (cerebrum) and hemispheres</summary>
+        <ul>
+          <li>The large wrinkled outer region is the <b>cerebral cortex</b> (or <b>cerebrum</b>).</li>
+          <li>It is linked to higher functions such as <b>consciousness</b>, <b>intelligence</b>, <b>memory</b>, and <b>language</b>, and also processes senses like <b>vision</b> and <b>hearing</b>.</li>
+          <li>The cortex is split into two <b>hemispheres</b>: the <b>left</b> hemisphere mainly controls muscles on the <b>right</b> side of the body, and the <b>right</b> hemisphere controls the <b>left</b> side.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Other key brain regions</summary>
+        <ul>
+          <li>The <b>cerebellum</b> (at the back) controls <b>balance</b> and <b>muscle coordination</b>, helping us stand and move smoothly.</li>
+          <li>The <b>hypothalamus</b> helps regulate internal conditions like <b>body temperature</b> and sends signals to the <b>pituitary gland</b>.</li>
+          <li>The <b>brain stem</b> connects the brain to the spinal cord; the <b>medulla</b> controls vital <b>unconscious</b> functions such as <b>breathing</b> and <b>heart rate</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) How scientists study the brain</summary>
+        <ul>
+          <li><b>Brain-damage (lesion) studies</b>: linking lost abilities (e.g., after a stroke) to the damaged region helps infer that region’s function.</li>
+          <li><b>Electrical stimulation</b>: stimulating a specific area can trigger effects like <b>muscle movement</b> or changes in <b>vision</b>, revealing what that area influences.</li>
+          <li><b>Brain scanning</b> is widely used today to examine structure and activity.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Brain scans and why treatment is difficult</summary>
+        <ul>
+          <li><b>CT</b> scans use <b>X‑rays</b> and are often used to detect <b>damage</b>.</li>
+          <li><b>PET</b> scans use <b>radioactive tracers</b>, and <b>MRI</b> uses strong <b>magnetic fields</b>; both can help measure <b>brain activity</b>.</li>
+          <li>Treatment is challenging because many problems can occur (tumours, infection, trauma, mental illness), the brain is protected by the <b>skull</b> and is fragile, and the brain’s complexity is not fully understood—making both <b>surgery</b> and <b>drug</b> treatment difficult.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2026 Biology Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the brain speech
+    const questions = [
+      {type:"mcq", q:"What do the brain and spinal cord together form?", opts:["The endocrine system", "The central nervous system", "The digestive system"], a:1, exp:"The brain and spinal cord make up the central nervous system (CNS)."},
+      {type:"mcq", q:"Apart from simple reflexes, which organ makes most important decisions?", opts:["The spinal cord", "The brain", "The skin"], a:1, exp:"Most decisions and complex control come from the brain."},
+      {type:"mcq", q:"The brain is made up of billions of interconnected ______ cells.", opts:["muscle", "nerve", "blood"], a:1, exp:"The brain contains billions of interconnected nerve cells (neurons)."},
+      {type:"mcq", q:"Which outer, wrinkled region is linked to consciousness and language?", opts:["Cerebellum", "Cerebral cortex (cerebrum)", "Medulla"], a:1, exp:"The cerebral cortex (cerebrum) is associated with higher functions and senses."},
+      {type:"fill", q:"The large wrinkled outer part of the brain is called the ______ cortex.", ans:"cerebral", exp:"The wrinkled outer layer is the cerebral cortex."},
+      {type:"mcq", q:"How many hemispheres is the cerebral cortex divided into?", opts:["One", "Two", "Four"], a:1, exp:"The cerebral cortex is split into two hemispheres."},
+      {type:"mcq", q:"Which hemisphere mainly controls muscles on the right side of the body?", opts:["Left hemisphere", "Right hemisphere", "Cerebellum"], a:0, exp:"The left hemisphere controls muscles on the right side of the body."},
+      {type:"mcq", q:"Which hemisphere mainly controls muscles on the left side of the body?", opts:["Left hemisphere", "Right hemisphere", "Hypothalamus"], a:1, exp:"The right hemisphere controls muscles on the left side of the body."},
+      {type:"mcq", q:"Which region helps control balance and muscle coordination?", opts:["Cerebellum", "Cerebrum", "Pituitary gland"], a:0, exp:"The cerebellum controls balance and muscle coordination."},
+      {type:"fill", q:"The brain region at the back that helps you walk without falling is the ______.", ans:"cerebellum", exp:"The cerebellum is responsible for balance and coordination."},
+      {type:"mcq", q:"Which region helps regulate body temperature?", opts:["Hypothalamus", "Cerebellum", "Cerebral cortex"], a:0, exp:"The hypothalamus is involved in regulating body temperature."},
+      {type:"mcq", q:"The hypothalamus sends signals to which gland?", opts:["Thyroid gland", "Pituitary gland", "Adrenal gland"], a:1, exp:"The hypothalamus sends signals to the pituitary gland."},
+      {type:"mcq", q:"What connects the brain to the spinal cord?", opts:["Cerebral cortex", "Brain stem", "Cerebellum"], a:1, exp:"The brain stem connects the brain to the spinal cord."},
+      {type:"mcq", q:"Which part controls unconscious activities like breathing and heart rate?", opts:["Medulla", "Cerebrum", "Cerebellum"], a:0, exp:"The medulla (within the brain stem) controls vital unconscious activities."},
+      {type:"fill", q:"Breathing and heart rate are controlled by the ______.", ans:"medulla", exp:"The medulla controls unconscious activities such as breathing and heartbeat."},
+      {type:"mcq", q:"A cross-section image of the brain shows it as if it were sliced:", opts:["Horizontally", "Down the middle", "Only at the back"], a:1, exp:"A midline slice lets us see inside the brain."},
+      {type:"mcq", q:"Which of these is a way scientists learn brain function by linking damage to lost ability?", opts:["Lesion studies", "Photosynthesis", "Fermentation"], a:0, exp:"Studying brain damage (lesions) can link regions to functions."},
+      {type:"mcq", q:"A stroke that damages a tiny region and causes loss of hearing suggests that region is involved in:", opts:["Hearing", "Digestion", "Bone growth"], a:0, exp:"Loss of a specific ability can indicate what the damaged region does."},
+      {type:"mcq", q:"What technique uses a tiny electrode to stimulate brain tissue?", opts:["CT scanning", "Electrical stimulation", "Blood testing"], a:1, exp:"Electrical stimulation uses an electrode to activate specific brain areas."},
+      {type:"mcq", q:"Stimulating a motor area would most likely cause:", opts:["Hair growth", "Muscle contraction", "Bone calcification"], a:1, exp:"Stimulation of motor regions can cause muscle contraction and movement."},
+      {type:"mcq", q:"Stimulating a vision-related region might cause:", opts:["Vision changes", "Hunger to disappear", "Bones to weaken"], a:0, exp:"Stimulation of visual areas can alter what the person sees."},
+      {type:"mcq", q:"Which approach is described as less invasive and most used today?", opts:["Brain scanning", "Removing tissue", "Deep cuts"], a:0, exp:"Scanning techniques are less invasive than stimulation or surgery."},
+      {type:"mcq", q:"Which scan uses X-rays?", opts:["MRI", "PET", "CT"], a:2, exp:"CT scans use X-rays."},
+      {type:"mcq", q:"Which scan uses radioactive chemicals (tracers)?", opts:["PET", "CT", "Ultrasound"], a:0, exp:"PET scans use radioactive tracers to measure activity."},
+      {type:"mcq", q:"Which scan uses strong magnetic fields?", opts:["MRI", "CT", "PET"], a:0, exp:"MRI uses strong magnetic fields."},
+      {type:"fill", q:"A scan that uses X-rays is a ______ scan.", ans:"ct", exp:"CT scans use X-rays."},
+      {type:"mcq", q:"CT scans are mainly used to see:", opts:["Which areas are damaged", "DNA sequences", "Skin thickness"], a:0, exp:"CT scans are commonly used to detect damaged regions."},
+      {type:"mcq", q:"PET and MRI scans are better for measuring:", opts:["Underlying brain activity", "Hair color", "Muscle size"], a:0, exp:"PET and MRI can measure patterns of brain activity."},
+      {type:"mcq", q:"In an activity scan, active regions may appear:", opts:["Darker", "Brighter", "Invisible"], a:1, exp:"Active areas can appear brighter in scan images."},
+      {type:"mcq", q:"Listening to music in an MRI would likely show:", opts:["A different activity pattern", "No change at all", "Only skull movement"], a:0, exp:"Different tasks produce different brain activity patterns."},
+      {type:"mcq", q:"Why is treating the brain difficult? (Choose the best answer)", opts:["It has only one function", "It is simple and well understood", "It is complex and not fully understood"], a:2, exp:"The brain\u2019s complexity makes diagnosis and treatment hard."},
+      {type:"mcq", q:"Which of these is NOT mentioned as something that can go wrong with the brain?", opts:["Tumors", "Infections", "Broken toenails"], a:2, exp:"Tumors and infections are mentioned; broken toenails are not."},
+      {type:"mcq", q:"Why can surgery on the brain be risky?", opts:["Brain tissue is fragile and surrounded by the skull", "The brain is outside the body", "Bones heal instantly"], a:0, exp:"The skull protects the brain and the tissue is delicate."},
+      {type:"mcq", q:"Mental health problems mentioned include:", opts:["Depression", "Scurvy", "Rickets"], a:0, exp:"Depression is mentioned as a mental health problem."},
+      {type:"fill", q:"The brain is protected by the ______, which makes surgery harder.", ans:"skull", exp:"The skull encases and protects the brain, complicating surgery."},
+      {type:"mcq", q:"Which statement best describes the cerebrum/cerebral cortex?", opts:["It controls unconscious breathing", "It controls balance only", "It supports higher thinking and senses"], a:2, exp:"The cerebral cortex is linked to higher functions and sensory processing."},
+      {type:"mcq", q:"Which region is most associated with coordination and posture?", opts:["Cerebellum", "Hypothalamus", "Medulla"], a:0, exp:"The cerebellum coordinates movement and balance."},
+      {type:"mcq", q:"The hypothalamus is involved in:", opts:["Regulating internal conditions", "Producing red blood cells", "Digesting proteins"], a:0, exp:"The hypothalamus helps regulate conditions like temperature."},
+      {type:"fill", q:"The CNS stands for ______ nervous system.", ans:"central", exp:"CNS stands for central nervous system."},
+      {type:"mcq", q:"Why are drugs difficult to design for many brain conditions?", opts:["Because the brain is fully understood", "Because underlying processes are not fully understood", "Because the brain has no chemicals"], a:1, exp:"Limited understanding of brain processes makes drug treatments challenging."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
