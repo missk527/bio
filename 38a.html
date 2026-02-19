@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biology: Homeostasis</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#a855f7);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    a{color:#0369a1}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Homeostasis</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/tFyVrHF__0o" title="Homeostasis" allowfullscreen></iframe>
+      <p style="margin:10px 0 0;color:var(--muted);font-size:.95rem">
+        Video link: <a href="https://youtu.be/tFyVrHF__0o" target="_blank" rel="noopener">https://youtu.be/tFyVrHF__0o</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+<details open>
+  <summary>1) What homeostasis means</summary>
+  <ul>
+    <li><strong>Homeostasis</strong> is the regulation of conditions inside the body to keep a <strong>stable internal environment</strong>.</li>
+    <li>The body responds to changes in <strong>internal</strong> and <strong>external</strong> conditions (e.g., cold weather or hot deserts).</li>
+    <li>Levels are kept within <strong>small limits</strong> (they can fluctuate, but not too much).</li>
+  </ul>
+</details>
+
+<details>
+  <summary>2) Why cells need stable conditions</summary>
+  <ul>
+    <li>Cells work best within a narrow range of conditions (temperature, pH, water, glucose, etc.).</li>
+    <li>If conditions move too far from the optimum, enzymes and cell processes stop working properly.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>3) Automatic control systems: the 3 parts</summary>
+  <ul>
+    <li><strong>Receptors</strong> detect a change (stimulus), such as a rise or fall in temperature.</li>
+    <li><strong>Coordination centres</strong> (brain, spinal cord, pancreas) process the information and decide on a response.</li>
+    <li><strong>Effectors</strong> carry out the response (usually <strong>muscles</strong> or <strong>glands</strong>).</li>
+  </ul>
+</details>
+
+<details>
+  <summary>4) How the body sends signals</summary>
+  <ul>
+    <li>The <strong>nervous system</strong> uses fast, precise electrical impulses along nerves for quick responses.</li>
+    <li>The <strong>endocrine system</strong> uses <strong>hormones</strong> carried in the blood; it is <strong>slower</strong>, <strong>longer-lasting</strong>, and more <strong>general</strong>.</li>
+    <li>Hormones only affect target cells that have the <strong>correct receptors</strong>.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>5) Negative feedback (the key mechanism)</summary>
+  <ul>
+    <li><strong>Negative feedback</strong> reverses a change to bring a level back toward normal.</li>
+    <li>If a level is <strong>too high</strong>, the response makes it <strong>decrease</strong>.</li>
+    <li>If a level is <strong>too low</strong>, the response makes it <strong>increase</strong>.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>6) Example: temperature control</summary>
+  <ul>
+    <li>If you enter a cold room, receptors detect the drop in temperature and the brain coordinates a response.</li>
+    <li>Effectors (muscles) cause <strong>shivering</strong> to generate heat and raise temperature.</li>
+    <li>If you get too hot, a different response happens: <strong>sweating</strong> helps cool you down.</li>
+    <li>This creates a repeating <strong>feedback loop</strong> that keeps body temperature near normal.</li>
+  </ul>
+</details>
+
+</section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2026 Biology Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the homeostasis speech
+    const questions = [
+  {
+    "type": "mcq",
+    "q": "Homeostasis is best defined as:",
+    "opts": [
+      "Keeping the body completely constant at all times",
+      "Regulation to maintain a stable internal environment",
+      "Producing energy by breaking down glucose"
+    ],
+    "a": 1,
+    "exp": "Homeostasis keeps internal conditions within narrow limits."
+  },
+  {
+    "type": "mcq",
+    "q": "Which statement best describes why cells need homeostasis?",
+    "opts": [
+      "Cells only work at extreme temperatures",
+      "Cells need specific conditions to function properly",
+      "Cells do not depend on pH or water"
+    ],
+    "a": 1,
+    "exp": "Cells require suitable temperature, pH, water, glucose, etc."
+  },
+  {
+    "type": "mcq",
+    "q": "Body conditions like temperature and glucose are:",
+    "opts": [
+      "Kept exactly constant with no change",
+      "Allowed to vary but only within small bounds",
+      "Uncontrolled and random"
+    ],
+    "a": 1,
+    "exp": "Homeostatic levels fluctuate slightly but stay near normal."
+  },
+  {
+    "type": "mcq",
+    "q": "Homeostasis helps the body respond to changes in:",
+    "opts": [
+      "Only external conditions",
+      "Only internal conditions",
+      "Both internal and external conditions"
+    ],
+    "a": 2,
+    "exp": "It maintains stability despite internal and external changes."
+  },
+  {
+    "type": "mcq",
+    "q": "Maintaining about 37\u00b0C even in snow or a desert shows:",
+    "opts": [
+      "Respiration",
+      "Homeostasis",
+      "Diffusion"
+    ],
+    "a": 1,
+    "exp": "Temperature regulation is a key example of homeostasis."
+  },
+  {
+    "type": "mcq",
+    "q": "Automatic control systems work by:",
+    "opts": [
+      "Detecting a change and reversing it",
+      "Letting changes continue until they stop",
+      "Increasing any change to make it faster"
+    ],
+    "a": 0,
+    "exp": "They recognize departures from optimum and act to correct them."
+  },
+  {
+    "type": "mcq",
+    "q": "Which component detects a change (stimulus)?",
+    "opts": [
+      "Receptors",
+      "Coordination centres",
+      "Effectors"
+    ],
+    "a": 0,
+    "exp": "Receptors sense changes such as temperature rise or fall."
+  },
+  {
+    "type": "mcq",
+    "q": "Which component interprets information and decides what to do?",
+    "opts": [
+      "Effectors",
+      "Coordination centres",
+      "Receptors"
+    ],
+    "a": 1,
+    "exp": "Brain/spinal cord (and other centres) coordinate responses."
+  },
+  {
+    "type": "mcq",
+    "q": "Effectors are usually:",
+    "opts": [
+      "Nerves only",
+      "Muscles or glands",
+      "Bones and teeth"
+    ],
+    "a": 1,
+    "exp": "Effectors carry out responses by contracting or releasing hormones/secretions."
+  },
+  {
+    "type": "mcq",
+    "q": "Why are communication systems needed in homeostasis?",
+    "opts": [
+      "Receptors, centres, and effectors may be in different body locations",
+      "Cells cannot detect changes",
+      "The blood cannot carry anything"
+    ],
+    "a": 0,
+    "exp": "Signals must travel between separated components."
+  },
+  {
+    "type": "mcq",
+    "q": "The nervous system sends signals mainly as:",
+    "opts": [
+      "Electrical impulses along nerves",
+      "Hormones in the blood",
+      "Sound waves"
+    ],
+    "a": 0,
+    "exp": "Nervous impulses are fast and precise."
+  },
+  {
+    "type": "mcq",
+    "q": "A key feature of nervous responses is that they are:",
+    "opts": [
+      "Slow and long-lasting",
+      "Fast and precise",
+      "Always uncontrolled"
+    ],
+    "a": 1,
+    "exp": "The nervous system enables rapid responses."
+  },
+  {
+    "type": "mcq",
+    "q": "The endocrine system uses:",
+    "opts": [
+      "Electrical impulses",
+      "Hormones",
+      "Reflex arcs"
+    ],
+    "a": 1,
+    "exp": "Endocrine control relies on hormones in the bloodstream."
+  },
+  {
+    "type": "mcq",
+    "q": "Hormones are best described as:",
+    "opts": [
+      "Large bones that store calcium",
+      "Small chemicals released into the bloodstream",
+      "Electrical charges that move through metals"
+    ],
+    "a": 1,
+    "exp": "Hormones are chemical messengers carried in blood."
+  },
+  {
+    "type": "mcq",
+    "q": "Hormones affect:",
+    "opts": [
+      "All cells equally",
+      "Only cells with the correct receptors",
+      "Only the skin"
+    ],
+    "a": 1,
+    "exp": "Target cells must have the right receptors."
+  },
+  {
+    "type": "mcq",
+    "q": "Compared with the nervous system, the endocrine system is generally:",
+    "opts": [
+      "Faster and more precise",
+      "Slower, longer-lasting, and more general",
+      "Completely unrelated to homeostasis"
+    ],
+    "a": 1,
+    "exp": "Endocrine effects usually take longer and last longer."
+  },
+  {
+    "type": "mcq",
+    "q": "The mechanism that keeps levels near normal by reversing changes is called:",
+    "opts": [
+      "Positive feedback",
+      "Negative feedback",
+      "Random feedback"
+    ],
+    "a": 1,
+    "exp": "Negative feedback counters the original change."
+  },
+  {
+    "type": "mcq",
+    "q": "If blood glucose becomes too high, negative feedback will:",
+    "opts": [
+      "Increase it further",
+      "Decrease it back toward normal",
+      "Stop all body processes"
+    ],
+    "a": 1,
+    "exp": "Negative feedback reduces high levels."
+  },
+  {
+    "type": "mcq",
+    "q": "If a level becomes too low, negative feedback will:",
+    "opts": [
+      "Decrease it further",
+      "Increase it back toward normal",
+      "Ignore it"
+    ],
+    "a": 1,
+    "exp": "Negative feedback raises low levels."
+  },
+  {
+    "type": "mcq",
+    "q": "Negative feedback can be summarized as:",
+    "opts": [
+      "Doing the opposite of the change",
+      "Always increasing levels",
+      "Always decreasing levels"
+    ],
+    "a": 0,
+    "exp": "It reverses deviations from the set point."
+  },
+  {
+    "type": "mcq",
+    "q": "When you enter a cold room, the first step is:",
+    "opts": [
+      "Effectors start sweating immediately",
+      "Receptors detect the low temperature",
+      "The endocrine system releases insulin"
+    ],
+    "a": 1,
+    "exp": "Receptors sense the temperature change."
+  },
+  {
+    "type": "mcq",
+    "q": "Signals from receptors to the brain travel via the:",
+    "opts": [
+      "Nervous system",
+      "Digestive system",
+      "Skeletal system"
+    ],
+    "a": 0,
+    "exp": "The nervous system carries impulses to coordination centres."
+  },
+  {
+    "type": "mcq",
+    "q": "In the temperature example, the coordination centre mentioned is:",
+    "opts": [
+      "The lungs",
+      "The brain and spinal cord",
+      "The kidneys only"
+    ],
+    "a": 1,
+    "exp": "They interpret information and coordinate responses."
+  },
+  {
+    "type": "mcq",
+    "q": "Shivering is an example of an effector response carried out by:",
+    "opts": [
+      "Muscles",
+      "Bones",
+      "Hair follicles only"
+    ],
+    "a": 0,
+    "exp": "Muscle contractions generate heat."
+  },
+  {
+    "type": "mcq",
+    "q": "Shivering increases body temperature by:",
+    "opts": [
+      "Reducing respiration",
+      "Generating heat through muscle contractions",
+      "Increasing water loss"
+    ],
+    "a": 1,
+    "exp": "Repeated contractions release heat."
+  },
+  {
+    "type": "mcq",
+    "q": "If body temperature rises too high, receptors will detect:",
+    "opts": [
+      "A fall in temperature",
+      "A rise in temperature",
+      "No change at all"
+    ],
+    "a": 1,
+    "exp": "Different receptors detect overheating."
+  },
+  {
+    "type": "mcq",
+    "q": "Sweating helps return temperature to normal mainly by:",
+    "opts": [
+      "Evaporation cooling the skin",
+      "Increasing muscle contraction",
+      "Making blood more acidic"
+    ],
+    "a": 0,
+    "exp": "Evaporation removes heat from the body."
+  },
+  {
+    "type": "mcq",
+    "q": "The overall pattern of homeostasis described is a:",
+    "opts": [
+      "One-way pathway with no repeats",
+      "Loop that keeps correcting levels",
+      "System that only works once"
+    ],
+    "a": 1,
+    "exp": "Homeostasis operates as a feedback loop."
+  },
+  {
+    "type": "mcq",
+    "q": "Which is NOT listed as a condition cells must keep suitable?",
+    "opts": [
+      "Temperature",
+      "pH",
+      "Eye colour"
+    ],
+    "a": 2,
+    "exp": "The speech mentions temperature, pH, glucose, water, etc."
+  },
+  {
+    "type": "mcq",
+    "q": "Coordination centres can include the:",
+    "opts": [
+      "Brain",
+      "Spinal cord",
+      "Both A and B"
+    ],
+    "a": 2,
+    "exp": "Both brain and spinal cord are examples of coordination centres."
+  },
+  {
+    "type": "mcq",
+    "q": "An effector gland might respond by:",
+    "opts": [
+      "Releasing hormones",
+      "Changing the number of neutrons",
+      "Creating protons"
+    ],
+    "a": 0,
+    "exp": "Glands secrete chemicals such as hormones."
+  },
+  {
+    "type": "mcq",
+    "q": "Homeostasis is important because it keeps conditions near:",
+    "opts": [
+      "Zero degrees",
+      "Optimal levels for enzymes and cells",
+      "The boiling point of water"
+    ],
+    "a": 1,
+    "exp": "Cells function best around an optimum."
+  },
+  {
+    "type": "mcq",
+    "q": "The phrase 'stable internal environment' means:",
+    "opts": [
+      "No changes at all",
+      "Conditions kept within narrow limits",
+      "The environment outside the body"
+    ],
+    "a": 1,
+    "exp": "Stability means controlled fluctuation within bounds."
+  },
+  {
+    "type": "mcq",
+    "q": "External changes that challenge homeostasis include:",
+    "opts": [
+      "Walking into snow",
+      "Running in a desert",
+      "Both A and B"
+    ],
+    "a": 2,
+    "exp": "The speech uses both as examples."
+  },
+  {
+    "type": "mcq",
+    "q": "The endocrine system\u2019s signals travel mainly through:",
+    "opts": [
+      "Nerves",
+      "The bloodstream",
+      "Bones"
+    ],
+    "a": 1,
+    "exp": "Hormones are carried in the blood."
+  },
+  {
+    "type": "mcq",
+    "q": "A key difference between nervous and endocrine control is that nervous control is:",
+    "opts": [
+      "Slower",
+      "Faster",
+      "Always chemical"
+    ],
+    "a": 1,
+    "exp": "Nervous impulses are fast."
+  },
+  {
+    "type": "mcq",
+    "q": "Negative feedback stops once:",
+    "opts": [
+      "Levels are back near normal",
+      "Levels become extremely high",
+      "A receptor breaks"
+    ],
+    "a": 0,
+    "exp": "Responses reduce as the variable returns to the set point."
+  },
+  {
+    "type": "mcq",
+    "q": "Which sequence matches a typical control pathway?",
+    "opts": [
+      "Effector \u2192 receptor \u2192 brain",
+      "Receptor \u2192 coordination centre \u2192 effector",
+      "Brain \u2192 effector \u2192 receptor"
+    ],
+    "a": 1,
+    "exp": "This is the standard pathway described."
+  },
+  {
+    "type": "mcq",
+    "q": "Homeostasis can regulate many variables, such as:",
+    "opts": [
+      "Temperature and blood glucose",
+      "Planetary motion",
+      "Magnetism only"
+    ],
+    "a": 0,
+    "exp": "The speech highlights temperature and glucose."
+  },
+  {
+    "type": "mcq",
+    "q": "Which variable is mentioned as needing control so the body is not too acidic or too alkaline?",
+    "opts": [
+      "pH",
+      "Heart rate only",
+      "Bone length"
+    ],
+    "a": 0,
+    "exp": "Homeostasis helps maintain pH within a narrow range."
+  }
+];
+
+
+    let order=[], idx=0, score=0;
+
+    function shuffle(a){
+      for(let i=a.length-1;i>0;i--){
+        const j=Math.floor(Math.random()*(i+1));
+        [a[i],a[j]]=[a[j],a[i]];
+      }
+      return a;
+    }
+
+    function startGame(){
+      order = shuffle([...Array(questions.length).keys()]);
+      idx = 0; score = 0; renderQ();
+    }
+
+    function renderQ(){
+      const q = questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${escapeHtml(q.q)}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${escapeHtml(o)}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      } else {
+        html += `<input id='fill' placeholder='Answer' autocomplete='off' style='padding:10px 12px;border:1px solid #e2e8f0;border-radius:10px;min-width:220px'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+
+    function checkMCQ(){
+      const q = questions[order[idx]];
+      const pick = document.querySelector("input[name='opt']:checked");
+      const fb = document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value,10)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+
+    function norm(s){
+      return (s||"").trim().toLowerCase().replace(/\s+/g," ");
+    }
+
+    function checkFill(){
+      const q = questions[order[idx]];
+      const ans = norm(document.getElementById('fill').value);
+      const fb = document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      const correct = norm(String(q.ans));
+      if(ans===correct){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+
+    function endGame(){
+      document.getElementById('game').innerHTML =
+        `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+
+    function escapeHtml(str){
+      return String(str).replace(/[&<>"']/g, (m)=>({
+        "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"
+      }[m]));
+    }
+  </script>
+</body>
+</html>
