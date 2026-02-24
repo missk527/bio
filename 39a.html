@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nervous System & Reflex Arc</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nervous System & Reflex Arc</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/GMrj0hPfn38" title="Electric Fields" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+            
+
+            <details open>
+        <summary>1) Why communication systems are needed</summary>
+        <div class="detail-body">
+          <p>Large multicellular organisms must coordinate actions and respond to internal and external changes. The body uses two main communication systems: the nervous system (fast) and the endocrine system (slower, hormone-based).</p>
+        </div>
+      </details>
+            <details open>
+        <summary>2) What a neuron is adapted to do</summary>
+        <div class="detail-body">
+          <p>Neurons (nerve cells) are specialized to carry electrical impulses. Their long, thin shape and branched ends help signals travel quickly and connect with many other cells.</p>
+        </div>
+      </details>
+            <details open>
+        <summary>3) Neuron structure in simple terms</summary>
+        <div class="detail-body">
+          <p>Typical neurons have dendrites to receive signals, a cell body, a long axon to carry impulses, and nerve endings that communicate with the next cell.</p>
+        </div>
+      </details>
+            <details open>
+        <summary>4) Synapses and neurotransmitters</summary>
+        <div class="detail-body">
+          <p>Neurons do not usually touch. At a synapse, an arriving electrical impulse triggers release of chemical messengers (neurotransmitters) that diffuse across the gap and start a new impulse in the next neuron.</p>
+        </div>
+      </details>
+            <details open>
+        <summary>5) The central nervous system (CNS)</summary>
+        <div class="detail-body">
+          <p>The CNS is the brain and spinal cord. It processes sensory information, makes decisions, and sends instructions to the rest of the body.</p>
+        </div>
+      </details>
+            <details open>
+        <summary>6) Sensory neurons and receptors</summary>
+        <div class="detail-body">
+          <p>Receptors detect stimuli (e.g., temperature, pressure, CO₂ levels). Sensory neurons carry impulses from receptors to the CNS.</p>
+        </div>
+      </details>
+            <details open>
+        <summary>7) Motor neurons and effectors</summary>
+        <div class="detail-body">
+          <p>After processing, the CNS sends impulses along motor neurons to effectors—usually muscles (contract) or glands (secrete).</p>
+        </div>
+      </details>
+            <details open>
+        <summary>8) What the nervous system achieves</summary>
+        <div class="detail-body">
+          <p>Together, receptors, neurons, the CNS, and effectors let the body detect change, interpret information, and produce coordinated responses.</p>
+        </div>
+      </details>
+            <details open>
+        <summary>9) Reflex arcs</summary>
+        <div class="detail-body">
+          <p>A reflex arc is the pathway for rapid, automatic (unconscious) responses such as withdrawing from pain or blinking. Reflexes help prevent injury by reducing reaction time.</p>
+        </div>
+      </details>
+            <details open>
+        <summary>10) Reflex arc pathway example</summary>
+        <div class="detail-body">
+          <p>Stimulus → receptor → sensory neuron → relay neuron in spinal cord → motor neuron → effector (muscle) → response. Synapses occur between each neuron, where the signal briefly becomes chemical.</p>
+        </div>
+      </details>
+</section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2026 Biology Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the electric nervous system speech
+        const questions = [
+      {type:"mcq", q:"Why do large multicellular organisms need communication systems?", opts:["To keep body temperature constant only", "To coordinate actions and respond to changes", "To increase body mass"], a:1, exp:"Communication systems allow different body parts to coordinate behaviour and respond to the environment."},
+      {type:"mcq", q:"Which two organ systems are used for body-wide communication?", opts:["Digestive and respiratory", "Nervous and endocrine", "Skeletal and muscular"], a:1, exp:"The nervous system and endocrine system are the main communication systems."},
+      {type:"mcq", q:"Neurons are adapted to carry:", opts:["Nutrients", "Electrical impulses", "Oxygen"], a:1, exp:"Neurons transmit electrical impulses from one place to another."},
+      {type:"mcq", q:"A typical neuron is described as:", opts:["Short and thick with no branches", "Long and thin with branched ends", "Flat and circular"], a:1, exp:"Neurons are long, thin, and branched to connect with other cells."},
+      {type:"mcq", q:"The biological 'wire' analogy refers to neurons carrying a small:", opts:["Magnetic field", "Current/impulse", "Pressure wave"], a:1, exp:"Neurons conduct electrical impulses like wires carry current."},
+      {type:"mcq", q:"The junction between two neurons is called a:", opts:["Alveolus", "Synapse", "Capillary"], a:1, exp:"Signals pass between neurons at synapses."},
+      {type:"mcq", q:"At a synapse, an electrical impulse causes the release of:", opts:["Enzymes", "Chemicals (neurotransmitters)", "Red blood cells"], a:1, exp:"Neurotransmitters are released into the synaptic gap."},
+      {type:"mcq", q:"Neurotransmitters cross the synapse mainly by:", opts:["Diffusion", "Osmosis", "Evaporation"], a:0, exp:"They diffuse across the synaptic cleft to the next neuron."},
+      {type:"mcq", q:"In synaptic transmission, the signal changes from electrical to chemical and then back to:", opts:["Thermal", "Electrical", "Gravitational"], a:1, exp:"The impulse is electrical in neurons but chemical across synapses."},
+      {type:"mcq", q:"The central nervous system (CNS) is made of the:", opts:["Brain and spinal cord", "Heart and lungs", "Stomach and intestines"], a:0, exp:"The CNS includes the brain and spinal cord."},
+      {type:"mcq", q:"The CNS mainly:", opts:["Produces hormones only", "Processes information and coordinates responses", "Digests food"], a:1, exp:"The CNS receives sensory input and sends out instructions."},
+      {type:"mcq", q:"Neurons that carry information from receptors to the CNS are:", opts:["Motor neurons", "Sensory neurons", "Relay neurons"], a:1, exp:"Sensory neurons transmit impulses from receptors to the CNS."},
+      {type:"mcq", q:"Neurons that carry impulses from the CNS to effectors are:", opts:["Motor neurons", "Sensory neurons", "Photoreceptors"], a:0, exp:"Motor neurons carry impulses to muscles or glands."},
+      {type:"mcq", q:"An effector is usually a:", opts:["Muscle or gland", "Receptor cell only", "Bone"], a:0, exp:"Effectors carry out responses, such as muscle contraction or gland secretion."},
+      {type:"mcq", q:"A receptor is best defined as:", opts:["A cell that detects stimuli", "A nerve that releases hormones", "A muscle that contracts"], a:0, exp:"Receptors detect changes (stimuli) in the body or environment."},
+      {type:"mcq", q:"Which could be a sensory input mentioned in the speech?", opts:["Blood carbon dioxide level", "Bone density", "Hair length"], a:0, exp:"Sensory neurons can carry information like CO\u2082 levels in the blood."},
+      {type:"mcq", q:"Which response is most typical of a muscle effector?", opts:["Secreting a hormone", "Contracting", "Producing antibodies"], a:1, exp:"Muscles respond by contracting."},
+      {type:"mcq", q:"Which response is most typical of a gland effector?", opts:["Contracting", "Secreting chemicals/hormones", "Generating impulses"], a:1, exp:"Glands respond by secreting substances, including hormones."},
+      {type:"mcq", q:"A reflex arc is:", opts:["A voluntary movement pathway", "A pathway for rapid, automatic responses", "A pathway only in the brain"], a:1, exp:"Reflex arcs produce fast, unconscious responses."},
+      {type:"mcq", q:"The main advantage of reflexes is that they are:", opts:["Slow and deliberate", "Rapid and automatic", "Only learned through practice"], a:1, exp:"Reflexes reduce reaction time and help prevent injury."},
+      {type:"mcq", q:"In a withdrawal reflex, the stimulus is detected by:", opts:["Effectors", "Receptors in the skin", "Relay neurons"], a:1, exp:"Skin receptors detect the stimulus and start the pathway."},
+      {type:"mcq", q:"In the reflex arc described, the sensory neuron carries impulses to the:", opts:["Spinal cord", "Biceps", "Heart"], a:0, exp:"The sensory neuron carries the impulse to the spinal cord (CNS)."},
+      {type:"mcq", q:"Inside the spinal cord, the sensory neuron passes the impulse to a:", opts:["Motor neuron directly", "Relay neuron", "Gland cell"], a:1, exp:"Relay neurons link sensory and motor neurons within the CNS."},
+      {type:"mcq", q:"The relay neuron then passes the impulse to a:", opts:["Motor neuron", "Receptor", "Synapse only"], a:0, exp:"Motor neurons carry impulses out to the effector."},
+      {type:"mcq", q:"In the example, the effector that contracts to move the hand away is the:", opts:["Biceps muscle", "Pupil", "Liver"], a:0, exp:"The biceps contracts to withdraw the hand."},
+      {type:"mcq", q:"Which sequence correctly shows a reflex arc pathway?", opts:["Receptor \u2192 motor neuron \u2192 relay neuron \u2192 sensory neuron \u2192 effector", "Stimulus \u2192 receptor \u2192 sensory neuron \u2192 relay neuron \u2192 motor neuron \u2192 effector \u2192 response", "CNS \u2192 receptor \u2192 stimulus \u2192 response"], a:1, exp:"Reflex arcs follow the stimulus-to-response pathway via sensory, relay, and motor neurons."},
+      {type:"mcq", q:"The brain is always required for a reflex response to happen immediately:", opts:["True", "False", "Only during sleep"], a:1, exp:"Many reflexes are coordinated in the spinal cord for speed."},
+      {type:"mcq", q:"At synapses, neurotransmitters are released from the:", opts:["Receiving neuron only", "End of the sending neuron", "Cell nucleus"], a:1, exp:"The presynaptic neuron releases neurotransmitters at its nerve ending."},
+      {type:"mcq", q:"Neurotransmitters trigger a new electrical impulse in the:", opts:["Next neuron", "Red blood cell", "Bone marrow"], a:0, exp:"They bind to receptors on the postsynaptic neuron and start an impulse."},
+      {type:"mcq", q:"The nervous system can detect changes:", opts:["Only outside the body", "Only inside the body", "Both inside and outside the body"], a:2, exp:"It monitors internal and external conditions and coordinates responses."},
+      {type:"mcq", q:"The spinal cord is part of the:", opts:["Peripheral nervous system only", "Central nervous system", "Digestive system"], a:1, exp:"The spinal cord is a major component of the CNS."},
+      {type:"mcq", q:"Which neuron type is found within the CNS linking sensory and motor neurons?", opts:["Relay neuron", "Motor neuron", "Sensory neuron"], a:0, exp:"Relay neurons (interneurons) connect pathways inside the CNS."},
+      {type:"mcq", q:"A stimulus in the reflex example was:", opts:["Bright light", "Pressure from a sharp object", "Low oxygen"], a:1, exp:"The sharp pressure from the pen acts as the stimulus."},
+      {type:"mcq", q:"In general, increasing the number of branch connections on a neuron helps it:", opts:["Store more fat", "Connect to more neurons", "Pump blood"], a:1, exp:"Branching allows communication with many other nerve cells."},
+      {type:"mcq", q:"Which statement best describes synaptic communication?", opts:["Neurons touch and electricity jumps directly across", "Electrical impulses cause chemicals to cross a gap and start a new impulse", "Hormones travel in the blood between neurons"], a:1, exp:"Synapses use chemicals to pass the signal across the gap."},
+      {type:"mcq", q:"The endocrine system mainly communicates using:", opts:["Neurotransmitters across synapses only", "Hormones carried in the blood", "Electrical impulses only"], a:1, exp:"The endocrine system uses hormones, usually slower than nervous impulses."},
+      {type:"mcq", q:"Which is a correct match?", opts:["Sensory neuron \u2192 CNS to effector", "Motor neuron \u2192 CNS to effector", "Relay neuron \u2192 receptor to CNS"], a:1, exp:"Motor neurons carry impulses from the CNS to effectors."},
+      {type:"mcq", q:"The response in a withdrawal reflex is:", opts:["Hand moves away", "Skin detects stimulus", "Impulse enters spinal cord"], a:0, exp:"The response is the action produced by the effector."},
+      {type:"mcq", q:"Why are synapses useful in nervous pathways?", opts:["They allow chemical control of signal transfer", "They stop all impulses permanently", "They increase bone strength"], a:0, exp:"Synapses enable controlled signal transfer via neurotransmitters."},
+      {type:"mcq", q:"The nervous system is best for communication that needs to be:", opts:["Fast and targeted", "Slow and widespread", "Only during digestion"], a:0, exp:"Electrical impulses provide rapid, precise communication."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
