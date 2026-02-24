@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Structure of the Eye and Iris Reflex</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Structure of the Eye & Iris Reflex</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/GXL8wYmnJp0" allowfullscreen></iframe>
+      <p style="margin:10px 0 0;"><a href="https://youtu.be/GXL8wYmnJp0" target="_blank">Video link</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) Light entering the eye</summary>
+        <p>Light first passes through the transparent cornea, which refracts (bends) light. The cornea has no blood vessels, so oxygen diffuses in from the air.</p>
+      </details>
+
+      <details open>
+        <summary>2) Iris, pupil and lens</summary>
+        <p>The iris is the coloured part of the eye and controls pupil size. The pupil is simply a gap that allows light through. The lens refracts light and can change shape to focus light onto the retina.</p>
+      </details>
+
+      <details open>
+        <summary>3) Retina and photoreceptors</summary>
+        <p>The retina contains rod cells (black and white vision, sensitive in low light) and cone cells (colour vision). In darkness, rod cells dominate, so colour vision is reduced.</p>
+      </details>
+
+      <details open>
+        <summary>4) Fovea and optic nerve</summary>
+        <p>The fovea is packed with cone cells and gives the sharpest vision. The optic nerve carries electrical impulses from the retina to the brain.</p>
+      </details>
+
+      <details open>
+        <summary>5) Iris reflex</summary>
+        <p>In bright light the pupil is constricted (circular muscles contract, radial relax). In dim light the pupil is dilated (radial muscles contract, circular relax). This protects the retina and improves vision.</p>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2026 Biology Pack</footer>
+  </div>
+
+<script>
+const questions = [
+{q:"Which structure does light hit first?",opts:["Lens","Cornea","Retina","Iris"],a:1},
+{q:"The cornea is transparent because it:",opts:["Contains blood vessels","Has no blood vessels","Is coloured","Is muscular"],a:1},
+{q:"The iris controls the size of the:",opts:["Lens","Retina","Pupil","Optic nerve"],a:2},
+{q:"The pupil is:",opts:["A muscle","A nerve","A gap","A lens"],a:2},
+{q:"The lens can change shape to:",opts:["Produce tears","Focus light","Change eye colour","Detect colour"],a:1},
+{q:"Light is focused onto the:",opts:["Cornea","Iris","Retina","Optic nerve"],a:2},
+{q:"Cone cells detect:",opts:["Light intensity only","Colour","Pain","Sound"],a:1},
+{q:"Rod cells are best for:",opts:["Colour vision","Bright light","Low light","Sharp vision"],a:2},
+{q:"Why can't we see colour well in darkness?",opts:["No light","Only rods work","Cones multiply","Lens shrinks"],a:1},
+{q:"The fovea contains mostly:",opts:["Rods","Cones","Blood vessels","Muscles"],a:1},
+{q:"The optic nerve carries impulses to the:",opts:["Heart","Brain","Lens","Iris"],a:1},
+{q:"In bright light the pupil becomes:",opts:["Dilated","Constricted","Blind","Closed permanently"],a:1},
+{q:"In dim light the pupil becomes:",opts:["Constricted","Dilated","White","Inactive"],a:1},
+{q:"Circular muscles contract in:",opts:["Dim light","Bright light","Darkness only","Sleep"],a:1},
+{q:"Radial muscles contract in:",opts:["Bright light","Dim light","No light","Never"],a:1},
+{q:"The iris reflex is:",opts:["Voluntary","Involuntary","Painful","Slow"],a:1},
+{q:"The retina contains:",opts:["Muscles","Photoreceptors","Bones","Air sacs"],a:1},
+{q:"The cornea refracts light by:",opts:["Absorbing it","Reflecting it","Bending it","Blocking it"],a:2},
+{q:"The lens helps focus light onto:",opts:["Fovea","Iris","Cornea","Eyelid"],a:0},
+{q:"Rods allow vision in:",opts:["Colour","Black and white","Infrared","Ultraviolet"],a:1},
+{q:"The fovea provides:",opts:["Peripheral vision","Sharp central vision","Night vision","Depth only"],a:1},
+{q:"Bright light can damage the:",opts:["Retina","Lens","Cornea","Eyelid"],a:0},
+{q:"Pupil size controls:",opts:["Sound","Light entry","Blood flow","Tears"],a:1},
+{q:"Radial muscles stretch like the:",opts:["Diameter","Circumference","Radius","Chord"],a:2},
+{q:"Circular muscles are arranged:",opts:["Radially","In circles","Randomly","Vertically"],a:1},
+{q:"The iris is the ______ part of the eye.",opts:["White","Clear","Coloured","Transparent"],a:2},
+{q:"The cornea gets oxygen by:",opts:["Blood","Air diffusion","Food","Water"],a:1},
+{q:"Photoreceptors convert light into:",opts:["Heat","Electric impulses","Sound","Movement"],a:1},
+{q:"In darkness circular muscles:",opts:["Contract","Relax","Tighten","Disappear"],a:1},
+{q:"In brightness radial muscles:",opts:["Contract","Relax","Shrink","Harden"],a:1},
+{q:"The retina is located at the:",opts:["Front","Back","Side","Centre"],a:1},
+{q:"The lens mainly:",opts:["Changes colour","Refracts light","Produces tears","Protects iris"],a:1},
+{q:"Rod cells are more sensitive to:",opts:["Colour","Light intensity","Sound","Heat"],a:1},
+{q:"The iris reflex prevents:",opts:["Hearing loss","Retina damage","Lens growth","Colour blindness"],a:1},
+{q:"The pupil appears black because:",opts:["It is empty space","It absorbs light","It reflects light","It is solid"],a:1},
+{q:"The cornea helps with:",opts:["Protection only","Refraction","Blood supply","Hearing"],a:1},
+{q:"Constricted means:",opts:["Pupil larger","Pupil smaller","Lens larger","Lens smaller"],a:1},
+{q:"Dilated means:",opts:["Pupil smaller","Pupil larger","Lens flat","Lens thick"],a:1},
+{q:"The eye responds to light changes using the:",opts:["Lens reflex","Iris reflex","Brain reflex","Tear reflex"],a:1},
+{q:"The main function of the iris reflex is to:",opts:["Change colour","Protect retina","Produce tears","Focus images"],a:1}
+];
+
+let order=[],idx=0,score=0;
+function startGame(){order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);idx=0;score=0;renderQ();}
+function renderQ(){
+const q=questions[order[idx]];
+let html=`<div class='qbox'><h3>Q ${idx+1}/40</h3><p>${q.q}</p>`;
+q.opts.forEach((o,i)=>{html+=`<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`;});
+html+=`<button onclick='check()'>Submit</button><div id='fb' class='feedback'></div></div>`;
+document.getElementById('game').innerHTML=html;
+}
+
+function check(){
+const pick=document.querySelector("input[name='opt']:checked");
+const fb=document.getElementById('fb');
+if(!pick){fb.innerHTML="❌ Please choose an answer";fb.className="feedback bad";return;}
+const q=questions[order[idx]];
+if(parseInt(pick.value)===q.a){
+score++;
+fb.innerHTML="✅ Correct!";
+fb.className="feedback ok";
+}else{
+fb.innerHTML="❌ Wrong! Correct answer: "+q.opts[q.a];
+fb.className="feedback bad";
+}
+setTimeout(()=>{
+idx++;
+if(idx<40)renderQ();
+else document.getElementById('game').innerHTML=`<div class='qbox'><h3>Finished!</h3><p>Your score: ${score}/40</p><button onclick='startGame()'>Retry</button></div>`;
+},1200);
+}
+</script>
+
+</body>
+</html>
