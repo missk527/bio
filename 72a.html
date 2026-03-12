@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thermoregulation: Controlling Body Temperature</title>
+  <style>
+    :root{ --brand:#16a34a; --paper:#fffefb; --ink:#1f2937; --accent:#065f46 }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f5faf7; color:var(--ink); line-height:1.6 }
+    header{ background:linear-gradient(90deg, var(--brand), #22c55e); color:#fff; padding:18px 20px; text-align:center; font-size:1.35rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 14px 28px }
+    .video{ display:flex; justify-content:center; margin:18px 0 }
+    iframe{ width:88%; max-width:1100px; height:480px; border:2px solid #d1fae5; border-radius:14px; background:#000; box-shadow:0 2px 12px rgba(5,150,105,.18) }
+    .card{ background:var(--paper); border-radius:16px; box-shadow:0 8px 20px rgba(15,23,42,.08); padding:20px; margin:18px 0 }
+    h2{ color:var(--accent); border-bottom:2px solid #bbf7d0; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:12px 14px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#064e3b }
+    .flex{ display:flex; gap:10px; flex-wrap:wrap }
+    .pill{ background:#dcfce7; border:1px solid #bbf7d0; border-radius:999px; padding:2px 10px; font-size:.9rem }
+    .kbd{background:#eef2ff;border:1px solid #c7d2fe;border-bottom-width:3px;padding:2px 6px;border-radius:6px;font-family:ui-monospace,Consolas,monospace}
+    .muted{opacity:.85}
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(5,150,105,.25) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem }
+    @media (max-width:760px){ iframe{ width:96%; height:240px } }
+    .tiny{font-size:.85rem;color:#475569}
+  </style>
+</head>
+<body>
+<header>Thermoregulation — Homeostasis and Temperature Control</header>
+
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/Hi2qs69D14Y" title="Thermoregulation" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="card">
+    <h2>Notes (rewritten in English from the given speech)</h2>
+
+    <details open>
+      <summary>What thermoregulation is</summary>
+      <ul>
+        <li><b>Thermoregulation</b> is the control of internal body temperature.</li>
+        <li>It is part of <b>homeostasis</b>, which means keeping the internal environment stable so cells can work properly.</li>
+        <li>The human body aims to keep temperature close to <b>37°C</b>.</li>
+      </ul>
+      <div class="flex">
+        <span class="pill">Homeostasis</span><span class="pill">37°C</span><span class="pill">Stable internal conditions</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>Why body temperature must stay stable</summary>
+      <ul>
+        <li><b>37°C</b> is close to the optimum temperature for many <b>enzymes</b> in the body.</li>
+        <li>If body temperature falls too low, enzyme activity <b>slows down</b>.</li>
+        <li>If temperature rises too high, enzymes may <b>denature</b> and stop working properly.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>What detects temperature changes</summary>
+      <ul>
+        <li>The <b>thermoregulatory centre</b> is found in the <b>hypothalamus</b> in the brain.</li>
+        <li>It acts like a <b>thermostat</b> for the body.</li>
+        <li><b>Temperature receptors</b> in the <b>skin</b> and <b>blood vessels</b> detect changes and send information to the brain.</li>
+        <li>The brain decides whether the body is too <b>hot</b> or too <b>cold</b> overall.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>How the body warms up</summary>
+      <ul>
+        <li>The body warms up by <b>conserving heat</b> and <b>generating more heat</b>.</li>
+        <li><b>Vasoconstriction</b>: blood vessels near the skin surface get narrower, so less warm blood flows there and less heat is lost.</li>
+        <li><b>Erector muscles contract</b>: hairs stand up and trap a thin layer of insulating air.</li>
+        <li><b>Shivering</b>: muscles contract automatically, increasing respiration and releasing more heat energy.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>How the body cools down</summary>
+      <ul>
+        <li>The body cools down by increasing heat loss.</li>
+        <li><b>Vasodilation</b>: blood vessels near the skin surface widen, so more warm blood flows close to the skin and more heat is transferred to the surroundings.</li>
+        <li><b>Erector muscles relax</b>: hairs lie flat, so less insulating air is trapped.</li>
+        <li><b>Sweating</b>: sweat is released onto the skin. As it <b>evaporates</b>, it takes heat away from the body.</li>
+      </ul>
+      <p class="tiny">Evaporation needs energy, so sweat removes heat from the body and helps lower body temperature.</p>
+    </details>
+
+  </section>
+
+  <section class="card">
+    <h2>Quiz (40 Questions based on the speech)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+const Q = [
+  {type:"mcq", q:"Thermoregulation is the control of:", opts:["Blood pressure","Internal body temperature","Blood glucose only"], a:1, exp:"Thermoregulation means controlling body temperature."},
+  {type:"mcq", q:"Thermoregulation is part of:", opts:["Digestion","Homeostasis","Respiration only"], a:1, exp:"It is one example of homeostasis."},
+  {type:"mcq", q:"Homeostasis means maintaining a:", opts:["Stable internal environment","High body mass","Fast heart rate"], a:0, exp:"Homeostasis keeps internal conditions stable."},
+  {type:"mcq", q:"The body temperature is usually kept around:", opts:["27°C","37°C","47°C"], a:1, exp:"The speech says body temperature is kept around 37°C."},
+  {type:"mcq", q:"Why is 37°C important for the body?", opts:["It is best for enzymes to work","It stops respiration","It prevents sweating"], a:0, exp:"37°C is close to the optimum temperature for enzymes."},
+  {type:"mcq", q:"If body temperature drops too low, enzyme activity:", opts:["Speeds up greatly","Slows down","Stops permanently at once"], a:1, exp:"Low temperature slows enzyme activity."},
+  {type:"mcq", q:"If body temperature gets too high, enzymes may:", opts:["Multiply","Denature","Become colder"], a:1, exp:"High temperatures can denature enzymes."},
+  {type:"mcq", q:"The thermoregulatory centre is in the:", opts:["Liver","Hypothalamus","Kidney"], a:1, exp:"The hypothalamus controls thermoregulation."},
+  {type:"mcq", q:"The hypothalamus acts like a:", opts:["Pump","Thermostat","Filter"], a:1, exp:"It is compared to a thermostat for the body."},
+  {type:"mcq", q:"Most temperature receptors are found in the:", opts:["Skin and blood vessels","Bones and teeth","Lungs only"], a:0, exp:"The speech highlights receptors in the skin and blood vessels."},
+  {type:"mcq", q:"If the body is too hot, the brain sends signals to:", opts:["Cool the body down","Store more fat","Stop circulation"], a:0, exp:"Responses are triggered to lower body temperature."},
+  {type:"mcq", q:"If the body is too cold, the brain sends signals to:", opts:["Warm the body up","Reduce enzyme action","Stop respiration"], a:0, exp:"Responses are triggered to raise body temperature."},
+  {type:"mcq", q:"Vasoconstriction means blood vessels near the skin:", opts:["Expand","Narrow","Disappear"], a:1, exp:"Vasoconstriction is the narrowing of blood vessels."},
+  {type:"mcq", q:"Vasoconstriction helps because it:", opts:["Loses more heat","Reduces heat loss","Increases sweating"], a:1, exp:"Less blood near the skin means less heat loss."},
+  {type:"mcq", q:"When erector muscles contract, hairs:", opts:["Fall out","Stand on end","Become longer"], a:1, exp:"Contracting erector muscles makes hairs stand up."},
+  {type:"mcq", q:"Standing hairs help trap a layer of:", opts:["Water","Insulating air","Salt"], a:1, exp:"This air layer reduces heat loss."},
+  {type:"mcq", q:"Shivering involves muscles:", opts:["Contracting automatically","Stopping movement completely","Cooling the blood directly"], a:0, exp:"Shivering is automatic muscle contraction."},
+  {type:"mcq", q:"Shivering warms the body because it increases:", opts:["Respiration","Digestion","Water loss"], a:0, exp:"More respiration releases more heat energy."},
+  {type:"mcq", q:"Vasodilation means blood vessels near the skin:", opts:["Widen","Close permanently","Move deeper"], a:0, exp:"Vasodilation is the widening of blood vessels."},
+  {type:"mcq", q:"Vasodilation increases heat loss because:", opts:["Less blood reaches the skin","More warm blood flows near the skin","Sweat production stops"], a:1, exp:"Warm blood near the surface transfers heat to the surroundings."},
+
+  {type:"tf", q:"Thermoregulation is the control of body temperature.", a:true, exp:"That is the definition given in the speech."},
+  {type:"tf", q:"Homeostasis means keeping internal conditions unstable.", a:false, exp:"Homeostasis keeps the internal environment stable."},
+  {type:"tf", q:"The body tries to keep temperature near 37°C.", a:true, exp:"37°C is the target temperature mentioned."},
+  {type:"tf", q:"Enzymes work best when body temperature is very high.", a:false, exp:"Too high a temperature can denature enzymes."},
+  {type:"tf", q:"The hypothalamus is part of the brain.", a:true, exp:"The thermoregulatory centre is in the hypothalamus."},
+  {type:"tf", q:"Temperature receptors are mostly in the skin and blood vessels.", a:true, exp:"That is stated directly in the speech."},
+  {type:"tf", q:"Vasoconstriction causes more blood to flow near the skin surface.", a:false, exp:"It reduces blood flow near the surface."},
+  {type:"tf", q:"Vasodilation helps the body lose heat.", a:true, exp:"Widening surface blood vessels increases heat loss."},
+  {type:"tf", q:"Sweat cools the body when it evaporates.", a:true, exp:"Evaporation takes heat away from the body."},
+  {type:"tf", q:"Erector muscles relax to make hairs stand up.", a:false, exp:"Hairs stand up when erector muscles contract."},
+
+  {type:"fill", q:"The control of internal body temperature is called ______.", text:"thermoregulation", exp:"Thermoregulation is the key term in the speech."},
+  {type:"fill", q:"The process of keeping a stable internal environment is called ______.", text:"homeostasis", exp:"Thermoregulation is one example of homeostasis."},
+  {type:"fill", q:"Normal body temperature is about ______ °C.", text:"37", exp:"The body is kept around 37°C."},
+  {type:"fill", q:"The temperature control centre in the brain is the ______.", text:"hypothalamus", exp:"The hypothalamus contains the thermoregulatory centre."},
+  {type:"fill", q:"Blood vessels near the skin narrow during ______.", text:"vasoconstriction", exp:"Vasoconstriction reduces heat loss."},
+  {type:"fill", q:"Blood vessels near the skin widen during ______.", text:"vasodilation", exp:"Vasodilation helps cool the body."},
+  {type:"fill", q:"Automatic muscle contractions that warm the body are called ______.", text:"shivering", exp:"Shivering increases respiration and heat release."},
+  {type:"fill", q:"The small muscles attached to hairs are called ______ muscles.", text:"erector", exp:"Erector muscles make hairs stand on end."},
+  {type:"fill", q:"Sweat cools the body when it ______ from the skin.", text:"evaporates", exp:"Evaporation takes heat away from the body."},
+  {type:"fill", q:"If body temperature gets too high, enzymes may ______.", text:"denature", exp:"High temperatures can denature enzymes."}
+];
+
+let idx=0, score=0, order=[];
+function startGame(){
+  order = [...Array(Q.length).keys()].sort(()=>Math.random()-0.5);
+  idx = 0; score = 0;
+  document.getElementById("scorebar").textContent = `Question ${idx+1} / ${Q.length}  Score: ${score}`;
+  renderQ();
+}
+function renderQ(){
+  const q = Q[order[idx]];
+  let html = `<div class='question-box'><p><strong>Q${idx+1}:</strong> ${q.q}</p>`;
+  if(q.type==="mcq"){
+    q.opts.forEach((opt,i)=> html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`);
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type==="tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  const area = document.getElementById("game-area");
+  const inner = document.getElementById("game-area-inner");
+  if(inner){ inner.innerHTML = html; } else { area.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`); }
+}
+function checkMCQ(){
+  const q = Q[order[idx]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkTF(){
+  const q = Q[order[idx]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select True or False."; fb.className="feedback incorrect"; return;}
+  const val = sel.value === "true";
+  if(val === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkFill(){
+  const q = Q[order[idx]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  function norm(s){ return s.replace(/\s+/g,"").toLowerCase(); }
+  const ok = norm(ans).includes(norm(q.text));
+  if(ok){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function nextQ(){
+  idx++;
+  if(idx < Q.length){
+    document.getElementById("scorebar").textContent = `Question ${idx+1} / ${Q.length}  Score: ${score}`;
+    renderQ();
+  }else{
+    endGame();
+  }
+}
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${Q.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${Q.length}`;
+}
+</script>
+</body>
+</html>
