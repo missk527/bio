@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blood Glucose Regulation: Insulin, Glucagon & Negative Feedback</title>
+  <style>
+    :root{ --brand:#16a34a; --paper:#fffefb; --ink:#1f2937; --accent:#065f46 }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f5faf7; color:var(--ink); line-height:1.6 }
+    header{ background:linear-gradient(90deg, var(--brand), #22c55e); color:#fff; padding:18px 20px; text-align:center; font-size:1.35rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 14px 28px }
+    .video{ display:flex; justify-content:center; margin:18px 0 }
+    iframe{ width:88%; max-width:1100px; height:480px; border:2px solid #d1fae5; border-radius:14px; background:#000; box-shadow:0 2px 12px rgba(5,150,105,.18) }
+    .card{ background:var(--paper); border-radius:16px; box-shadow:0 8px 20px rgba(15,23,42,.08); padding:20px; margin:18px 0 }
+    h2{ color:var(--accent); border-bottom:2px solid #bbf7d0; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:12px 14px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#064e3b }
+    .flex{ display:flex; gap:10px; flex-wrap:wrap }
+    .pill{ background:#dcfce7; border:1px solid #bbf7d0; border-radius:999px; padding:2px 10px; font-size:.9rem }
+    .kbd{background:#eef2ff;border:1px solid #c7d2fe;border-bottom-width:3px;padding:2px 6px;border-radius:6px;font-family:ui-monospace,Consolas,monospace}
+    .muted{opacity:.85}
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(5,150,105,.25) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem }
+    @media (max-width:760px){ iframe{ width:96%; height:240px } }
+    .tiny{font-size:.85rem;color:#475569}
+  </style>
+</head>
+<body>
+<header>Blood Glucose Regulation — Insulin, Glucagon & Negative Feedback</header>
+
+<div class="video">
+  <!-- Updated link as requested -->
+  <iframe src="https://www.youtube.com/embed/uzF9TUvpjp0" title="Blood Glucose Regulation" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="card">
+    <h2>Notes (rewritten in English from the given speech)</h2>
+
+    <details open>
+      <summary>What blood glucose concentration means</summary>
+      <ul>
+        <li><b>Blood glucose concentration</b> means the amount of glucose (sugar) in the bloodstream.</li>
+        <li>The body must keep blood glucose at a balanced level so cells always have enough glucose for <b>respiration</b>.</li>
+        <li>If blood glucose becomes <b>too high</b>, it can damage body tissues.</li>
+        <li>If it becomes <b>too low</b>, cells may not get enough glucose for energy release.</li>
+      </ul>
+      <div class="flex">
+        <span class="pill">Blood glucose</span><span class="pill">Insulin</span><span class="pill">Glucagon</span><span class="pill">Negative feedback</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>What happens after eating carbohydrates</summary>
+      <ul>
+        <li>After a meal rich in <b>carbohydrates</b>, digestion breaks them down into many <b>glucose molecules</b>.</li>
+        <li>These glucose molecules are <b>absorbed into the bloodstream</b>.</li>
+        <li>As a result, <b>blood glucose concentration rises</b> above the normal level.</li>
+        <li>This rise is detected by the <b>pancreas</b>, which lies behind the stomach.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>How insulin lowers blood glucose</summary>
+      <ul>
+        <li>When blood glucose is too high, the <b>pancreas releases insulin</b> into the bloodstream.</li>
+        <li>Insulin binds to <b>receptors</b> on certain body cells.</li>
+        <li>This tells cells to <b>take in glucose</b> from the blood.</li>
+        <li><b>Liver cells</b> and <b>muscle cells</b> are especially important because they take up extra glucose.</li>
+        <li>These cells convert glucose into <b>glycogen</b>, a storage form of glucose.</li>
+        <li>Because glucose is removed from the blood, the blood glucose concentration <b>falls back toward normal</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>How glucagon raises blood glucose</summary>
+      <ul>
+        <li>If blood glucose falls too low, for example after missing a meal, the <b>pancreas releases glucagon</b>.</li>
+        <li><b>Glucagon</b> has the opposite effect to insulin.</li>
+        <li>It acts mainly on the <b>liver</b>.</li>
+        <li>Liver cells break down stored <b>glycogen</b> into glucose molecules.</li>
+        <li>These glucose molecules are then <b>released into the bloodstream</b>.</li>
+        <li>This causes blood glucose concentration to <b>rise back toward normal</b>.</li>
+      </ul>
+      <p class="tiny">Remember: <i>glucagon</i> is a hormone, while <i>glycogen</i> is a storage carbohydrate made from many glucose molecules.</p>
+    </details>
+
+    <details>
+      <summary>Negative feedback control</summary>
+      <ul>
+        <li>Blood glucose is controlled by a <b>negative feedback loop</b>.</li>
+        <li>If glucose gets <b>too high</b>, insulin is released to lower it.</li>
+        <li>If glucose gets <b>too low</b>, glucagon is released to raise it.</li>
+        <li>The body constantly releases these hormones as needed to keep blood glucose close to the correct level.</li>
+        <li>This is why blood glucose level <b>fluctuates slightly</b> instead of staying completely flat.</li>
+      </ul>
+    </details>
+
+  </section>
+
+  <section class="card">
+    <h2>Quiz (40 Questions based on the speech)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 40 questions tightly grounded to the provided plant-leaf speech
+const Q = [
+  {type:"mcq", q:"Blood glucose concentration refers to the amount of ______ in the blood.", opts:["oxygen","glucose","glycogen"], a:1, exp:"It means the amount of sugar, specifically glucose, in the bloodstream."},
+  {type:"mcq", q:"Cells need a steady supply of glucose for:", opts:["diffusion","respiration","photosynthesis"], a:1, exp:"Glucose is used in respiration to release energy."},
+  {type:"mcq", q:"Which organ detects changes in blood glucose concentration?", opts:["Liver","Pancreas","Kidney"], a:1, exp:"The pancreas detects both high and low blood glucose levels."},
+  {type:"mcq", q:"After a carbohydrate-rich meal, blood glucose concentration usually:", opts:["falls sharply","stays the same","rises"], a:2, exp:"Digested carbohydrates are absorbed as glucose, causing blood glucose to rise."},
+  {type:"mcq", q:"Carbohydrates are broken down in the intestines into:", opts:["amino acids","fatty acids","glucose molecules"], a:2, exp:"Digestion breaks carbohydrates down into glucose molecules."},
+  {type:"mcq", q:"Which hormone is released when blood glucose is too high?", opts:["Glucagon","Insulin","Adrenaline"], a:1, exp:"Insulin is secreted by the pancreas when glucose levels rise."},
+  {type:"mcq", q:"Insulin causes body cells to:", opts:["release glucose into the blood","take in glucose from the blood","stop respiration"], a:1, exp:"Insulin binds to receptors and tells cells to absorb glucose."},
+  {type:"mcq", q:"Which cells are especially important for taking up extra glucose?", opts:["Skin and nerve cells","Liver and muscle cells","Bone and blood cells"], a:1, exp:"Liver and muscle cells store extra glucose."},
+  {type:"mcq", q:"Extra glucose is stored in the form of:", opts:["glycogen","glucagon","starch"], a:0, exp:"Glycogen is the storage form of glucose in the body."},
+  {type:"mcq", q:"When insulin works, blood glucose concentration:", opts:["increases","decreases","does not change"], a:1, exp:"Removing glucose from the bloodstream lowers the concentration."},
+  {type:"mcq", q:"Which hormone is released when blood glucose becomes too low?", opts:["Insulin","Glucagon","Thyroxine"], a:1, exp:"Glucagon is released by the pancreas when blood glucose is low."},
+  {type:"mcq", q:"Glucagon mainly acts on the:", opts:["liver","lungs","heart"], a:0, exp:"Glucagon mainly acts on liver cells."},
+  {type:"mcq", q:"Glucagon causes glycogen to be broken down into:", opts:["protein","glucose","fat"], a:1, exp:"Stored glycogen is converted back into glucose."},
+  {type:"mcq", q:"After glycogen is broken down, glucose is released into the:", opts:["stomach","bloodstream","intestine"], a:1, exp:"The glucose enters the blood and raises blood glucose concentration."},
+  {type:"mcq", q:"Glucagon has what kind of effect compared with insulin?", opts:["The same effect","The opposite effect","No effect"], a:1, exp:"Insulin lowers blood glucose, while glucagon raises it."},
+  {type:"mcq", q:"The control of blood glucose concentration is an example of:", opts:["positive feedback","negative feedback","digestion"], a:1, exp:"The system reverses changes and brings levels back toward normal."},
+  {type:"mcq", q:"If blood glucose gets too high, insulin is released to:", opts:["raise it further","lower it back to normal","stop blood flow"], a:1, exp:"Insulin reduces blood glucose when it rises above normal."},
+  {type:"mcq", q:"If blood glucose gets too low, glucagon is released to:", opts:["lower it further","raise it back to normal","store more glycogen"], a:1, exp:"Glucagon raises blood glucose when it falls too low."},
+  {type:"mcq", q:"Why must blood glucose be controlled carefully?", opts:["Because high levels can damage tissues","Because glucose is never needed","Because the pancreas stores oxygen"], a:0, exp:"Very high blood glucose can damage body tissues."},
+  {type:"mcq", q:"Why do blood glucose levels fluctuate slightly instead of staying flat?", opts:["Because hormones are released as needed","Because blood has no glucose","Because digestion never happens"], a:0, exp:"Insulin and glucagon keep adjusting levels around the normal value."},
+  {type:"tf", q:"Blood glucose concentration means the amount of sugar in the bloodstream.", a:true, exp:"Yes, it describes the amount of glucose in the blood."},
+  {type:"tf", q:"The pancreas is located just behind the stomach.", a:true, exp:"That is where the pancreas sits."},
+  {type:"tf", q:"Insulin is released when blood glucose becomes too low.", a:false, exp:"Insulin is released when blood glucose is too high."},
+  {type:"tf", q:"Glucagon lowers blood glucose concentration.", a:false, exp:"Glucagon increases blood glucose concentration."},
+  {type:"tf", q:"Liver and muscle cells can store glucose as glycogen.", a:true, exp:"These cells combine glucose molecules to form glycogen."},
+  {type:"tf", q:"Glycogen is a hormone released by the pancreas.", a:false, exp:"Glycogen is a storage molecule, not a hormone."},
+  {type:"tf", q:"Glucagon and glycogen mean the same thing.", a:false, exp:"Glucagon is a hormone; glycogen is stored glucose."},
+  {type:"tf", q:"Skipping meals can cause blood glucose concentration to drop.", a:true, exp:"Missing breakfast is one example given in the speech."},
+  {type:"tf", q:"Negative feedback moves conditions away from normal.", a:false, exp:"Negative feedback brings conditions back toward normal."},
+  {type:"tf", q:"Insulin binds to receptors on certain cells.", a:true, exp:"This triggers cells to take in glucose from the blood."},
+  {type:"fill", q:"The hormone that lowers blood glucose is ______.", text:"insulin", exp:"Insulin is released when blood glucose rises too high."},
+  {type:"fill", q:"The hormone that raises blood glucose is ______.", text:"glucagon", exp:"Glucagon is released when blood glucose becomes too low."},
+  {type:"fill", q:"Glucose is stored in the body as ______.", text:"glycogen", exp:"Glycogen is the storage form of glucose."},
+  {type:"fill", q:"The organ that detects blood glucose changes is the ______.", text:"pancreas", exp:"The pancreas monitors blood glucose concentration."},
+  {type:"fill", q:"Glucose is used by cells for ______.", text:"respiration", exp:"Respiration releases energy from glucose."},
+  {type:"fill", q:"After eating carbohydrates, blood glucose usually ______.", text:"rises", exp:"Digested glucose enters the blood and raises the level."},
+  {type:"fill", q:"The main organ glucagon acts on is the ______.", text:"liver", exp:"Glucagon mainly targets liver cells."},
+  {type:"fill", q:"When glycogen is broken down, ______ molecules are released.", text:"glucose", exp:"Breaking down glycogen produces glucose."},
+  {type:"fill", q:"Blood glucose control works by ______ feedback.", text:"negative", exp:"This is a classic negative feedback loop."},
+  {type:"fill", q:"Blood glucose must stay close to the ______ level.", text:"normal", exp:"Hormones keep blood glucose around the normal level."}
+];
+
+let idx=0, score=0, order=[];
+function startGame(){
+  order = [...Array(Q.length).keys()].sort(()=>Math.random()-0.5);
+  idx = 0; score = 0;
+  document.getElementById("scorebar").textContent = `Question ${idx+1} / ${Q.length}  Score: ${score}`;
+  renderQ();
+}
+function renderQ(){
+  const q = Q[order[idx]];
+  let html = `<div class='question-box'><p><strong>Q${idx+1}:</strong> ${q.q}</p>`;
+  if(q.type==="mcq"){
+    q.opts.forEach((opt,i)=> html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`);
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type==="tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  const area = document.getElementById("game-area");
+  const inner = document.getElementById("game-area-inner");
+  if(inner){ inner.innerHTML = html; } else { area.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`); }
+}
+function checkMCQ(){
+  const q = Q[order[idx]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkTF(){
+  const q = Q[order[idx]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select True or False."; fb.className="feedback incorrect"; return;}
+  const val = sel.value === "true";
+  if(val === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkFill(){
+  const q = Q[order[idx]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  // Accept basic variants (e.g., plural vs singular)
+  function norm(s){ return s.replace(/\s+/g,"").toLowerCase(); }
+  const ok = norm(ans).includes(norm(q.text));
+  if(ok){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function nextQ(){
+  idx++;
+  if(idx < Q.length){
+    document.getElementById("scorebar").textContent = `Question ${idx+1} / ${Q.length}  Score: ${score}`;
+    renderQ();
+  }else{
+    endGame();
+  }
+}
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${Q.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${Q.length}`;
+}
+</script>
+</body>
+</html>
