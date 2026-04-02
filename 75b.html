@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sound Waves and Hearing</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>73P. Sound Waves and Hearing</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/bAaOcR6612Q" title="Sound Waves and Hearing Video" allowfullscreen></iframe>
+    </div>
+
+    
+    
+    
+
+
+
+<section class="card">
+<h2>Key Notes (English)</h2>
+<p class="muted">Topic: Kidney Failure</p>
+
+<details open><summary>1) What is Kidney Failure?</summary>
+<ul>
+<li>Kidney failure occurs when the kidneys can no longer filter waste from the blood effectively.</li>
+<li>It leads to the buildup of toxins and excess fluids in the body.</li>
+</ul></details>
+
+<details><summary>2) Functions of Healthy Kidneys</summary>
+<ul>
+<li>Remove waste products from the blood.</li>
+<li>Regulate water balance and electrolytes.</li>
+<li>Maintain blood pressure.</li>
+<li>Produce hormones such as erythropoietin.</li>
+</ul></details>
+
+<details><summary>3) Types of Kidney Failure</summary>
+<ul>
+<li>Acute kidney failure: sudden loss of function.</li>
+<li>Chronic kidney disease (CKD): gradual and long-term damage.</li>
+</ul></details>
+
+<details><summary>4) Causes</summary>
+<ul>
+<li>Diabetes and high blood pressure.</li>
+<li>Infections or injury to the kidneys.</li>
+<li>Blockages such as kidney stones.</li>
+</ul></details>
+
+<details><summary>5) Symptoms</summary>
+<ul>
+<li>Fatigue and weakness.</li>
+<li>Swelling in legs and ankles.</li>
+<li>Reduced urine output.</li>
+<li>Nausea and confusion.</li>
+</ul></details>
+
+<details><summary>6) Effects on the Body</summary>
+<ul>
+<li>Toxin buildup in blood.</li>
+<li>Imbalance of salts and fluids.</li>
+<li>Can affect heart, brain, and other organs.</li>
+</ul></details>
+
+<details><summary>7) Treatment</summary>
+<ul>
+<li>Dialysis to filter blood artificially.</li>
+<li>Kidney transplant.</li>
+<li>Medication and lifestyle changes.</li>
+</ul></details>
+
+<details><summary>8) Prevention</summary>
+<ul>
+<li>Maintain healthy blood pressure and blood sugar levels.</li>
+<li>Stay hydrated and eat a balanced diet.</li>
+<li>Avoid excessive use of harmful drugs.</li>
+</ul></details>
+
+</section>
+
+
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2026 Contraception Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the contraception speech/notes)
+
+
+const questions = [
+{"type":"fill","question":"What is kidney failure?","answerText":"kidneys can no longer filter","explanation":"loss of filtering function"},
+{"type":"fill","question":"What builds up in the body during kidney failure?","answerText":"toxins","explanation":"toxins"},
+{"type":"fill","question":"Healthy kidneys remove what?","answerText":"waste","explanation":"waste"},
+{"type":"fill","question":"Kidneys help regulate what balance?","answerText":"water","explanation":"water balance"},
+{"type":"fill","question":"Kidneys also control what pressure?","answerText":"blood","explanation":"blood pressure"},
+{"type":"fill","question":"What hormone do kidneys produce for red blood cells?","answerText":"erythropoietin","explanation":"erythropoietin"},
+{"type":"fill","question":"Acute kidney failure is what type of change?","answerText":"sudden","explanation":"sudden"},
+{"type":"fill","question":"Chronic kidney disease is what type of change?","answerText":"gradual","explanation":"gradual"},
+{"type":"fill","question":"Name one major cause of kidney failure.","answerText":"diabetes","explanation":"diabetes"},
+{"type":"fill","question":"High what can cause kidney failure?","answerText":"blood pressure","explanation":"blood pressure"},
+{"type":"fill","question":"Kidney stones can cause what?","answerText":"blockage","explanation":"blockage"},
+{"type":"fill","question":"Fatigue is a what type of symptom?","answerText":"symptom","explanation":"symptom"},
+{"type":"fill","question":"Swelling often occurs in which body part?","answerText":"legs","explanation":"legs"},
+{"type":"fill","question":"Kidney failure may reduce what output?","answerText":"urine","explanation":"urine"},
+{"type":"fill","question":"Toxin buildup affects what fluid?","answerText":"blood","explanation":"blood"},
+{"type":"fill","question":"Kidney failure affects salt and fluid what?","answerText":"balance","explanation":"balance"},
+{"type":"fill","question":"Dialysis replaces what function?","answerText":"filtering","explanation":"filtering"},
+{"type":"fill","question":"Dialysis filters what?","answerText":"blood","explanation":"blood"},
+{"type":"fill","question":"A transplant replaces what organ?","answerText":"kidney","explanation":"kidney"},
+{"type":"fill","question":"Lifestyle changes can help what?","answerText":"manage","explanation":"manage"},
+{"type":"fill","question":"Healthy diet helps prevent what?","answerText":"kidney failure","explanation":"kidney failure"},
+{"type":"fill","question":"Hydration supports what organ?","answerText":"kidneys","explanation":"kidneys"},
+{"type":"fill","question":"Excess drugs can damage what?","answerText":"kidneys","explanation":"kidneys"},
+{"type":"fill","question":"Kidneys regulate electrolyte what?","answerText":"balance","explanation":"balance"},
+{"type":"fill","question":"Swelling is due to fluid what?","answerText":"retention","explanation":"retention"},
+{"type":"fill","question":"Kidney failure can affect the what?","answerText":"heart","explanation":"heart"},
+{"type":"fill","question":"Kidney failure can affect the what?","answerText":"brain","explanation":"brain"},
+{"type":"fill","question":"Nausea is a what?","answerText":"symptom","explanation":"symptom"},
+{"type":"fill","question":"Confusion is linked to toxin what?","answerText":"buildup","explanation":"buildup"},
+{"type":"fill","question":"Chronic disease develops over what time?","answerText":"long","explanation":"long time"},
+{"type":"fill","question":"Acute failure happens quickly or what?","answerText":"suddenly","explanation":"suddenly"},
+{"type":"fill","question":"Kidneys filter waste from the what?","answerText":"blood","explanation":"blood"},
+{"type":"fill","question":"Kidneys maintain fluid what?","answerText":"balance","explanation":"balance"},
+{"type":"fill","question":"Dialysis is an artificial what?","answerText":"treatment","explanation":"treatment"},
+{"type":"fill","question":"Transplant is a surgical what?","answerText":"procedure","explanation":"procedure"},
+{"type":"fill","question":"Blood sugar control prevents what disease effect?","answerText":"kidney damage","explanation":"kidney damage"},
+{"type":"fill","question":"Kidney disease can be chronic or what?","answerText":"acute","explanation":"acute"},
+{"type":"fill","question":"Electrolytes include salts like what?","answerText":"sodium","explanation":"sodium"},
+{"type":"fill","question":"Waste buildup can be what to the body?","answerText":"toxic","explanation":"toxic"},
+{"type":"fill","question":"Kidney failure affects overall what?","answerText":"health","explanation":"health"}
+];
+
+
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
