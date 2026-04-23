@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DNA, Chromosomes, Genes and Genome</title>
+<style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    .options{display:grid;gap:10px;margin-top:12px}
+    .option-btn{display:block;width:100%;text-align:left;background:#f8fafc;color:var(--ink);border:1px solid #cbd5e1}
+    .option-btn:hover{background:#e0f2fe}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 12px}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+<header>
+<h1>DNA, Chromosomes, Genes and Genome</h1>
+</header>
+<div class="wrap">
+<section class="card video">
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/G6atYHiFXmo" title="DNA, Chromosomes, Genes and Genome"></iframe>
+</section>
+<section class="card">
+<h2>Key Notes (rewritten from the speech)</h2>
+<details open="">
+<summary>1) DNA: the basic genetic material</summary>
+<ul>
+<li>DNA stands for <b>deoxyribonucleic acid</b> and it is the substance that carries genetic information.</li>
+<li>It is the chemical from which all human genetic material is made.</li>
+<li>DNA stores the instructions cells use to build and run the body.</li>
+</ul>
+</details>
+<details>
+<summary>2) DNA structure</summary>
+<ul>
+<li>DNA is a <b>polymer</b>, meaning it is made from many repeating subunits joined together.</li>
+<li>It has <b>two strands</b> twisted around each other in a <b>double helix</b>.</li>
+<li>The double helix can be described as a double-stranded spiral.</li>
+</ul>
+</details>
+<details>
+<summary>3) DNA packaging in cells</summary>
+<ul>
+<li>If the DNA from one cell were stretched out, it would be <b>more than 2 metres long</b>.</li>
+<li>To prevent tangling and to fit inside the nucleus, DNA is tightly packed.</li>
+<li>This packing helps organize genetic material efficiently inside each cell.</li>
+</ul>
+</details>
+<details>
+<summary>4) Chromosomes</summary>
+<ul>
+<li>Human DNA is divided into <b>46 tightly coiled sections</b> called <b>chromosomes</b>.</li>
+<li>Each chromosome is a compact package of DNA.</li>
+<li>Chromosomes help keep long DNA molecules organized.</li>
+</ul>
+</details>
+<details>
+<summary>5) Chromosome pairs</summary>
+<ul>
+<li>There are 46 chromosomes in most body cells, but only <b>23 different types</b>.</li>
+<li>This is because chromosomes come in <b>pairs</b>, with one inherited from each parent.</li>
+<li>For example, you have two chromosome 1s, two chromosome 2s, and so on.</li>
+</ul>
+</details>
+<details>
+<summary>6) Sex chromosomes</summary>
+<ul>
+<li>The <b>23rd pair</b> is the sex chromosome pair.</li>
+<li>Females usually have <b>XX</b> chromosomes, while males usually have <b>XY</b> chromosomes.</li>
+<li>These chromosomes play a major role in biological sex determination.</li>
+</ul>
+</details>
+<details>
+<summary>7) Chromosome shape</summary>
+<ul>
+<li>Chromosomes are often drawn in an <b>X shape</b>, but this is only typical just before cell division.</li>
+<li>They appear like this before processes such as <b>mitosis</b> or <b>meiosis</b>.</li>
+<li>When cells are not dividing, chromosomes are usually less condensed.</li>
+</ul>
+</details>
+<details>
+<summary>8) Genes</summary>
+<ul>
+<li>A <b>gene</b> is a small section of DNA that contains instructions for making a specific protein.</li>
+<li>You can think of a gene as a short segment located on a chromosome.</li>
+<li>Different genes provide instructions for different proteins.</li>
+</ul>
+</details>
+<details>
+<summary>9) Genes and proteins</summary>
+<ul>
+<li>A gene acts as a code for a particular sequence of <b>amino acids</b>.</li>
+<li>When amino acids are linked in the correct order, they form a <b>protein</b>.</li>
+<li>Because proteins do so many jobs in the body, genes strongly influence cell function.</li>
+</ul>
+</details>
+<details>
+<summary>10) Protein variety and cell function</summary>
+<ul>
+<li>There are only <b>20 common amino acids</b>, but they can combine in countless ways to make many proteins.</li>
+<li>The proteins a cell makes help determine what kind of cell it becomes and what it does.</li>
+<li>For example, red blood cells need lots of <b>haemoglobin</b>, while muscle cells need proteins for contraction.</li>
+</ul>
+</details>
+<details>
+<summary>11) Genome</summary>
+<ul>
+<li>The <b>genome</b> is the complete set of genetic material in an organism.</li>
+<li>A person's genome includes all of their DNA, genes, and chromosomes together.</li>
+<li>Each person's genome is unique, although close relatives usually share many similarities.</li>
+</ul>
+</details>
+<details>
+<summary>12) Why genomes matter</summary>
+<ul>
+<li>Scientists have worked out the complete human genome, meaning they know the full DNA code sequence.</li>
+<li>This helps researchers identify genes linked to diseases and improve medical treatments.</li>
+<li>Genome studies can also be used to trace human ancestry and migration patterns over time.</li>
+</ul>
+</details>
+</section>
+<section class="card"><h2>Quiz (40 Questions)</h2><div id="game"><button onclick="startGame()">Start Quiz</button></div></section>
+<footer>© 2026 Biology Pack</footer>
+</div>
+<script>
+const questions = [
+{type:"mcq", q:'1. What does DNA stand for?', opts:['Deoxyribonucleic acid', 'Dynamic nuclear acid', 'Double ribonucleotide assembly', 'Deoxygenated nucleic acid'], a:0, exp:'DNA stands for deoxyribonucleic acid.'},
+{type:"mcq", q:'2. What is DNA made of in general terms?', opts:['Proteins', 'Many repeating units', 'Only sugars', 'Single amino acids'], a:1, exp:'DNA is a polymer made of many repeating units.'},
+{type:"mcq", q:'3. How many strands make up a DNA molecule?', opts:['One', 'Two', 'Three', 'Four'], a:1, exp:'DNA has two strands.'},
+{type:"mcq", q:'4. What is the shape of DNA called?', opts:['Triple knot', 'Double helix', 'Protein coil', 'Circular mesh'], a:1, exp:'DNA forms a double helix.'},
+{type:"mcq", q:'5. If DNA from one cell were stretched out, it would be over how long?', opts:['2 cm', '20 cm', '2 m', '20 m'], a:2, exp:'The speech says it would be over 2 metres long.'},
+{type:"mcq", q:'6. Why is DNA packed tightly inside the nucleus?', opts:['To make it heavier', 'To stop it tangling and help it fit', 'To change it into protein', 'To remove genes'], a:1, exp:'DNA is packed so it does not tangle and can fit in the nucleus.'},
+{type:"mcq", q:'7. Into how many sections is human DNA separated in a typical body cell?', opts:['23', '24', '46', '92'], a:2, exp:'Human body cells usually contain 46 chromosomes.'},
+{type:"mcq", q:'8. What is a chromosome?', opts:['A type of amino acid', 'A tightly coiled section of DNA', 'A protein in blood', 'A cell membrane channel'], a:1, exp:'A chromosome is a tightly coiled section of DNA.'},
+{type:"mcq", q:'9. How many chromosomes are found in most human body cells?', opts:['23', '46', '44', '92'], a:1, exp:'Most human body cells contain 46 chromosomes.'},
+{type:"mcq", q:'10. Why are there only 23 different chromosome types?', opts:['Half dissolve in the nucleus', 'Chromosomes occur in pairs', 'Some chromosomes are proteins', 'Genes replace the others'], a:1, exp:'There are 23 types because chromosomes come in pairs.'},
+{type:"mcq", q:'11. Where does one chromosome in each pair come from?', opts:['The brain', 'Each parent', 'The nucleus only', 'The diet'], a:1, exp:'One chromosome comes from each parent.'},
+{type:"mcq", q:'12. What is the 23rd chromosome pair called?', opts:['Growth chromosomes', 'Body chromosomes', 'Sex chromosomes', 'Protein chromosomes'], a:2, exp:'The 23rd pair is the sex chromosome pair.'},
+{type:"mcq", q:'13. Which sex chromosomes are usually found in females?', opts:['XY', 'YY', 'XX', 'XO'], a:2, exp:'Females usually have XX chromosomes.'},
+{type:"mcq", q:'14. Which sex chromosomes are usually found in males?', opts:['XX', 'XY', 'YY', 'ZZ'], a:1, exp:'Males usually have XY chromosomes.'},
+{type:"mcq", q:'15. Why are chromosomes often drawn as X-shaped?', opts:['They are always X-shaped', 'They look like this just before cell division', 'They are proteins', 'They form letters in the nucleus'], a:1, exp:'Chromosomes are commonly X-shaped just before cell division.'},
+{type:"mcq", q:'16. Before which processes may chromosomes appear X-shaped?', opts:['Respiration and digestion', 'Mitosis or meiosis', 'Diffusion and osmosis', 'Translation and secretion'], a:1, exp:'They are condensed before mitosis or meiosis.'},
+{type:"mcq", q:'17. What is a gene?', opts:['A whole genome', 'A small section of DNA that codes for a protein', 'A type of chromosome stain', 'A cell organelle'], a:1, exp:'A gene is a small DNA segment coding for a protein.'},
+{type:"mcq", q:'18. A gene can be thought of as a small segment of what?', opts:['A membrane', 'A chromosome', 'A ribosome', 'A lipid'], a:1, exp:'A gene is a segment of a chromosome.'},
+{type:"mcq", q:'19. What does a gene code for?', opts:['A lipid layer', 'A sequence of amino acids', 'A whole organ', 'A sugar'], a:1, exp:'Genes code for amino acid sequences in proteins.'},
+{type:"mcq", q:'20. What do amino acids join together to form?', opts:['Chromosomes', 'Proteins', 'Lipids', 'Nuclei'], a:1, exp:'Amino acids combine to make proteins.'},
+{type:"mcq", q:'21. How many common amino acid types were mentioned?', opts:['10', '20', '30', '46'], a:1, exp:'The speech mentions 20 amino acids.'},
+{type:"mcq", q:'22. Why can the body make many different proteins from only 20 amino acids?', opts:['Because amino acids disappear', 'Because they combine in many sequences', 'Because chromosomes copy proteins directly', 'Because every cell uses only one amino acid'], a:1, exp:'Different combinations create many different proteins.'},
+{type:"mcq", q:'23. DNA determines which proteins the cell does what with?', opts:['Destroys', 'Produces', 'Ignores', 'Exports only'], a:1, exp:'DNA determines which proteins a cell produces.'},
+{type:"mcq", q:'24. Why are proteins important for cell type?', opts:['They decide what the cell can do', 'They remove chromosomes', 'They replace DNA', 'They stop the nucleus forming'], a:0, exp:'The proteins a cell makes help determine its structure and function.'},
+{type:"mcq", q:'25. Which protein is especially important in red blood cells?', opts:['Collagen', 'Keratin', 'Haemoglobin', 'Insulin'], a:2, exp:'Red blood cells need lots of haemoglobin.'},
+{type:"mcq", q:'26. What is the main job of haemoglobin?', opts:['Digest food', 'Transport oxygen', 'Destroy pathogens', 'Build chromosomes'], a:1, exp:'Haemoglobin carries oxygen around the body.'},
+{type:"mcq", q:'27. Muscle cells need many proteins mainly for what?', opts:['Photosynthesis', 'Contraction', 'Gas exchange', 'Fertilization'], a:1, exp:'Muscle cells need proteins for contraction.'},
+{type:"mcq", q:'28. What is a genome?', opts:['A single gene', 'The complete set of genetic material in an organism', 'A chromosome pair only', 'A protein map'], a:1, exp:'A genome is the full set of genetic material.'},
+{type:"mcq", q:"29. How would one person's genome compare with a stranger's genome?", opts:['It would be identical', 'It would probably be different', 'It would contain no DNA', 'It would be shorter'], a:1, exp:"A person's genome would probably differ from a stranger's."},
+{type:"mcq", q:"30. Whose genomes are usually more similar to yours than a stranger's?", opts:['Plants', "Your parents'", 'Bacteria', 'Fish'], a:1, exp:"Your genome is more similar to your parents' genomes."},
+{type:"mcq", q:'31. Who would have the same genome as you in the example given?', opts:['A close friend', 'An identical twin', 'A cousin', 'A teacher'], a:1, exp:'The speech says an identical twin would have the same genome.'},
+{type:"mcq", q:'32. What does it mean that scientists have worked out the complete human genome?', opts:['They know the entire DNA code', 'They removed all mutations', 'They ended inheritance', 'They can change every gene'], a:0, exp:'It means they know the full genetic code.'},
+{type:"mcq", q:'33. Why is knowing the human genome useful in medicine?', opts:['It helps identify disease-linked genes', 'It stops all disease', 'It replaces microscopes', 'It removes chromosomes'], a:0, exp:'Genome knowledge helps identify genes linked to disease.'},
+{type:"mcq", q:'34. What is an inherited disease?', opts:['A disease caught from food', 'A disease caused by genes passed from parents', 'A disease caused only by exercise', 'A disease with no genetic link'], a:1, exp:'Inherited diseases are linked to genes passed down from parents.'},
+{type:"mcq", q:'35. What can some genes do even if they do not directly cause disease?', opts:['Lower all risks', 'Increase the risk of a disease', 'Turn into chromosomes', 'Remove proteins'], a:1, exp:'Some genes increase disease risk rather than directly causing disease.'},
+{type:"mcq", q:'36. Which genes were mentioned as increasing the risk of breast cancer?', opts:['ATP genes', 'BRCA genes', 'RNA genes', 'ABO genes'], a:1, exp:'The speech gives BRCA genes as an example.'},
+{type:"mcq", q:'37. How can doctors use information about genes?', opts:['To choose more effective treatments', 'To remove the genome instantly', 'To stop protein synthesis forever', 'To identify only blood groups'], a:0, exp:'Doctors can use genetic information to guide treatment choices.'},
+{type:"mcq", q:'38. How can scientists use genome information besides disease research?', opts:['To trace human migrations', 'To change gravity', 'To stop evolution', 'To remove amino acids'], a:0, exp:'Genome differences can help trace ancestral migration.'},
+{type:"mcq", q:'39. What can small genome differences between populations reveal?', opts:['When populations separated', 'How many proteins exist', 'Why all cells are X-shaped', 'The colour of chromosomes'], a:0, exp:'They can show when groups separated in history.'},
+{type:"mcq", q:'40. Which statement best describes the relationship among DNA, genes, chromosomes, and the genome?', opts:['Genes are made of genomes only', 'Chromosomes are proteins inside genes', 'Genes are sections of DNA on chromosomes, and the genome is the whole genetic set', 'The genome is smaller than a gene'], a:2, exp:'Genes are sections of DNA, chromosomes are packaged DNA, and the genome is all the genetic material together.'}
+];
+
+let current = 0;
+let score = 0;
+let locked = false;
+
+function startGame(){
+  current = 0;
+  score = 0;
+  locked = false;
+  renderQ();
+}
+
+function renderQ(){
+  const game = document.getElementById('game');
+  const item = questions[current];
+  game.innerHTML = `
+    <div class="meta">
+      <span class="pill">Question ${current + 1} / ${questions.length}</span>
+      <span class="pill">Score: ${score}</span>
+    </div>
+    <div class="qbox">
+      <div><b>${item.q}</b></div>
+      <div class="options">
+        ${item.opts.map((opt, i) => `<button class="option-btn" onclick="checkAnswer(${i})">${opt}</button>`).join('')}
+      </div>
+      <div id="feedback" class="feedback"></div>
+    </div>
+  `;
+  locked = false;
+}
+
+function checkAnswer(choice){
+  if(locked) return;
+  locked = true;
+  const item = questions[current];
+  const fb = document.getElementById('feedback');
+  if(choice === item.a){
+    score++;
+    fb.className = 'feedback ok';
+    fb.innerHTML = `Correct! ${item.exp}`;
+  } else {
+    fb.className = 'feedback bad';
+    fb.innerHTML = `Incorrect. Correct answer: <b>${item.opts[item.a]}</b>. ${item.exp}`;
+  }
+
+  const game = document.getElementById('game');
+  const nav = document.createElement('div');
+  nav.style.marginTop = '12px';
+  nav.innerHTML = current < questions.length - 1
+    ? `<button onclick="nextQuestion()">Next Question</button>`
+    : `<button onclick="showResult()">See Result</button>`;
+  game.appendChild(nav);
+}
+
+function nextQuestion(){
+  current++;
+  renderQ();
+}
+
+function showResult(){
+  const percent = ((score / questions.length) * 100).toFixed(1);
+  document.getElementById('game').innerHTML = `
+    <div class="qbox">
+      <h3>Your Result</h3>
+      <p><b>Score:</b> ${score} / ${questions.length}</p>
+      <p><b>Percentage:</b> ${percent}%</p>
+      <p>${percent >= 80 ? 'Excellent work!' : percent >= 60 ? 'Good job!' : 'Keep practicing and try again.'}</p>
+      <button onclick="startGame()">Restart Quiz</button>
+    </div>
+  `;
+}
+</script>
+</body>
+</html>
