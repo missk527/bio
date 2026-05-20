@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family Trees & Cystic Fibrosis</title>
+<style>
+:root{
+--brand:#0ea5e9;
+--ink:#1f2937;
+--paper:#fafafa;
+--card:#ffffff;
+--muted:#6b7280;
+--good:#16a34a;
+--bad:#dc2626;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+color:var(--ink);
+background:var(--paper);
+line-height:1.6;
+}
+header{
+background:linear-gradient(135deg,var(--brand),#6366f1);
+color:white;
+padding:20px 16px;
+text-align:center;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+.card{
+background:var(--card);
+border-radius:12px;
+padding:18px;
+box-shadow:0 6px 18px rgba(2,6,23,.08);
+margin:16px 0;
+}
+iframe{
+width:100%;
+max-width:900px;
+height:480px;
+border:0;
+border-radius:12px;
+}
+details{
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:10px 12px;
+margin:10px 0;
+background:#fff;
+}
+summary{
+font-weight:700;
+color:#0f766e;
+cursor:pointer;
+}
+.btn{
+background:var(--brand);
+color:white;
+border:0;
+border-radius:10px;
+padding:10px 14px;
+font-weight:700;
+cursor:pointer;
+}
+.correct{color:green}
+.incorrect{color:red}
+</style>
+</head>
+<body>
+
+<header>
+<h1>82B. Family Trees & Cystic Fibrosis</h1>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/c_gd5uiOJVY" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+
+<details open>
+<summary>0:00 - 1:25 | Cystic Fibrosis Genetics</summary>
+<ul>
+<li>Cystic fibrosis is a recessive inherited disorder.</li>
+<li>The disease allele is represented by lowercase f.</li>
+<li>The healthy dominant allele is represented by capital F.</li>
+<li>People with ff have cystic fibrosis.</li>
+<li>People with FF are unaffected.</li>
+<li>People with Ff are carriers but do not have the disease.</li>
+</ul>
+</details>
+
+<details>
+<summary>1:32 - 2:15 | Family Tree Symbols</summary>
+<ul>
+<li>Circles represent females.</li>
+<li>Squares represent males.</li>
+<li>Shaded symbols show affected individuals.</li>
+<li>Half-shaded symbols show carriers.</li>
+<li>Unshaded symbols show unaffected individuals.</li>
+</ul>
+</details>
+
+<details>
+<summary>2:15 - 3:22 | Understanding Family Trees</summary>
+<ul>
+<li>People with cystic fibrosis are homozygous recessive.</li>
+<li>Carriers are heterozygous.</li>
+<li>Unaffected individuals are homozygous dominant.</li>
+<li>Each row represents a new generation.</li>
+<li>Horizontal lines connect couples.</li>
+</ul>
+</details>
+
+<details>
+<summary>3:22 - 4:45 | Genotypes in the Example</summary>
+<ul>
+<li>Jenny is unaffected and has genotype FF.</li>
+<li>Paul is a carrier with genotype Ff.</li>
+<li>Anna and Lucy are carriers.</li>
+<li>Ron and Harry are unaffected.</li>
+<li>Sam has cystic fibrosis and genotype ff.</li>
+</ul>
+</details>
+
+<details>
+<summary>4:45 - 5:51 | Probability & Punnett Squares</summary>
+<ul>
+<li>Lucy and Jack are both carriers.</li>
+<li>Both parents have genotype Ff.</li>
+<li>A Punnett square predicts offspring outcomes.</li>
+<li>There is a 25% chance of cystic fibrosis.</li>
+<li>There is a 50% chance of being a carrier.</li>
+<li>There is a 25% chance of being completely unaffected.</li>
+</ul>
+</details>
+
+</section>
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button class="btn" onclick="startGame()">Start Quiz</button>
+</div>
+</section>
+
+</div>
+
+<script>
+const questions=[
+{type:"mcq",question:"What is cystic fibrosis?",options:["Dominant disorder","Recessive inherited disorder","Virus"],answer:1,explanation:"Cystic fibrosis is recessive."},
+{type:"fill",question:"The cystic fibrosis allele is represented by lowercase ______.",answerText:"f",explanation:"Lowercase f represents the recessive allele."},
+{type:"mcq",question:"Which allele is dominant?",options:["f","F","ff"],answer:1,explanation:"Capital F is dominant."},
+{type:"fill",question:"People with genotype ff have ______ fibrosis.",answerText:"cystic",explanation:"ff causes cystic fibrosis."},
+{type:"mcq",question:"What genotype is homozygous dominant?",options:["FF","Ff","ff"],answer:0,explanation:"FF is homozygous dominant."},
+{type:"mcq",question:"What genotype is heterozygous?",options:["FF","ff","Ff"],answer:2,explanation:"Ff is heterozygous."},
+{type:"fill",question:"Carriers can pass the disease ______ to children.",answerText:"allele",explanation:"Carriers pass on the allele."},
+{type:"mcq",question:"What shape represents females?",options:["Squares","Circles","Triangles"],answer:1,explanation:"Circles are females."},
+{type:"mcq",question:"What shape represents males?",options:["Squares","Circles","Stars"],answer:0,explanation:"Squares are males."},
+{type:"fill",question:"Shaded symbols mean the person has the ______.",answerText:"condition",explanation:"Shaded means affected."},
+{type:"mcq",question:"Half-shaded symbols represent:",options:["Unaffected","Carriers","Doctors"],answer:1,explanation:"Half-shaded means carrier."},
+{type:"mcq",question:"What do unshaded symbols represent?",options:["Affected","Unaffected","Carriers"],answer:1,explanation:"Unshaded means unaffected."},
+{type:"fill",question:"Each row in a family tree represents a new ______.",answerText:"generation",explanation:"Rows show generations."},
+{type:"mcq",question:"Horizontal lines connect:",options:["Friends","Couples","Doctors"],answer:1,explanation:"Horizontal lines connect couples."},
+{type:"mcq",question:"What genotype do affected people have?",options:["FF","Ff","ff"],answer:2,explanation:"Affected individuals are ff."},
+{type:"fill",question:"Carriers are ______ozygous.",answerText:"heter",explanation:"Carriers are heterozygous."},
+{type:"mcq",question:"Unaffected people are usually:",options:["ff","FF","Ff"],answer:1,explanation:"Unaffected are FF."},
+{type:"mcq",question:"Jenny is represented by an:",options:["Empty circle","Shaded square","Half-shaded circle"],answer:0,explanation:"Jenny is unaffected female."},
+{type:"fill",question:"Jenny’s genotype is ______.",answerText:"ff",explanation:"Jenny is FF."},
+{type:"mcq",question:"Paul is:",options:["Affected","Carrier","Unaffected"],answer:1,explanation:"Paul is a carrier."},
+{type:"mcq",question:"Paul’s genotype is:",options:["FF","Ff","ff"],answer:1,explanation:"Paul is heterozygous."},
+{type:"fill",question:"Anna and Lucy are ______.",answerText:"carriers",explanation:"Both are carriers."},
+{type:"mcq",question:"Ron and Harry are:",options:["Affected","Unaffected","Carriers"],answer:1,explanation:"Ron and Harry are unaffected."},
+{type:"mcq",question:"Who has cystic fibrosis?",options:["Jenny","Sam","Paul"],answer:1,explanation:"Sam has cystic fibrosis."},
+{type:"fill",question:"Sam’s genotype is ______.",answerText:"ff",explanation:"Sam is homozygous recessive."},
+{type:"mcq",question:"What tool predicts offspring genotypes?",options:["Microscope","Punnett square","Graph"],answer:1,explanation:"Punnett squares predict inheritance."},
+{type:"mcq",question:"Lucy and Jack are both:",options:["Affected","Carriers","Unaffected"],answer:1,explanation:"Both are carriers."},
+{type:"fill",question:"Lucy’s genotype is ______.",answerText:"ff",explanation:"Lucy is Ff."},
+{type:"mcq",question:"What is the chance of cystic fibrosis in Lucy and Jack’s baby?",options:["25%","50%","75%"],answer:0,explanation:"There is a 25% chance."},
+{type:"mcq",question:"What is the chance of being a carrier?",options:["25%","50%","75%"],answer:1,explanation:"50% chance of carrier."},
+{type:"fill",question:"A 1 in 4 chance equals ______%.",answerText:"25",explanation:"1 in 4 = 25%."},
+{type:"mcq",question:"How many disease alleles are needed for cystic fibrosis?",options:["1","2","3"],answer:1,explanation:"Two recessive alleles are needed."},
+{type:"mcq",question:"Why don’t carriers have the disease?",options:["Dominant healthy allele","No allele","Extra chromosome"],answer:0,explanation:"Dominant allele masks disease."},
+{type:"fill",question:"FF individuals are homozygous ______.",answerText:"dominant",explanation:"FF is homozygous dominant."},
+{type:"mcq",question:"What does ff mean?",options:["Carrier","Affected","Unaffected"],answer:1,explanation:"ff means affected."},
+{type:"mcq",question:"What does Ff mean?",options:["Carrier","Affected","Dominant only"],answer:0,explanation:"Ff means carrier."},
+{type:"fill",question:"The healthy allele is written with a capital ______.",answerText:"f",explanation:"Capital F is healthy allele."},
+{type:"mcq",question:"What does a pedigree show?",options:["Family inheritance","Planet movement","Chemical changes"],answer:0,explanation:"Pedigrees show inheritance."},
+{type:"mcq",question:"Why are partners included in pedigrees?",options:["They are relatives","They help show inheritance","Decoration"],answer:1,explanation:"Partners affect inheritance patterns."},
+{type:"fill",question:"Punnett squares are used to calculate genetic ______.",answerText:"probabilities",explanation:"They predict inheritance chances."}
+];
+
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+
+function startGame(){
+shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);
+currentQuestion=0;
+score=0;
+showQuestion();
+}
+
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div><p><strong>Question ${currentQuestion+1}:</strong> ${q.question}</p>`;
+
+if(q.type==="mcq"){
+q.options.forEach((opt,idx)=>{
+html+=`<label style="display:block"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+});
+html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;
+}else{
+html+=`<input id="fill" type="text" style="width:100%;padding:10px;margin:10px 0;">`;
+html+=`<button class="btn" onclick="checkFill()">Submit</button>`;
+}
+
+html+=`<div id="feedback"></div></div>`;
+gameArea.innerHTML=html;
+}
+
+function checkMCQ(){
+const q=shuffledQuestions[currentQuestion];
+const sel=document.querySelector('input[name="opt"]:checked');
+if(!sel)return;
+
+const feedback=document.getElementById("feedback");
+
+if(parseInt(sel.value)===q.answer){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function checkFill(){
+const q=shuffledQuestions[currentQuestion];
+const ans=document.getElementById("fill").value.trim().toLowerCase();
+const feedback=document.getElementById("feedback");
+
+if(ans.includes(q.answerText)){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function nextQuestion(){
+currentQuestion++;
+if(currentQuestion<shuffledQuestions.length){
+showQuestion();
+}else{
+document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: ${score}/${shuffledQuestions.length}</p><button class="btn" onclick="startGame()">Try Again</button>`;
+}
+}
+</script>
+
+</body>
+</html>
