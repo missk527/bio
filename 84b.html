@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trophic Levels</title>
+<style>
+:root{
+--brand:#0ea5e9;
+--ink:#1f2937;
+--paper:#fafafa;
+--card:#ffffff;
+--muted:#6b7280;
+--good:#16a34a;
+--bad:#dc2626;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+color:var(--ink);
+background:var(--paper);
+line-height:1.6;
+}
+header{
+background:linear-gradient(135deg,var(--brand),#6366f1);
+color:white;
+padding:20px 16px;
+text-align:center;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+.card{
+background:var(--card);
+border-radius:12px;
+padding:18px;
+box-shadow:0 6px 18px rgba(2,6,23,.08);
+margin:16px 0;
+}
+iframe{
+width:100%;
+max-width:900px;
+height:480px;
+border:0;
+border-radius:12px;
+}
+details{
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:10px 12px;
+margin:10px 0;
+background:#fff;
+}
+summary{
+font-weight:700;
+color:#0f766e;
+cursor:pointer;
+}
+.btn{
+background:var(--brand);
+color:white;
+border:0;
+border-radius:10px;
+padding:10px 14px;
+font-weight:700;
+cursor:pointer;
+}
+.correct{color:green}
+.incorrect{color:red}
+</style>
+</head>
+<body>
+
+<header>
+<h1>84B. Trophic Levels</h1>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/bwe4mN_XJjE" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+
+<details open>
+<summary>0:00 - 0:39 | Trophic Levels and Producers</summary>
+<ul>
+<li>Trophic levels are the different feeding levels in a food chain.</li>
+<li>In a simple chain, grass is level 1, rabbit is level 2, snake is level 3, and hawk is level 4.</li>
+<li>The first trophic level is always made up of producers, such as plants or algae.</li>
+<li>Producers use photosynthesis to make their own food using energy from sunlight.</li>
+<li>Sunlight captured by producers is the original energy source for the whole food chain.</li>
+</ul>
+</details>
+
+<details>
+<summary>0:44 - 1:20 | Primary and Secondary Consumers</summary>
+<ul>
+<li>The second trophic level contains primary consumers.</li>
+<li>Primary consumers are the first organisms in the chain to eat other organisms.</li>
+<li>They are usually herbivores because they feed on plants or algae.</li>
+<li>The third trophic level contains secondary consumers.</li>
+<li>Secondary consumers are carnivores because they eat other animals.</li>
+</ul>
+</details>
+
+<details>
+<summary>1:20 - 2:31 | Higher Consumers and Energy Transfer</summary>
+<ul>
+<li>Organisms in the fourth trophic level are tertiary consumers.</li>
+<li>Tertiary consumers are usually carnivores that eat secondary consumers.</li>
+<li>Most food chains have only four or five trophic levels.</li>
+<li>Energy is lost each time it passes from one trophic level to the next.</li>
+<li>Only about 10% of the energy in one trophic level is transferred to the next level.</li>
+<li>For example, 1000 J at level 1 may become 100 J at level 2, 10 J at level 3, and 1 J at level 4.</li>
+</ul>
+</details>
+
+<details>
+<summary>2:31 - 3:04 | Apex Predators and Omnivores</summary>
+<ul>
+<li>Apex predators are carnivores at the top of a food chain with no predators of their own.</li>
+<li>Omnivores, such as bears, eat both producers and other animals.</li>
+<li>Omnivores do not fit perfectly into one trophic level.</li>
+<li>They are often placed in trophic level 3 because they can eat primary consumers.</li>
+<li>However, they may also feed directly on producers.</li>
+</ul>
+</details>
+
+<details>
+<summary>3:12 - 3:32 | Decomposers and Nutrient Recycling</summary>
+<ul>
+<li>Decomposers include bacteria, fungi, and small animals such as worms.</li>
+<li>They break down dead plant and animal matter in the environment.</li>
+<li>Decomposition recycles nutrients back into the soil.</li>
+<li>These nutrients can then be used again by producers.</li>
+<li>Decomposers are essential for keeping nutrients moving through ecosystems.</li>
+</ul>
+</details>
+
+</section>
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button class="btn" onclick="startGame()">Start Quiz</button>
+</div>
+</section>
+
+</div>
+
+<script>
+const questions=[
+  {
+    "type": "mcq",
+    "question": "What are trophic levels?",
+    "options": [
+      "Different feeding levels in a food chain",
+      "Different types of weather",
+      "Different layers of rock"
+    ],
+    "answer": 0,
+    "explanation": "Trophic levels are the feeding levels within a food chain."
+  },
+  {
+    "type": "fill",
+    "question": "The first trophic level is always a ______.",
+    "answerText": "producer",
+    "explanation": "The first trophic level is made up of producers."
+  },
+  {
+    "type": "mcq",
+    "question": "Which organism is a producer in the example food chain?",
+    "options": [
+      "Grass",
+      "Rabbit",
+      "Hawk"
+    ],
+    "answer": 0,
+    "explanation": "Grass is a plant, so it is a producer."
+  },
+  {
+    "type": "fill",
+    "question": "Producers make their own food by ______.",
+    "answerText": "photosynthesis",
+    "explanation": "Plants and algae use photosynthesis to make food."
+  },
+  {
+    "type": "mcq",
+    "question": "What energy source do producers use for photosynthesis?",
+    "options": [
+      "Sunlight",
+      "Sound",
+      "Wind"
+    ],
+    "answer": 0,
+    "explanation": "Producers use sunlight as the energy source for photosynthesis."
+  },
+  {
+    "type": "mcq",
+    "question": "In the example, which trophic level is the rabbit?",
+    "options": [
+      "Level 2",
+      "Level 3",
+      "Level 4"
+    ],
+    "answer": 0,
+    "explanation": "The rabbit eats the producer, so it is trophic level 2."
+  },
+  {
+    "type": "fill",
+    "question": "Primary consumers are also called ______ because they eat plants or algae.",
+    "answerText": "herbivores",
+    "explanation": "Primary consumers are herbivores."
+  },
+  {
+    "type": "mcq",
+    "question": "What does a primary consumer eat?",
+    "options": [
+      "Producers",
+      "Only apex predators",
+      "Only decomposers"
+    ],
+    "answer": 0,
+    "explanation": "Primary consumers feed on producers such as plants or algae."
+  },
+  {
+    "type": "fill",
+    "question": "The second trophic level is made up of primary ______.",
+    "answerText": "consumers",
+    "explanation": "Level 2 contains primary consumers."
+  },
+  {
+    "type": "mcq",
+    "question": "In the example food chain, which organism is trophic level 3?",
+    "options": [
+      "Snake",
+      "Grass",
+      "Rabbit"
+    ],
+    "answer": 0,
+    "explanation": "The snake eats the rabbit, so it is trophic level 3."
+  },
+  {
+    "type": "fill",
+    "question": "Secondary consumers are usually ______ because they eat animals.",
+    "answerText": "carnivores",
+    "explanation": "Secondary consumers eat animals, so they are carnivores."
+  },
+  {
+    "type": "mcq",
+    "question": "What is a secondary consumer?",
+    "options": [
+      "The second level of consumers in a food chain",
+      "An organism that makes its own food",
+      "A plant at the start of a chain"
+    ],
+    "answer": 0,
+    "explanation": "A secondary consumer is the second consumer level in the chain."
+  },
+  {
+    "type": "mcq",
+    "question": "In the example, which trophic level is the hawk?",
+    "options": [
+      "Level 4",
+      "Level 1",
+      "Level 2"
+    ],
+    "answer": 0,
+    "explanation": "The hawk is trophic level 4 in the example chain."
+  },
+  {
+    "type": "fill",
+    "question": "Organisms in the fourth trophic level are called tertiary ______.",
+    "answerText": "consumers",
+    "explanation": "Fourth-level consumers are tertiary consumers."
+  },
+  {
+    "type": "mcq",
+    "question": "What does tertiary mean in this context?",
+    "options": [
+      "Third",
+      "First",
+      "Tenth"
+    ],
+    "answer": 0,
+    "explanation": "Tertiary means third, so tertiary consumers are the third level of consumers."
+  },
+  {
+    "type": "fill",
+    "question": "Most food chains usually have no more than four or ______ trophic levels.",
+    "answerText": "five",
+    "explanation": "Food chains usually have only four or five trophic levels."
+  },
+  {
+    "type": "mcq",
+    "question": "Why are very long food chains uncommon?",
+    "options": [
+      "Energy is lost at each trophic level",
+      "Producers cannot photosynthesise",
+      "Consumers never eat"
+    ],
+    "answer": 0,
+    "explanation": "Energy loss at each transfer limits the number of trophic levels."
+  },
+  {
+    "type": "fill",
+    "question": "Only about ______ percent of energy passes to the next trophic level.",
+    "answerText": "10",
+    "explanation": "The general rule is that about 10% of energy is transferred."
+  },
+  {
+    "type": "mcq",
+    "question": "If level 1 has 1000 J of energy, about how much reaches level 2?",
+    "options": [
+      "100 J",
+      "900 J",
+      "10 J"
+    ],
+    "answer": 0,
+    "explanation": "About 10% of 1000 J is 100 J."
+  },
+  {
+    "type": "mcq",
+    "question": "If trophic level 2 has 100 J, about how much reaches trophic level 3?",
+    "options": [
+      "10 J",
+      "1000 J",
+      "90 J"
+    ],
+    "answer": 0,
+    "explanation": "About 10% of 100 J is 10 J."
+  },
+  {
+    "type": "fill",
+    "question": "If trophic level 3 has 10 J, trophic level 4 may receive about ______ J.",
+    "answerText": "1",
+    "explanation": "About 10% of 10 J is 1 J."
+  },
+  {
+    "type": "mcq",
+    "question": "What is an apex predator?",
+    "options": [
+      "A top predator with no predators of its own",
+      "A plant that makes food",
+      "A decomposer in soil"
+    ],
+    "answer": 0,
+    "explanation": "Apex predators are at the top of food chains and have no predators."
+  },
+  {
+    "type": "fill",
+    "question": "Carnivores at the very top of a food chain are called apex ______.",
+    "answerText": "predators",
+    "explanation": "Top carnivores are known as apex predators."
+  },
+  {
+    "type": "mcq",
+    "question": "Which organism is an example of an omnivore from the speech?",
+    "options": [
+      "Bear",
+      "Grass",
+      "Algae"
+    ],
+    "answer": 0,
+    "explanation": "Bears are mentioned as omnivores."
+  },
+  {
+    "type": "fill",
+    "question": "Omnivores eat both producers and other ______.",
+    "answerText": "animals",
+    "explanation": "Omnivores eat plants/producers and animals."
+  },
+  {
+    "type": "mcq",
+    "question": "Why do omnivores not fit neatly into one trophic level?",
+    "options": [
+      "They can eat both producers and consumers",
+      "They never eat anything",
+      "They only use sunlight"
+    ],
+    "answer": 0,
+    "explanation": "Omnivores may feed at different points in a food chain."
+  },
+  {
+    "type": "mcq",
+    "question": "In general, which trophic level are omnivores often placed in?",
+    "options": [
+      "Level 3",
+      "Level 1",
+      "Level 5 only"
+    ],
+    "answer": 0,
+    "explanation": "Omnivores are often placed in level 3 because they can eat primary consumers."
+  },
+  {
+    "type": "fill",
+    "question": "Bacteria and fungi are examples of ______.",
+    "answerText": "decomposers",
+    "explanation": "Bacteria and fungi help break down dead matter."
+  },
+  {
+    "type": "mcq",
+    "question": "What do decomposers break down?",
+    "options": [
+      "Dead plant and animal matter",
+      "Only sunlight",
+      "Only living hawks"
+    ],
+    "answer": 0,
+    "explanation": "Decomposers break down dead organic matter."
+  },
+  {
+    "type": "fill",
+    "question": "Worms can help decompose dead matter and recycle ______.",
+    "answerText": "nutrients",
+    "explanation": "Decomposers recycle nutrients back into the environment."
+  },
+  {
+    "type": "mcq",
+    "question": "Where are recycled nutrients returned?",
+    "options": [
+      "Into the ground or soil",
+      "Into outer space",
+      "Into the Sun"
+    ],
+    "answer": 0,
+    "explanation": "Nutrients are recycled back into the ground or soil."
+  },
+  {
+    "type": "fill",
+    "question": "Recycled nutrients can be used again by ______.",
+    "answerText": "producers",
+    "explanation": "Producers can use nutrients returned to the soil."
+  },
+  {
+    "type": "mcq",
+    "question": "Which group includes plants and algae?",
+    "options": [
+      "Producers",
+      "Secondary consumers",
+      "Apex predators"
+    ],
+    "answer": 0,
+    "explanation": "Plants and algae are producers."
+  },
+  {
+    "type": "mcq",
+    "question": "Which group includes organisms that eat plants only?",
+    "options": [
+      "Herbivores",
+      "Carnivores",
+      "Decomposers only"
+    ],
+    "answer": 0,
+    "explanation": "Herbivores eat plants or algae."
+  },
+  {
+    "type": "fill",
+    "question": "A carnivore is an animal that eats other ______.",
+    "answerText": "animals",
+    "explanation": "Carnivores feed on other animals."
+  },
+  {
+    "type": "mcq",
+    "question": "What happens to available energy as you move up a food chain?",
+    "options": [
+      "It decreases",
+      "It always increases",
+      "It stays exactly the same"
+    ],
+    "answer": 0,
+    "explanation": "Available energy decreases at higher trophic levels."
+  },
+  {
+    "type": "fill",
+    "question": "The original energy in most food chains comes from the ______.",
+    "answerText": "sun",
+    "explanation": "Sunlight provides the energy captured by producers."
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement best describes producers?",
+    "options": [
+      "They make their own food",
+      "They only eat hawks",
+      "They break down only rocks"
+    ],
+    "answer": 0,
+    "explanation": "Producers make their own food using photosynthesis."
+  },
+  {
+    "type": "mcq",
+    "question": "What is the main role of decomposers in an ecosystem?",
+    "options": [
+      "Recycle nutrients",
+      "Stop photosynthesis",
+      "Become sunlight"
+    ],
+    "answer": 0,
+    "explanation": "Decomposers recycle nutrients from dead matter."
+  },
+  {
+    "type": "fill",
+    "question": "Energy transfer between trophic levels is inefficient because much energy is ______.",
+    "answerText": "lost",
+    "explanation": "Energy is lost at each trophic level transfer."
+  }
+];
+
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+
+function startGame(){
+shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);
+currentQuestion=0;
+score=0;
+showQuestion();
+}
+
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div><p><strong>Question ${currentQuestion+1}:</strong> ${q.question}</p>`;
+
+if(q.type==="mcq"){
+q.options.forEach((opt,idx)=>{
+html+=`<label style="display:block"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+});
+html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;
+}else{
+html+=`<input id="fill" type="text" style="width:100%;padding:10px;margin:10px 0;">`;
+html+=`<button class="btn" onclick="checkFill()">Submit</button>`;
+}
+
+html+=`<div id="feedback"></div></div>`;
+gameArea.innerHTML=html;
+}
+
+function checkMCQ(){
+const q=shuffledQuestions[currentQuestion];
+const sel=document.querySelector('input[name="opt"]:checked');
+if(!sel)return;
+
+const feedback=document.getElementById("feedback");
+
+if(parseInt(sel.value)===q.answer){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function checkFill(){
+const q=shuffledQuestions[currentQuestion];
+const ans=document.getElementById("fill").value.trim().toLowerCase();
+const feedback=document.getElementById("feedback");
+
+if(ans.includes(q.answerText)){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function nextQuestion(){
+currentQuestion++;
+if(currentQuestion<shuffledQuestions.length){
+showQuestion();
+}else{
+document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: ${score}/${shuffledQuestions.length}</p><button class="btn" onclick="startGame()">Try Again</button>`;
+}
+}
+</script>
+
+</body>
+</html>
