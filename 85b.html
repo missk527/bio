@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pyramids of Biomass</title>
+<style>
+:root{
+--brand:#0ea5e9;
+--ink:#1f2937;
+--paper:#fafafa;
+--card:#ffffff;
+--muted:#6b7280;
+--good:#16a34a;
+--bad:#dc2626;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+color:var(--ink);
+background:var(--paper);
+line-height:1.6;
+}
+header{
+background:linear-gradient(135deg,var(--brand),#6366f1);
+color:white;
+padding:20px 16px;
+text-align:center;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+.card{
+background:var(--card);
+border-radius:12px;
+padding:18px;
+box-shadow:0 6px 18px rgba(2,6,23,.08);
+margin:16px 0;
+}
+iframe{
+width:100%;
+max-width:900px;
+height:480px;
+border:0;
+border-radius:12px;
+}
+details{
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:10px 12px;
+margin:10px 0;
+background:#fff;
+}
+summary{
+font-weight:700;
+color:#0f766e;
+cursor:pointer;
+}
+.btn{
+background:var(--brand);
+color:white;
+border:0;
+border-radius:10px;
+padding:10px 14px;
+font-weight:700;
+cursor:pointer;
+}
+.correct{color:green}
+.incorrect{color:red}
+</style>
+</head>
+<body>
+
+<header>
+<h1>85B. Pyramids of Biomass</h1>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/DE_Oz4-TTTM" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+
+<details open>
+<summary>0:00 - 0:52 | What Pyramids of Biomass Show</summary>
+<ul>
+<li>A pyramid of biomass shows the biomass at each trophic level in a food chain.</li>
+<li>Biomass means the mass of living organisms.</li>
+<li>In the example food chain, grass is the producer, rabbits are primary consumers, snakes are secondary consumers, and hawks are tertiary consumers.</li>
+<li>Each bar shows the total mass of all organisms at that trophic level.</li>
+</ul>
+</details>
+<details>
+<summary>0:52 - 1:58 | Why Biomass Decreases Up the Pyramid</summary>
+<ul>
+<li>The bars usually get smaller as you move up the trophic levels.</li>
+<li>This means the total biomass decreases at higher levels in the food chain.</li>
+<li>Even if one snake is heavier than one rabbit, there are usually far fewer snakes, so total snake biomass is lower.</li>
+<li>Only about 10% of biomass and energy is transferred to the next trophic level.</li>
+</ul>
+</details>
+<details>
+<summary>1:58 - 3:08 | Why Only Some Biomass Is Transferred</summary>
+<ul>
+<li>Organisms do not usually eat every part of the organism they consume.</li>
+<li>Some eaten parts cannot be broken down or absorbed, so they are egested as feces.</li>
+<li>Most absorbed nutrients are used to release energy through respiration rather than being stored as growth.</li>
+<li>Biomass can be lost as waste products such as carbon dioxide and urea.</li>
+</ul>
+</details>
+<details>
+<summary>3:15 - 4:42 | Calculating Biomass Transfer Efficiency</summary>
+<ul>
+<li>Biomass transfer efficiency is the percentage of biomass passed to the next trophic level.</li>
+<li>Efficiency = biomass transferred to the next level ÷ biomass available at the previous level × 100.</li>
+<li>For rabbits to snakes: 15 kg ÷ 144 kg × 100 = 10.4%.</li>
+<li>For snakes to hawks: 1.6 kg ÷ 15 kg × 100 = 10.7%.</li>
+</ul>
+</details>
+
+</section>
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button class="btn" onclick="startGame()">Start Quiz</button>
+</div>
+</section>
+
+</div>
+
+<script>
+const questions=[
+  {
+    "type": "mcq",
+    "question": "What does a pyramid of biomass show?",
+    "options": [
+      "The biomass at each trophic level",
+      "The speed of each animal",
+      "The temperature of an ecosystem"
+    ],
+    "answer": 0,
+    "explanation": "A pyramid of biomass shows the mass of living organisms at each trophic level."
+  },
+  {
+    "type": "fill",
+    "question": "Biomass means the mass of living ______.",
+    "answerText": "organisms",
+    "explanation": "Biomass is the mass of living organisms."
+  },
+  {
+    "type": "mcq",
+    "question": "Which organism is the producer in the example food chain?",
+    "options": [
+      "Grass",
+      "Rabbit",
+      "Hawk"
+    ],
+    "answer": 0,
+    "explanation": "Grass is the producer in the example food chain."
+  },
+  {
+    "type": "fill",
+    "question": "In the example, rabbits are the primary ______.",
+    "answerText": "consumer",
+    "explanation": "Rabbits eat the producer, so they are primary consumers."
+  },
+  {
+    "type": "mcq",
+    "question": "Which organism is the secondary consumer in the example?",
+    "options": [
+      "Snake",
+      "Grass",
+      "Rabbit"
+    ],
+    "answer": 0,
+    "explanation": "Snakes eat rabbits, so they are secondary consumers."
+  },
+  {
+    "type": "fill",
+    "question": "In the food chain, hawks are the tertiary ______.",
+    "answerText": "consumer",
+    "explanation": "Hawks are tertiary consumers because they feed at the fourth trophic level."
+  },
+  {
+    "type": "mcq",
+    "question": "What does the bottom bar of a biomass pyramid usually represent?",
+    "options": [
+      "The producer biomass",
+      "The top predator biomass",
+      "Only dead material"
+    ],
+    "answer": 0,
+    "explanation": "The bottom bar represents the total biomass of producers."
+  },
+  {
+    "type": "fill",
+    "question": "The bars in a pyramid of biomass usually get ______ as you move up the trophic levels.",
+    "answerText": "smaller",
+    "explanation": "Biomass decreases at higher trophic levels."
+  },
+  {
+    "type": "mcq",
+    "question": "Why can total snake biomass be lower than total rabbit biomass?",
+    "options": [
+      "There are fewer snakes than rabbits",
+      "Each snake is always tiny",
+      "Rabbits contain no biomass"
+    ],
+    "answer": 0,
+    "explanation": "Even if each snake is heavier, there are usually far fewer snakes."
+  },
+  {
+    "type": "fill",
+    "question": "Only about ______ percent of biomass is transferred to the next trophic level.",
+    "answerText": "10",
+    "explanation": "Only about 10% is transferred to the next level."
+  },
+  {
+    "type": "mcq",
+    "question": "What happens to most biomass and energy at each transfer?",
+    "options": [
+      "It is lost or used",
+      "It all moves to the next level",
+      "It becomes sunlight"
+    ],
+    "answer": 0,
+    "explanation": "Most biomass and energy is lost or used rather than transferred."
+  },
+  {
+    "type": "fill",
+    "question": "Each step up a food chain is called a trophic ______.",
+    "answerText": "level",
+    "explanation": "A trophic level is a feeding level in a food chain."
+  },
+  {
+    "type": "mcq",
+    "question": "Which part of a snake would a hawk probably not eat?",
+    "options": [
+      "Skeleton or teeth",
+      "Muscle only",
+      "All digestible tissue"
+    ],
+    "answer": 0,
+    "explanation": "Predators do not usually eat every part of their prey."
+  },
+  {
+    "type": "fill",
+    "question": "Uneaten parts of organisms are not transferred as ______ to the predator.",
+    "answerText": "biomass",
+    "explanation": "If a part is not eaten, its biomass is not transferred."
+  },
+  {
+    "type": "mcq",
+    "question": "What may happen to food parts that cannot be broken down?",
+    "options": [
+      "They are egested as feces",
+      "They become extra oxygen",
+      "They are stored forever"
+    ],
+    "answer": 0,
+    "explanation": "Undigested material is egested as feces."
+  },
+  {
+    "type": "fill",
+    "question": "Feces is material that has been ______ from the body.",
+    "answerText": "egested",
+    "explanation": "Egestion is the removal of undigested food as feces."
+  },
+  {
+    "type": "mcq",
+    "question": "What process uses absorbed nutrients to release energy?",
+    "options": [
+      "Respiration",
+      "Photosynthesis only",
+      "Freezing"
+    ],
+    "answer": 0,
+    "explanation": "Respiration releases energy from absorbed nutrients."
+  },
+  {
+    "type": "fill",
+    "question": "Most absorbed nutrients are used for respiration rather than ______.",
+    "answerText": "growth",
+    "explanation": "Much of the absorbed biomass is used in respiration, not stored as growth."
+  },
+  {
+    "type": "mcq",
+    "question": "Which waste product is released during respiration?",
+    "options": [
+      "Carbon dioxide",
+      "Aluminium",
+      "Sand"
+    ],
+    "answer": 0,
+    "explanation": "Carbon dioxide is a waste product from respiration."
+  },
+  {
+    "type": "fill",
+    "question": "Another waste product mentioned in the video is ______.",
+    "answerText": "urea",
+    "explanation": "Urea is one of the waste products mentioned."
+  },
+  {
+    "type": "mcq",
+    "question": "Why does an organism not pass on all biomass it has consumed?",
+    "options": [
+      "It uses much of it for everyday functions",
+      "It keeps all biomass forever",
+      "It turns all food into bone"
+    ],
+    "answer": 0,
+    "explanation": "Organisms use much of their biomass and energy for life processes."
+  },
+  {
+    "type": "fill",
+    "question": "Biomass transfer efficiency is a ______.",
+    "answerText": "percentage",
+    "explanation": "Efficiency is expressed as a percentage of biomass transferred."
+  },
+  {
+    "type": "mcq",
+    "question": "What is the formula for biomass transfer efficiency?",
+    "options": [
+      "Biomass transferred \u00f7 biomass available \u00d7 100",
+      "Biomass available \u00d7 100 only",
+      "Biomass transferred + biomass available"
+    ],
+    "answer": 0,
+    "explanation": "Efficiency is calculated by dividing transferred biomass by available biomass and multiplying by 100."
+  },
+  {
+    "type": "fill",
+    "question": "To turn a decimal into a percentage, multiply by ______.",
+    "answerText": "100",
+    "explanation": "Multiplying by 100 converts the value into a percentage."
+  },
+  {
+    "type": "mcq",
+    "question": "In the rabbit-to-snake example, what biomass is transferred to snakes?",
+    "options": [
+      "15 kg",
+      "144 kg",
+      "1.6 kg"
+    ],
+    "answer": 0,
+    "explanation": "The snake biomass used in the calculation is 15 kg."
+  },
+  {
+    "type": "fill",
+    "question": "In the rabbit-to-snake example, the rabbit biomass available is ______ kg.",
+    "answerText": "144",
+    "explanation": "The available rabbit biomass is 144 kg."
+  },
+  {
+    "type": "mcq",
+    "question": "What is 15 divided by 144 multiplied by 100?",
+    "options": [
+      "About 10.4%",
+      "About 50%",
+      "About 1%"
+    ],
+    "answer": 0,
+    "explanation": "15 \u00f7 144 \u00d7 100 is about 10.4%."
+  },
+  {
+    "type": "fill",
+    "question": "The efficiency from rabbits to snakes is about ______ percent.",
+    "answerText": "10.4",
+    "explanation": "The calculated efficiency is about 10.4%."
+  },
+  {
+    "type": "mcq",
+    "question": "What is the snake-to-hawk efficiency calculation?",
+    "options": [
+      "1.6 \u00f7 15 \u00d7 100",
+      "15 \u00f7 1.6 \u00d7 100",
+      "144 \u00f7 15 \u00d7 100"
+    ],
+    "answer": 0,
+    "explanation": "The hawk biomass is divided by the snake biomass and multiplied by 100."
+  },
+  {
+    "type": "fill",
+    "question": "The efficiency from snakes to hawks is about ______ percent.",
+    "answerText": "10.7",
+    "explanation": "1.6 \u00f7 15 \u00d7 100 gives about 10.7%."
+  },
+  {
+    "type": "mcq",
+    "question": "What does a wider bar in a biomass pyramid mean?",
+    "options": [
+      "More total biomass",
+      "More speed",
+      "Higher temperature"
+    ],
+    "answer": 0,
+    "explanation": "A wider bar represents more total biomass."
+  },
+  {
+    "type": "fill",
+    "question": "The producer level usually has the ______ biomass.",
+    "answerText": "largest",
+    "explanation": "Producers usually have the largest biomass in a pyramid."
+  },
+  {
+    "type": "mcq",
+    "question": "What happens to biomass as energy is released in respiration?",
+    "options": [
+      "It can leave as waste products",
+      "It is all stored as body mass",
+      "It becomes a new producer"
+    ],
+    "answer": 0,
+    "explanation": "Some biomass is released as waste products such as carbon dioxide and urea."
+  },
+  {
+    "type": "fill",
+    "question": "Biomass and energy transfer is inefficient because much is lost, used, or not ______.",
+    "answerText": "absorbed",
+    "explanation": "Some eaten material is not absorbed after digestion."
+  },
+  {
+    "type": "mcq",
+    "question": "Which reason explains why predators do not receive all prey biomass?",
+    "options": [
+      "They do not eat every part of the prey",
+      "They always eat producers only",
+      "Biomass increases at every level"
+    ],
+    "answer": 0,
+    "explanation": "Predators often leave parts such as bones, teeth, or skeletons."
+  },
+  {
+    "type": "fill",
+    "question": "A pyramid of biomass represents the total mass at each feeding, or trophic, ______.",
+    "answerText": "level",
+    "explanation": "Each bar represents a trophic level."
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement is correct about biomass transfer?",
+    "options": [
+      "Only a small percentage is passed on",
+      "All biomass is passed on",
+      "No biomass is ever lost"
+    ],
+    "answer": 0,
+    "explanation": "Only a small percentage, often around 10%, is transferred."
+  },
+  {
+    "type": "fill",
+    "question": "Carbon dioxide is produced when organisms release energy by ______.",
+    "answerText": "respiration",
+    "explanation": "Respiration releases energy and produces carbon dioxide."
+  },
+  {
+    "type": "mcq",
+    "question": "What does the calculation 1.6 \u00f7 15 \u00d7 100 show?",
+    "options": [
+      "Efficiency between snakes and hawks",
+      "Total grass biomass",
+      "Rabbit population size"
+    ],
+    "answer": 0,
+    "explanation": "It calculates biomass transfer efficiency from snakes to hawks."
+  },
+  {
+    "type": "fill",
+    "question": "The main pattern in a pyramid of biomass is that biomass ______ up the food chain.",
+    "answerText": "decreases",
+    "explanation": "Biomass decreases at higher trophic levels."
+  }
+];
+
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+
+function startGame(){
+shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);
+currentQuestion=0;
+score=0;
+showQuestion();
+}
+
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div><p><strong>Question ${currentQuestion+1}:</strong> ${q.question}</p>`;
+
+if(q.type==="mcq"){
+q.options.forEach((opt,idx)=>{
+html+=`<label style="display:block"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+});
+html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;
+}else{
+html+=`<input id="fill" type="text" style="width:100%;padding:10px;margin:10px 0;">`;
+html+=`<button class="btn" onclick="checkFill()">Submit</button>`;
+}
+
+html+=`<div id="feedback"></div></div>`;
+gameArea.innerHTML=html;
+}
+
+function checkMCQ(){
+const q=shuffledQuestions[currentQuestion];
+const sel=document.querySelector('input[name="opt"]:checked');
+if(!sel)return;
+
+const feedback=document.getElementById("feedback");
+
+if(parseInt(sel.value)===q.answer){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function checkFill(){
+const q=shuffledQuestions[currentQuestion];
+const ans=document.getElementById("fill").value.trim().toLowerCase();
+const feedback=document.getElementById("feedback");
+
+if(ans.includes(q.answerText)){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function nextQuestion(){
+currentQuestion++;
+if(currentQuestion<shuffledQuestions.length){
+showQuestion();
+}else{
+document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: ${score}/${shuffledQuestions.length}</p><button class="btn" onclick="startGame()">Try Again</button>`;
+}
+}
+</script>
+
+</body>
+</html>
